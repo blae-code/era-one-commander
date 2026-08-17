@@ -4,7 +4,7 @@ import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { seedGameData, loadIndex, ERA_ONE_ENTITIES } from "@/lib/seedGameData";
 import { Button } from "@/components/ui/button";
-import { DatabaseZap, RefreshCw, CheckCircle2, AlertTriangle } from "lucide-react";
+import { DatabaseZap, RefreshCw, CheckCircle2, AlertTriangle, ShieldCheck } from "lucide-react";
 
 // Admin page: shows the game build the bundled dataset was extracted from, compares it with what is
 // live in the app's entities, and runs the seeder (upsert by game_id).
@@ -16,6 +16,19 @@ export default function GameData() {
   const [log, setLog] = useState([]);
   const [running, setRunning] = useState(false);
   const [deleteMissing, setDeleteMissing] = useState(false);
+  const [verify, setVerify] = useState(null);
+  const [verifying, setVerifying] = useState(false);
+
+  // Server-side proof: gameDataStatus embeds the expected counts + game_ids for this build.
+  const runVerify = async () => {
+    setVerifying(true); setVerify(null);
+    try {
+      const res = await base44.functions.invoke("gameDataStatus", {});
+      setVerify(res?.data ?? res);
+    } catch (e) {
+      setVerify({ error: e?.message || String(e) });
+    } finally { setVerifying(false); }
+  };
 
   useEffect(() => { loadIndex().then(setIndex); }, []);
 
@@ -74,6 +87,9 @@ export default function GameData() {
           <Button variant="outline" size="sm" className="rounded-none font-mono text-xs" onClick={() => refetch()} disabled={isFetching}>
             <RefreshCw size={13} className={isFetching ? "animate-spin" : ""} /> Re-check
           </Button>
+          <Button variant="outline" size="sm" className="rounded-none font-mono text-xs" onClick={runVerify} disabled={verifying}>
+            <ShieldCheck size={13} /> {verifying ? "Verifying…" : "Verify server-side"}
+          </Button>
           <Button size="sm" className="rounded-none font-mono text-xs" onClick={run} disabled={!isAdmin || running}>
             <DatabaseZap size={13} /> {running ? "Importing…" : "Import / update all"}
           </Button>
@@ -112,6 +128,23 @@ export default function GameData() {
           </tbody>
         </table>
       </div>
+
+      {verify && (
+        <div className={`schematic-panel p-3 mb-4 font-mono text-[11px] ${verify.error ? "text-red-400" : verify.ok ? "text-emerald-400" : "text-amber-400"}`}>
+          {verify.error ? `Verify failed: ${verify.error}` : (
+            <>
+              <div className="mb-1">{verify.ok ? "SERVER VERIFIED — every entity matches build " + verify.game?.buildid : "Server check: not fully synced"}</div>
+              {Object.entries(verify.entities || {}).map(([k, v]) => (
+                <div key={k} className={v.state === "synced" ? "text-muted-foreground" : ""}>
+                  {k}: {v.state} — live {v.live}/{v.expected}{v.live_build ? ` (build ${v.live_build})` : ""}
+                  {v.missing?.length ? ` · missing ${v.missing.length}: ${v.missing.slice(0, 6).join(", ")}${v.missing.length > 6 ? "…" : ""}` : ""}
+                  {v.extra?.length ? ` · extra ${v.extra.length}: ${v.extra.slice(0, 6).join(", ")}${v.extra.length > 6 ? "…" : ""}` : ""}
+                </div>
+              ))}
+            </>
+          )}
+        </div>
+      )}
 
       <label className="flex items-center gap-2 font-mono text-xs text-muted-foreground mb-4">
         <input type="checkbox" checked={deleteMissing} onChange={(e) => setDeleteMissing(e.target.checked)} disabled={running} />

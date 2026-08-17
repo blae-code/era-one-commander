@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 (dataset: game 0.12.2, Steam build 24615926).**
+**Last updated 2026-08-17 (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -32,12 +32,12 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `Weapon` | 65 | Guns / launchers / mines | `dps`, `range`, `hp_change` (hull dmg/hit), `shield_change`, `armor_penetration` (0..1), `class_damage_multipliers[] {entity_class, multiplier}`, `rate_of_fire`, `burst_amount`, `burst_interval`, `requires_reload`, `reload_time`, `bullet_speed`, `deal_area_damage`, `area_radius`, `weapon_type` (Standard · Missile · EMP · Radiation · SelfDestruct · LongRangeTorpedo · NuclearBomb · SubWeapon, may be `A|B`), `implementation` (Projectile · Raycast · AreaOfEffect · SelfDestructSystem · MineLayer), `applied_status_on_hit`, `required_research` |
 | `Turret` | 51 | Turret mounts (module or ship) | `weapons` (ids, repeat = count), `weapons_count`, `dps`, `horizontal_fov`/`vertical_fov` `[min,max]`, `horizontal_rotation_speed`, `time_between_volleys`, `is_fixed`, `attack_priority[]`, `weapons_source` (`prefab` or `shared_prefab:<id>` = inferred) |
 | `Subsystem` | 4 | Fighter equipment slots (bomber/interceptor/scout defaults) | `name`, `dps` |
-| `ResearchNode` | 131 | The tech tree | `research_type` (Upgrade · Technology · Tier · Ability), `tier`, `cost_resources`, `cost_energy`, `construction_time`, `required_nodes[]` (parents), `child_nodes[]`, `other_requirements[]` (module ids), `unlocks[]` (module/unit ids), `modifiers[] {stat, operation, value, abs}`, `unit_class_affected`, `module_class_affected`, `module_types_affected[]` |
+| `ResearchNode` | 131 | The tech tree | `research_type` (Upgrade · Technology · Tier · Ability), `tier`, `cost_resources`, `cost_energy`, `construction_time`, `required_nodes[]` (parents), `child_nodes[]`, `other_requirements[]` (module ids), `unlocks[]` (game's own list), **`unlocks_modules[]` / `unlocks_units[]` / `unlocks_weapons[]` / `unlocks_turrets[]`** (computed reverse links: everything whose `required_research` names this node), `modifiers[] {stat, operation, value, abs}`, `unit_class_affected`, `module_class_affected`, `module_types_affected[]` |
 | `Resource` | 5 | Asteroid resource types | `extraction_rate`, `refining_rate`, `color_rgba` |
 | `Station` | 6 | Station archetypes | mostly names |
 | `GameBlueprint` | 42 | Ship/station designs shipped with the game (+ AI stations) | `modules` `{game_id: count}`, `part_count`, `cost_resources`, `cost_population`, `construction_time`, `required_research[]`, `sum_module_*` roll-ups, `weapon_modules[]`, `source` (shipped/player), `folder` |
 | `StatModifier` | 1249 | Long table of every stat modifier | `source_type` (research · unit_level · module), `source_id`, `context` (upgrade · level_N · perfect_attachment_bonus · power_on_modifiers), `stat`, `operation` (Add · Subtract · Multiply · Divide · Set), `value`, `abs` |
-| `LootEntry` | 71 | Research loot tables (wreck drops) | `table`, `item_id` (research id; null = nothing), `weight`, `probability` |
+| `LootEntry` | 71 | Research loot tables (wreck drops) | `table`, `item_id` (research id; null = nothing), `item_name`, `weight`, `probability` |
 
 ### Interpretation rules (please respect in the UI)
 * **Armament:** `Module.weapons` / `Unit.weapons` already include the guns inside their turrets. Don't add `Turret.weapons` on top (double count).
@@ -83,7 +83,12 @@ DPS per module/unit = Σ over `weapons` of `Weapon.dps` (the game's own per-weap
 → `{ "path": [ { game_id, name, research_type, tier, cost_resources, cost_energy, construction_time, depth } ],
      "totals": { cost_resources, cost_energy, construction_time, nodes }, "missing": [] }` — topologically ordered, excluding `have`.
 
-All three read the entities as service role; they need the data imported first (`/gamedata`).
+**`gameDataStatus`** — `{}` → `{ game: {game_version, buildid, …}, entities: { Module: { expected, live, live_build, missing[], extra[], state } … }, ok }`.
+`state` ∈ synced · partial · stale · empty · missing_entity. The expected counts and every expected `game_id` are
+**embedded at generation time**, so this is the authoritative "is the data present and accounted for" check
+(the `/gamedata` page has a *Verify server-side* button that calls it). GENERATED file — regenerate via era-one-data.
+
+All functions read the entities as service role; they need the data imported first (`/gamedata`).
 
 ---
 

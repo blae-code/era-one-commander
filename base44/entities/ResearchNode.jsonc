@@ -165,6 +165,24 @@
     "agent_category": {
       "type": "string"
     },
+    "unlocks_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unlocks_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unlocks_weapons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

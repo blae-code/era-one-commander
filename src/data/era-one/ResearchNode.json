@@ -42,6 +42,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [
+"WPN.002"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -85,6 +91,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack|Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [
+"WPN.040"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -131,6 +143,10 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Support",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -178,6 +194,10 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -224,6 +244,16 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [
+"WPN.023",
+"WPN.024",
+"WPN.025",
+"WPN.026",
+"WPN.064"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -269,6 +299,10 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -315,6 +349,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.009"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -402,6 +442,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -451,6 +495,14 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [
+"CMX_BOM",
+"PIR_BOM2",
+"PIR_INT2"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -501,6 +553,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [
+"CMX_COR"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -562,6 +620,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -610,6 +672,18 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [
+"CMX_FRI2",
+"CMX_FRI3",
+"PIR_FRI",
+"PIR_FRI1",
+"PIR_FRI_HVY",
+"PIR_FRI_ION",
+"PIR_PERF_MINE"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -655,6 +729,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"CLK.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -701,6 +781,14 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.006",
+"TUR.012",
+"TUR.017"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -745,6 +833,26 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Defense",
+"unlocks_modules": [
+"ARM.001",
+"ARM.002",
+"ARM.004",
+"ARM.008",
+"ARM.0081",
+"ARM.009",
+"ARM.010",
+"ARM.011",
+"SDF.001",
+"WDF.001",
+"WDF.002",
+"WDF.003",
+"WDF.004",
+"WDF.006",
+"WDF.007"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -793,6 +901,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"DEF.001",
+"DEF.002"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -840,6 +955,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"DRL.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -885,6 +1006,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [
+"CMX_DEP"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -928,6 +1055,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.016"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -973,6 +1106,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.005",
+"TUR.009"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1017,6 +1157,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack",
+"unlocks_modules": [
+"TUR.018"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1064,6 +1210,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.013"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1111,6 +1263,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"POW.ACC"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1157,6 +1315,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.002",
+"TUR.018"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1200,6 +1365,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.004"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1245,6 +1416,15 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.002",
+"TUR.003",
+"TUR.011",
+"TUR.018"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1290,6 +1470,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [
+"WPN.024"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1337,6 +1523,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"PRD.006"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1383,6 +1575,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"PRD.007"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1431,6 +1629,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.017"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1479,6 +1683,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"POW.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1523,6 +1733,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [
+"WPN.064"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1571,6 +1787,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"POW.REC"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1616,6 +1838,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.010"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1662,6 +1890,19 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Attack",
+"unlocks_modules": [
+"TUR.006",
+"TUR.012",
+"TUR.017"
+],
+"unlocks_units": [
+"PIR_FRI1",
+"PIR_PERF_MINE"
+],
+"unlocks_weapons": [
+"WPN.026"
+],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1708,6 +1949,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"DEF.002"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1754,6 +2001,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TNK.003"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1811,6 +2064,10 @@
 }
 ],
 "agent_category": "Resources",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1862,6 +2119,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TNK.001",
+"TNKADV.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1911,6 +2175,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Resources",
+"unlocks_modules": [
+"ASM.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1957,6 +2227,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.008",
+"TUR.010"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2019,6 +2296,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2064,6 +2345,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"RAD.001"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2109,6 +2396,29 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Defense",
+"unlocks_modules": [
+"ARM.001",
+"ARM.002",
+"ARM.004",
+"ARM.008",
+"ARM.0081",
+"ARM.009",
+"ARM.010",
+"ARM.011",
+"PLA.003",
+"PLA.005",
+"PLA.006",
+"SDF.001",
+"WDF.001",
+"WDF.002",
+"WDF.003",
+"WDF.004",
+"WDF.006",
+"WDF.007"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2155,6 +2465,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"WRP.SUP"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2201,6 +2517,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.019"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2246,6 +2568,18 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.007",
+"TUR.008",
+"TUR.010",
+"TUR.014"
+],
+"unlocks_units": [
+"CMX_FRI2",
+"PIR_FRI_ION"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2293,6 +2627,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "None",
+"unlocks_modules": [
+"TUR.015",
+"TUR.019"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2341,6 +2682,13 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Movement",
+"unlocks_modules": [
+"WRP.GEN",
+"WRP.SUP"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2395,6 +2743,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2448,6 +2800,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2502,6 +2858,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2556,6 +2916,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2610,6 +2974,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2662,6 +3030,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2718,6 +3090,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2775,6 +3151,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2832,6 +3212,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2889,6 +3273,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2944,6 +3332,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2997,6 +3389,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3051,6 +3447,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3105,6 +3505,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3159,6 +3563,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3211,6 +3619,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3271,6 +3683,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3332,6 +3748,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3393,6 +3813,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3454,6 +3878,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3513,6 +3941,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3573,6 +4005,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3634,6 +4070,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3695,6 +4135,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3756,6 +4200,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3815,6 +4263,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3892,6 +4344,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3969,6 +4425,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4046,6 +4506,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4123,6 +4587,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4198,6 +4666,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4252,6 +4724,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4328,6 +4804,10 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Research",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4402,6 +4882,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Research",
+"unlocks_modules": [
+"PRD.005"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4473,6 +4959,12 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Research",
+"unlocks_modules": [
+"HDP.002"
+],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4537,6 +5029,14 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Research",
+"unlocks_modules": [
+"TNKADV.001"
+],
+"unlocks_units": [
+"PIR_FRI_HVY"
+],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4599,6 +5099,10 @@
 "ability_unlocked": null,
 "modifiers": [],
 "agent_category": "Research",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4652,6 +5156,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4706,6 +5214,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4760,6 +5272,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4814,6 +5330,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4866,6 +5386,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4919,6 +5443,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4973,6 +5501,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5027,6 +5559,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5081,6 +5617,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5133,6 +5673,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5186,6 +5730,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5240,6 +5788,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5294,6 +5846,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5348,6 +5904,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5400,6 +5960,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5453,6 +6017,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5507,6 +6075,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5561,6 +6133,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5615,6 +6191,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5667,6 +6247,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5727,6 +6311,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5788,6 +6376,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5849,6 +6441,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5910,6 +6506,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5969,6 +6569,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6029,6 +6633,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6090,6 +6698,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6151,6 +6763,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6212,6 +6828,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6271,6 +6891,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6324,6 +6948,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6378,6 +7006,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6432,6 +7064,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6486,6 +7122,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6538,6 +7178,10 @@
 }
 ],
 "agent_category": "Defense",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6598,6 +7242,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6659,6 +7307,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6720,6 +7372,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6781,6 +7437,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6840,6 +7500,10 @@
 }
 ],
 "agent_category": "Movement",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6910,6 +7574,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6980,6 +7648,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7050,6 +7722,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7120,6 +7796,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7188,6 +7868,10 @@
 }
 ],
 "agent_category": "None",
+"unlocks_modules": [],
+"unlocks_units": [],
+"unlocks_weapons": [],
+"unlocks_turrets": [],
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

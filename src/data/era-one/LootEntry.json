@@ -5,6 +5,7 @@
 "item_id": "R.T.CLO",
 "weight": 65.0,
 "probability": 0.00028,
+"item_name": "Cloaking Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -14,6 +15,7 @@
 "item_id": "R.T.DFI",
 "weight": 80.0,
 "probability": 0.00035,
+"item_name": "Defense Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -23,6 +25,7 @@
 "item_id": "R.T.DAR",
 "weight": 80.0,
 "probability": 0.00035,
+"item_name": "Deflection Armors",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -32,6 +35,7 @@
 "item_id": "R.T.AFI",
 "weight": 95.0,
 "probability": 0.00042,
+"item_name": "Advanced Fighter",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -41,6 +45,7 @@
 "item_id": "R.T.HCS",
 "weight": 50.0,
 "probability": 0.00022,
+"item_name": "Hypercell Storage",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -50,6 +55,7 @@
 "item_id": "R.T.AME",
 "weight": 92.5,
 "probability": 0.0004,
+"item_name": "Advanced Mechgun",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -59,6 +65,7 @@
 "item_id": "R.T.NFE",
 "weight": 90.0,
 "probability": 0.00039,
+"item_name": "Nuclear Fusion Energy",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -68,6 +75,7 @@
 "item_id": "R.T.QC",
 "weight": 65.0,
 "probability": 0.00028,
+"item_name": "Quantum Core",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -77,6 +85,7 @@
 "item_id": "R.T.RSI",
 "weight": 55.0,
 "probability": 0.00024,
+"item_name": "Radiant Shield",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -86,6 +95,7 @@
 "item_id": "R.T.ETS",
 "weight": 95.0,
 "probability": 0.00042,
+"item_name": "Remote Energy Transfer",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -95,6 +105,7 @@
 "item_id": "R.T.RUBM",
 "weight": 20.0,
 "probability": 9e-05,
+"item_name": "Biomechanical Mining Swarms",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -104,6 +115,7 @@
 "item_id": "R.T.RUFUS",
 "weight": 75.0,
 "probability": 0.00033,
+"item_name": "RUs Fusion",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -113,6 +125,7 @@
 "item_id": "R.T.RUMD",
 "weight": 55.0,
 "probability": 0.00024,
+"item_name": "Asteroid Mining Docks",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -122,6 +135,7 @@
 "item_id": "R.T.SSO",
 "weight": 75.0,
 "probability": 0.00033,
+"item_name": "Spatial Sonar",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -131,6 +145,7 @@
 "item_id": "R.T.TAR",
 "weight": 95.0,
 "probability": 0.00042,
+"item_name": "Titanium Armors",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -140,6 +155,7 @@
 "item_id": "R.T.WD",
 "weight": 60.0,
 "probability": 0.00026,
+"item_name": "Warp Disruption Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -149,6 +165,7 @@
 "item_id": "R.T.WRP",
 "weight": 70.0,
 "probability": 0.00031,
+"item_name": "Warp Drive Generator",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -158,6 +175,7 @@
 "item_id": "R.T.AWA",
 "weight": 90.0,
 "probability": 0.00039,
+"item_name": "Advanced Warship",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -167,6 +185,7 @@
 "item_id": "R.T.ACMI",
 "weight": 80.0,
 "probability": 0.00035,
+"item_name": "Laser-Guided Projectiles",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -176,6 +195,7 @@
 "item_id": "R.T.CMI",
 "weight": 55.0,
 "probability": 0.00024,
+"item_name": "Concussion Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -185,6 +205,7 @@
 "item_id": "R.T.GAT",
 "weight": 92.5,
 "probability": 0.0004,
+"item_name": "Gatling Gun",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -194,6 +215,7 @@
 "item_id": "R.T.SHV",
 "weight": 40.0,
 "probability": 0.00017,
+"item_name": "Heavy Ion Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -203,6 +225,7 @@
 "item_id": "R.T.HKI",
 "weight": 40.0,
 "probability": 0.00017,
+"item_name": "Heavy Kinetic Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -212,6 +235,7 @@
 "item_id": "R.T.WPL",
 "weight": 70.0,
 "probability": 0.00031,
+"item_name": "Ion Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -221,6 +245,7 @@
 "item_id": "R.T.KIN",
 "weight": 90.0,
 "probability": 0.00039,
+"item_name": "Kinetic Weapon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -230,6 +255,7 @@
 "item_id": "R.T.LCA",
 "weight": 95.0,
 "probability": 0.00042,
+"item_name": "Laser Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -239,6 +265,7 @@
 "item_id": "R.T.HMI",
 "weight": 75.0,
 "probability": 0.00033,
+"item_name": "Heavy Mine",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -248,6 +275,7 @@
 "item_id": "R.T.HBL",
 "weight": 65.0,
 "probability": 0.00028,
+"item_name": "Heavy Bomb Launcher",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -257,6 +285,7 @@
 "item_id": "R.T.PCA",
 "weight": 80.0,
 "probability": 0.00035,
+"item_name": "Pulsar Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -266,6 +295,7 @@
 "item_id": "R.T.LRM",
 "weight": 45.0,
 "probability": 0.0002,
+"item_name": "Long-Range Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -275,6 +305,7 @@
 "item_id": "R.T.LRNB",
 "weight": 10.0,
 "probability": 4e-05,
+"item_name": "Long-Range Nuclear Bomb",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -284,6 +315,7 @@
 "item_id": "R.T.RMI",
 "weight": 95.0,
 "probability": 0.00042,
+"item_name": "Rocket Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -293,6 +325,7 @@
 "item_id": "R.T.RHIC",
 "weight": 50.0,
 "probability": 0.00022,
+"item_name": "Rotary Multi-Ion Acceleration",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -302,6 +335,7 @@
 "item_id": null,
 "weight": 226450.0,
 "probability": 0.98999,
+"item_name": "(nothing)",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -311,6 +345,7 @@
 "item_id": "R.T.CLO",
 "weight": 65.0,
 "probability": 0.02838,
+"item_name": "Cloaking Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -320,6 +355,7 @@
 "item_id": "R.T.DFI",
 "weight": 80.0,
 "probability": 0.03493,
+"item_name": "Defense Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -329,6 +365,7 @@
 "item_id": "R.T.DAR",
 "weight": 80.0,
 "probability": 0.03493,
+"item_name": "Deflection Armors",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -338,6 +375,7 @@
 "item_id": "R.T.AFI",
 "weight": 95.0,
 "probability": 0.04148,
+"item_name": "Advanced Fighter",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -347,6 +385,7 @@
 "item_id": "R.T.HCS",
 "weight": 50.0,
 "probability": 0.02183,
+"item_name": "Hypercell Storage",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -356,6 +395,7 @@
 "item_id": "R.T.AME",
 "weight": 92.5,
 "probability": 0.04039,
+"item_name": "Advanced Mechgun",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -365,6 +405,7 @@
 "item_id": "R.T.NFE",
 "weight": 90.0,
 "probability": 0.0393,
+"item_name": "Nuclear Fusion Energy",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -374,6 +415,7 @@
 "item_id": "R.T.QC",
 "weight": 65.0,
 "probability": 0.02838,
+"item_name": "Quantum Core",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -383,6 +425,7 @@
 "item_id": "R.T.RSI",
 "weight": 55.0,
 "probability": 0.02402,
+"item_name": "Radiant Shield",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -392,6 +435,7 @@
 "item_id": "R.T.ETS",
 "weight": 95.0,
 "probability": 0.04148,
+"item_name": "Remote Energy Transfer",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -401,6 +445,7 @@
 "item_id": "R.T.RUBM",
 "weight": 20.0,
 "probability": 0.00873,
+"item_name": "Biomechanical Mining Swarms",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -410,6 +455,7 @@
 "item_id": "R.T.RUFUS",
 "weight": 75.0,
 "probability": 0.03275,
+"item_name": "RUs Fusion",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -419,6 +465,7 @@
 "item_id": "R.T.RUMD",
 "weight": 55.0,
 "probability": 0.02402,
+"item_name": "Asteroid Mining Docks",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -428,6 +475,7 @@
 "item_id": "R.T.SSO",
 "weight": 75.0,
 "probability": 0.03275,
+"item_name": "Spatial Sonar",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -437,6 +485,7 @@
 "item_id": "R.T.TAR",
 "weight": 95.0,
 "probability": 0.04148,
+"item_name": "Titanium Armors",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -446,6 +495,7 @@
 "item_id": "R.T.WD",
 "weight": 60.0,
 "probability": 0.0262,
+"item_name": "Warp Disruption Field",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -455,6 +505,7 @@
 "item_id": "R.T.WRP",
 "weight": 70.0,
 "probability": 0.03057,
+"item_name": "Warp Drive Generator",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -464,6 +515,7 @@
 "item_id": "R.T.AWA",
 "weight": 90.0,
 "probability": 0.0393,
+"item_name": "Advanced Warship",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -473,6 +525,7 @@
 "item_id": "R.T.ACMI",
 "weight": 80.0,
 "probability": 0.03493,
+"item_name": "Laser-Guided Projectiles",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -482,6 +535,7 @@
 "item_id": "R.T.CMI",
 "weight": 55.0,
 "probability": 0.02402,
+"item_name": "Concussion Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -491,6 +545,7 @@
 "item_id": "R.T.GAT",
 "weight": 92.5,
 "probability": 0.04039,
+"item_name": "Gatling Gun",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -500,6 +555,7 @@
 "item_id": "R.T.SHV",
 "weight": 40.0,
 "probability": 0.01747,
+"item_name": "Heavy Ion Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -509,6 +565,7 @@
 "item_id": "R.T.HKI",
 "weight": 40.0,
 "probability": 0.01747,
+"item_name": "Heavy Kinetic Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -518,6 +575,7 @@
 "item_id": "R.T.WPL",
 "weight": 70.0,
 "probability": 0.03057,
+"item_name": "Ion Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -527,6 +585,7 @@
 "item_id": "R.T.KIN",
 "weight": 90.0,
 "probability": 0.0393,
+"item_name": "Kinetic Weapon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -536,6 +595,7 @@
 "item_id": "R.T.LCA",
 "weight": 95.0,
 "probability": 0.04148,
+"item_name": "Laser Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -545,6 +605,7 @@
 "item_id": "R.T.HMI",
 "weight": 75.0,
 "probability": 0.03275,
+"item_name": "Heavy Mine",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -554,6 +615,7 @@
 "item_id": "R.T.HBL",
 "weight": 65.0,
 "probability": 0.02838,
+"item_name": "Heavy Bomb Launcher",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -563,6 +625,7 @@
 "item_id": "R.T.PCA",
 "weight": 80.0,
 "probability": 0.03493,
+"item_name": "Pulsar Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -572,6 +635,7 @@
 "item_id": "R.T.LRM",
 "weight": 45.0,
 "probability": 0.01965,
+"item_name": "Long-Range Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -581,6 +645,7 @@
 "item_id": "R.T.LRNB",
 "weight": 10.0,
 "probability": 0.00437,
+"item_name": "Long-Range Nuclear Bomb",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -590,6 +655,7 @@
 "item_id": "R.T.RMI",
 "weight": 95.0,
 "probability": 0.04148,
+"item_name": "Rocket Missile",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -599,6 +665,7 @@
 "item_id": "R.T.RHIC",
 "weight": 50.0,
 "probability": 0.02183,
+"item_name": "Rotary Multi-Ion Acceleration",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -608,6 +675,7 @@
 "item_id": "R.T.RHIC",
 "weight": 63.0,
 "probability": 0.05408,
+"item_name": "Rotary Multi-Ion Acceleration",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -617,6 +685,7 @@
 "item_id": "R.U.E2",
 "weight": 58.0,
 "probability": 0.04979,
+"item_name": "Tech Era 2/5",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -626,6 +695,7 @@
 "item_id": "R.T.SHV",
 "weight": 44.0,
 "probability": 0.03777,
+"item_name": "Heavy Ion Cannon",
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -635,6 +705,7 @@
 "item_id": null,
 "weight": 1000.0,
 "probability": 0.85837,
+"item_name": "(nothing)",
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

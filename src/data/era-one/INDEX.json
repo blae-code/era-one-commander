@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T17:33:26Z",
+  "generated_utc": "2026-08-17T17:55:22Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -86,7 +86,7 @@
    "entity": "ResearchNode",
    "source_table": "research",
    "rows": 131,
-   "columns": 36,
+   "columns": 39,
    "key": "game_id"
   },
   {
@@ -121,7 +121,7 @@
    "entity": "LootEntry",
    "source_table": "loot_tables",
    "rows": 71,
-   "columns": 7,
+   "columns": 8,
    "key": null
   }
  ]

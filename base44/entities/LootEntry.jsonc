@@ -22,6 +22,9 @@
     "probability": {
       "type": "number"
     },
+    "item_name": {
+      "type": "string"
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

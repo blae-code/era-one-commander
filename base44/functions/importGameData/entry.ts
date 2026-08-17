@@ -25,7 +25,7 @@ Deno.serve(async (req) => {
     for (const c of chunk(records, CHUNK)) { await api.bulkCreate(c); created += c.length; }
   } else {
     const existing = await api.list('game_id', 5000);
-    const byKey = new Map(existing.map((r: any) => [r.game_id, r]));
+    const byKey = new Map<string, any>(existing.map((r: any) => [r.game_id, r]));
     const toCreate: any[] = [];
     for (const r of records) {
       const cur = byKey.get(r.game_id);
