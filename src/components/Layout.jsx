@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
-import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, UploadCloud, Ship } from "lucide-react";
+import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, UploadCloud, Ship, EyeOff } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
 
 const NAV = [
@@ -11,8 +11,9 @@ const NAV = [
   { to: "/database", label: "Databank", code: "04", icon: Database },
   { to: "/compare", label: "Comparison", code: "05", icon: ArrowLeftRight },
   { to: "/fleet", label: "Fleet Analysis", code: "06", icon: Ship },
-  { to: "/gamedata", label: "Game Data", code: "07", icon: DatabaseZap },
-  { to: "/import", label: "Data Import", code: "08", icon: UploadCloud },
+  { to: "/stealth", label: "Stealth Analysis", code: "07", icon: EyeOff },
+  { to: "/gamedata", label: "Game Data", code: "08", icon: DatabaseZap },
+  { to: "/import", label: "Data Import", code: "09", icon: UploadCloud },
 ];
 
 export default function Layout() {
