@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T19:18:27Z",
+  "generated_utc": "2026-08-17T19:22:07Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -54,7 +54,9 @@
    "match_options": 56,
    "score_weights": 20,
    "attachment_rules": 103,
-   "localization": 2448
+   "localization": 2448,
+   "build_changes": 0,
+   "dataset_builds": 1
   },
   "full_counts": {
    "ResourceData": 5,
@@ -269,7 +271,7 @@
    "entity": "LocalizedString",
    "source_table": "localization",
    "rows": 2448,
-   "columns": 6,
+   "columns": 23,
    "key": "game_id"
   },
   {
@@ -417,6 +419,20 @@
    "source_table": "attachment_rules",
    "rows": 103,
    "columns": 15,
+   "key": "game_id"
+  },
+  {
+   "entity": "DatasetBuild",
+   "source_table": "dataset_builds",
+   "rows": 1,
+   "columns": 10,
+   "key": "game_id"
+  },
+  {
+   "entity": "BuildChange",
+   "source_table": "build_changes",
+   "rows": 0,
+   "columns": 11,
    "key": "game_id"
   }
  ]

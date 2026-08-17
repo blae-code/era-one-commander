@@ -1,0 +1,51 @@
+{
+  "name": "BuildChange",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string"
+    },
+    "from_build": {
+      "type": "string"
+    },
+    "to_build": {
+      "type": "string"
+    },
+    "table": {
+      "type": "string"
+    },
+    "change": {
+      "type": "string",
+      "enum": [
+        "added",
+        "removed",
+        "changed"
+      ]
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "before": {
+      "type": "object"
+    },
+    "after": {
+      "type": "object"
+    },
+    "game_version": {
+      "type": "string"
+    },
+    "game_build": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One BuildChange (record-level diff between two dataset builds; empty until a second build is imported)."
+}

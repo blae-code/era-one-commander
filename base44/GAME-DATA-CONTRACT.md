@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 — 46 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 48 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -11,7 +11,8 @@ each other. Kept in `base44/` because it is the backend's statement of its own s
 
 | Owner | Paths | Notes |
 |---|---|---|
-| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 4 shipped):** `GameBlueprint.assembly` trees (draw shipped designs), `AttachmentRule`, `Module.prefab_guid`; functions `blueprintStats` (design roll-up + warnings) and `importStationFile` (drop a `.station` file → parts + stats, optional save). This is the backend for a **module-graph Ship Builder / design viewer** replacing the Hull/Component grid.
+| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 5 shipped — workplan complete):** `LocalizedString` now carries all 9 languages (+`namespace`); `DatasetBuild` + `BuildChange` for "what changed in the patch". All 48 entities verified synced.
+* **Backend → frontend (Phase 4 shipped):** `GameBlueprint.assembly` trees (draw shipped designs), `AttachmentRule`, `Module.prefab_guid`; functions `blueprintStats` (design roll-up + warnings) and `importStationFile` (drop a `.station` file → parts + stats, optional save). This is the backend for a **module-graph Ship Builder / design viewer** replacing the Hull/Component grid.
 * **Backend → frontend (Phase 3 shipped):** `AiPersonality` (AI dossier), `AiLogicGraph` + `AiFact/AiGoal/AiOperation` + `AiColorScheme` (render the AI's decision graphs), `MatchOption` (match-setup matrix), `ScoreWeight`; functions `economyModel`, `scoreEstimate`.
 * **Backend → frontend (Phase 2 shipped):** **Maps** — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
 * **Backend → frontend (2026-08-17, Phase 0+1 shipped):** `StatDefinition` (real stat names — use in every modifier chip), `Effectiveness` + `dps_vs_class` (counters matrix / heatmap), decoded unit doctrine + flight fields, turret costs, and functions `unitLoadout` (loadout configurator with ranked fits) and `engagement` (TTK / modifier stack). Suggested wiring: Compare page → `Unit`/`Module` + `engagement`; Fleet Analysis → `fleetPlan`; a Loadout panel on Unit detail → `unitLoadout`; `gameFileImport.importEntityRows` → `upsertEntityRows`.
@@ -70,7 +71,9 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `MatchOption` | 56 | Every match-setup enum member | `setting` (game_mode · settings_preset · ai_personality · difficulty · game_speed · starting_resources · starting_ships · crew_module_cap · research_module_cap · eclipse_duration · wrecks_contain_research · map_resources · wreck_lifetime · attack_frequency), `option`, `value` |
 | `ScoreWeight` | 20 | Score formula weights | `id` (TierWeight, ArmamentWeight, …), `weight` (+ team score multipliers) |
 | `AttachmentRule` | 103 | Per module: what it needs/forbids when attached | `mount_size`, `is_command`, `link_range`, `perfect_attachment_requires`, `perfect_attachment_bonus[]`, `prohibited_attachments[]`, `provides_hardpoint`, `requires_hardpoint` |
-| `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
+| `LocalizedString` | 2448 | Every game string, **9 languages** | `key`, `namespace` (Module · Unit · Equip · Research · Map · ObjectiveData · GameHint · GameplayUI · …), `text_en`, `text_fr`, `text_de`, `text_it`, `text_es`, `text_pt`, `text_ru`, `text_zh`, `text_zh_tw` (only when different from English) |
+| `DatasetBuild` | 1+ | One row per imported dataset build | `game_version`, `buildid`, `catalog_hash`, `generated_utc`, `previous_build`, `changes`, `row_counts{}` |
+| `BuildChange` | 0+ | **Patch diff**: record-level changes between consecutive builds | `table`, `game_id`, `name`, `change` (added · removed · changed), `fields[]`, `before{}`, `after{}`, `from_build`, `to_build` — empty until the game updates and the pipeline is re-run |
 
 **`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
 `full` object: the **complete decoded game record** (e.g. 124 fields on a module: tumble/AI/attack/noise/cloak/shield/pool

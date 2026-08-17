@@ -53,6 +53,8 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'MatchOption', file: 'MatchOption', keyed: true },
   { entity: 'ScoreWeight', file: 'ScoreWeight', keyed: true },
   { entity: 'AttachmentRule', file: 'AttachmentRule', keyed: true },
+  { entity: 'DatasetBuild', file: 'DatasetBuild', keyed: true },
+  { entity: 'BuildChange', file: 'BuildChange', keyed: true },
 ];
 
 const CHUNK = 100;

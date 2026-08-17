@@ -9,7 +9,34 @@
     "key": {
       "type": "string"
     },
+    "namespace": {
+      "type": "string"
+    },
     "text_en": {
+      "type": "string"
+    },
+    "text_fr": {
+      "type": "string"
+    },
+    "text_de": {
+      "type": "string"
+    },
+    "text_it": {
+      "type": "string"
+    },
+    "text_es": {
+      "type": "string"
+    },
+    "text_pt": {
+      "type": "string"
+    },
+    "text_ru": {
+      "type": "string"
+    },
+    "text_zh": {
+      "type": "string"
+    },
+    "text_zh_tw": {
       "type": "string"
     },
     "game_version": {
@@ -21,6 +48,30 @@
       "description": "Steam buildid the record was extracted from"
     },
     "text_en_truncated": {
+      "type": "boolean"
+    },
+    "text_fr_truncated": {
+      "type": "boolean"
+    },
+    "text_de_truncated": {
+      "type": "boolean"
+    },
+    "text_it_truncated": {
+      "type": "boolean"
+    },
+    "text_es_truncated": {
+      "type": "boolean"
+    },
+    "text_pt_truncated": {
+      "type": "boolean"
+    },
+    "text_ru_truncated": {
+      "type": "boolean"
+    },
+    "text_zh_truncated": {
+      "type": "boolean"
+    },
+    "text_zh_tw_truncated": {
       "type": "boolean"
     }
   },
