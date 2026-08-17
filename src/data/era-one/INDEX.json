@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T18:58:36Z",
+  "generated_utc": "2026-08-17T19:14:15Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -45,6 +45,14 @@
    "scenarios": 24,
    "scenario_entities": 6596,
    "scenario_objectives": 338,
+   "ai_personalities": 5,
+   "ai_facts": 86,
+   "ai_goals": 15,
+   "ai_operations": 42,
+   "ai_logic_graphs": 13,
+   "ai_color_schemes": 1,
+   "match_options": 56,
+   "score_weights": 20,
    "localization": 2448
   },
   "full_counts": {
@@ -197,7 +205,7 @@
    "entity": "GameSetting",
    "source_table": "game_settings",
    "rows": 1,
-   "columns": 166,
+   "columns": 180,
    "key": "game_id"
   },
   {
@@ -345,6 +353,62 @@
    "source_table": "arena_turns",
    "rows": 9,
    "columns": 16,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiPersonality",
+   "source_table": "ai_personalities",
+   "rows": 5,
+   "columns": 96,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiFact",
+   "source_table": "ai_facts",
+   "rows": 86,
+   "columns": 9,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiGoal",
+   "source_table": "ai_goals",
+   "rows": 15,
+   "columns": 8,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiOperation",
+   "source_table": "ai_operations",
+   "rows": 42,
+   "columns": 11,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiLogicGraph",
+   "source_table": "ai_logic_graphs",
+   "rows": 13,
+   "columns": 14,
+   "key": "game_id"
+  },
+  {
+   "entity": "AiColorScheme",
+   "source_table": "ai_color_schemes",
+   "rows": 1,
+   "columns": 7,
+   "key": "game_id"
+  },
+  {
+   "entity": "MatchOption",
+   "source_table": "match_options",
+   "rows": 56,
+   "columns": 7,
+   "key": "game_id"
+  },
+  {
+   "entity": "ScoreWeight",
+   "source_table": "score_weights",
+   "rows": 20,
+   "columns": 5,
    "key": "game_id"
   }
  ]

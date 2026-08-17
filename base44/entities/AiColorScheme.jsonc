@@ -1,0 +1,197 @@
+{
+  "name": "AiColorScheme",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "category_colors": {
+      "type": "object",
+      "properties": {
+        "None": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Attack": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Modules": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Intelligence": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Energy": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Resources": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Population": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Fleet": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Exploration": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Research": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Defense": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Game": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Diplomacy": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Support": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Movement": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Structural": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "goap_colors": {
+      "type": "object",
+      "properties": {
+        "Fact": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Operation": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Goal": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Logic": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Timer": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Comment": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "logic_colors": {
+      "type": "object",
+      "properties": {
+        "And": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Or": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Xor": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Not": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One AiColorScheme records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

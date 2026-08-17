@@ -1,0 +1,227 @@
+[
+{
+"game_id": "GOAL.0000",
+"name": "Staring At The Void",
+"numeric_id": 0,
+"category": "None",
+"color": [
+0.2264,
+0.2168,
+0.2168,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0022",
+"name": "Accumulate Resources",
+"numeric_id": 22,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0023",
+"name": "Destroy Enemy Command Center",
+"numeric_id": 23,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0030",
+"name": "Complete Fleet",
+"numeric_id": 30,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0031",
+"name": "Reduce Enemy Collectors",
+"numeric_id": 31,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0032",
+"name": "Destroy Enemy Stations",
+"numeric_id": 32,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0033",
+"name": "Destroy Enemy Explorers",
+"numeric_id": 33,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0034",
+"name": "Organize Fleet",
+"numeric_id": 34,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0035",
+"name": "Stop Enemy Expansion",
+"numeric_id": 35,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0036",
+"name": "Protect Command Center",
+"numeric_id": 36,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0037",
+"name": "Destroy Enemy Fleet",
+"numeric_id": 37,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0038",
+"name": "Concentrate Fleet",
+"numeric_id": 38,
+"category": "Fleet|Defense",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0039",
+"name": "Destroy Enemy Supply",
+"numeric_id": 39,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0040",
+"name": "Keep Pressure On Enemy",
+"numeric_id": 40,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "GOAL.0041",
+"name": "Protect Friend Command Centers",
+"numeric_id": 41,
+"category": "Defense|Diplomacy",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

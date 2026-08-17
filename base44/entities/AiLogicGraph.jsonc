@@ -1,0 +1,138 @@
+{
+  "name": "AiLogicGraph",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "faction": {
+      "type": "string",
+      "enum": [
+        "CMX",
+        "PIR"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "node_count": {
+      "type": "number"
+    },
+    "edge_count": {
+      "type": "number"
+    },
+    "facts": {
+      "type": "number"
+    },
+    "operations": {
+      "type": "number"
+    },
+    "goals": {
+      "type": "number"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "collapsed": {
+            "type": "boolean"
+          },
+          "auto_generate_goal": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logic_type": {
+            "type": "string"
+          },
+          "builtin_type": {
+            "type": "number"
+          },
+          "target_identifier": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "negated": {
+            "type": "boolean"
+          },
+          "kind": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "comments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "w": {
+            "type": "number"
+          },
+          "h": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One AiLogicGraph records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

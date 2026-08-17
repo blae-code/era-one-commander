@@ -163,6 +163,67 @@
 "default_pool_size": 20,
 "team_score_entities_multiplier": 0.01,
 "team_score_dps_multiplier": 0.6,
+"speech_local_position": [
+0.0,
+0.05,
+0.0
+],
+"advanced_pathfinder_disable_threshold": [
+24,
+40
+],
+"default_frigates_formation_spacing": [
+4.0,
+4.0,
+5.0
+],
+"default_platforms_formation_spacing": [
+4.0,
+4.0,
+4.0
+],
+"fighter_formation_grid": [
+5,
+3
+],
+"corvettes_formation_grid": [
+5,
+3
+],
+"utilities_formation_grid": [
+5,
+3
+],
+"frigates_formation_grid": [
+5,
+3
+],
+"platforms_formation_grid": [
+5,
+3
+],
+"delta_formation_grid": [
+5,
+3
+],
+"wall_formation_grid": [
+5,
+3
+],
+"claw_formation_grid": [
+5,
+3
+],
+"constructable_remains_yield": [
+0.7,
+0.8
+],
+"harvestable_remains_yield": [
+0.65,
+0.85
+],
+"building_tooltip_actions": [],
+"waypoint_mode_tooltip_actions": [],
 "score_calculation_weights": {
 "ScoreNormalization": 5.0,
 "TierWeight": 0.8,

@@ -1,0 +1,1469 @@
+[
+{
+"game_id": "AI.AGGRESSIVE",
+"name": "Aggressive",
+"asset_name": "DATA Team Agent Personality Aggressive",
+"weapon_category_hint_exclusive": 0,
+"maximum_stations_per_blueprint": 1,
+"stations_percent_before_attack": 0.7,
+"stations_turbo_enabled": false,
+"starting_resource_bonus": [
+1000,
+10000
+],
+"blueprint_resource_bonus": [
+2000,
+16000
+],
+"give_blueprint_resource_value": 0,
+"restart_resource_bonus": [
+2000,
+12000
+],
+"give_resource_shortage_bonus": 0,
+"resource_shortage_bonus": [
+0,
+2000
+],
+"resource_shortage_threshold": 200,
+"resource_shortage_duration": 10,
+"resource_shortage_bonus_interval": 120,
+"energy_production_bonus": [
+20,
+50
+],
+"ignore_warp_requirements": 1,
+"ignore_research_center_concurrency_limit": 1,
+"auto_increase_crew_cap": 0,
+"bypass_modules_crew_cap_limit": 0,
+"bypass_units_crew_cap_limit": 0,
+"bypass_crew_cap_game_phase": 0,
+"auto_increase_energy_production": 0,
+"turbo_not_consume_energy": 0,
+"allow_modules_not_unlocked": 0,
+"priority_module_types": [],
+"priority_module_identifiers": [
+"PRD.001",
+"PRD.002",
+"RES.001",
+"POW.001",
+"POP.001",
+"DRO.001",
+"POW.002",
+"POW.REC",
+"POW.ACC"
+],
+"priority_research_identifiers": [
+"R.T.DFI",
+"R.T.NFE",
+"R.T.AWA",
+"R.T.ETS",
+"R.T.AME",
+"R.T.AFI",
+"R.U.CHA1",
+"R.T.GAT",
+"R.T.RMI",
+"R.T.WPL",
+"R.A.SWW",
+"R.T.GAT",
+"R.T.CMI",
+""
+],
+"modules_max_concurrent_build": 5,
+"max_queued_modules_of_same_type": 3,
+"units_max_concurrent_build": 18,
+"research_max_concurrent_build": 12,
+"max_module_queued": 6,
+"prioritize_secondary_station_constructions": 0,
+"long_construction_delay_range": [
+12,
+30
+],
+"short_construction_delay_range": [
+4,
+15
+],
+"destroyed_part_rebuild_cooldown_range": [
+4,
+18
+],
+"build_range_constraint": 1,
+"modules_build_priority_range": [
+-2,
+4
+],
+"units_build_priority_range": [
+-2,
+4
+],
+"research_build_priority_range": [
+-2,
+4
+],
+"default_attack_stance": "Aggressive",
+"defensive_probability": 0.2,
+"aggressive_probability": 0.2,
+"hunter_probability": 0.03,
+"chase_probability": 0.2,
+"flyby_probability": 0.005,
+"orbit_probability": 0.14,
+"frontal_probability": 0.005,
+"lateral_probability": 0.005,
+"time_between_attacks": {
+"toCommandCenter": [
+240,
+480
+],
+"toStation": [
+380,
+1300
+],
+"toFleet": [
+380,
+1300
+],
+"toExplorers": [
+380,
+1300
+],
+"toCollectors": [
+380,
+1300
+],
+"withStations": [
+380,
+1300
+],
+"withCommandCenter": [
+380,
+1300
+],
+"withLongRangeWeapons": [
+380,
+1300
+],
+"withWarp": [
+380,
+1300
+]
+},
+"secondary_attack_distance_from_enemy_cc": 20.0,
+"min_max_units_for_attack": [
+15,
+27
+],
+"min_units_per_formation": 5,
+"max_units_per_formation": 14,
+"min_defending_units": 30,
+"enemy_collectors_threshold": 12,
+"enemy_stations_threshold": 2,
+"enemy_modules_threshold": 20,
+"minimum_fleet_recall_distance": 20,
+"maximum_fleet_recall_distance": 60,
+"enemy_team_selection_criteria": [
+0,
+2,
+3
+],
+"enemy_team_selection_interval": [
+420,
+1800
+],
+"allow_warp_attack": 1,
+"dock_collectors_if_attacked": 1,
+"collectors_dock_time": [
+60,
+300
+],
+"kamikaze_unarmed_stations": 1,
+"main_station_percent_before_attack": 0.9,
+"max_enemy_strength_for_final_attack": 3,
+"minimum_attacker_at_player_base": 12,
+"frigate_warp_attack_chance": 0.25,
+"stations_warp_attack_chance": 0.1,
+"patrol_route_cube_size": [
+80,
+110
+],
+"units_per_patrol_route": 4,
+"minimum_expansion_resource_quantity": 30000,
+"migration_with_warp_chance": 0.2,
+"use_last_known_positions": 0,
+"memory_expired_threshold_range": [
+1741,
+3570
+],
+"planner_options": {
+"goalSelection": 1,
+"planSelection": 1,
+"planSelectionWeight": 0.5,
+"categoryPreferenceWeight": 0.5,
+"maxDepth": 16,
+"maxNodes": 2000
+},
+"category_priority_config": {
+"categoryOffsets": [
+{
+"category": 256,
+"priority": 17
+},
+{
+"category": 512,
+"priority": -7
+},
+{
+"category": 2,
+"priority": -8
+},
+{
+"category": 32,
+"priority": -3
+},
+{
+"category": 64,
+"priority": 15
+}
+]
+},
+"construction_channel_priority_config": {
+"modulesPriority": 3,
+"unitsPriority": 12,
+"researchPriority": 16
+},
+"category_priority_order": [
+256,
+64,
+16,
+32,
+512,
+2,
+128,
+4,
+4096
+],
+"disabled_operations": [],
+"disabled_goals": [],
+"disabled_categories": [],
+"fleet_type_requirements": {
+"Scout": 2,
+"SensorProbe": 3,
+"Platform": 4,
+"Collector": 12
+},
+"fleet_family_requirements": {
+"Interceptor": 20,
+"Bomber": 12,
+"Corvette": 10,
+"Frigate": 8
+},
+"modules_type_requirements": null,
+"modules_sub_type_requirements": {
+"FlameThrowerMid": 3,
+"AntiMissileMid": 1,
+"AutocannonMid": 1,
+"PointDefenseCannonMid": 1
+},
+"secondary_stations_limits": {
+"Start": {
+"maxSize": 15,
+"maxStations": 0
+},
+"Early": {
+"maxSize": 41,
+"maxStations": 2
+},
+"Mid": {
+"maxSize": 75,
+"maxStations": 3
+},
+"Late": {
+"maxSize": 124,
+"maxStations": 5
+},
+"End": {
+"maxSize": -1,
+"maxStations": 6
+}
+},
+"secondary_stations_category_limits": {
+"Attack": 10,
+"Defense": 0,
+"Intelligence": 0,
+"Support": 0
+},
+"granted_researches": {},
+"formation_type_probability": {},
+"attack_formation_stance_probability": {},
+"min_units_for_command_center_attack": {
+"Start": 15,
+"Early": 22,
+"Mid": 30,
+"Late": 40,
+"End": 60
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AI.BALANCED",
+"name": "Balanced",
+"asset_name": "DATA Team Agent Personality Balanced",
+"weapon_category_hint_exclusive": 1,
+"maximum_stations_per_blueprint": 1,
+"stations_percent_before_attack": 0.7,
+"stations_turbo_enabled": true,
+"starting_resource_bonus": [
+2000,
+10000
+],
+"blueprint_resource_bonus": [
+3000,
+15000
+],
+"give_blueprint_resource_value": 1,
+"restart_resource_bonus": [
+2000,
+10000
+],
+"give_resource_shortage_bonus": 1,
+"resource_shortage_bonus": [
+1000,
+5000
+],
+"resource_shortage_threshold": 200,
+"resource_shortage_duration": 5,
+"resource_shortage_bonus_interval": 60,
+"energy_production_bonus": [
+20,
+100
+],
+"ignore_warp_requirements": 1,
+"ignore_research_center_concurrency_limit": 1,
+"auto_increase_crew_cap": 1,
+"bypass_modules_crew_cap_limit": 1,
+"bypass_units_crew_cap_limit": 1,
+"bypass_crew_cap_game_phase": 4,
+"auto_increase_energy_production": 30,
+"turbo_not_consume_energy": 1,
+"allow_modules_not_unlocked": 0,
+"priority_module_types": [
+15,
+12,
+35,
+13,
+3,
+4,
+5,
+10,
+6,
+19,
+29,
+8,
+2,
+11,
+32,
+22,
+17
+],
+"priority_module_identifiers": [
+"DRO.001",
+"RES.001",
+"ANG.001",
+"BSM.001",
+"ANG.002",
+"BSM.002",
+"EXT.006",
+"EXT.007",
+"EXT.004",
+"EXT.003",
+"COB.002",
+"TUR.009",
+"HDP.001",
+"HDP.002",
+"PRD.007"
+],
+"priority_research_identifiers": [
+"R.U.CHA1",
+"R.T.KIN",
+"R.T.GAT",
+"R.T.ACMI",
+"R.U.CHA2",
+"R.U.CHA3",
+"R.T.ETS",
+"R.T.NFE",
+"R.T.AME",
+"R.T.DAR",
+"R.A.SWW",
+"R.T.DFI",
+"R.T.CMI",
+"R.T.AWA",
+"R.T.AFI",
+"R.T.RMI",
+"R.T.WPL",
+"R.T.HBL",
+"R.T.LRNB"
+],
+"modules_max_concurrent_build": 5,
+"max_queued_modules_of_same_type": 2,
+"units_max_concurrent_build": 3,
+"research_max_concurrent_build": 4,
+"max_module_queued": 5,
+"prioritize_secondary_station_constructions": 1,
+"long_construction_delay_range": [
+8,
+15
+],
+"short_construction_delay_range": [
+3,
+8
+],
+"destroyed_part_rebuild_cooldown_range": [
+4,
+18
+],
+"build_range_constraint": 1,
+"modules_build_priority_range": [
+-2,
+3
+],
+"units_build_priority_range": [
+-3,
+1
+],
+"research_build_priority_range": [
+-3,
+0
+],
+"default_attack_stance": "Aggressive",
+"defensive_probability": 0.2,
+"aggressive_probability": 0.2,
+"hunter_probability": 0.001,
+"chase_probability": 0.1,
+"flyby_probability": 0.1,
+"orbit_probability": 0.1,
+"frontal_probability": 0.005,
+"lateral_probability": 0.005,
+"time_between_attacks": {
+"toCommandCenter": [
+240,
+480
+],
+"toStation": [
+380,
+1300
+],
+"toFleet": [
+380,
+1300
+],
+"toExplorers": [
+380,
+1300
+],
+"toCollectors": [
+380,
+1300
+],
+"withStations": [
+380,
+1300
+],
+"withCommandCenter": [
+380,
+1300
+],
+"withLongRangeWeapons": [
+500,
+1540
+],
+"withWarp": [
+380,
+1300
+]
+},
+"secondary_attack_distance_from_enemy_cc": 20.0,
+"min_max_units_for_attack": [
+9,
+24
+],
+"min_units_per_formation": 5,
+"max_units_per_formation": 9,
+"min_defending_units": 9,
+"enemy_collectors_threshold": 12,
+"enemy_stations_threshold": 1,
+"enemy_modules_threshold": 30,
+"minimum_fleet_recall_distance": 20,
+"maximum_fleet_recall_distance": 60,
+"enemy_team_selection_criteria": [
+1,
+4,
+0
+],
+"enemy_team_selection_interval": [
+420,
+1800
+],
+"allow_warp_attack": 1,
+"dock_collectors_if_attacked": 1,
+"collectors_dock_time": [
+30,
+300
+],
+"kamikaze_unarmed_stations": 1,
+"main_station_percent_before_attack": 0.98,
+"max_enemy_strength_for_final_attack": 3,
+"minimum_attacker_at_player_base": 12,
+"frigate_warp_attack_chance": 0.25,
+"stations_warp_attack_chance": 0.1,
+"patrol_route_cube_size": [
+50,
+75
+],
+"units_per_patrol_route": 1,
+"minimum_expansion_resource_quantity": 30000,
+"migration_with_warp_chance": 0.2,
+"use_last_known_positions": 0,
+"memory_expired_threshold_range": [
+300,
+1500
+],
+"planner_options": {
+"goalSelection": 1,
+"planSelection": 1,
+"planSelectionWeight": 0.0,
+"categoryPreferenceWeight": 0.63953,
+"maxDepth": 12,
+"maxNodes": 2500
+},
+"category_priority_config": {
+"categoryOffsets": [
+{
+"category": 256,
+"priority": 13
+},
+{
+"category": 512,
+"priority": 7
+},
+{
+"category": 2,
+"priority": 0
+},
+{
+"category": 32,
+"priority": 11
+},
+{
+"category": 64,
+"priority": 9
+},
+{
+"category": 16,
+"priority": 4
+}
+]
+},
+"construction_channel_priority_config": {
+"modulesPriority": 7,
+"unitsPriority": 1,
+"researchPriority": 6
+},
+"category_priority_order": [
+32,
+64,
+256,
+512,
+16,
+2,
+4,
+128,
+4096
+],
+"disabled_operations": [],
+"disabled_goals": [],
+"disabled_categories": [],
+"fleet_type_requirements": {
+"Scout": 8,
+"SensorProbe": 1,
+"Platform": 3,
+"Collector": 16
+},
+"fleet_family_requirements": {
+"Interceptor": 18,
+"Bomber": 12,
+"Corvette": 8,
+"Frigate": 6
+},
+"modules_type_requirements": {
+"Armor": 12,
+"Engine": 6,
+"WeaponHardpoint": 6,
+"Facility": 2,
+"Research": 2,
+"DropPoint": 6,
+"Sensor": 2,
+"Storage": 6,
+"HardpointHeavy": 2,
+"Shield": 4,
+"SpaceSonar": 2,
+"WarpDrive": 1,
+"WarpDisruptor": 1,
+"Cloak": 1,
+"Weapon": 32,
+"RepairBay": 2
+},
+"modules_sub_type_requirements": {
+"FlameThrowerMid": 2,
+"AntiMissileMid": 4,
+"PointDefenseCannonMid": 2,
+"IonMid": 6,
+"Reactor": 8
+},
+"secondary_stations_limits": {
+"Start": {
+"maxSize": 0,
+"maxStations": 0
+},
+"Early": {
+"maxSize": 20,
+"maxStations": 3
+},
+"Mid": {
+"maxSize": 60,
+"maxStations": 3
+},
+"Late": {
+"maxSize": 110,
+"maxStations": 1
+},
+"End": {
+"maxSize": 200,
+"maxStations": 1
+}
+},
+"secondary_stations_category_limits": {
+"Resources": 1,
+"Support": 1,
+"Defense": 1,
+"Attack": 4,
+"Intelligence": 1
+},
+"granted_researches": {
+"Mid": [
+"R.T.LRM"
+],
+"Late": [
+"R.T.LRNB"
+]
+},
+"formation_type_probability": {
+"Wall": 0.6,
+"Delta": 0.2,
+"Claw": 0.2,
+"Sphere": 0.0,
+"Grouped": 0.0
+},
+"attack_formation_stance_probability": {
+"Free": 0.9,
+"Scatter": 0.075,
+"Keep": 0.0,
+"KeepClass": 0.025
+},
+"min_units_for_command_center_attack": {
+"Start": 8,
+"Early": 16,
+"Mid": 24,
+"Late": 32,
+"End": 40
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AI.DEFENSIVE",
+"name": "Defensive",
+"asset_name": "DATA Team Agent Personality Defensive",
+"weapon_category_hint_exclusive": 0,
+"maximum_stations_per_blueprint": 1,
+"stations_percent_before_attack": 0.7,
+"stations_turbo_enabled": false,
+"starting_resource_bonus": [
+250,
+4000
+],
+"blueprint_resource_bonus": [
+700,
+6000
+],
+"give_blueprint_resource_value": 0,
+"restart_resource_bonus": [
+700,
+6000
+],
+"give_resource_shortage_bonus": 0,
+"resource_shortage_bonus": [
+0,
+2000
+],
+"resource_shortage_threshold": 200,
+"resource_shortage_duration": 10,
+"resource_shortage_bonus_interval": 120,
+"energy_production_bonus": [
+10,
+50
+],
+"ignore_warp_requirements": 1,
+"ignore_research_center_concurrency_limit": 0,
+"auto_increase_crew_cap": 0,
+"bypass_modules_crew_cap_limit": 0,
+"bypass_units_crew_cap_limit": 0,
+"bypass_crew_cap_game_phase": 0,
+"auto_increase_energy_production": 0,
+"turbo_not_consume_energy": 0,
+"allow_modules_not_unlocked": 0,
+"priority_module_types": [],
+"priority_module_identifiers": [
+"DEF.001",
+"TUR.009"
+],
+"priority_research_identifiers": [],
+"modules_max_concurrent_build": 4,
+"max_queued_modules_of_same_type": 3,
+"units_max_concurrent_build": 4,
+"research_max_concurrent_build": 4,
+"max_module_queued": 4,
+"prioritize_secondary_station_constructions": 0,
+"long_construction_delay_range": [
+12,
+30
+],
+"short_construction_delay_range": [
+4,
+15
+],
+"destroyed_part_rebuild_cooldown_range": [
+4,
+18
+],
+"build_range_constraint": 1,
+"modules_build_priority_range": [
+-3,
+3
+],
+"units_build_priority_range": [
+-3,
+3
+],
+"research_build_priority_range": [
+-3,
+3
+],
+"default_attack_stance": "Defensive",
+"defensive_probability": 0.2,
+"aggressive_probability": 0.001,
+"hunter_probability": 0.4,
+"chase_probability": 0.1,
+"flyby_probability": 0.005,
+"orbit_probability": 0.1,
+"frontal_probability": 0.005,
+"lateral_probability": 0.005,
+"time_between_attacks": {
+"toCommandCenter": [
+240,
+480
+],
+"toStation": [
+380,
+1300
+],
+"toFleet": [
+380,
+1300
+],
+"toExplorers": [
+380,
+1300
+],
+"toCollectors": [
+380,
+1300
+],
+"withStations": [
+380,
+1300
+],
+"withCommandCenter": [
+380,
+1300
+],
+"withLongRangeWeapons": [
+380,
+1300
+],
+"withWarp": [
+380,
+1300
+]
+},
+"secondary_attack_distance_from_enemy_cc": 20.0,
+"min_max_units_for_attack": [
+4,
+4
+],
+"min_units_per_formation": 5,
+"max_units_per_formation": 5,
+"min_defending_units": 25,
+"enemy_collectors_threshold": 0,
+"enemy_stations_threshold": 0,
+"enemy_modules_threshold": 0,
+"minimum_fleet_recall_distance": 20,
+"maximum_fleet_recall_distance": 60,
+"enemy_team_selection_criteria": [
+0,
+3,
+4
+],
+"enemy_team_selection_interval": [
+420,
+1800
+],
+"allow_warp_attack": 0,
+"dock_collectors_if_attacked": 1,
+"collectors_dock_time": [
+60,
+300
+],
+"kamikaze_unarmed_stations": 0,
+"main_station_percent_before_attack": 0.9,
+"max_enemy_strength_for_final_attack": 3,
+"minimum_attacker_at_player_base": 12,
+"frigate_warp_attack_chance": 0.25,
+"stations_warp_attack_chance": 0.1,
+"patrol_route_cube_size": [
+80,
+110
+],
+"units_per_patrol_route": 4,
+"minimum_expansion_resource_quantity": 30000,
+"migration_with_warp_chance": 0.2,
+"use_last_known_positions": 1,
+"memory_expired_threshold_range": [
+768,
+1903
+],
+"planner_options": {
+"goalSelection": 1,
+"planSelection": 1,
+"planSelectionWeight": 0.5,
+"categoryPreferenceWeight": 0.43528,
+"maxDepth": 13,
+"maxNodes": 1251
+},
+"category_priority_config": {
+"categoryOffsets": [
+{
+"category": 512,
+"priority": 16
+},
+{
+"category": 256,
+"priority": -17
+},
+{
+"category": 2,
+"priority": 11
+}
+]
+},
+"construction_channel_priority_config": {
+"modulesPriority": 6,
+"unitsPriority": 11,
+"researchPriority": 3
+},
+"category_priority_order": [
+512,
+64,
+2,
+16,
+128,
+4096,
+4
+],
+"disabled_operations": [],
+"disabled_goals": [],
+"disabled_categories": [
+256
+],
+"fleet_type_requirements": {
+"Scout": 4,
+"SensorProbe": 3,
+"Platform": 12
+},
+"fleet_family_requirements": {
+"Interceptor": 10,
+"Bomber": 6,
+"Corvette": 3
+},
+"modules_type_requirements": null,
+"modules_sub_type_requirements": {
+"FlameThrowerMid": 4,
+"AntiMissileMid": 1
+},
+"secondary_stations_limits": {
+"Start": {
+"maxSize": 15,
+"maxStations": 0
+},
+"Early": {
+"maxSize": 26,
+"maxStations": 2
+},
+"Mid": {
+"maxSize": 41,
+"maxStations": 3
+},
+"Late": {
+"maxSize": 75,
+"maxStations": 4
+},
+"End": {
+"maxSize": 100,
+"maxStations": 4
+}
+},
+"secondary_stations_category_limits": {
+"Defense": 6,
+"Attack": 0,
+"Support": 3,
+"Resources": 3
+},
+"granted_researches": {},
+"formation_type_probability": {},
+"attack_formation_stance_probability": {},
+"min_units_for_command_center_attack": {
+"Start": 8,
+"Early": 15,
+"Mid": 22,
+"Late": 30,
+"End": 40
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AI.PASSIVE",
+"name": "Passive",
+"asset_name": "DATA Team Agent Personality Passive",
+"weapon_category_hint_exclusive": 0,
+"maximum_stations_per_blueprint": 1,
+"stations_percent_before_attack": 0.7,
+"stations_turbo_enabled": false,
+"starting_resource_bonus": [
+250,
+6000
+],
+"blueprint_resource_bonus": [
+500,
+8000
+],
+"give_blueprint_resource_value": 0,
+"restart_resource_bonus": [
+500,
+8000
+],
+"give_resource_shortage_bonus": 0,
+"resource_shortage_bonus": [
+0,
+2000
+],
+"resource_shortage_threshold": 200,
+"resource_shortage_duration": 10,
+"resource_shortage_bonus_interval": 120,
+"energy_production_bonus": [
+8,
+50
+],
+"ignore_warp_requirements": 0,
+"ignore_research_center_concurrency_limit": 0,
+"auto_increase_crew_cap": 0,
+"bypass_modules_crew_cap_limit": 0,
+"bypass_units_crew_cap_limit": 0,
+"bypass_crew_cap_game_phase": 0,
+"auto_increase_energy_production": 0,
+"turbo_not_consume_energy": 0,
+"allow_modules_not_unlocked": 0,
+"priority_module_types": [],
+"priority_module_identifiers": [],
+"priority_research_identifiers": [
+"R.T.RUFUS",
+""
+],
+"modules_max_concurrent_build": 5,
+"max_queued_modules_of_same_type": 3,
+"units_max_concurrent_build": 1,
+"research_max_concurrent_build": 2,
+"max_module_queued": 6,
+"prioritize_secondary_station_constructions": 0,
+"long_construction_delay_range": [
+12,
+30
+],
+"short_construction_delay_range": [
+4,
+15
+],
+"destroyed_part_rebuild_cooldown_range": [
+4,
+18
+],
+"build_range_constraint": 1,
+"modules_build_priority_range": [
+-3,
+3
+],
+"units_build_priority_range": [
+-3,
+3
+],
+"research_build_priority_range": [
+-3,
+3
+],
+"default_attack_stance": "Passive",
+"defensive_probability": 0.2,
+"aggressive_probability": 0.2,
+"hunter_probability": 0.4,
+"chase_probability": 0.1,
+"flyby_probability": 0.005,
+"orbit_probability": 0.1,
+"frontal_probability": 0.005,
+"lateral_probability": 0.005,
+"time_between_attacks": {
+"toCommandCenter": [
+240,
+480
+],
+"toStation": [
+380,
+1300
+],
+"toFleet": [
+380,
+1300
+],
+"toExplorers": [
+380,
+1300
+],
+"toCollectors": [
+380,
+1300
+],
+"withStations": [
+380,
+1300
+],
+"withCommandCenter": [
+380,
+1300
+],
+"withLongRangeWeapons": [
+380,
+1300
+],
+"withWarp": [
+380,
+1300
+]
+},
+"secondary_attack_distance_from_enemy_cc": 20.0,
+"min_max_units_for_attack": [
+4,
+6
+],
+"min_units_per_formation": 5,
+"max_units_per_formation": 7,
+"min_defending_units": 4,
+"enemy_collectors_threshold": 0,
+"enemy_stations_threshold": 0,
+"enemy_modules_threshold": 0,
+"minimum_fleet_recall_distance": 20,
+"maximum_fleet_recall_distance": 1000,
+"enemy_team_selection_criteria": [
+0
+],
+"enemy_team_selection_interval": [
+420,
+1800
+],
+"allow_warp_attack": 0,
+"dock_collectors_if_attacked": 1,
+"collectors_dock_time": [
+60,
+300
+],
+"kamikaze_unarmed_stations": 0,
+"main_station_percent_before_attack": 0.9,
+"max_enemy_strength_for_final_attack": 3,
+"minimum_attacker_at_player_base": 12,
+"frigate_warp_attack_chance": 0.25,
+"stations_warp_attack_chance": 0.1,
+"patrol_route_cube_size": [
+80,
+110
+],
+"units_per_patrol_route": 4,
+"minimum_expansion_resource_quantity": 30000,
+"migration_with_warp_chance": 0.2,
+"use_last_known_positions": 1,
+"memory_expired_threshold_range": [
+60,
+369
+],
+"planner_options": {
+"goalSelection": 1,
+"planSelection": 3,
+"planSelectionWeight": 0.39968,
+"categoryPreferenceWeight": 0.61974,
+"maxDepth": 8,
+"maxNodes": 1251
+},
+"category_priority_config": {
+"categoryOffsets": [
+{
+"category": 256,
+"priority": -20
+},
+{
+"category": 512,
+"priority": -16
+},
+{
+"category": 2,
+"priority": 14
+}
+]
+},
+"construction_channel_priority_config": {
+"modulesPriority": 0,
+"unitsPriority": 0,
+"researchPriority": 0
+},
+"category_priority_order": [
+2,
+4,
+512,
+16,
+128,
+4096,
+64
+],
+"disabled_operations": [],
+"disabled_goals": [],
+"disabled_categories": [
+320
+],
+"fleet_type_requirements": {
+"SensorProbe": 4,
+"ContainerShip": 10,
+"Deployer": 4
+},
+"fleet_family_requirements": {},
+"modules_type_requirements": null,
+"modules_sub_type_requirements": {},
+"secondary_stations_limits": {
+"Start": {
+"maxSize": 20,
+"maxStations": 2
+},
+"Early": {
+"maxSize": 30,
+"maxStations": 2
+},
+"Mid": {
+"maxSize": 30,
+"maxStations": 2
+},
+"Late": {
+"maxSize": 30,
+"maxStations": 4
+},
+"End": {
+"maxSize": 30,
+"maxStations": 6
+}
+},
+"secondary_stations_category_limits": {
+"Attack": 0,
+"Defense": 0,
+"Resources": 3
+},
+"granted_researches": {},
+"formation_type_probability": {},
+"attack_formation_stance_probability": {},
+"min_units_for_command_center_attack": {
+"Start": 8,
+"Early": 15,
+"Mid": 22,
+"Late": 30,
+"End": 40
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AI.ROGUE",
+"name": "Rogue",
+"asset_name": "DATA Rogue Agent Personality",
+"weapon_category_hint_exclusive": 0,
+"maximum_stations_per_blueprint": 1,
+"stations_percent_before_attack": 0.7,
+"stations_turbo_enabled": false,
+"starting_resource_bonus": [
+0,
+6000
+],
+"blueprint_resource_bonus": [
+0,
+8000
+],
+"give_blueprint_resource_value": 0,
+"restart_resource_bonus": [
+0,
+8000
+],
+"give_resource_shortage_bonus": 0,
+"resource_shortage_bonus": [
+0,
+2000
+],
+"resource_shortage_threshold": 200,
+"resource_shortage_duration": 10,
+"resource_shortage_bonus_interval": 120,
+"energy_production_bonus": [
+0,
+50
+],
+"ignore_warp_requirements": 0,
+"ignore_research_center_concurrency_limit": 0,
+"auto_increase_crew_cap": 0,
+"bypass_modules_crew_cap_limit": 0,
+"bypass_units_crew_cap_limit": 0,
+"bypass_crew_cap_game_phase": 0,
+"auto_increase_energy_production": 0,
+"turbo_not_consume_energy": 0,
+"allow_modules_not_unlocked": 0,
+"priority_module_types": [],
+"priority_module_identifiers": [],
+"priority_research_identifiers": [],
+"modules_max_concurrent_build": 8,
+"max_queued_modules_of_same_type": 3,
+"units_max_concurrent_build": 20,
+"research_max_concurrent_build": 12,
+"max_module_queued": 4,
+"prioritize_secondary_station_constructions": 0,
+"long_construction_delay_range": [
+12,
+30
+],
+"short_construction_delay_range": [
+4,
+15
+],
+"destroyed_part_rebuild_cooldown_range": [
+4,
+18
+],
+"build_range_constraint": 1,
+"modules_build_priority_range": [
+-3,
+3
+],
+"units_build_priority_range": [
+-3,
+4
+],
+"research_build_priority_range": [
+-3,
+3
+],
+"default_attack_stance": "Aggressive",
+"defensive_probability": 0.2,
+"aggressive_probability": 0.2,
+"hunter_probability": 0.01,
+"chase_probability": 0.1,
+"flyby_probability": 0.005,
+"orbit_probability": 0.1,
+"frontal_probability": 0.005,
+"lateral_probability": 0.005,
+"time_between_attacks": {
+"toCommandCenter": [
+240,
+480
+],
+"toStation": [
+380,
+1300
+],
+"toFleet": [
+380,
+1300
+],
+"toExplorers": [
+380,
+1300
+],
+"toCollectors": [
+380,
+1300
+],
+"withStations": [
+380,
+1300
+],
+"withCommandCenter": [
+380,
+1300
+],
+"withLongRangeWeapons": [
+380,
+1300
+],
+"withWarp": [
+380,
+1300
+]
+},
+"secondary_attack_distance_from_enemy_cc": 20.0,
+"min_max_units_for_attack": [
+6,
+9
+],
+"min_units_per_formation": 5,
+"max_units_per_formation": 7,
+"min_defending_units": 10,
+"enemy_collectors_threshold": 12,
+"enemy_stations_threshold": 2,
+"enemy_modules_threshold": 30,
+"minimum_fleet_recall_distance": 20,
+"maximum_fleet_recall_distance": 40,
+"enemy_team_selection_criteria": [
+6,
+0,
+3
+],
+"enemy_team_selection_interval": [
+420,
+1800
+],
+"allow_warp_attack": 1,
+"dock_collectors_if_attacked": 1,
+"collectors_dock_time": [
+60,
+300
+],
+"kamikaze_unarmed_stations": 1,
+"main_station_percent_before_attack": 0.9,
+"max_enemy_strength_for_final_attack": 3,
+"minimum_attacker_at_player_base": 12,
+"frigate_warp_attack_chance": 0.25,
+"stations_warp_attack_chance": 0.1,
+"patrol_route_cube_size": [
+80,
+110
+],
+"units_per_patrol_route": 4,
+"minimum_expansion_resource_quantity": 30000,
+"migration_with_warp_chance": 0.2,
+"use_last_known_positions": 1,
+"memory_expired_threshold_range": [
+400,
+900
+],
+"planner_options": {
+"goalSelection": 1,
+"planSelection": 1,
+"planSelectionWeight": 0.5,
+"categoryPreferenceWeight": 0.5,
+"maxDepth": 16,
+"maxNodes": 2000
+},
+"category_priority_config": {
+"categoryOffsets": [
+{
+"category": 256,
+"priority": 17
+},
+{
+"category": 512,
+"priority": 0
+},
+{
+"category": 64,
+"priority": 15
+}
+]
+},
+"construction_channel_priority_config": {
+"modulesPriority": 0,
+"unitsPriority": 0,
+"researchPriority": 0
+},
+"category_priority_order": [
+64,
+256,
+16,
+512,
+128,
+4096
+],
+"disabled_operations": [],
+"disabled_goals": [],
+"disabled_categories": [],
+"fleet_type_requirements": {
+"Scout": 2
+},
+"fleet_family_requirements": {
+"Interceptor": 18,
+"Bomber": 12,
+"Frigate": 6
+},
+"modules_type_requirements": null,
+"modules_sub_type_requirements": {},
+"secondary_stations_limits": {
+"Start": {
+"maxSize": 15,
+"maxStations": 0
+},
+"Early": {
+"maxSize": 33,
+"maxStations": 2
+},
+"Mid": {
+"maxSize": 61,
+"maxStations": 4
+},
+"Late": {
+"maxSize": 100,
+"maxStations": 6
+},
+"End": {
+"maxSize": -1,
+"maxStations": -1
+}
+},
+"secondary_stations_category_limits": {},
+"granted_researches": {},
+"formation_type_probability": {},
+"attack_formation_stance_probability": {},
+"min_units_for_command_center_attack": {
+"Start": 8,
+"Early": 15,
+"Mid": 22,
+"Late": 30,
+"End": 40
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

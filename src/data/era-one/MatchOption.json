@@ -1,0 +1,506 @@
+[
+{
+"game_id": "ai_personality:Aggressive",
+"setting": "ai_personality",
+"option": "Aggressive",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+AIPersonality",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ai_personality:Balanced",
+"setting": "ai_personality",
+"option": "Balanced",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+AIPersonality",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ai_personality:Defensive",
+"setting": "ai_personality",
+"option": "Defensive",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+AIPersonality",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ai_personality:Passive",
+"setting": "ai_personality",
+"option": "Passive",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+AIPersonality",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "attack_frequency:High",
+"setting": "attack_frequency",
+"option": "High",
+"value": 3,
+"enum": "EraOne.Game.Services.AI.Agents.TeamAgent+AttackFrequency",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "attack_frequency:Insane",
+"setting": "attack_frequency",
+"option": "Insane",
+"value": 4,
+"enum": "EraOne.Game.Services.AI.Agents.TeamAgent+AttackFrequency",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "attack_frequency:Low",
+"setting": "attack_frequency",
+"option": "Low",
+"value": 1,
+"enum": "EraOne.Game.Services.AI.Agents.TeamAgent+AttackFrequency",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "attack_frequency:Nope",
+"setting": "attack_frequency",
+"option": "Nope",
+"value": 0,
+"enum": "EraOne.Game.Services.AI.Agents.TeamAgent+AttackFrequency",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "attack_frequency:Normal",
+"setting": "attack_frequency",
+"option": "Normal",
+"value": 2,
+"enum": "EraOne.Game.Services.AI.Agents.TeamAgent+AttackFrequency",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "crew_module_cap:High",
+"setting": "crew_module_cap",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+CrewModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "crew_module_cap:Insane",
+"setting": "crew_module_cap",
+"option": "Insane",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+CrewModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "crew_module_cap:Low",
+"setting": "crew_module_cap",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+CrewModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "crew_module_cap:Meltdown",
+"setting": "crew_module_cap",
+"option": "Meltdown",
+"value": 4,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+CrewModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "crew_module_cap:Normal",
+"setting": "crew_module_cap",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+CrewModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "difficulty:Easy",
+"setting": "difficulty",
+"option": "Easy",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameSettings+GameDifficulty",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "difficulty:Hard",
+"setting": "difficulty",
+"option": "Hard",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameSettings+GameDifficulty",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "difficulty:Insane",
+"setting": "difficulty",
+"option": "Insane",
+"value": 4,
+"enum": "EraOne.Game.Data.Settings.GameSettings+GameDifficulty",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "difficulty:Normal",
+"setting": "difficulty",
+"option": "Normal",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameSettings+GameDifficulty",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "difficulty:VeryEasy",
+"setting": "difficulty",
+"option": "VeryEasy",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameSettings+GameDifficulty",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "eclipse_duration:High",
+"setting": "eclipse_duration",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+EclipseDuration",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "eclipse_duration:Low",
+"setting": "eclipse_duration",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+EclipseDuration",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "eclipse_duration:Normal",
+"setting": "eclipse_duration",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+EclipseDuration",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:Deathmatch",
+"setting": "game_mode",
+"option": "Deathmatch",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:EnemyWaves",
+"setting": "game_mode",
+"option": "EnemyWaves",
+"value": 4,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:ResourceRace",
+"setting": "game_mode",
+"option": "ResourceRace",
+"value": 6,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:Sandbox",
+"setting": "game_mode",
+"option": "Sandbox",
+"value": 7,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:Scenario",
+"setting": "game_mode",
+"option": "Scenario",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:Survival",
+"setting": "game_mode",
+"option": "Survival",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:Training",
+"setting": "game_mode",
+"option": "Training",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_mode:WarMachinesBattle",
+"setting": "game_mode",
+"option": "WarMachinesBattle",
+"value": 5,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+GameMode",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_speed:Fast",
+"setting": "game_speed",
+"option": "Fast",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameSpeed+GameSpeedSetting",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_speed:Insane",
+"setting": "game_speed",
+"option": "Insane",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameSpeed+GameSpeedSetting",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_speed:Normal",
+"setting": "game_speed",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameSpeed+GameSpeedSetting",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "game_speed:Tactical",
+"setting": "game_speed",
+"option": "Tactical",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameSpeed+GameSpeedSetting",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "map_resources:High",
+"setting": "map_resources",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.MapResources+MapResourcesAmount",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "map_resources:Low",
+"setting": "map_resources",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.MapResources+MapResourcesAmount",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "map_resources:Normal",
+"setting": "map_resources",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.MapResources+MapResourcesAmount",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "research_module_cap:Progressive",
+"setting": "research_module_cap",
+"option": "Progressive",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+ResearchModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "research_module_cap:Unlimited",
+"setting": "research_module_cap",
+"option": "Unlimited",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+ResearchModuleCap",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "settings_preset:Custom",
+"setting": "settings_preset",
+"option": "Custom",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+SettingsPreset",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "settings_preset:Normal",
+"setting": "settings_preset",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+SettingsPreset",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "settings_preset:Tactical",
+"setting": "settings_preset",
+"option": "Tactical",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+SettingsPreset",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "settings_preset:Warlike",
+"setting": "settings_preset",
+"option": "Warlike",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+SettingsPreset",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_resources:High",
+"setting": "starting_resources",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingResources",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_resources:Insane",
+"setting": "starting_resources",
+"option": "Insane",
+"value": 3,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingResources",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_resources:Low",
+"setting": "starting_resources",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingResources",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_resources:Normal",
+"setting": "starting_resources",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingResources",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_ships:High",
+"setting": "starting_ships",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingShips",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_ships:Low",
+"setting": "starting_ships",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingShips",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "starting_ships:Normal",
+"setting": "starting_ships",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+StartingShips",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wreck_lifetime:High",
+"setting": "wreck_lifetime",
+"option": "High",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.RemainSettings+WreckLifetimeLength",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wreck_lifetime:Low",
+"setting": "wreck_lifetime",
+"option": "Low",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.RemainSettings+WreckLifetimeLength",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wreck_lifetime:Normal",
+"setting": "wreck_lifetime",
+"option": "Normal",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.RemainSettings+WreckLifetimeLength",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wrecks_contain_research:Disabled",
+"setting": "wrecks_contain_research",
+"option": "Disabled",
+"value": 2,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+WrecksContainResearch",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wrecks_contain_research:Enabled",
+"setting": "wrecks_contain_research",
+"option": "Enabled",
+"value": 0,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+WrecksContainResearch",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "wrecks_contain_research:MapOnly",
+"setting": "wrecks_contain_research",
+"option": "MapOnly",
+"value": 1,
+"enum": "EraOne.Game.Data.Settings.GameStartSettings+WrecksContainResearch",
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

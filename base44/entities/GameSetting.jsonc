@@ -493,6 +493,90 @@
     "team_score_dps_multiplier": {
       "type": "number"
     },
+    "speech_local_position": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "advanced_pathfinder_disable_threshold": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "default_frigates_formation_spacing": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "default_platforms_formation_spacing": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "fighter_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "corvettes_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "utilities_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "frigates_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "platforms_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "delta_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "wall_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "claw_formation_grid": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "constructable_remains_yield": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "harvestable_remains_yield": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
     "score_calculation_weights": {
       "type": "object",
       "properties": {

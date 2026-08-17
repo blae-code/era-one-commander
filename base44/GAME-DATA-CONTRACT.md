@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 — 37 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 45 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -11,7 +11,8 @@ each other. Kept in `base44/` because it is the backend's statement of its own s
 
 | Owner | Paths | Notes |
 |---|---|---|
-| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 2 shipped):** **Maps** — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
+| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 3 shipped):** `AiPersonality` (AI dossier), `AiLogicGraph` + `AiFact/AiGoal/AiOperation` + `AiColorScheme` (render the AI's decision graphs), `MatchOption` (match-setup matrix), `ScoreWeight`; functions `economyModel`, `scoreEstimate`.
+* **Backend → frontend (Phase 2 shipped):** **Maps** — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
 * **Backend → frontend (2026-08-17, Phase 0+1 shipped):** `StatDefinition` (real stat names — use in every modifier chip), `Effectiveness` + `dps_vs_class` (counters matrix / heatmap), decoded unit doctrine + flight fields, turret costs, and functions `unitLoadout` (loadout configurator with ranked fits) and `engagement` (TTK / modifier stack). Suggested wiring: Compare page → `Unit`/`Module` + `engagement`; Fleet Analysis → `fleetPlan`; a Loadout panel on Unit detail → `unitLoadout`; `gameFileImport.importEntityRows` → `upsertEntityRows`.
 * — change them upstream in era-one-data, never by hand here. |
 | **Frontend** (Base44 builder / Blae) | `src/pages/**`, `src/components/**`, `src/index.css`, `tailwind.config.js`, `src/App.jsx` routes, `src/components/Layout.jsx` nav | The backend only touched `src/pages/Database.jsx`, `src/pages/GameData.jsx`, `src/pages/Dashboard.jsx` and `src/components/database/GameEntityDetail.jsx` once to prove the data flows; from here on they are yours to restyle or replace. |
@@ -62,6 +63,11 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `Remain` | 27 | Wreck types (WRK.*) | `name`, `info`, `max_health`, `life_span` (s), `base_signature_noise` — yields: `GameSetting.harvestable_remains_yield` |
 | **`EnemySpawner` / `EnemyWave` / `EnemyUpgrade`** | 2 / 32 / 16 | **Wave tables** of the two enemy HQs (`SPAWN.PIR`, `SPAWN.CMX`) | wave: `index`, `name`, `time_to_spawn` (+`random_time_to_spawn`), `units {slot: {count, random_extra, unit_id}}`, `unit_total`, `unit_total_max`, `possible_formations[]`, `formation_stance`, `stations_to_spawn`, `difficulty_deltas {VeryEasy…Insane: {slot: ±n}}`, `trade_chance`, `trade_resources`, `replaces_wave` + `alternative_probability` for alternates; upgrade: `time_to_upgrade` → `research_ids[]` the AI receives; spawner: `initial_delay`, `mode`, `only_spawn_when_enemy_detected` |
 | `ArenaTurn` | 9 | Battle-arena turns | `build_time_by_difficulty {VeryEasy…Insane}`, `reward_for_victory`, `max_combat_time`, `opponent_blueprints[]` (→ GameBlueprint ids `shipped:BattleArenaBlueprints/N_*`), `support_wave_units`, trade fields |
+| **`AiPersonality`** | 5 | Passive · Defensive · Balanced · Aggressive · Rogue — every AI knob (~95 fields) | `starting_resource_bonus [min,max]`, `min_max_units_for_attack`, `default_attack_stance`, `priority_module_identifiers[]`, `priority_research_identifiers[]`, `stations_percent_before_attack`, `flyby/orbit/chase/frontal/lateral_probability`, `defensive/aggressive/hunter_probability`, `time_between_attacks`, `frigate_warp_attack_chance`, `fleet_type_requirements {UnitType: n}`, `secondary_stations_limits {Start…End: {maxSize,maxStations}}`, `min_units_for_command_center_attack {phase: n}`, `granted_researches`, `formation_type_probability`, build concurrency limits, `disabled_operations/goals` |
+| `AiFact` / `AiGoal` / `AiOperation` | 86 / 15 / 42 | GOAP vocabulary | `name`, `category` (AgentCategory), `color`; operations: `value` (utility 0–100), `cost`, `construction_channel` |
+| **`AiLogicGraph`** | 13 | The AI decision graphs, renderable | `name`, `faction`, `category`, `nodes[{guid, kind: fact·operation·goal·logic·linked_fact·timer_fact, identifier, name, x, y, enabled, logic_type}]`, `edges[{from, to, negated, kind: condition·operand}]`, `comments[]` (designer notes) — palette in `AiColorScheme.category_colors` |
+| `MatchOption` | 56 | Every match-setup enum member | `setting` (game_mode · settings_preset · ai_personality · difficulty · game_speed · starting_resources · starting_ships · crew_module_cap · research_module_cap · eclipse_duration · wrecks_contain_research · map_resources · wreck_lifetime · attack_frequency), `option`, `value` |
+| `ScoreWeight` | 20 | Score formula weights | `id` (TierWeight, ArmamentWeight, …), `weight` (+ team score multipliers) |
 | `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
 
 **`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
@@ -136,6 +142,10 @@ DPS per module/unit = Σ over `weapons` of `Weapon.dps` (the game's own per-weap
 Stances: `passive|reactive|defensive|aggressive|hunter`; styles: `flyby|hold|chase|orbit`; formations: `claw|delta|sphere|wall|grouped` (base `FM.FORMATION` bonus is added automatically); `level` 1–10 applies UnitLevel upgrades. Additive fractions stack per stat (`1 + Σadd`), then Multiply/Set. **Armor is reported, not applied** — the game's armor formula is not in the extracted data; present it alongside.
 
 **`researchImpact`** — `{ targets: ["R.U.FRS3"], have?: [...], cumulative?: true }` → `{ path[{game_id, name, depth, cost…, modifiers[], affected_units[], affected_modules[], unlocks_*}], totals, cumulative_by_entity {CMX_FRI3: {MaxSpeed: 0.33, Power: 0.21}}, unlocked {modules, units, weapons, turrets}, missing }` — class/type filters resolved to concrete ids; cumulative sums Add/Subtract fractions along the chain.
+
+**`economyModel`** — `{ modules:[{game_id,count}], units:[…], resource_id?: "RU.MET" }` → `{ resource, totals {extraction_ru_per_s, refining_ru_per_s, production_ru_per_s, gross_ru_per_s, ru_per_minute, cargo_capacity, minutes_to_fill_storage, payback_minutes, energy_*, crew, cost_resources}, lines[], settings {harvestable_remains_yield, …}, model }` — the model is stated in the response.
+
+**`scoreEstimate`** — `{ game_ids:[…] }` → per entity `{ score (game's own), components {Weight: {value, weight}}, contributions }` — weight × observable, side by side with the actual score (the combination formula is not extracted).
 
 All functions read the entities as service role; they need the data imported first (`/gamedata`).
 

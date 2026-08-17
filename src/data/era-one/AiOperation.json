@@ -1,0 +1,758 @@
+[
+{
+"game_id": "OPER.0000",
+"name": "Relax",
+"numeric_id": 0,
+"category": "None",
+"color": [
+0.2264,
+0.2168,
+0.2168,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0021",
+"name": "Build Start Collectors",
+"numeric_id": 21,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0022",
+"name": "Build Collectors",
+"numeric_id": 22,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0023",
+"name": "Order Collectors To Harvest",
+"numeric_id": 23,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0024",
+"name": "Build Sensor Probes",
+"numeric_id": 24,
+"category": "Fleet|Exploration",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0025",
+"name": "Build Deployers",
+"numeric_id": 25,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0026",
+"name": "Extract Resources",
+"numeric_id": 26,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0027",
+"name": "Build Interceptors",
+"numeric_id": 27,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0028",
+"name": "Build Corvettes",
+"numeric_id": 28,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0029",
+"name": "Build Frigates",
+"numeric_id": 29,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0030",
+"name": "Build Bombers",
+"numeric_id": 30,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0031",
+"name": "Build Scouts",
+"numeric_id": 31,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0032",
+"name": "Build Probes",
+"numeric_id": 32,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0033",
+"name": "Create Formations",
+"numeric_id": 33,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 30.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0034",
+"name": "Recall Idle Units",
+"numeric_id": 34,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 70.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0035",
+"name": "Build Combat Units",
+"numeric_id": 35,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 40.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0036",
+"name": "Attack With Stations",
+"numeric_id": 36,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 70.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0037",
+"name": "Attack Enemy Collectors",
+"numeric_id": 37,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0038",
+"name": "Attack Enemy Stations",
+"numeric_id": 38,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 50.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0039",
+"name": "Attack Enemy Command Center",
+"numeric_id": 39,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 100.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0040",
+"name": "Attack Enemy Explorers",
+"numeric_id": 40,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 20.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0041",
+"name": "Convert To Hunters",
+"numeric_id": 41,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0042",
+"name": "Defend Command Center",
+"numeric_id": 42,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 20.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0043",
+"name": "Attack Enemy Fleet",
+"numeric_id": 43,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 30.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0044",
+"name": "Destroy Enemy Supply",
+"numeric_id": 44,
+"category": "Fleet|Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0045",
+"name": "Push Attacking Units",
+"numeric_id": 45,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0046",
+"name": "Defend Friend Command Centers",
+"numeric_id": 46,
+"category": "Defense|Diplomacy",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0047",
+"name": "Construct Blueprint",
+"numeric_id": 47,
+"category": "Modules",
+"color": [
+0.1478,
+0.2136,
+0.3868,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0048",
+"name": "Send Exploration Units",
+"numeric_id": 48,
+"category": "Exploration|Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0049",
+"name": "Fortify Command Center",
+"numeric_id": 49,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 2.0,
+"construction_channel": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0050",
+"name": "Arm Command Center",
+"numeric_id": 50,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 10.0,
+"construction_channel": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0051",
+"name": "Recycle",
+"numeric_id": 51,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0052",
+"name": "Give Start Resources",
+"numeric_id": 52,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0053",
+"name": "Deploy Mining Stations",
+"numeric_id": 53,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0054",
+"name": "Attack With Long Range Weapons",
+"numeric_id": 54,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 50.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0055",
+"name": "Stop Incoming Long Range Attack",
+"numeric_id": 55,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 100.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0056",
+"name": "Defend Stations",
+"numeric_id": 56,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0057",
+"name": "Attack With Warp",
+"numeric_id": 57,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 30.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0058",
+"name": "Attack With Command Center",
+"numeric_id": 58,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 60.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0059",
+"name": "Send Patrol Units",
+"numeric_id": 59,
+"category": "Exploration|Defense|Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 2.0,
+"value": 20.0,
+"construction_channel": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0060",
+"name": "Migrate To Expansion Site",
+"numeric_id": 60,
+"category": "Resources|Movement",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 50.0,
+"value": 200.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "OPER.0061",
+"name": "Send Collectors To Remote Drop Points",
+"numeric_id": 61,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"cost": 1.0,
+"value": 0.0,
+"construction_channel": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

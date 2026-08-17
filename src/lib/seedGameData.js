@@ -44,6 +44,14 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'EnemyWave', file: 'EnemyWave', keyed: true },
   { entity: 'EnemyUpgrade', file: 'EnemyUpgrade', keyed: true },
   { entity: 'ArenaTurn', file: 'ArenaTurn', keyed: true },
+  { entity: 'AiPersonality', file: 'AiPersonality', keyed: true },
+  { entity: 'AiFact', file: 'AiFact', keyed: true },
+  { entity: 'AiGoal', file: 'AiGoal', keyed: true },
+  { entity: 'AiOperation', file: 'AiOperation', keyed: true },
+  { entity: 'AiLogicGraph', file: 'AiLogicGraph', keyed: true },
+  { entity: 'AiColorScheme', file: 'AiColorScheme', keyed: true },
+  { entity: 'MatchOption', file: 'MatchOption', keyed: true },
+  { entity: 'ScoreWeight', file: 'ScoreWeight', keyed: true },
 ];
 
 const CHUNK = 100;

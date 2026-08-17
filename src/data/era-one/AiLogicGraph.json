@@ -1,0 +1,4083 @@
+[
+{
+"game_id": "LOGIC.PLAYER_AGENT_ATTACK",
+"name": "Player Agent Attack Logic",
+"faction": "CMX",
+"category": "Attack",
+"node_count": 60,
+"edge_count": 41,
+"facts": 40,
+"operations": 11,
+"goals": 7,
+"nodes": [
+{
+"guid": "7201d7e5405d464e94deff4f746f89b7",
+"kind": "fact",
+"identifier": "FACT.0041",
+"enabled": true,
+"x": 661.0,
+"y": 220.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Command Center Alive"
+},
+{
+"guid": "9a2c06a44dd44cfeb210fe202d68a1c1",
+"kind": "fact",
+"identifier": "FACT.0053",
+"enabled": true,
+"x": 686.0,
+"y": 484.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Push Range"
+},
+{
+"guid": "642a37ad2e244b659fb92ab36bf47874",
+"kind": "fact",
+"identifier": "FACT.0053",
+"enabled": true,
+"x": 1211.0,
+"y": 484.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Push Range"
+},
+{
+"guid": "13591a431cef49dfaa3891257121baf2",
+"kind": "fact",
+"identifier": "FACT.0059",
+"enabled": true,
+"x": 328.0,
+"y": 1061.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Explorers Deployed"
+},
+{
+"guid": "7e9883fdeb8147c78b8a41902ff800ea",
+"kind": "fact",
+"identifier": "FACT.0046",
+"enabled": true,
+"x": 328.0,
+"y": 1321.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Interceptors"
+},
+{
+"guid": "6ed1079b41464025978f680eac564ef1",
+"kind": "fact",
+"identifier": "FACT.0059",
+"enabled": true,
+"x": 967.0,
+"y": 1194.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Explorers Deployed"
+},
+{
+"guid": "c79d82f881714c1f83c5d8e4a1686691",
+"kind": "fact",
+"identifier": "FACT.0072",
+"enabled": true,
+"x": 957.0,
+"y": 854.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Stations"
+},
+{
+"guid": "0ba69f4ff7a84bff9613d232ed92c853",
+"kind": "fact",
+"identifier": "FACT.0069",
+"enabled": true,
+"x": 328.0,
+"y": 1602.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Fleet Deployed"
+},
+{
+"guid": "81016a0caf0f49aeb8bd0efa89c6b1f7",
+"kind": "fact",
+"identifier": "FACT.0069",
+"enabled": true,
+"x": 977.0,
+"y": 1605.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Fleet Deployed"
+},
+{
+"guid": "6b21d7130d5f46309c00a560c10d5331",
+"kind": "fact",
+"identifier": "FACT.0074",
+"enabled": true,
+"x": 328.0,
+"y": 1991.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Storages"
+},
+{
+"guid": "9abc322bd0a5497da6a0e7874ee4ad65",
+"kind": "fact",
+"identifier": "FACT.0074",
+"enabled": true,
+"x": 1016.0,
+"y": 2000.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Storages"
+},
+{
+"guid": "50c82103011d4c10b4b3333b969a7d20",
+"kind": "fact",
+"identifier": "FACT.0056",
+"enabled": true,
+"x": 114.60001,
+"y": 218.20001,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Can Attack Command Center"
+},
+{
+"guid": "f0d84f94da904f96b4cdd52fa79230cb",
+"kind": "fact",
+"identifier": "FACT.0054",
+"enabled": true,
+"x": 124.0,
+"y": 779.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Stations Deployed"
+},
+{
+"guid": "a4486ac0627c47bca4f01d65045e0d2a",
+"kind": "fact",
+"identifier": "FACT.0054",
+"enabled": true,
+"x": 957.0,
+"y": 946.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Stations Deployed"
+},
+{
+"guid": "5a65f4058da542f5b220c1de4c30188e",
+"kind": "fact",
+"identifier": "FACT.0060",
+"enabled": true,
+"x": 1732.0,
+"y": 871.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Inactive Attack Stations"
+},
+{
+"guid": "fa34beee3fe645d0b9d70740b09e8af1",
+"kind": "fact",
+"identifier": "FACT.0072",
+"enabled": true,
+"x": 2263.0,
+"y": 1605.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Stations"
+},
+{
+"guid": "c6656f0bb7c44d33b8b6e5a8a7b3bfa9",
+"kind": "fact",
+"identifier": "FACT.0054",
+"enabled": true,
+"x": 2278.0,
+"y": 1697.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Stations Deployed"
+},
+{
+"guid": "6c8611dfd6ad40bda05e4a6413e6f0c7",
+"kind": "fact",
+"identifier": "FACT.0054",
+"enabled": true,
+"x": 1603.0,
+"y": 1194.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Stations Deployed"
+},
+{
+"guid": "4a82cf35f0584b50aef7068a27b2538e",
+"kind": "fact",
+"identifier": "FACT.0039",
+"enabled": true,
+"x": 1470.0,
+"y": 1339.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Command Center Detected"
+},
+{
+"guid": "004019720448462ba9c9caded96c95f5",
+"kind": "fact",
+"identifier": "FACT.0063",
+"enabled": true,
+"x": 1705.0,
+"y": 1576.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Long Range Weapons"
+},
+{
+"guid": "2a0d5845d75d4c2e8208b0c7f3c3a902",
+"kind": "fact",
+"identifier": "FACT.0041",
+"enabled": true,
+"x": 2290.0,
+"y": 1368.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Command Center Alive"
+},
+{
+"guid": "dac05702adbe451787c88101d4edcd3f",
+"kind": "fact",
+"identifier": "FACT.0080",
+"enabled": true,
+"x": 1967.0,
+"y": 312.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Completed Main Station"
+},
+{
+"guid": "c58ad9082d894e6a8dc42c0d240c7cd5",
+"kind": "fact",
+"identifier": "FACT.0081",
+"enabled": true,
+"x": 1967.0,
+"y": 128.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Can Perform Warp Attack"
+},
+{
+"guid": "3e2e9cf8c8fa4c139c592ca3f0cb9bc5",
+"kind": "fact",
+"identifier": "FACT.0085",
+"enabled": true,
+"x": 20.0,
+"y": 363.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack To Command Center"
+},
+{
+"guid": "15ebc45ada414be6b5f987811b29288f",
+"kind": "fact",
+"identifier": "FACT.0086",
+"enabled": true,
+"x": 139.0,
+"y": 903.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack To Station"
+},
+{
+"guid": "c5ae177df49345e7bfebfac3c6e3ccd7",
+"kind": "fact",
+"identifier": "FACT.0088",
+"enabled": true,
+"x": 248.0,
+"y": 1165.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack To Explorers"
+},
+{
+"guid": "77dd571f80bc4e4a838b7aa77432e80f",
+"kind": "fact",
+"identifier": "FACT.0087",
+"enabled": true,
+"x": 248.0,
+"y": 1455.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack To Fleet"
+},
+{
+"guid": "c944aba6e3724a09a83f0e3356c28987",
+"kind": "fact",
+"identifier": "FACT.0092",
+"enabled": true,
+"x": 1582.0,
+"y": 1694.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack With Long Range Weapons"
+},
+{
+"guid": "9676e5ea6cf246e0991d22cc75819d19",
+"kind": "fact",
+"identifier": "FACT.0090",
+"enabled": true,
+"x": 1666.0,
+"y": 1001.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack With Stations"
+},
+{
+"guid": "ca43d17f845a48f2ab5053d98fca1636",
+"kind": "fact",
+"identifier": "FACT.0004",
+"enabled": true,
+"x": 1966.0,
+"y": 5.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "After End Game"
+},
+{
+"guid": "31ab3c63a14f485f880bb3299a5d439a",
+"kind": "fact",
+"identifier": "FACT.0003",
+"enabled": true,
+"x": 1966.0,
+"y": 427.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "After Late Game"
+},
+{
+"guid": "967064dee9284f71ad91d4e07c8b6e6a",
+"kind": "fact",
+"identifier": "FACT.0073",
+"enabled": true,
+"x": 328.0,
+"y": 1870.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack"
+},
+{
+"guid": "98db32d50ba64b1fb0ef514fce96489f",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 621.0,
+"y": 2418.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "6e03745f9b024757ab80f9e551be610a",
+"kind": "fact",
+"identifier": "FACT.0070",
+"enabled": true,
+"x": 621.0,
+"y": 2539.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Extractors Deployed"
+},
+{
+"guid": "2fb2af6726f24257a72610bdc228f5c4",
+"kind": "fact",
+"identifier": "FACT.0089",
+"enabled": true,
+"x": 328.0,
+"y": 2339.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack To Collectors"
+},
+{
+"guid": "effaf93706634539a8ff45534a122642",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 1298.0,
+"y": 2339.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "bf0d10d578234a95b374f1e9bc68de9c",
+"kind": "fact",
+"identifier": "FACT.0070",
+"enabled": true,
+"x": 1298.0,
+"y": 2477.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Extractors Deployed"
+},
+{
+"guid": "9dbc7f24b8bf4dd7a6c13e97621d4722",
+"kind": "fact",
+"identifier": "FACT.0098",
+"enabled": true,
+"x": 1967.0,
+"y": 548.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Command Center"
+},
+{
+"guid": "61882c2b3c404d3b99d4ab9ac4061d2a",
+"kind": "fact",
+"identifier": "FACT.0100",
+"enabled": true,
+"x": 1967.0,
+"y": -155.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Can Defeat Enemy"
+},
+{
+"guid": "3261bfa69ce54fc39fba0e5dfa13b0dd",
+"kind": "fact",
+"identifier": "FACT.0099",
+"enabled": true,
+"x": 1704.0,
+"y": -34.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Is Attacking Enemy Command Center"
+},
+{
+"guid": "8672c635f51b4001a212bdb2cd141bd2",
+"kind": "operation",
+"identifier": "OPER.0039",
+"enabled": true,
+"x": 380.0,
+"y": 220.0,
+"collapsed": false,
+"name": "Attack Enemy Command Center"
+},
+{
+"guid": "1ea4244e71e64f21812d402f3a64c0db",
+"kind": "operation",
+"identifier": "OPER.0045",
+"enabled": true,
+"x": 936.0,
+"y": 484.0,
+"collapsed": false,
+"name": "Push Attacking Units"
+},
+{
+"guid": "c321c96816ae4088843a44f7126fd4ee",
+"kind": "operation",
+"identifier": "OPER.0038",
+"enabled": true,
+"x": 648.0,
+"y": 779.0,
+"collapsed": false,
+"name": "Attack Enemy Stations"
+},
+{
+"guid": "49243c73b5ef49d1bdce030065d2e66d",
+"kind": "operation",
+"identifier": "OPER.0040",
+"enabled": true,
+"x": 648.0,
+"y": 1173.0,
+"collapsed": false,
+"name": "Attack Enemy Explorers"
+},
+{
+"guid": "1ae9651a64f04ad3b5c91b49b4e37159",
+"kind": "operation",
+"identifier": "OPER.0043",
+"enabled": true,
+"x": 648.0,
+"y": 1565.0,
+"collapsed": false,
+"name": "Attack Enemy Fleet"
+},
+{
+"guid": "6c479b1f703e40a0b9f1233a9a064c64",
+"kind": "operation",
+"identifier": "OPER.0044",
+"enabled": true,
+"x": 648.0,
+"y": 1991.0,
+"collapsed": false,
+"name": "Destroy Enemy Supply"
+},
+{
+"guid": "cd4a3a51a1fa4a2eb8bf6e111394cda0",
+"kind": "operation",
+"identifier": "OPER.0036",
+"enabled": true,
+"x": 1966.0,
+"y": 871.0,
+"collapsed": false,
+"name": "Attack With Stations"
+},
+{
+"guid": "205f64b7bb4e4d7d8dfb0ceeec3b3eed",
+"kind": "operation",
+"identifier": "OPER.0054",
+"enabled": true,
+"x": 1959.0,
+"y": 1449.0,
+"collapsed": false,
+"name": "Attack With Long Range Weapons"
+},
+{
+"guid": "15d67038730c4597817d3276c8c9bf0c",
+"kind": "operation",
+"identifier": "OPER.0057",
+"enabled": true,
+"x": 2278.0,
+"y": 5.0,
+"collapsed": false,
+"name": "Attack With Warp"
+},
+{
+"guid": "263a5294f45346dd8030b405ecb5586c",
+"kind": "operation",
+"identifier": "OPER.0058",
+"enabled": true,
+"x": 2278.0,
+"y": 404.0,
+"collapsed": false,
+"name": "Attack With Command Center"
+},
+{
+"guid": "df3b015ddec04daab3c8876e4ae90384",
+"kind": "operation",
+"identifier": "OPER.0037",
+"enabled": true,
+"x": 977.0,
+"y": 2326.0,
+"collapsed": false,
+"name": "Attack Enemy Collectors"
+},
+{
+"guid": "1c61b8791db4406ea6a20a176df1fb92",
+"kind": "goal",
+"identifier": "GOAL.0023",
+"enabled": true,
+"x": 926.0,
+"y": 220.0,
+"collapsed": false,
+"name": "Destroy Enemy Command Center"
+},
+{
+"guid": "001671a7ea5e43368bec3f93710a893b",
+"kind": "goal",
+"identifier": "GOAL.0037",
+"enabled": true,
+"x": 1307.0,
+"y": 1552.0,
+"collapsed": false,
+"name": "Destroy Enemy Fleet"
+},
+{
+"guid": "2f2ec0a27d9641d9b9ec1532f07d192a",
+"kind": "goal",
+"identifier": "GOAL.0032",
+"enabled": true,
+"x": 1307.0,
+"y": 810.0,
+"collapsed": false,
+"name": "Destroy Enemy Stations"
+},
+{
+"guid": "5db8f605382b430ca5d139595399a6f5",
+"kind": "goal",
+"identifier": "GOAL.0033",
+"enabled": true,
+"x": 1307.0,
+"y": 1137.0,
+"collapsed": false,
+"name": "Destroy Enemy Explorers"
+},
+{
+"guid": "821c116d78cb4d539a8d6ce90f6632c7",
+"kind": "goal",
+"identifier": "GOAL.0039",
+"enabled": true,
+"x": 1307.0,
+"y": 2000.0,
+"collapsed": false,
+"name": "Destroy Enemy Supply"
+},
+{
+"guid": "1b031bb01a264711b0c17433882cb7ff",
+"kind": "goal",
+"identifier": "GOAL.0040",
+"enabled": true,
+"x": 1470.0,
+"y": 484.0,
+"collapsed": false,
+"name": "Keep Pressure On Enemy"
+},
+{
+"guid": "af68e3a990414668aa9506b5bd738b28",
+"kind": "goal",
+"identifier": "GOAL.0031",
+"enabled": true,
+"x": 1552.0,
+"y": 2376.0,
+"collapsed": false,
+"name": "Reduce Enemy Collectors"
+},
+{
+"guid": "b0df3e234d8f4e978f3fae40743e2590",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 1732.0,
+"y": 1460.0,
+"collapsed": true,
+"logic_type": "OR",
+"name": null
+},
+{
+"guid": "7d0b68b2caf64cd79835f621c452c2ad",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 1967.0,
+"y": 220.0,
+"collapsed": true,
+"builtin_type": 2,
+"target_identifier": "WRP.GEN",
+"name": null
+}
+],
+"edges": [
+{
+"from": "50c82103011d4c10b4b3333b969a7d20",
+"to": "8672c635f51b4001a212bdb2cd141bd2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "3e2e9cf8c8fa4c139c592ca3f0cb9bc5",
+"to": "8672c635f51b4001a212bdb2cd141bd2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "9a2c06a44dd44cfeb210fe202d68a1c1",
+"to": "1ea4244e71e64f21812d402f3a64c0db",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "f0d84f94da904f96b4cdd52fa79230cb",
+"to": "c321c96816ae4088843a44f7126fd4ee",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "15ebc45ada414be6b5f987811b29288f",
+"to": "c321c96816ae4088843a44f7126fd4ee",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "13591a431cef49dfaa3891257121baf2",
+"to": "49243c73b5ef49d1bdce030065d2e66d",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "7e9883fdeb8147c78b8a41902ff800ea",
+"to": "49243c73b5ef49d1bdce030065d2e66d",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "c5ae177df49345e7bfebfac3c6e3ccd7",
+"to": "49243c73b5ef49d1bdce030065d2e66d",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "0ba69f4ff7a84bff9613d232ed92c853",
+"to": "1ae9651a64f04ad3b5c91b49b4e37159",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "7e9883fdeb8147c78b8a41902ff800ea",
+"to": "1ae9651a64f04ad3b5c91b49b4e37159",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "77dd571f80bc4e4a838b7aa77432e80f",
+"to": "1ae9651a64f04ad3b5c91b49b4e37159",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6b21d7130d5f46309c00a560c10d5331",
+"to": "6c479b1f703e40a0b9f1233a9a064c64",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "7e9883fdeb8147c78b8a41902ff800ea",
+"to": "6c479b1f703e40a0b9f1233a9a064c64",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "967064dee9284f71ad91d4e07c8b6e6a",
+"to": "6c479b1f703e40a0b9f1233a9a064c64",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "5a65f4058da542f5b220c1de4c30188e",
+"to": "cd4a3a51a1fa4a2eb8bf6e111394cda0",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "9676e5ea6cf246e0991d22cc75819d19",
+"to": "cd4a3a51a1fa4a2eb8bf6e111394cda0",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "004019720448462ba9c9caded96c95f5",
+"to": "205f64b7bb4e4d7d8dfb0ceeec3b3eed",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "c944aba6e3724a09a83f0e3356c28987",
+"to": "205f64b7bb4e4d7d8dfb0ceeec3b3eed",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "dac05702adbe451787c88101d4edcd3f",
+"to": "15d67038730c4597817d3276c8c9bf0c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "c58ad9082d894e6a8dc42c0d240c7cd5",
+"to": "15d67038730c4597817d3276c8c9bf0c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "ca43d17f845a48f2ab5053d98fca1636",
+"to": "15d67038730c4597817d3276c8c9bf0c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "61882c2b3c404d3b99d4ab9ac4061d2a",
+"to": "15d67038730c4597817d3276c8c9bf0c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "3261bfa69ce54fc39fba0e5dfa13b0dd",
+"to": "15d67038730c4597817d3276c8c9bf0c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "dac05702adbe451787c88101d4edcd3f",
+"to": "263a5294f45346dd8030b405ecb5586c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "31ab3c63a14f485f880bb3299a5d439a",
+"to": "263a5294f45346dd8030b405ecb5586c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "9dbc7f24b8bf4dd7a6c13e97621d4722",
+"to": "263a5294f45346dd8030b405ecb5586c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "61882c2b3c404d3b99d4ab9ac4061d2a",
+"to": "263a5294f45346dd8030b405ecb5586c",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "98db32d50ba64b1fb0ef514fce96489f",
+"to": "df3b015ddec04daab3c8876e4ae90384",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6e03745f9b024757ab80f9e551be610a",
+"to": "df3b015ddec04daab3c8876e4ae90384",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "2fb2af6726f24257a72610bdc228f5c4",
+"to": "df3b015ddec04daab3c8876e4ae90384",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "7201d7e5405d464e94deff4f746f89b7",
+"to": "1c61b8791db4406ea6a20a176df1fb92",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "81016a0caf0f49aeb8bd0efa89c6b1f7",
+"to": "001671a7ea5e43368bec3f93710a893b",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "c79d82f881714c1f83c5d8e4a1686691",
+"to": "2f2ec0a27d9641d9b9ec1532f07d192a",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "a4486ac0627c47bca4f01d65045e0d2a",
+"to": "2f2ec0a27d9641d9b9ec1532f07d192a",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "6ed1079b41464025978f680eac564ef1",
+"to": "5db8f605382b430ca5d139595399a6f5",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "9abc322bd0a5497da6a0e7874ee4ad65",
+"to": "821c116d78cb4d539a8d6ce90f6632c7",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "642a37ad2e244b659fb92ab36bf47874",
+"to": "1b031bb01a264711b0c17433882cb7ff",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "bf0d10d578234a95b374f1e9bc68de9c",
+"to": "af68e3a990414668aa9506b5bd738b28",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "effaf93706634539a8ff45534a122642",
+"to": "af68e3a990414668aa9506b5bd738b28",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "6c8611dfd6ad40bda05e4a6413e6f0c7",
+"to": "b0df3e234d8f4e978f3fae40743e2590",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "4a82cf35f0584b50aef7068a27b2538e",
+"to": "b0df3e234d8f4e978f3fae40743e2590",
+"negated": false,
+"kind": "operand"
+}
+],
+"comments": [
+{
+"x": 686.0,
+"y": 404.0,
+"w": 300.0,
+"h": 104.0,
+"text": "If we have units idle in [Push Range] we have to push them! (Spingitori Di Cavalieri)"
+},
+{
+"x": 110.0,
+"y": 129.0,
+"w": 300.0,
+"h": 104.0,
+"text": "This is the logic to [Attack the enemy CC] (We should have a completed fleet)"
+},
+{
+"x": 110.0,
+"y": 703.0,
+"w": 300.0,
+"h": 104.0,
+"text": "Logic to [Attack enemy Stations]"
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.PLAYER_AGENT_DEFENSE",
+"name": "Player Agent Defense Logic",
+"faction": "CMX",
+"category": "Defense",
+"node_count": 25,
+"edge_count": 15,
+"facts": 12,
+"operations": 8,
+"goals": 3,
+"nodes": [
+{
+"guid": "bfa6398b1ef842c09fd06ee0081d5995",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 20.0,
+"y": 924.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"kind": "fact",
+"identifier": "FACT.0077",
+"enabled": true,
+"x": 20.0,
+"y": 828.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Under Attack"
+},
+{
+"guid": "6260256a1e694ec68b8babe9892769fc",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 844.0,
+"y": 1036.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "f4943de4a8d14d40ba37474ebbdf7d8c",
+"kind": "fact",
+"identifier": "FACT.0077",
+"enabled": true,
+"x": 844.0,
+"y": 892.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Under Attack"
+},
+{
+"guid": "af191b2ec8e3431b94a93c134c7c9fda",
+"kind": "fact",
+"identifier": "FACT.0051",
+"enabled": true,
+"x": 910.0,
+"y": 768.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Recall Range"
+},
+{
+"guid": "397a29c8a27f4ea0bda325cb7720bfe0",
+"kind": "fact",
+"identifier": "FACT.0030",
+"enabled": true,
+"x": 72.0,
+"y": 1544.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Enough Formations"
+},
+{
+"guid": "1bf4dd937a6143a5988e0c432d25286b",
+"kind": "fact",
+"identifier": "FACT.0030",
+"enabled": true,
+"x": 580.0,
+"y": 1544.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Enough Formations"
+},
+{
+"guid": "a46bdde440434ecf890edd0352b48964",
+"kind": "fact",
+"identifier": "FACT.0058",
+"enabled": true,
+"x": 122.0,
+"y": 20.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Can Build Fortify"
+},
+{
+"guid": "d2938770ff6145edb84d211da53cb522",
+"kind": "fact",
+"identifier": "FACT.0057",
+"enabled": true,
+"x": 122.0,
+"y": 352.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Can Build Weapons"
+},
+{
+"guid": "16b15fe18870463ba3aa6527e9507f6b",
+"kind": "fact",
+"identifier": "FACT.0076",
+"enabled": true,
+"x": 878.0,
+"y": 141.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Incoming Long Range Attack"
+},
+{
+"guid": "9600f555faa74c7fa1ed7b8c7ae61973",
+"kind": "fact",
+"identifier": "FACT.0079",
+"enabled": true,
+"x": 910.0,
+"y": 1266.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Defenseless Stations"
+},
+{
+"guid": "009fcd7c422a41cfa19be8e594f966be",
+"kind": "fact",
+"identifier": "FACT.0084",
+"enabled": true,
+"x": 20.0,
+"y": 1016.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Already Building Combat Units"
+},
+{
+"guid": "5322fa7525af46278a21f74b2edf0794",
+"kind": "operation",
+"identifier": "OPER.0042",
+"enabled": true,
+"x": 498.0,
+"y": 1126.0,
+"collapsed": false,
+"name": "Defend Command Center"
+},
+{
+"guid": "2cdca83ef7634d85a13c37cb0d1a3497",
+"kind": "operation",
+"identifier": "OPER.0035",
+"enabled": true,
+"x": 498.0,
+"y": 697.0,
+"collapsed": false,
+"name": "Build Combat Units"
+},
+{
+"guid": "84cd673d8f70406f832bb01c60e95e13",
+"kind": "operation",
+"identifier": "OPER.0033",
+"enabled": true,
+"x": 310.0,
+"y": 1544.0,
+"collapsed": false,
+"name": "Create Formations"
+},
+{
+"guid": "38ca9176cfa94da0aee3f79384c6f804",
+"kind": "operation",
+"identifier": "OPER.0034",
+"enabled": true,
+"x": 1160.0,
+"y": 517.0,
+"collapsed": false,
+"name": "Recall Idle Units"
+},
+{
+"guid": "ab364983f71d40568076cbc72f67c910",
+"kind": "operation",
+"identifier": "OPER.0050",
+"enabled": true,
+"x": 498.0,
+"y": 352.0,
+"collapsed": false,
+"name": "Arm Command Center"
+},
+{
+"guid": "38c49d26645a4d5b9e6ce6291933c4bc",
+"kind": "operation",
+"identifier": "OPER.0049",
+"enabled": true,
+"x": 505.0,
+"y": 20.0,
+"collapsed": false,
+"name": "Fortify Command Center"
+},
+{
+"guid": "1cb1c237781b4fcb82f7c7f9445b32c2",
+"kind": "operation",
+"identifier": "OPER.0055",
+"enabled": true,
+"x": 1151.0,
+"y": 127.0,
+"collapsed": false,
+"name": "Stop Incoming Long Range Attack"
+},
+{
+"guid": "d9d569386ff44e75945e4ed740c6d9b0",
+"kind": "operation",
+"identifier": "OPER.0056",
+"enabled": true,
+"x": 1145.0,
+"y": 1266.0,
+"collapsed": false,
+"name": "Defend Stations"
+},
+{
+"guid": "512ea8c62b984e458d97a1b8285b173c",
+"kind": "goal",
+"identifier": "GOAL.0036",
+"enabled": true,
+"x": 1126.0,
+"y": 952.0,
+"collapsed": false,
+"name": "Protect Command Center"
+},
+{
+"guid": "07bf352b28604c80bd78d1c60f8ca4b1",
+"kind": "goal",
+"identifier": "GOAL.0038",
+"enabled": true,
+"x": 1427.0,
+"y": 795.0,
+"collapsed": false,
+"name": "Concentrate Fleet"
+},
+{
+"guid": "22d3c740b75c4a16bbb68a911ed15a21",
+"kind": "goal",
+"identifier": "GOAL.0034",
+"enabled": true,
+"x": 844.0,
+"y": 1544.0,
+"collapsed": false,
+"name": "Organize Fleet"
+},
+{
+"guid": "765dcabcefd34e3f8a4f03369d78dfe3",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 276.0,
+"y": 828.0,
+"collapsed": true,
+"logic_type": "OR",
+"name": null
+},
+{
+"guid": "661f6438bc1a40b4a5081a8f7414aadd",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 20.0,
+"y": 736.0,
+"collapsed": true,
+"builtin_type": 2,
+"target_identifier": "PRD.001",
+"name": null
+}
+],
+"edges": [
+{
+"from": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"to": "5322fa7525af46278a21f74b2edf0794",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "bfa6398b1ef842c09fd06ee0081d5995",
+"to": "5322fa7525af46278a21f74b2edf0794",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "009fcd7c422a41cfa19be8e594f966be",
+"to": "2cdca83ef7634d85a13c37cb0d1a3497",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "397a29c8a27f4ea0bda325cb7720bfe0",
+"to": "84cd673d8f70406f832bb01c60e95e13",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "af191b2ec8e3431b94a93c134c7c9fda",
+"to": "38ca9176cfa94da0aee3f79384c6f804",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "d2938770ff6145edb84d211da53cb522",
+"to": "ab364983f71d40568076cbc72f67c910",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "a46bdde440434ecf890edd0352b48964",
+"to": "38c49d26645a4d5b9e6ce6291933c4bc",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "16b15fe18870463ba3aa6527e9507f6b",
+"to": "1cb1c237781b4fcb82f7c7f9445b32c2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "9600f555faa74c7fa1ed7b8c7ae61973",
+"to": "d9d569386ff44e75945e4ed740c6d9b0",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6260256a1e694ec68b8babe9892769fc",
+"to": "512ea8c62b984e458d97a1b8285b173c",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "f4943de4a8d14d40ba37474ebbdf7d8c",
+"to": "512ea8c62b984e458d97a1b8285b173c",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "af191b2ec8e3431b94a93c134c7c9fda",
+"to": "07bf352b28604c80bd78d1c60f8ca4b1",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "1bf4dd937a6143a5988e0c432d25286b",
+"to": "22d3c740b75c4a16bbb68a911ed15a21",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"to": "765dcabcefd34e3f8a4f03369d78dfe3",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "bfa6398b1ef842c09fd06ee0081d5995",
+"to": "765dcabcefd34e3f8a4f03369d78dfe3",
+"negated": false,
+"kind": "operand"
+}
+],
+"comments": [
+{
+"x": 20.0,
+"y": 622.0,
+"w": 300.0,
+"h": 115.0,
+"text": "To [Protect Command Center], if we are under attack or defenseless we should Build Combat Units, if both we should Defend it (will also recall units)"
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.PLAYER_AGENT_EXPLORATION",
+"name": "Player Agent Exploration Logic",
+"faction": "CMX",
+"category": "Exploration",
+"node_count": 9,
+"edge_count": 4,
+"facts": 4,
+"operations": 2,
+"goals": 0,
+"nodes": [
+{
+"guid": "e887d20e029141b9a5b3fcdac32d91b5",
+"kind": "fact",
+"identifier": "FACT.0034",
+"enabled": true,
+"x": 26.0,
+"y": 379.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Exploration Units"
+},
+{
+"guid": "56e3e7401ed345a7b585f4d6adcd5bdf",
+"kind": "fact",
+"identifier": "FACT.0035",
+"enabled": true,
+"x": 20.0,
+"y": 590.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Exploration Routes"
+},
+{
+"guid": "c8a992ea33b44ac3b2cee9b3a7f4bd3f",
+"kind": "fact",
+"identifier": "FACT.0094",
+"enabled": true,
+"x": 26.0,
+"y": 113.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enough Units In Patrol Routes"
+},
+{
+"guid": "7c47f77f1c894cd287bce26b1ebb230f",
+"kind": "fact",
+"identifier": "FACT.0046",
+"enabled": true,
+"x": 26.0,
+"y": -20.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Interceptors"
+},
+{
+"guid": "2d2e70cc4c4d41048fcd553947f6596b",
+"kind": "operation",
+"identifier": "OPER.0048",
+"enabled": true,
+"x": 332.0,
+"y": 321.0,
+"collapsed": false,
+"name": "Send Exploration Units"
+},
+{
+"guid": "cfc08e171e26461ea60e72e6a11b7119",
+"kind": "operation",
+"identifier": "OPER.0059",
+"enabled": true,
+"x": 332.0,
+"y": 20.0,
+"collapsed": false,
+"name": "Send Patrol Units"
+},
+{
+"guid": "9a03b804b9eb4ed5b99f7f87c51780ca",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 20.0,
+"y": 695.0,
+"collapsed": true,
+"builtin_type": 2,
+"target_identifier": "CMX_SEN",
+"name": null
+},
+{
+"guid": "42b8dcadbf0c479eb03d3658e2dfaedb",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 20.0,
+"y": 796.0,
+"collapsed": true,
+"builtin_type": 0,
+"target_identifier": "CMX_SEN",
+"name": null
+},
+{
+"guid": "7b0d7112ba104ccc918723ec9f1bd9e8",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 26.0,
+"y": 275.0,
+"collapsed": true,
+"name": null
+}
+],
+"edges": [
+{
+"from": "56e3e7401ed345a7b585f4d6adcd5bdf",
+"to": "2d2e70cc4c4d41048fcd553947f6596b",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "e887d20e029141b9a5b3fcdac32d91b5",
+"to": "2d2e70cc4c4d41048fcd553947f6596b",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "c8a992ea33b44ac3b2cee9b3a7f4bd3f",
+"to": "cfc08e171e26461ea60e72e6a11b7119",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "7c47f77f1c894cd287bce26b1ebb230f",
+"to": "cfc08e171e26461ea60e72e6a11b7119",
+"negated": false,
+"kind": "condition"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.PLAYER_AGENT_PRIORITY",
+"name": "Player Agent Priority Logic",
+"faction": "CMX",
+"category": "None",
+"node_count": 18,
+"edge_count": 0,
+"facts": 2,
+"operations": 1,
+"goals": 0,
+"nodes": [
+{
+"guid": "eec97700855048f5a2018198c3cd4a30",
+"kind": "fact",
+"identifier": "FACT.0033",
+"enabled": true,
+"x": -91.0,
+"y": 1586.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Population At Maximum Capacity"
+},
+{
+"guid": "cf3dd2338b7c417dba3a8ec7608f1c69",
+"kind": "fact",
+"identifier": "FACT.0001",
+"enabled": true,
+"x": 772.0,
+"y": 729.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "After Early Game"
+},
+{
+"guid": "0e37b251c5a045369218c01fb6d3f4a7",
+"kind": "operation",
+"identifier": "OPER.0047",
+"enabled": true,
+"x": 862.0,
+"y": 1045.0,
+"collapsed": false,
+"name": "Construct Blueprint"
+},
+{
+"guid": "697ff0dd2db84792b07abfce6839e8e9",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -45.0,
+"y": 482.0,
+"collapsed": false,
+"builtin_type": 2,
+"target_identifier": "PRD.001",
+"name": null
+},
+{
+"guid": "f0060c87bfce42209774768349f84e6f",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -91.0,
+"y": 1069.0,
+"collapsed": false,
+"builtin_type": 2,
+"target_identifier": "RES.001",
+"name": null
+},
+{
+"guid": "6aabcceeea414b09a3ea85f02503c76f",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 11.0,
+"y": 774.0,
+"collapsed": false,
+"builtin_type": 3,
+"target_identifier": "PRD.001",
+"name": null
+},
+{
+"guid": "bb45eca79bbc4ff98a356fee36a16a6c",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -45.0,
+"y": 643.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "PRD.001",
+"name": null
+},
+{
+"guid": "19283b9dfa784c1e8d9757a6fed8c727",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -91.0,
+"y": 1402.0,
+"collapsed": true,
+"builtin_type": 1,
+"target_identifier": "POP.001",
+"name": null
+},
+{
+"guid": "a54cd95d2fe543709b940377e7515f95",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -91.0,
+"y": 1494.0,
+"collapsed": true,
+"builtin_type": 0,
+"target_identifier": "POP.001",
+"name": null
+},
+{
+"guid": "92f2e9db4b26493ab2f84570c5172fc5",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -91.0,
+"y": 1678.0,
+"collapsed": true,
+"builtin_type": 3,
+"target_identifier": "POP.001",
+"name": null
+},
+{
+"guid": "38209da6c5b14ff0ac193cd9abb95334",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -197.0,
+"y": -44.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "PRD.002",
+"name": null
+},
+{
+"guid": "3487f0fcb79f45e0909036a77349f76d",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -185.0,
+"y": 79.0,
+"collapsed": false,
+"builtin_type": 2,
+"target_identifier": "PRD.002",
+"name": null
+},
+{
+"guid": "b08f026682cd46a3bfd5dd7fb6ffe2bf",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -157.0,
+"y": 205.0,
+"collapsed": false,
+"builtin_type": 3,
+"target_identifier": "PRD.002",
+"name": null
+},
+{
+"guid": "88a8115f6b2e4624a489f30b1aaad456",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": -55.0,
+"y": 319.0,
+"collapsed": false,
+"builtin_type": 2,
+"target_identifier": "PRD.001",
+"name": null
+},
+{
+"guid": "f5aca28bc9fd4525b69b2d1326f4c115",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": -313.0,
+"y": 537.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "e6f152089d9e40dbba5e540735f1a67c",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": -91.0,
+"y": 1170.0,
+"collapsed": true,
+"name": null
+},
+{
+"guid": "f9dc3fee1563437593d88cd2d2013100",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 644.0,
+"y": 1045.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "c5366ecf2a924d67944c167a1b2b4654",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": -119.0,
+"y": -143.0,
+"collapsed": true,
+"name": null
+}
+],
+"edges": [],
+"comments": [
+{
+"x": 1615.19995,
+"y": -334.39999,
+"w": 300.0,
+"h": 86.39999,
+"text": "Each time a [Priority Research] is unlocked it will be automatically started and removed from the queue."
+},
+{
+"x": 159.2,
+"y": 949.59998,
+"w": 300.0,
+"h": 104.0,
+"text": "[Research Center] should be built as soon as it's possible if it doesnt exist already."
+},
+{
+"x": 644.0,
+"y": 961.59998,
+"w": 300.0,
+"h": 104.0,
+"text": "This will start the [blueprint construction] after a delay"
+},
+{
+"x": 172.8,
+"y": 1352.0,
+"w": 300.0,
+"h": 104.0,
+"text": "If there is a [Population Crisis] construction of a Crew Quarter should be prioritized."
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.PLAYER_AGENT_RESOURCE",
+"name": "Player Agent Resource Logic",
+"faction": "CMX",
+"category": "Resources",
+"node_count": 12,
+"edge_count": 9,
+"facts": 6,
+"operations": 5,
+"goals": 0,
+"nodes": [
+{
+"guid": "ac9ce618c2664c6e8df1f1553bd8442f",
+"kind": "fact",
+"identifier": "FACT.0044",
+"enabled": true,
+"x": -14.0,
+"y": 127.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Collectors"
+},
+{
+"guid": "addf103155f44d67b5d087dbee5b0e03",
+"kind": "fact",
+"identifier": "FACT.0024",
+"enabled": true,
+"x": -14.0,
+"y": 424.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Resources Exhausted"
+},
+{
+"guid": "ccf0d411fee943d5b39726028b495090",
+"kind": "fact",
+"identifier": "FACT.0096",
+"enabled": true,
+"x": 714.0,
+"y": 824.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Resource Cluster Depleted"
+},
+{
+"guid": "433d2b49b38148eab4295cdfec126634",
+"kind": "fact",
+"identifier": "FACT.0097",
+"enabled": true,
+"x": 714.0,
+"y": 916.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Eligible Expansion Site"
+},
+{
+"guid": "e8d5b3213f494ede88fe957961144acb",
+"kind": "fact",
+"identifier": "FACT.0098",
+"enabled": true,
+"x": 714.0,
+"y": 732.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Command Center"
+},
+{
+"guid": "35c34b8cd61b45bb8aa727e68ec243e4",
+"kind": "fact",
+"identifier": "FACT.0101",
+"enabled": true,
+"x": 874.0,
+"y": 254.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Remote Drop Points Without Collectors"
+},
+{
+"guid": "44806f77c62f44eaadba79a9b3bd3899",
+"kind": "operation",
+"identifier": "OPER.0021",
+"enabled": true,
+"x": 278.0,
+"y": 126.0,
+"collapsed": false,
+"name": "Build Start Collectors"
+},
+{
+"guid": "b1886623b0744044a9c98e4e0ede3ce0",
+"kind": "operation",
+"identifier": "OPER.0051",
+"enabled": true,
+"x": 278.0,
+"y": 424.0,
+"collapsed": false,
+"name": "Recycle"
+},
+{
+"guid": "fc286ad422114b21a99aa8b344578612",
+"kind": "operation",
+"identifier": "OPER.0052",
+"enabled": true,
+"x": 278.0,
+"y": 742.0,
+"collapsed": false,
+"name": "Give Start Resources"
+},
+{
+"guid": "cc436fb819e244ecb9b432759ef26e4f",
+"kind": "operation",
+"identifier": "OPER.0060",
+"enabled": true,
+"x": 979.0,
+"y": 732.0,
+"collapsed": false,
+"name": "Migrate To Expansion Site"
+},
+{
+"guid": "00bef7fb959d4af48ee2bd4d2e7482c8",
+"kind": "operation",
+"identifier": "OPER.0061",
+"enabled": true,
+"x": 1203.0,
+"y": 254.0,
+"collapsed": false,
+"name": "Send Collectors To Remote Drop Points"
+},
+{
+"guid": "f0b3dff630d84d2683e460b43d556514",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 872.0,
+"y": 352.0,
+"collapsed": true,
+"name": null
+}
+],
+"edges": [
+{
+"from": "ac9ce618c2664c6e8df1f1553bd8442f",
+"to": "44806f77c62f44eaadba79a9b3bd3899",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "ac9ce618c2664c6e8df1f1553bd8442f",
+"to": "b1886623b0744044a9c98e4e0ede3ce0",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "addf103155f44d67b5d087dbee5b0e03",
+"to": "b1886623b0744044a9c98e4e0ede3ce0",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "ac9ce618c2664c6e8df1f1553bd8442f",
+"to": "fc286ad422114b21a99aa8b344578612",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "addf103155f44d67b5d087dbee5b0e03",
+"to": "fc286ad422114b21a99aa8b344578612",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "ccf0d411fee943d5b39726028b495090",
+"to": "cc436fb819e244ecb9b432759ef26e4f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "433d2b49b38148eab4295cdfec126634",
+"to": "cc436fb819e244ecb9b432759ef26e4f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "e8d5b3213f494ede88fe957961144acb",
+"to": "cc436fb819e244ecb9b432759ef26e4f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "35c34b8cd61b45bb8aa727e68ec243e4",
+"to": "00bef7fb959d4af48ee2bd4d2e7482c8",
+"negated": false,
+"kind": "condition"
+}
+],
+"comments": [
+{
+"x": 30.0,
+"y": -75.0,
+"w": 300.0,
+"h": 210.0,
+"text": "Start Collectors: every time you run out of collectors, this operation will be executed (Priority + Persistent).\n\nIf we have no resources and no collectors, recycle one module, and give again the start resources.\n\nFIrst Harvest Rate researches are prioritized."
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.ROGUE_AGENT_ATTACK",
+"name": "Rogue Agent Attack Logic",
+"faction": "PIR",
+"category": "Attack",
+"node_count": 38,
+"edge_count": 28,
+"facts": 21,
+"operations": 9,
+"goals": 8,
+"nodes": [
+{
+"guid": "1ff186ff2afe4b26a2e774f0d9964e8c",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 451.0,
+"y": 2146.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "ddc35fe0c1684cb184f951f28470d338",
+"kind": "fact",
+"identifier": "FACT.0050",
+"enabled": true,
+"x": 1078.0,
+"y": 2100.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Fighters Or Corvettes"
+},
+{
+"guid": "5eca28f705984b008cb78772d7baa441",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 1078.0,
+"y": 2192.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "1b3fd4a72ac1427496bb6f6136005a41",
+"kind": "fact",
+"identifier": "FACT.0070",
+"enabled": true,
+"x": 1078.0,
+"y": 2284.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Extractors Deployed"
+},
+{
+"guid": "f1525b22f72d46c9ba028620511bea47",
+"kind": "fact",
+"identifier": "FACT.0072",
+"enabled": true,
+"x": 1017.0,
+"y": 151.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Stations"
+},
+{
+"guid": "c6e0a5ac29474526b0bf60fc958e8867",
+"kind": "fact",
+"identifier": "FACT.0031",
+"enabled": true,
+"x": 413.0,
+"y": 1805.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Enough Combat Units"
+},
+{
+"guid": "b07dc4f93aa849bdb72668aaf7000692",
+"kind": "fact",
+"identifier": "FACT.0073",
+"enabled": true,
+"x": 20.0,
+"y": 1208.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enough Time From Last Attack"
+},
+{
+"guid": "7201d7e5405d464e94deff4f746f89b7",
+"kind": "fact",
+"identifier": "FACT.0041",
+"enabled": true,
+"x": 1022.0,
+"y": 1773.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Command Center Alive"
+},
+{
+"guid": "6b54bbbb00cf418ba40f7b16956561e3",
+"kind": "fact",
+"identifier": "FACT.0046",
+"enabled": true,
+"x": 20.0,
+"y": 1300.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Interceptors"
+},
+{
+"guid": "09f78edefaaa4afd9da015571b8d158d",
+"kind": "fact",
+"identifier": "FACT.0074",
+"enabled": true,
+"x": 20.0,
+"y": 1475.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Storages"
+},
+{
+"guid": "25f1f01ac8a6420b95da3973b40909a6",
+"kind": "fact",
+"identifier": "FACT.0074",
+"enabled": true,
+"x": 1022.0,
+"y": 1429.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Storages"
+},
+{
+"guid": "a2a4032e243b428d889f6b1f9f6ad20e",
+"kind": "fact",
+"identifier": "FACT.0067",
+"enabled": true,
+"x": 1022.0,
+"y": 1072.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Is Expanding"
+},
+{
+"guid": "098ba24a60ea41d8b426f6435193befc",
+"kind": "fact",
+"identifier": "FACT.0069",
+"enabled": true,
+"x": 1022.0,
+"y": 1164.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Fleet Deployed"
+},
+{
+"guid": "2f1be8a129d84ce8888ebad9bef6d92e",
+"kind": "fact",
+"identifier": "FACT.0040",
+"enabled": true,
+"x": 224.0,
+"y": 737.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Needs More Hunters"
+},
+{
+"guid": "822e24dad3554555a07c29ffbf242cf5",
+"kind": "fact",
+"identifier": "FACT.0059",
+"enabled": true,
+"x": 1022.0,
+"y": 691.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Explorers Deployed"
+},
+{
+"guid": "9a2c06a44dd44cfeb210fe202d68a1c1",
+"kind": "fact",
+"identifier": "FACT.0053",
+"enabled": true,
+"x": 1316.0,
+"y": 1751.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Push Range"
+},
+{
+"guid": "a88421c7cf9d45fd891376487bbd9c56",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 1650.0,
+"y": 2100.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "2055675a437d4d94a49e174401074769",
+"kind": "fact",
+"identifier": "FACT.0059",
+"enabled": true,
+"x": 224.0,
+"y": 392.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Explorers Deployed"
+},
+{
+"guid": "36903895f3ac4c38ab498d69ed91f025",
+"kind": "fact",
+"identifier": "FACT.0041",
+"enabled": true,
+"x": 1648.0,
+"y": 641.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Command Center Alive"
+},
+{
+"guid": "df4bad4e3d204d5aa7283a1bbac623db",
+"kind": "fact",
+"identifier": "FACT.0069",
+"enabled": true,
+"x": 1022.0,
+"y": 896.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Enemy Fleet Deployed"
+},
+{
+"guid": "642a37ad2e244b659fb92ab36bf47874",
+"kind": "fact",
+"identifier": "FACT.0053",
+"enabled": true,
+"x": 1643.0,
+"y": 175.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Push Range"
+},
+{
+"guid": "1526aa0c83674d22ac22015b19ec1a22",
+"kind": "operation",
+"identifier": "OPER.0035",
+"enabled": true,
+"x": 715.0,
+"y": 2146.0,
+"collapsed": false,
+"name": "Build Combat Units"
+},
+{
+"guid": "52f6992843504483b6cf5b50ce56ecec",
+"kind": "operation",
+"identifier": "OPER.0037",
+"enabled": true,
+"x": 1384.0,
+"y": 2100.0,
+"collapsed": false,
+"name": "Attack Enemy Collectors"
+},
+{
+"guid": "a73e12d632ba470db4bd555397d87d7a",
+"kind": "operation",
+"identifier": "OPER.0038",
+"enabled": true,
+"x": 1285.0,
+"y": 151.0,
+"collapsed": false,
+"name": "Attack Enemy Stations"
+},
+{
+"guid": "8672c635f51b4001a212bdb2cd141bd2",
+"kind": "operation",
+"identifier": "OPER.0039",
+"enabled": false,
+"x": 730.0,
+"y": 1805.0,
+"collapsed": false,
+"name": "Attack Enemy Command Center"
+},
+{
+"guid": "2a32138b26a34c3aa106f791289b0bde",
+"kind": "operation",
+"identifier": "OPER.0044",
+"enabled": true,
+"x": 730.0,
+"y": 1460.0,
+"collapsed": false,
+"name": "Destroy Enemy Supply"
+},
+{
+"guid": "558a7b269f594b9c97b869c4a4a55a81",
+"kind": "operation",
+"identifier": "OPER.0043",
+"enabled": true,
+"x": 730.0,
+"y": 1072.0,
+"collapsed": false,
+"name": "Attack Enemy Fleet"
+},
+{
+"guid": "d3746778e1c4441ca6b6f84aeebfddb0",
+"kind": "operation",
+"identifier": "OPER.0041",
+"enabled": false,
+"x": 730.0,
+"y": 737.0,
+"collapsed": false,
+"name": "Convert To Hunters"
+},
+{
+"guid": "1ea4244e71e64f21812d402f3a64c0db",
+"kind": "operation",
+"identifier": "OPER.0045",
+"enabled": true,
+"x": 1648.0,
+"y": 1751.0,
+"collapsed": false,
+"name": "Push Attacking Units"
+},
+{
+"guid": "15693b421df449e1a4410a5a4d960e50",
+"kind": "operation",
+"identifier": "OPER.0040",
+"enabled": true,
+"x": 730.0,
+"y": 392.0,
+"collapsed": false,
+"name": "Attack Enemy Explorers"
+},
+{
+"guid": "1c61b8791db4406ea6a20a176df1fb92",
+"kind": "goal",
+"identifier": "GOAL.0023",
+"enabled": true,
+"x": 1983.0,
+"y": 742.0,
+"collapsed": false,
+"name": "Destroy Enemy Command Center"
+},
+{
+"guid": "6d77d8ab23fc4d359cc6248a426ccaaf",
+"kind": "goal",
+"identifier": "GOAL.0037",
+"enabled": true,
+"x": 1316.0,
+"y": 871.0,
+"collapsed": false,
+"name": "Destroy Enemy Fleet"
+},
+{
+"guid": "5b0096e34e304acdb59c3740f2db8e27",
+"kind": "goal",
+"identifier": "GOAL.0039",
+"enabled": true,
+"x": 1288.0,
+"y": 1300.0,
+"collapsed": false,
+"name": "Destroy Enemy Supply"
+},
+{
+"guid": "1c106ea52fd446cb8218a2e1686db378",
+"kind": "goal",
+"identifier": "GOAL.0031",
+"enabled": true,
+"x": 1887.0,
+"y": 2100.0,
+"collapsed": false,
+"name": "Reduce Enemy Collectors"
+},
+{
+"guid": "8f42bbb858f54635baebb1368e87a913",
+"kind": "goal",
+"identifier": "GOAL.0032",
+"enabled": true,
+"x": 1285.0,
+"y": 414.0,
+"collapsed": false,
+"name": "Destroy Enemy Stations"
+},
+{
+"guid": "1af0cf53ab4e4d9cb5c5304fbcde7b56",
+"kind": "goal",
+"identifier": "GOAL.0033",
+"enabled": true,
+"x": 1288.0,
+"y": 617.0,
+"collapsed": false,
+"name": "Destroy Enemy Explorers"
+},
+{
+"guid": "d684570655ab49efa9e66a995642ca94",
+"kind": "goal",
+"identifier": "GOAL.0035",
+"enabled": true,
+"x": 1983.0,
+"y": 896.0,
+"collapsed": false,
+"name": "Stop Enemy Expansion"
+},
+{
+"guid": "1b031bb01a264711b0c17433882cb7ff",
+"kind": "goal",
+"identifier": "GOAL.0040",
+"enabled": true,
+"x": 1983.0,
+"y": 175.0,
+"collapsed": false,
+"name": "Keep Pressure On Enemy"
+}
+],
+"edges": [
+{
+"from": "1ff186ff2afe4b26a2e774f0d9964e8c",
+"to": "1526aa0c83674d22ac22015b19ec1a22",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "ddc35fe0c1684cb184f951f28470d338",
+"to": "52f6992843504483b6cf5b50ce56ecec",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "5eca28f705984b008cb78772d7baa441",
+"to": "52f6992843504483b6cf5b50ce56ecec",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "1b3fd4a72ac1427496bb6f6136005a41",
+"to": "52f6992843504483b6cf5b50ce56ecec",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "f1525b22f72d46c9ba028620511bea47",
+"to": "a73e12d632ba470db4bd555397d87d7a",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "c6e0a5ac29474526b0bf60fc958e8867",
+"to": "8672c635f51b4001a212bdb2cd141bd2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "b07dc4f93aa849bdb72668aaf7000692",
+"to": "8672c635f51b4001a212bdb2cd141bd2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6b54bbbb00cf418ba40f7b16956561e3",
+"to": "2a32138b26a34c3aa106f791289b0bde",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "09f78edefaaa4afd9da015571b8d158d",
+"to": "2a32138b26a34c3aa106f791289b0bde",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "b07dc4f93aa849bdb72668aaf7000692",
+"to": "2a32138b26a34c3aa106f791289b0bde",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6b54bbbb00cf418ba40f7b16956561e3",
+"to": "558a7b269f594b9c97b869c4a4a55a81",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "b07dc4f93aa849bdb72668aaf7000692",
+"to": "558a7b269f594b9c97b869c4a4a55a81",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "2f1be8a129d84ce8888ebad9bef6d92e",
+"to": "d3746778e1c4441ca6b6f84aeebfddb0",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "9a2c06a44dd44cfeb210fe202d68a1c1",
+"to": "1ea4244e71e64f21812d402f3a64c0db",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6b54bbbb00cf418ba40f7b16956561e3",
+"to": "15693b421df449e1a4410a5a4d960e50",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "2055675a437d4d94a49e174401074769",
+"to": "15693b421df449e1a4410a5a4d960e50",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "b07dc4f93aa849bdb72668aaf7000692",
+"to": "15693b421df449e1a4410a5a4d960e50",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "36903895f3ac4c38ab498d69ed91f025",
+"to": "1c61b8791db4406ea6a20a176df1fb92",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "a2a4032e243b428d889f6b1f9f6ad20e",
+"to": "6d77d8ab23fc4d359cc6248a426ccaaf",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "098ba24a60ea41d8b426f6435193befc",
+"to": "6d77d8ab23fc4d359cc6248a426ccaaf",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "25f1f01ac8a6420b95da3973b40909a6",
+"to": "5b0096e34e304acdb59c3740f2db8e27",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "a88421c7cf9d45fd891376487bbd9c56",
+"to": "1c106ea52fd446cb8218a2e1686db378",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "f1525b22f72d46c9ba028620511bea47",
+"to": "8f42bbb858f54635baebb1368e87a913",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "822e24dad3554555a07c29ffbf242cf5",
+"to": "1af0cf53ab4e4d9cb5c5304fbcde7b56",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "a2a4032e243b428d889f6b1f9f6ad20e",
+"to": "d684570655ab49efa9e66a995642ca94",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "098ba24a60ea41d8b426f6435193befc",
+"to": "d684570655ab49efa9e66a995642ca94",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "df4bad4e3d204d5aa7283a1bbac623db",
+"to": "d684570655ab49efa9e66a995642ca94",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "642a37ad2e244b659fb92ab36bf47874",
+"to": "1b031bb01a264711b0c17433882cb7ff",
+"negated": true,
+"kind": "condition"
+}
+],
+"comments": [
+{
+"x": 459.0,
+"y": 103.0,
+"w": 300.0,
+"h": 104.0,
+"text": "This file contains the [Attack Logic] for the Pirate rogue teams."
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.ROGUE_AGENT_DEFENSE",
+"name": "Rogue Agent Defense Logic",
+"faction": "PIR",
+"category": "Defense",
+"node_count": 20,
+"edge_count": 14,
+"facts": 11,
+"operations": 5,
+"goals": 4,
+"nodes": [
+{
+"guid": "1ff186ff2afe4b26a2e774f0d9964e8c",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 224.0,
+"y": 847.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "bfa6398b1ef842c09fd06ee0081d5995",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 224.0,
+"y": 688.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"kind": "fact",
+"identifier": "FACT.0077",
+"enabled": true,
+"x": 224.0,
+"y": 581.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Under Attack"
+},
+{
+"guid": "1487e3e7d9704eaab1a4f070e8d337e3",
+"kind": "fact",
+"identifier": "FACT.0082",
+"enabled": true,
+"x": 221.0,
+"y": 270.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Friend Command Centers Defenseless"
+},
+{
+"guid": "bf531948b65440568780eaedc34be793",
+"kind": "fact",
+"identifier": "FACT.0082",
+"enabled": true,
+"x": 855.0,
+"y": 196.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Friend Command Centers Defenseless"
+},
+{
+"guid": "6260256a1e694ec68b8babe9892769fc",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 894.0,
+"y": 847.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "f4943de4a8d14d40ba37474ebbdf7d8c",
+"kind": "fact",
+"identifier": "FACT.0077",
+"enabled": true,
+"x": 894.0,
+"y": 755.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Command Center Under Attack"
+},
+{
+"guid": "6027b6304b034da78f7d62df09423e41",
+"kind": "fact",
+"identifier": "FACT.0066",
+"enabled": true,
+"x": 855.0,
+"y": 372.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Friend Command Centers Under Attack"
+},
+{
+"guid": "af191b2ec8e3431b94a93c134c7c9fda",
+"kind": "fact",
+"identifier": "FACT.0051",
+"enabled": true,
+"x": 889.0,
+"y": 516.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Recall Range"
+},
+{
+"guid": "397a29c8a27f4ea0bda325cb7720bfe0",
+"kind": "fact",
+"identifier": "FACT.0030",
+"enabled": true,
+"x": 20.0,
+"y": 1265.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Enough Formations"
+},
+{
+"guid": "1bf4dd937a6143a5988e0c432d25286b",
+"kind": "fact",
+"identifier": "FACT.0030",
+"enabled": true,
+"x": 636.0,
+"y": 1265.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Has Enough Formations"
+},
+{
+"guid": "5322fa7525af46278a21f74b2edf0794",
+"kind": "operation",
+"identifier": "OPER.0042",
+"enabled": true,
+"x": 553.0,
+"y": 549.0,
+"collapsed": false,
+"name": "Defend Command Center"
+},
+{
+"guid": "bc254bf4e2ad446e93f74e2e4ab4ebe9",
+"kind": "operation",
+"identifier": "OPER.0046",
+"enabled": true,
+"x": 553.0,
+"y": 196.0,
+"collapsed": false,
+"name": "Defend Friend Command Centers"
+},
+{
+"guid": "2cdca83ef7634d85a13c37cb0d1a3497",
+"kind": "operation",
+"identifier": "OPER.0035",
+"enabled": true,
+"x": 553.0,
+"y": 912.0,
+"collapsed": false,
+"name": "Build Combat Units"
+},
+{
+"guid": "84cd673d8f70406f832bb01c60e95e13",
+"kind": "operation",
+"identifier": "OPER.0033",
+"enabled": true,
+"x": 299.0,
+"y": 1236.0,
+"collapsed": false,
+"name": "Create Formations"
+},
+{
+"guid": "38ca9176cfa94da0aee3f79384c6f804",
+"kind": "operation",
+"identifier": "OPER.0034",
+"enabled": true,
+"x": 1210.0,
+"y": 238.0,
+"collapsed": false,
+"name": "Recall Idle Units"
+},
+{
+"guid": "512ea8c62b984e458d97a1b8285b173c",
+"kind": "goal",
+"identifier": "GOAL.0036",
+"enabled": true,
+"x": 1210.0,
+"y": 717.0,
+"collapsed": false,
+"name": "Protect Command Center"
+},
+{
+"guid": "a2a57c2feb294a87a0961b8b3d7c5d65",
+"kind": "goal",
+"identifier": "GOAL.0041",
+"enabled": true,
+"x": 1210.0,
+"y": 20.0,
+"collapsed": false,
+"name": "Protect Friend Command Centers"
+},
+{
+"guid": "07bf352b28604c80bd78d1c60f8ca4b1",
+"kind": "goal",
+"identifier": "GOAL.0038",
+"enabled": true,
+"x": 1210.0,
+"y": 516.0,
+"collapsed": false,
+"name": "Concentrate Fleet"
+},
+{
+"guid": "22d3c740b75c4a16bbb68a911ed15a21",
+"kind": "goal",
+"identifier": "GOAL.0034",
+"enabled": true,
+"x": 929.0,
+"y": 1285.0,
+"collapsed": false,
+"name": "Organize Fleet"
+}
+],
+"edges": [
+{
+"from": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"to": "5322fa7525af46278a21f74b2edf0794",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "bfa6398b1ef842c09fd06ee0081d5995",
+"to": "5322fa7525af46278a21f74b2edf0794",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "1487e3e7d9704eaab1a4f070e8d337e3",
+"to": "bc254bf4e2ad446e93f74e2e4ab4ebe9",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "dbaf5d80d3064cc4a86b6b9eeab446a4",
+"to": "bc254bf4e2ad446e93f74e2e4ab4ebe9",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "bfa6398b1ef842c09fd06ee0081d5995",
+"to": "bc254bf4e2ad446e93f74e2e4ab4ebe9",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "1ff186ff2afe4b26a2e774f0d9964e8c",
+"to": "2cdca83ef7634d85a13c37cb0d1a3497",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "397a29c8a27f4ea0bda325cb7720bfe0",
+"to": "84cd673d8f70406f832bb01c60e95e13",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "af191b2ec8e3431b94a93c134c7c9fda",
+"to": "38ca9176cfa94da0aee3f79384c6f804",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "6260256a1e694ec68b8babe9892769fc",
+"to": "512ea8c62b984e458d97a1b8285b173c",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "f4943de4a8d14d40ba37474ebbdf7d8c",
+"to": "512ea8c62b984e458d97a1b8285b173c",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "6027b6304b034da78f7d62df09423e41",
+"to": "a2a57c2feb294a87a0961b8b3d7c5d65",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "bf531948b65440568780eaedc34be793",
+"to": "a2a57c2feb294a87a0961b8b3d7c5d65",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "af191b2ec8e3431b94a93c134c7c9fda",
+"to": "07bf352b28604c80bd78d1c60f8ca4b1",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "1bf4dd937a6143a5988e0c432d25286b",
+"to": "22d3c740b75c4a16bbb68a911ed15a21",
+"negated": false,
+"kind": "condition"
+}
+],
+"comments": [
+{
+"x": 876.0,
+"y": 1048.0,
+"w": 300.0,
+"h": 104.0,
+"text": "This file contains the [Defense Logic] for the Pirate rogue teams, and the logic to protect allies too."
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.ROGUE_AGENT_RESOURCE",
+"name": "Rogue Agent Resource Logic",
+"faction": "PIR",
+"category": "Resources",
+"node_count": 7,
+"edge_count": 5,
+"facts": 5,
+"operations": 1,
+"goals": 1,
+"nodes": [
+{
+"guid": "20eef2ad8fee4dc29746b32f2d5ce80c",
+"kind": "fact",
+"identifier": "FACT.0028",
+"enabled": true,
+"x": 20.0,
+"y": 20.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources Are Decreasing Or Exhausted"
+},
+{
+"guid": "8d859856768d47a39b7924244e0998f4",
+"kind": "fact",
+"identifier": "FACT.0027",
+"enabled": true,
+"x": 25.0,
+"y": 194.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Extracting Resources"
+},
+{
+"guid": "a875b4523a694e07b47d3c58b0e7fb24",
+"kind": "fact",
+"identifier": "FACT.0026",
+"enabled": true,
+"x": 20.0,
+"y": 307.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources At Maximum Capacity"
+},
+{
+"guid": "8f002c18e06a4d00b22e9b252c106135",
+"kind": "fact",
+"identifier": "FACT.0022",
+"enabled": true,
+"x": 599.0,
+"y": 26.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources Are Increasing"
+},
+{
+"guid": "fcc8d13b9de54da095b9ee93a5970943",
+"kind": "fact",
+"identifier": "FACT.0023",
+"enabled": true,
+"x": 599.0,
+"y": 169.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources Are Enough"
+},
+{
+"guid": "754a4ea3bfb04cd3834237446123adfc",
+"kind": "operation",
+"identifier": "OPER.0026",
+"enabled": true,
+"x": 309.0,
+"y": 20.0,
+"collapsed": false,
+"name": "Extract Resources"
+},
+{
+"guid": "28b4b9ac3a774a57ad0c89a606bff467",
+"kind": "goal",
+"identifier": "GOAL.0022",
+"enabled": true,
+"x": 930.0,
+"y": 26.0,
+"collapsed": false,
+"name": "Accumulate Resources"
+}
+],
+"edges": [
+{
+"from": "20eef2ad8fee4dc29746b32f2d5ce80c",
+"to": "754a4ea3bfb04cd3834237446123adfc",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "8d859856768d47a39b7924244e0998f4",
+"to": "754a4ea3bfb04cd3834237446123adfc",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "a875b4523a694e07b47d3c58b0e7fb24",
+"to": "754a4ea3bfb04cd3834237446123adfc",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "8f002c18e06a4d00b22e9b252c106135",
+"to": "28b4b9ac3a774a57ad0c89a606bff467",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "fcc8d13b9de54da095b9ee93a5970943",
+"to": "28b4b9ac3a774a57ad0c89a606bff467",
+"negated": false,
+"kind": "condition"
+}
+],
+"comments": [
+{
+"x": 429.0,
+"y": -156.0,
+"w": 300.0,
+"h": 104.0,
+"text": "This file contains the [Resource Management Logic] for the Pirate rogue teams."
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.TEAM_TEST_01",
+"name": "Team Test Logic 01",
+"faction": "CMX",
+"category": "Fleet",
+"node_count": 19,
+"edge_count": 7,
+"facts": 7,
+"operations": 3,
+"goals": 2,
+"nodes": [
+{
+"guid": "6f02395821894bf8a378eccd2fbab149",
+"kind": "fact",
+"identifier": "FACT.0047",
+"enabled": true,
+"x": 29.0,
+"y": 115.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Bombers"
+},
+{
+"guid": "1b03cb01314c44118880fd6901ce846d",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 807.0,
+"y": 20.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "9407e7d057c9476fa5921087f026b57c",
+"kind": "fact",
+"identifier": "FACT.0046",
+"enabled": true,
+"x": 38.0,
+"y": 603.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Interceptors"
+},
+{
+"guid": "f2243d4905674c7f98fb7a62927867e3",
+"kind": "fact",
+"identifier": "FACT.0051",
+"enabled": true,
+"x": 59.0,
+"y": 767.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Recall Range"
+},
+{
+"guid": "1ceaa523bfa14c3fbf8d8340b044854c",
+"kind": "fact",
+"identifier": "FACT.0048",
+"enabled": true,
+"x": 909.0,
+"y": 572.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Corvettes"
+},
+{
+"guid": "a809340264254622bbeb66a5ed7e0f12",
+"kind": "fact",
+"identifier": "FACT.0040",
+"enabled": true,
+"x": 29.0,
+"y": -72.0,
+"collapsed": true,
+"auto_generate_goal": false,
+"name": "Needs More Hunters"
+},
+{
+"guid": "72d6986dd62741b2b1bae7602ed8b929",
+"kind": "fact",
+"identifier": "FACT.0049",
+"enabled": true,
+"x": 41.0,
+"y": 974.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Frigates"
+},
+{
+"guid": "4722bb6c2aaf461699995c1e61fc0158",
+"kind": "operation",
+"identifier": "OPER.0042",
+"enabled": true,
+"x": 431.0,
+"y": -34.0,
+"collapsed": false,
+"name": "Defend Command Center"
+},
+{
+"guid": "d3ee49d4618a4cf3be91031c4712c602",
+"kind": "operation",
+"identifier": "OPER.0034",
+"enabled": true,
+"x": 444.0,
+"y": 288.0,
+"collapsed": false,
+"name": "Recall Idle Units"
+},
+{
+"guid": "0457ed418c7d41fb954fd802a34483ae",
+"kind": "operation",
+"identifier": "OPER.0046",
+"enabled": true,
+"x": 380.0,
+"y": 1132.0,
+"collapsed": false,
+"name": "Defend Friend Command Centers"
+},
+{
+"guid": "f42a0aca5eb1457aa97ad4797ed7c424",
+"kind": "goal",
+"identifier": "GOAL.0036",
+"enabled": true,
+"x": 1136.0,
+"y": 82.0,
+"collapsed": false,
+"name": "Protect Command Center"
+},
+{
+"guid": "1f41d7388233491381d220c6e253cff2",
+"kind": "goal",
+"identifier": "GOAL.0038",
+"enabled": true,
+"x": 1136.0,
+"y": 288.0,
+"collapsed": false,
+"name": "Concentrate Fleet"
+},
+{
+"guid": "0e98e3aecc524e9e993582b1e98e0217",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 338.0,
+"y": 715.0,
+"collapsed": false,
+"logic_type": "AND",
+"name": null
+},
+{
+"guid": "c09af4cc7af74d09a2ad2c915392ef95",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 1194.0,
+"y": 726.0,
+"collapsed": false,
+"logic_type": "OR",
+"name": null
+},
+{
+"guid": "a93919e9bffa4a0fb80fd5ebe52f9c3e",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 38.0,
+"y": 450.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "ARM.002",
+"name": null
+},
+{
+"guid": "27e3e242380b4a2db0e2be840b030952",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 789.0,
+"y": 343.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "EXT.003",
+"name": null
+},
+{
+"guid": "a12bf293274d4d94858b908a24b3a501",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 29.0,
+"y": 287.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "CMX_BOM",
+"name": null
+},
+{
+"guid": "c63522c1c3b94a8abc0c8bd4b84ca1d6",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 932.0,
+"y": 767.0,
+"collapsed": false,
+"builtin_type": 3,
+"target_identifier": "TUR.006",
+"name": null
+},
+{
+"guid": "e456742cf30843368f7c8298490fbb31",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 17.0,
+"y": 1174.0,
+"collapsed": false,
+"builtin_type": 4,
+"target_identifier": "R.T.HBL",
+"name": null
+}
+],
+"edges": [
+{
+"from": "6f02395821894bf8a378eccd2fbab149",
+"to": "4722bb6c2aaf461699995c1e61fc0158",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "a809340264254622bbeb66a5ed7e0f12",
+"to": "4722bb6c2aaf461699995c1e61fc0158",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "6f02395821894bf8a378eccd2fbab149",
+"to": "d3ee49d4618a4cf3be91031c4712c602",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "72d6986dd62741b2b1bae7602ed8b929",
+"to": "0457ed418c7d41fb954fd802a34483ae",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "1b03cb01314c44118880fd6901ce846d",
+"to": "f42a0aca5eb1457aa97ad4797ed7c424",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "f2243d4905674c7f98fb7a62927867e3",
+"to": "0e98e3aecc524e9e993582b1e98e0217",
+"negated": true,
+"kind": "operand"
+},
+{
+"from": "1ceaa523bfa14c3fbf8d8340b044854c",
+"to": "c09af4cc7af74d09a2ad2c915392ef95",
+"negated": false,
+"kind": "operand"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.TEAM_TEST_02",
+"name": "Team Test Logic 02",
+"faction": "CMX",
+"category": "Resources",
+"node_count": 11,
+"edge_count": 3,
+"facts": 5,
+"operations": 2,
+"goals": 1,
+"nodes": [
+{
+"guid": "b6c59df6c0094a3d9154880a9433cf63",
+"kind": "fact",
+"identifier": "FACT.0004",
+"enabled": true,
+"x": 324.0,
+"y": 537.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "After End Game"
+},
+{
+"guid": "322d47fcc1f2433ab06c4f83440defe4",
+"kind": "fact",
+"identifier": "FACT.0065",
+"enabled": true,
+"x": 324.0,
+"y": 736.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Friend Command Centers"
+},
+{
+"guid": "2fd3019633c046ffb05153f023565aaf",
+"kind": "fact",
+"identifier": "FACT.0051",
+"enabled": true,
+"x": 988.0,
+"y": 20.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Units In Recall Range"
+},
+{
+"guid": "92598a54f7904824b365a38eab0ddcb0",
+"kind": "fact",
+"identifier": "FACT.0066",
+"enabled": true,
+"x": 203.0,
+"y": 30.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Friend Command Centers Under Attack"
+},
+{
+"guid": "fec72a3cd4f44c55b5d8e4ab10ac7a9e",
+"kind": "fact",
+"identifier": "FACT.0062",
+"enabled": true,
+"x": 20.0,
+"y": 554.0,
+"collapsed": false,
+"auto_generate_goal": true,
+"name": "Has Multiple Interceptors"
+},
+{
+"guid": "0d52467bef204d6887ddd20264d36b1d",
+"kind": "operation",
+"identifier": "OPER.0042",
+"enabled": true,
+"x": 988.0,
+"y": 276.0,
+"collapsed": false,
+"name": "Defend Command Center"
+},
+{
+"guid": "86055e6e9afa46a5bd218c792ee544de",
+"kind": "operation",
+"identifier": "OPER.0031",
+"enabled": true,
+"x": 1081.0,
+"y": 662.0,
+"collapsed": false,
+"name": "Build Scouts"
+},
+{
+"guid": "25a3d4bce7e74e3399ff601726fb4128",
+"kind": "goal",
+"identifier": "GOAL.0036",
+"enabled": true,
+"x": 1312.0,
+"y": 269.0,
+"collapsed": false,
+"name": "Protect Command Center"
+},
+{
+"guid": "c97db1b44bb14fde999193e704773d05",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 630.0,
+"y": 414.0,
+"collapsed": false,
+"logic_type": "NOT",
+"name": null
+},
+{
+"guid": "47dc3835fa4c40f094c166a1b256a0b3",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 697.0,
+"y": 276.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "PIP.004",
+"name": null
+},
+{
+"guid": "f6a87cd5e6a94dc982a8acfc1a37362d",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": false,
+"x": 291.0,
+"y": 322.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "ARM.004",
+"name": null
+}
+],
+"edges": [
+{
+"from": "2fd3019633c046ffb05153f023565aaf",
+"to": "25a3d4bce7e74e3399ff601726fb4128",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "b6c59df6c0094a3d9154880a9433cf63",
+"to": "c97db1b44bb14fde999193e704773d05",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "322d47fcc1f2433ab06c4f83440defe4",
+"to": "c97db1b44bb14fde999193e704773d05",
+"negated": true,
+"kind": "operand"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.TEAM_TEST_03",
+"name": "Team Test Logic 03",
+"faction": "CMX",
+"category": "Attack",
+"node_count": 18,
+"edge_count": 2,
+"facts": 3,
+"operations": 3,
+"goals": 2,
+"nodes": [
+{
+"guid": "2c177c248f724fd69fb16b3a99f5b0a7",
+"kind": "fact",
+"identifier": "FACT.0052",
+"enabled": true,
+"x": 1006.0,
+"y": 285.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Little Combat Units"
+},
+{
+"guid": "d156a638bd06472c8cd5088d25d6047c",
+"kind": "fact",
+"identifier": "FACT.0078",
+"enabled": true,
+"x": 20.0,
+"y": 552.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Command Center Defenseless"
+},
+{
+"guid": "1504169eb69e4c3eaec743dcb5473445",
+"kind": "fact",
+"identifier": "FACT.0049",
+"enabled": true,
+"x": 268.0,
+"y": 1143.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Frigates"
+},
+{
+"guid": "5016f47da5b34e7fba759125b9917307",
+"kind": "operation",
+"identifier": "OPER.0024",
+"enabled": true,
+"x": 468.0,
+"y": 20.0,
+"collapsed": false,
+"name": "Build Sensor Probes"
+},
+{
+"guid": "616c7a76f2f64730b7b371ad62640c44",
+"kind": "operation",
+"identifier": "OPER.0037",
+"enabled": true,
+"x": 1249.0,
+"y": 695.0,
+"collapsed": false,
+"name": "Attack Enemy Collectors"
+},
+{
+"guid": "f2b4a651219f41d38cbcc2b310724144",
+"kind": "operation",
+"identifier": "OPER.0046",
+"enabled": true,
+"x": 580.0,
+"y": 1117.0,
+"collapsed": false,
+"name": "Defend Friend Command Centers"
+},
+{
+"guid": "127112d6397a45c5b239a20a73698d87",
+"kind": "goal",
+"identifier": "GOAL.0038",
+"enabled": true,
+"x": 1362.0,
+"y": 104.0,
+"collapsed": false,
+"name": "Concentrate Fleet"
+},
+{
+"guid": "7d7d3a2f9fad48d5914d0d2344b700f5",
+"kind": "goal",
+"identifier": "GOAL.0041",
+"enabled": true,
+"x": 1346.0,
+"y": 328.0,
+"collapsed": false,
+"name": "Protect Friend Command Centers"
+},
+{
+"guid": "ae92ed34c340491ebd8072da97841d98",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 341.0,
+"y": 328.0,
+"collapsed": false,
+"logic_type": "OR",
+"name": null
+},
+{
+"guid": "d59372b9e43e48518d64a0186db5a142",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 801.0,
+"y": 39.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "EXT.007",
+"name": null
+},
+{
+"guid": "bef70d0f4e3743b483aca01d6dc45ed3",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 34.0,
+"y": 308.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "RTT.002",
+"name": null
+},
+{
+"guid": "f05f3188cde445fd8fe7c36ecb798923",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 34.0,
+"y": 428.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "DEC.002",
+"name": null
+},
+{
+"guid": "df6c039bb23b478b939566f0ccf4c81f",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 288.0,
+"y": 649.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "TUR.004",
+"name": null
+},
+{
+"guid": "cc2b503fc6654629aeb39354b12c1c12",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 20.0,
+"y": 39.0,
+"collapsed": false,
+"builtin_type": 0,
+"target_identifier": "PIP.004",
+"name": null
+},
+{
+"guid": "87cf54ff9aac4f3d9b8dfe4317a66399",
+"kind": "linked_fact",
+"identifier": null,
+"enabled": true,
+"x": 0.0,
+"y": 0.0,
+"collapsed": false,
+"builtin_type": 3,
+"target_identifier": "ARM.008",
+"name": null
+},
+{
+"guid": "67e2a634eca247a39ea8d5b9ceae18f9",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 1146.0,
+"y": 883.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "d3ca512789974f2981062bcf5abcad03",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 801.0,
+"y": 862.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "208df614c89249bcb325e33fc1d527fe",
+"kind": "timer_fact",
+"identifier": null,
+"enabled": true,
+"x": 331.0,
+"y": 862.0,
+"collapsed": false,
+"name": null
+}
+],
+"edges": [
+{
+"from": "1504169eb69e4c3eaec743dcb5473445",
+"to": "f2b4a651219f41d38cbcc2b310724144",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "2c177c248f724fd69fb16b3a99f5b0a7",
+"to": "7d7d3a2f9fad48d5914d0d2344b700f5",
+"negated": false,
+"kind": "condition"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.TEST_AGENT",
+"name": "Test Agent Logic",
+"faction": "CMX",
+"category": "None",
+"node_count": 15,
+"edge_count": 15,
+"facts": 4,
+"operations": 4,
+"goals": 4,
+"nodes": [
+{
+"guid": "250047add6414a85903188aa0b21251b",
+"kind": "fact",
+"identifier": "FACT.0067",
+"enabled": true,
+"x": 333.0,
+"y": 20.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Is Expanding"
+},
+{
+"guid": "0af58fd3e83f41f7a83ab9a6e466b8a0",
+"kind": "fact",
+"identifier": "FACT.0025",
+"enabled": true,
+"x": 333.0,
+"y": 183.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources Exhausting"
+},
+{
+"guid": "cfe2c45991a8405c9c4cd121959a1d36",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 333.0,
+"y": 347.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "9cca8dc4cfc64afaadf81cf69daa8208",
+"kind": "fact",
+"identifier": "FACT.0016",
+"enabled": true,
+"x": 371.0,
+"y": 530.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": null
+},
+{
+"guid": "aac98ed6eef44caeafb7957dc0758cdd",
+"kind": "operation",
+"identifier": "OPER.0022",
+"enabled": true,
+"x": 1247.0,
+"y": 94.0,
+"collapsed": false,
+"name": "Build Collectors"
+},
+{
+"guid": "97c08c41c97949e19480866a4dc7e843",
+"kind": "operation",
+"identifier": "OPER.0018",
+"enabled": true,
+"x": 1166.0,
+"y": 420.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "310fa99527c84ee1b6ac40a89c566190",
+"kind": "operation",
+"identifier": "OPER.0010",
+"enabled": true,
+"x": 1247.0,
+"y": 762.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "93ef33321e904057ab2e54fe4a407725",
+"kind": "operation",
+"identifier": "OPER.0028",
+"enabled": true,
+"x": 932.0,
+"y": 789.0,
+"collapsed": false,
+"name": "Build Corvettes"
+},
+{
+"guid": "8f671fdd447047a3919a354a167e114f",
+"kind": "goal",
+"identifier": "GOAL.0006",
+"enabled": true,
+"x": 1681.0,
+"y": 604.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "96eec765466f4448a211179976106d3f",
+"kind": "goal",
+"identifier": "GOAL.0007",
+"enabled": true,
+"x": 1681.0,
+"y": 479.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "7485b3d926504938b4c0f5b3e2c37715",
+"kind": "goal",
+"identifier": "GOAL.0019",
+"enabled": true,
+"x": 1688.0,
+"y": 125.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "40bdc0ab91364f47bad1c59115811dc2",
+"kind": "goal",
+"identifier": "GOAL.0024",
+"enabled": true,
+"x": 1681.0,
+"y": 852.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "6520a0ccf7c54978bb4d52a22e7ed81e",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 383.0,
+"y": 862.0,
+"collapsed": false,
+"logic_type": "OR",
+"name": null
+},
+{
+"guid": "f1a5a9ef88964c28a13fb59b12bb9e17",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 847.0,
+"y": 251.0,
+"collapsed": false,
+"logic_type": "AND",
+"name": null
+},
+{
+"guid": "ad0a335e53354790b9972d01982ef9a9",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 20.0,
+"y": 752.0,
+"collapsed": false,
+"logic_type": "OR",
+"name": null
+}
+],
+"edges": [
+{
+"from": "",
+"to": "aac98ed6eef44caeafb7957dc0758cdd",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "aac98ed6eef44caeafb7957dc0758cdd",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "aac98ed6eef44caeafb7957dc0758cdd",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "93ef33321e904057ab2e54fe4a407725",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "8f671fdd447047a3919a354a167e114f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "96eec765466f4448a211179976106d3f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "7485b3d926504938b4c0f5b3e2c37715",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "40bdc0ab91364f47bad1c59115811dc2",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "6520a0ccf7c54978bb4d52a22e7ed81e",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "6520a0ccf7c54978bb4d52a22e7ed81e",
+"negated": true,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "6520a0ccf7c54978bb4d52a22e7ed81e",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "f1a5a9ef88964c28a13fb59b12bb9e17",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "f1a5a9ef88964c28a13fb59b12bb9e17",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "ad0a335e53354790b9972d01982ef9a9",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "ad0a335e53354790b9972d01982ef9a9",
+"negated": false,
+"kind": "operand"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LOGIC.TEST_AGENT_1",
+"name": "Test Agent Logic 1",
+"faction": "CMX",
+"category": "None",
+"node_count": 12,
+"edge_count": 11,
+"facts": 6,
+"operations": 2,
+"goals": 2,
+"nodes": [
+{
+"guid": "3ff8e85e25084a4fb327bf84726869c6",
+"kind": "fact",
+"identifier": "FACT.0058",
+"enabled": true,
+"x": 68.0,
+"y": 87.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Can Build Fortify"
+},
+{
+"guid": "dfad454fe8884ea1af2b64dcfecfe972",
+"kind": "fact",
+"identifier": "FACT.0050",
+"enabled": true,
+"x": 64.0,
+"y": 515.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Idle Fighters Or Corvettes"
+},
+{
+"guid": "04c1b22ed1fe4d09b6f3841f28361eeb",
+"kind": "fact",
+"identifier": "FACT.0061",
+"enabled": true,
+"x": 68.0,
+"y": 289.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Has Inactive Mining Stations"
+},
+{
+"guid": "1d0b03b3996f461ea234db4aa80da045",
+"kind": "fact",
+"identifier": "FACT.0071",
+"enabled": true,
+"x": 162.0,
+"y": 710.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Enemy Has Many Collectors"
+},
+{
+"guid": "8fac292af39948cb95f5b1d6e2217fe4",
+"kind": "fact",
+"identifier": "FACT.0016",
+"enabled": true,
+"x": 915.0,
+"y": -26.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": null
+},
+{
+"guid": "14c34f59a4ea46bdb285beab6d018c1c",
+"kind": "fact",
+"identifier": "FACT.0025",
+"enabled": true,
+"x": 855.0,
+"y": 664.0,
+"collapsed": false,
+"auto_generate_goal": false,
+"name": "Resources Exhausting"
+},
+{
+"guid": "3cedd761e393437581607e4e9f9e26cf",
+"kind": "operation",
+"identifier": "OPER.0013",
+"enabled": true,
+"x": 529.0,
+"y": 310.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "2d540d1c0fe34bee99fe878c858f343a",
+"kind": "operation",
+"identifier": "OPER.0008",
+"enabled": true,
+"x": 1314.0,
+"y": -52.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "76dfeb05bde34b7e816562bc61607f8f",
+"kind": "goal",
+"identifier": "GOAL.0025",
+"enabled": true,
+"x": 1344.0,
+"y": 218.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "25d9e0344e02449f8071d931370521be",
+"kind": "goal",
+"identifier": "GOAL.0012",
+"enabled": true,
+"x": 1146.0,
+"y": 515.0,
+"collapsed": false,
+"name": null
+},
+{
+"guid": "518dc12e659a413cae324d09f4f70366",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 519.0,
+"y": -5.0,
+"collapsed": false,
+"logic_type": "NOT",
+"name": null
+},
+{
+"guid": "b332dda709f34bbd9c10bd9194fd608f",
+"kind": "logic",
+"identifier": null,
+"enabled": true,
+"x": 887.0,
+"y": 211.0,
+"collapsed": false,
+"logic_type": "OR",
+"name": null
+}
+],
+"edges": [
+{
+"from": "",
+"to": "3cedd761e393437581607e4e9f9e26cf",
+"negated": true,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "76dfeb05bde34b7e816562bc61607f8f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "76dfeb05bde34b7e816562bc61607f8f",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "25d9e0344e02449f8071d931370521be",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "25d9e0344e02449f8071d931370521be",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "25d9e0344e02449f8071d931370521be",
+"negated": false,
+"kind": "condition"
+},
+{
+"from": "",
+"to": "518dc12e659a413cae324d09f4f70366",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "518dc12e659a413cae324d09f4f70366",
+"negated": true,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "518dc12e659a413cae324d09f4f70366",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "b332dda709f34bbd9c10bd9194fd608f",
+"negated": false,
+"kind": "operand"
+},
+{
+"from": "",
+"to": "b332dda709f34bbd9c10bd9194fd608f",
+"negated": false,
+"kind": "operand"
+}
+],
+"comments": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

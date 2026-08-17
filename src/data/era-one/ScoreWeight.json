@@ -1,0 +1,142 @@
+[
+{
+"game_id": "ArmamentWeight",
+"name": "Armament Weight",
+"weight": 2.0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ArmorWeight",
+"name": "Armor Weight",
+"weight": 0.7,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackRangeWeight",
+"name": "Attack Range Weight",
+"weight": 0.8,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CloakWeight",
+"name": "Cloak Weight",
+"weight": 0.5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ConstructionTimeWeight",
+"name": "Construction Time Weight",
+"weight": 0.01,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "DetectionRangeWeight",
+"name": "Detection Range Weight",
+"weight": 0.06,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "EnergyProductionWeight",
+"name": "Energy Production Weight",
+"weight": 0.3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "EntityModifiersWeight",
+"name": "Entity Modifiers Weight",
+"weight": 2.0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "HealthWeight",
+"name": "Health Weight",
+"weight": 0.005,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PopulationCostWeight",
+"name": "Population Cost Weight",
+"weight": 0.5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PowerControlWeight",
+"name": "Power Control Weight",
+"weight": 1.5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ResourceCostWeight",
+"name": "Resource Cost Weight",
+"weight": 0.02,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ScoreNormalization",
+"name": "Score Normalization",
+"weight": 5.0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SensorStrengthWeight",
+"name": "Sensor Strength Weight",
+"weight": 2.5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "StaticBonusWeight",
+"name": "Static Bonus Weight",
+"weight": 0.001,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TierWeight",
+"name": "Tier Weight",
+"weight": 0.8,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "UnlockedConstructableWeight",
+"name": "Unlocked Constructable Weight",
+"weight": 0.5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "UpgradeModifierWeight",
+"name": "Upgrade Modifier Weight",
+"weight": 8.0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "team_score_dps_multiplier",
+"name": "team score dps multiplier",
+"weight": 0.6,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "team_score_entities_multiplier",
+"name": "team score entities multiplier",
+"weight": 0.01,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

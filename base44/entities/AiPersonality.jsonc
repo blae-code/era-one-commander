@@ -1,0 +1,712 @@
+{
+  "name": "AiPersonality",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "asset_name": {
+      "type": "string",
+      "description": "Unity asset name inside the game bundle"
+    },
+    "weapon_category_hint_exclusive": {
+      "type": "number"
+    },
+    "maximum_stations_per_blueprint": {
+      "type": "number"
+    },
+    "stations_percent_before_attack": {
+      "type": "number"
+    },
+    "stations_turbo_enabled": {
+      "type": "boolean"
+    },
+    "starting_resource_bonus": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "blueprint_resource_bonus": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "give_blueprint_resource_value": {
+      "type": "number"
+    },
+    "restart_resource_bonus": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "give_resource_shortage_bonus": {
+      "type": "number"
+    },
+    "resource_shortage_bonus": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "resource_shortage_threshold": {
+      "type": "number"
+    },
+    "resource_shortage_duration": {
+      "type": "number"
+    },
+    "resource_shortage_bonus_interval": {
+      "type": "number"
+    },
+    "energy_production_bonus": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "ignore_warp_requirements": {
+      "type": "number"
+    },
+    "ignore_research_center_concurrency_limit": {
+      "type": "number"
+    },
+    "auto_increase_crew_cap": {
+      "type": "number"
+    },
+    "bypass_modules_crew_cap_limit": {
+      "type": "number"
+    },
+    "bypass_units_crew_cap_limit": {
+      "type": "number"
+    },
+    "bypass_crew_cap_game_phase": {
+      "type": "number"
+    },
+    "auto_increase_energy_production": {
+      "type": "number"
+    },
+    "turbo_not_consume_energy": {
+      "type": "number"
+    },
+    "allow_modules_not_unlocked": {
+      "type": "number"
+    },
+    "priority_module_types": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "priority_module_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "priority_research_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "modules_max_concurrent_build": {
+      "type": "number"
+    },
+    "max_queued_modules_of_same_type": {
+      "type": "number"
+    },
+    "units_max_concurrent_build": {
+      "type": "number"
+    },
+    "research_max_concurrent_build": {
+      "type": "number"
+    },
+    "max_module_queued": {
+      "type": "number"
+    },
+    "prioritize_secondary_station_constructions": {
+      "type": "number"
+    },
+    "long_construction_delay_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "short_construction_delay_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "destroyed_part_rebuild_cooldown_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "build_range_constraint": {
+      "type": "number"
+    },
+    "modules_build_priority_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "units_build_priority_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "research_build_priority_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "default_attack_stance": {
+      "type": "string"
+    },
+    "defensive_probability": {
+      "type": "number"
+    },
+    "aggressive_probability": {
+      "type": "number"
+    },
+    "hunter_probability": {
+      "type": "number"
+    },
+    "chase_probability": {
+      "type": "number"
+    },
+    "flyby_probability": {
+      "type": "number"
+    },
+    "orbit_probability": {
+      "type": "number"
+    },
+    "frontal_probability": {
+      "type": "number"
+    },
+    "lateral_probability": {
+      "type": "number"
+    },
+    "time_between_attacks": {
+      "type": "object",
+      "properties": {
+        "toCommandCenter": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "toStation": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "toFleet": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "toExplorers": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "toCollectors": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "withStations": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "withCommandCenter": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "withLongRangeWeapons": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "withWarp": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "secondary_attack_distance_from_enemy_cc": {
+      "type": "number"
+    },
+    "min_max_units_for_attack": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "min_units_per_formation": {
+      "type": "number"
+    },
+    "max_units_per_formation": {
+      "type": "number"
+    },
+    "min_defending_units": {
+      "type": "number"
+    },
+    "enemy_collectors_threshold": {
+      "type": "number"
+    },
+    "enemy_stations_threshold": {
+      "type": "number"
+    },
+    "enemy_modules_threshold": {
+      "type": "number"
+    },
+    "minimum_fleet_recall_distance": {
+      "type": "number"
+    },
+    "maximum_fleet_recall_distance": {
+      "type": "number"
+    },
+    "enemy_team_selection_criteria": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "enemy_team_selection_interval": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "allow_warp_attack": {
+      "type": "number"
+    },
+    "dock_collectors_if_attacked": {
+      "type": "number"
+    },
+    "collectors_dock_time": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "kamikaze_unarmed_stations": {
+      "type": "number"
+    },
+    "main_station_percent_before_attack": {
+      "type": "number"
+    },
+    "max_enemy_strength_for_final_attack": {
+      "type": "number"
+    },
+    "minimum_attacker_at_player_base": {
+      "type": "number"
+    },
+    "frigate_warp_attack_chance": {
+      "type": "number"
+    },
+    "stations_warp_attack_chance": {
+      "type": "number"
+    },
+    "patrol_route_cube_size": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "units_per_patrol_route": {
+      "type": "number"
+    },
+    "minimum_expansion_resource_quantity": {
+      "type": "number"
+    },
+    "migration_with_warp_chance": {
+      "type": "number"
+    },
+    "use_last_known_positions": {
+      "type": "number"
+    },
+    "memory_expired_threshold_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "planner_options": {
+      "type": "object",
+      "properties": {
+        "goalSelection": {
+          "type": "number"
+        },
+        "planSelection": {
+          "type": "number"
+        },
+        "planSelectionWeight": {
+          "type": "number"
+        },
+        "categoryPreferenceWeight": {
+          "type": "number"
+        },
+        "maxDepth": {
+          "type": "number"
+        },
+        "maxNodes": {
+          "type": "number"
+        }
+      }
+    },
+    "category_priority_config": {
+      "type": "object",
+      "properties": {
+        "categoryOffsets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "number"
+              },
+              "priority": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "construction_channel_priority_config": {
+      "type": "object",
+      "properties": {
+        "modulesPriority": {
+          "type": "number"
+        },
+        "unitsPriority": {
+          "type": "number"
+        },
+        "researchPriority": {
+          "type": "number"
+        }
+      }
+    },
+    "category_priority_order": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "disabled_categories": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "fleet_type_requirements": {
+      "type": "object",
+      "properties": {
+        "Scout": {
+          "type": "number"
+        },
+        "SensorProbe": {
+          "type": "number"
+        },
+        "Platform": {
+          "type": "number"
+        },
+        "Collector": {
+          "type": "number"
+        },
+        "ContainerShip": {
+          "type": "number"
+        },
+        "Deployer": {
+          "type": "number"
+        }
+      }
+    },
+    "fleet_family_requirements": {
+      "type": "object",
+      "properties": {
+        "Interceptor": {
+          "type": "number"
+        },
+        "Bomber": {
+          "type": "number"
+        },
+        "Corvette": {
+          "type": "number"
+        },
+        "Frigate": {
+          "type": "number"
+        }
+      }
+    },
+    "modules_type_requirements": {
+      "type": "object",
+      "properties": {
+        "Armor": {
+          "type": "number"
+        },
+        "Engine": {
+          "type": "number"
+        },
+        "WeaponHardpoint": {
+          "type": "number"
+        },
+        "Facility": {
+          "type": "number"
+        },
+        "Research": {
+          "type": "number"
+        },
+        "DropPoint": {
+          "type": "number"
+        },
+        "Sensor": {
+          "type": "number"
+        },
+        "Storage": {
+          "type": "number"
+        },
+        "HardpointHeavy": {
+          "type": "number"
+        },
+        "Shield": {
+          "type": "number"
+        },
+        "SpaceSonar": {
+          "type": "number"
+        },
+        "WarpDrive": {
+          "type": "number"
+        },
+        "WarpDisruptor": {
+          "type": "number"
+        },
+        "Cloak": {
+          "type": "number"
+        },
+        "Weapon": {
+          "type": "number"
+        },
+        "RepairBay": {
+          "type": "number"
+        }
+      }
+    },
+    "modules_sub_type_requirements": {
+      "type": "object",
+      "properties": {
+        "FlameThrowerMid": {
+          "type": "number"
+        },
+        "AntiMissileMid": {
+          "type": "number"
+        },
+        "AutocannonMid": {
+          "type": "number"
+        },
+        "PointDefenseCannonMid": {
+          "type": "number"
+        },
+        "IonMid": {
+          "type": "number"
+        },
+        "Reactor": {
+          "type": "number"
+        }
+      }
+    },
+    "secondary_stations_limits": {
+      "type": "object",
+      "properties": {
+        "Start": {
+          "type": "object",
+          "properties": {
+            "maxSize": {
+              "type": "number"
+            },
+            "maxStations": {
+              "type": "number"
+            }
+          }
+        },
+        "Early": {
+          "type": "object",
+          "properties": {
+            "maxSize": {
+              "type": "number"
+            },
+            "maxStations": {
+              "type": "number"
+            }
+          }
+        },
+        "Mid": {
+          "type": "object",
+          "properties": {
+            "maxSize": {
+              "type": "number"
+            },
+            "maxStations": {
+              "type": "number"
+            }
+          }
+        },
+        "Late": {
+          "type": "object",
+          "properties": {
+            "maxSize": {
+              "type": "number"
+            },
+            "maxStations": {
+              "type": "number"
+            }
+          }
+        },
+        "End": {
+          "type": "object",
+          "properties": {
+            "maxSize": {
+              "type": "number"
+            },
+            "maxStations": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "secondary_stations_category_limits": {
+      "type": "object",
+      "properties": {
+        "Attack": {
+          "type": "number"
+        },
+        "Defense": {
+          "type": "number"
+        },
+        "Intelligence": {
+          "type": "number"
+        },
+        "Support": {
+          "type": "number"
+        },
+        "Resources": {
+          "type": "number"
+        }
+      }
+    },
+    "granted_researches": {
+      "type": "object",
+      "properties": {
+        "Mid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Late": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "formation_type_probability": {
+      "type": "object",
+      "properties": {
+        "Wall": {
+          "type": "number"
+        },
+        "Delta": {
+          "type": "number"
+        },
+        "Claw": {
+          "type": "number"
+        },
+        "Sphere": {
+          "type": "number"
+        },
+        "Grouped": {
+          "type": "number"
+        }
+      }
+    },
+    "attack_formation_stance_probability": {
+      "type": "object",
+      "properties": {
+        "Free": {
+          "type": "number"
+        },
+        "Scatter": {
+          "type": "number"
+        },
+        "Keep": {
+          "type": "number"
+        },
+        "KeepClass": {
+          "type": "number"
+        }
+      }
+    },
+    "min_units_for_command_center_attack": {
+      "type": "object",
+      "properties": {
+        "Start": {
+          "type": "number"
+        },
+        "Early": {
+          "type": "number"
+        },
+        "Mid": {
+          "type": "number"
+        },
+        "Late": {
+          "type": "number"
+        },
+        "End": {
+          "type": "number"
+        }
+      }
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One AiPersonality records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

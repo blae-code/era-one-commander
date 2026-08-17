@@ -1,0 +1,1378 @@
+[
+{
+"game_id": "FACT.0000",
+"name": "Nothing",
+"numeric_id": 0,
+"category": "None",
+"color": [
+0.2264,
+0.2168,
+0.2168,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0001",
+"name": "After Early Game",
+"numeric_id": 1,
+"category": "Game",
+"color": [
+0.6132,
+0.4306,
+0.2632,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0002",
+"name": "After Mid Game",
+"numeric_id": 2,
+"category": "Game",
+"color": [
+0.6132,
+0.4306,
+0.2632,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0003",
+"name": "After Late Game",
+"numeric_id": 3,
+"category": "Game",
+"color": [
+0.6132,
+0.4306,
+0.2632,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0004",
+"name": "After End Game",
+"numeric_id": 4,
+"category": "Game",
+"color": [
+0.6132,
+0.4306,
+0.2632,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0021",
+"name": "Resources Are Decreasing",
+"numeric_id": 21,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0022",
+"name": "Resources Are Increasing",
+"numeric_id": 22,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0023",
+"name": "Resources Are Enough",
+"numeric_id": 23,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0024",
+"name": "Resources Exhausted",
+"numeric_id": 24,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0025",
+"name": "Resources Exhausting",
+"numeric_id": 25,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0026",
+"name": "Resources At Maximum Capacity",
+"numeric_id": 26,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0027",
+"name": "Extracting Resources",
+"numeric_id": 27,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0028",
+"name": "Resources Are Decreasing Or Exhausted",
+"numeric_id": 28,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0029",
+"name": "Collectors Are In Construction",
+"numeric_id": 29,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0030",
+"name": "Has Enough Formations",
+"numeric_id": 30,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0031",
+"name": "Has Enough Combat Units",
+"numeric_id": 31,
+"category": "Fleet|Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0032",
+"name": "Has Enough Exploration Units",
+"numeric_id": 32,
+"category": "Exploration",
+"color": [
+0.1969,
+0.547,
+0.5566,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0033",
+"name": "Population At Maximum Capacity",
+"numeric_id": 33,
+"category": "Population",
+"color": [
+0.4568,
+0.5226,
+0.5472,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0034",
+"name": "Has Idle Exploration Units",
+"numeric_id": 34,
+"category": "Exploration",
+"color": [
+0.1969,
+0.547,
+0.5566,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0035",
+"name": "Has Exploration Routes",
+"numeric_id": 35,
+"category": "Exploration",
+"color": [
+0.1969,
+0.547,
+0.5566,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0036",
+"name": "Has Command Center",
+"numeric_id": 36,
+"category": "Modules",
+"color": [
+0.1478,
+0.2136,
+0.3868,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0037",
+"name": "Has Light Facility",
+"numeric_id": 37,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0038",
+"name": "Has Heavy Facility",
+"numeric_id": 38,
+"category": "Fleet",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0039",
+"name": "Enemy Command Center Detected",
+"numeric_id": 39,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0040",
+"name": "Needs More Hunters",
+"numeric_id": 40,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0041",
+"name": "Enemy Command Center Alive",
+"numeric_id": 41,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0042",
+"name": "Exploration In Progress",
+"numeric_id": 42,
+"category": "Exploration",
+"color": [
+0.1969,
+0.547,
+0.5566,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0043",
+"name": "Has Enough Collectors",
+"numeric_id": 43,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0044",
+"name": "Has Collectors",
+"numeric_id": 44,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0045",
+"name": "Has Idle Collectors",
+"numeric_id": 45,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0046",
+"name": "Has Idle Interceptors",
+"numeric_id": 46,
+"category": "Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0047",
+"name": "Has Idle Bombers",
+"numeric_id": 47,
+"category": "Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0048",
+"name": "Has Idle Corvettes",
+"numeric_id": 48,
+"category": "Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0049",
+"name": "Has Idle Frigates",
+"numeric_id": 49,
+"category": "Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0050",
+"name": "Has Idle Fighters Or Corvettes",
+"numeric_id": 50,
+"category": "Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0051",
+"name": "Has Idle Units In Recall Range",
+"numeric_id": 51,
+"category": "Fleet|Defense",
+"color": [
+0.4528,
+0.2884,
+0.3147,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0052",
+"name": "Has Idle Little Combat Units",
+"numeric_id": 52,
+"category": "Fleet|Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0053",
+"name": "Has Idle Units In Push Range",
+"numeric_id": 53,
+"category": "Fleet|Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0054",
+"name": "Enemy Stations Deployed",
+"numeric_id": 54,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0055",
+"name": "Someone Under Attack",
+"numeric_id": 55,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0056",
+"name": "Can Attack Command Center",
+"numeric_id": 56,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0057",
+"name": "Can Build Weapons",
+"numeric_id": 57,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0058",
+"name": "Can Build Fortify",
+"numeric_id": 58,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0059",
+"name": "Enemy Explorers Deployed",
+"numeric_id": 59,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0060",
+"name": "Has Inactive Attack Stations",
+"numeric_id": 60,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0061",
+"name": "Has Inactive Mining Stations",
+"numeric_id": 61,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0062",
+"name": "Has Multiple Interceptors",
+"numeric_id": 62,
+"category": "Fleet|Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0063",
+"name": "Has Long Range Weapons",
+"numeric_id": 63,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0064",
+"name": "Has Multiple Fighters Or Corvettes",
+"numeric_id": 64,
+"category": "Fleet|Attack|Defense",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0065",
+"name": "Has Friend Command Centers",
+"numeric_id": 65,
+"category": "Diplomacy",
+"color": [
+0.5478,
+0.8302,
+0.1919,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0066",
+"name": "Friend Command Centers Under Attack",
+"numeric_id": 66,
+"category": "Diplomacy",
+"color": [
+0.5478,
+0.8302,
+0.1919,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0067",
+"name": "Enemy Is Expanding",
+"numeric_id": 67,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0068",
+"name": "Enemy Command Center Defenseless",
+"numeric_id": 68,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0069",
+"name": "Enemy Fleet Deployed",
+"numeric_id": 69,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0070",
+"name": "Enemy Extractors Deployed",
+"numeric_id": 70,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0071",
+"name": "Enemy Has Many Collectors",
+"numeric_id": 71,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0072",
+"name": "Enemy Has Many Stations",
+"numeric_id": 72,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0073",
+"name": "Enough Time From Last Attack",
+"numeric_id": 73,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0074",
+"name": "Enemy Has Many Storages",
+"numeric_id": 74,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0075",
+"name": "Enemy Has Many Modules",
+"numeric_id": 75,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0076",
+"name": "Incoming Long Range Attack",
+"numeric_id": 76,
+"category": "Intelligence",
+"color": [
+0.5375,
+0.0968,
+0.7075,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0077",
+"name": "Command Center Under Attack",
+"numeric_id": 77,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0078",
+"name": "Command Center Defenseless",
+"numeric_id": 78,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0079",
+"name": "Has Defenseless Stations",
+"numeric_id": 79,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0080",
+"name": "Has Completed Main Station",
+"numeric_id": 80,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0081",
+"name": "Can Perform Warp Attack",
+"numeric_id": 81,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0082",
+"name": "Friend Command Centers Defenseless",
+"numeric_id": 82,
+"category": "Diplomacy",
+"color": [
+0.5478,
+0.8302,
+0.1919,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0083",
+"name": "Energy Insufficient",
+"numeric_id": 83,
+"category": "Energy",
+"color": [
+0.0839,
+0.7736,
+0.4934,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0084",
+"name": "Already Building Combat Units",
+"numeric_id": 84,
+"category": "Defense",
+"color": [
+0.1059,
+0.5647,
+0.1198,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0085",
+"name": "Enough Time From Last Attack To Command Center",
+"numeric_id": 85,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0086",
+"name": "Enough Time From Last Attack To Station",
+"numeric_id": 86,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0087",
+"name": "Enough Time From Last Attack To Fleet",
+"numeric_id": 87,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0088",
+"name": "Enough Time From Last Attack To Explorers",
+"numeric_id": 88,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0089",
+"name": "Enough Time From Last Attack To Collectors",
+"numeric_id": 89,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0090",
+"name": "Enough Time From Last Attack With Stations",
+"numeric_id": 90,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0091",
+"name": "Enough Time From Last Attack With Command Center",
+"numeric_id": 91,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0092",
+"name": "Enough Time From Last Attack With Long Range Weapons",
+"numeric_id": 92,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0093",
+"name": "Enough Time From Last Attack With Warp",
+"numeric_id": 93,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0094",
+"name": "Enough Units In Patrol Routes",
+"numeric_id": 94,
+"category": "Exploration|Defense",
+"color": [
+0.1969,
+0.547,
+0.5566,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0095",
+"name": "Is Attacking With Stations",
+"numeric_id": 95,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0096",
+"name": "Resource Cluster Depleted",
+"numeric_id": 96,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0097",
+"name": "Has Eligible Expansion Site",
+"numeric_id": 97,
+"category": "Resources|Exploration",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0098",
+"name": "Has Idle Command Center",
+"numeric_id": 98,
+"category": "Movement",
+"color": [
+0.1005,
+0.0752,
+0.8396,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0099",
+"name": "Is Attacking Enemy Command Center",
+"numeric_id": 99,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0100",
+"name": "Can Defeat Enemy",
+"numeric_id": 100,
+"category": "Attack",
+"color": [
+0.7843,
+0.1961,
+0.1961,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FACT.0101",
+"name": "Has Remote Drop Points Without Collectors",
+"numeric_id": 101,
+"category": "Resources",
+"color": [
+0.8,
+0.6356,
+0.0,
+1.0
+],
+"auto_generate_goal": false,
+"non_blocking": false,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]
