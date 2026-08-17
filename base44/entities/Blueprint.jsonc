@@ -1,0 +1,101 @@
+{
+  "name": "Blueprint",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "hull_id": {
+      "type": "string"
+    },
+    "hull_name": {
+      "type": "string"
+    },
+    "ship_class": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "component_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "x": {
+            "type": "integer"
+          },
+          "y": {
+            "type": "integer"
+          },
+          "w": {
+            "type": "integer"
+          },
+          "h": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "mass": {
+          "type": "number"
+        },
+        "hp": {
+          "type": "number"
+        },
+        "dps": {
+          "type": "number"
+        },
+        "thrust": {
+          "type": "number"
+        },
+        "twr": {
+          "type": "number"
+        },
+        "power_gen": {
+          "type": "number"
+        },
+        "power_use": {
+          "type": "number"
+        },
+        "shield": {
+          "type": "number"
+        },
+        "cargo": {
+          "type": "number"
+        }
+      }
+    },
+    "likes": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

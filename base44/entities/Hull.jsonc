@@ -1,0 +1,53 @@
+{
+  "name": "Hull",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "ship_class": {
+      "type": "string",
+      "enum": [
+        "corvette",
+        "frigate",
+        "destroyer",
+        "cruiser",
+        "battleship",
+        "carrier"
+      ]
+    },
+    "role": {
+      "type": "string"
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "grid_width": {
+      "type": "integer",
+      "default": 8
+    },
+    "grid_height": {
+      "type": "integer",
+      "default": 6
+    },
+    "mass": {
+      "type": "number"
+    },
+    "hp": {
+      "type": "number"
+    },
+    "base_power": {
+      "type": "number"
+    },
+    "crew": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "ship_class"
+  ]
+}

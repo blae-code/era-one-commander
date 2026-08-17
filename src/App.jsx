@@ -7,6 +7,13 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
+import Layout from '@/components/Layout';
+import Dashboard from '@/pages/Dashboard';
+import ShipBuilder from '@/pages/ShipBuilder';
+import Blueprints from '@/pages/Blueprints';
+import BlueprintDetail from '@/pages/BlueprintDetail';
+import Database from '@/pages/Database';
+import Compare from '@/pages/Compare';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -35,6 +42,14 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       {/* Add your page Route elements here */}
+      <Route element={<Layout />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/builder" element={<ShipBuilder />} />
+        <Route path="/blueprints" element={<Blueprints />} />
+        <Route path="/blueprints/:id" element={<BlueprintDetail />} />
+        <Route path="/database" element={<Database />} />
+        <Route path="/compare" element={<Compare />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
