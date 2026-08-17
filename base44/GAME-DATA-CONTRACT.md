@@ -109,4 +109,4 @@ All functions read the entities as service role; they need the data imported fir
 ## 4. Requests from the frontend to the backend
 _(append here — one line each: what you need, where you'd use it)_
 
-* —
+* Fleet-formation / stance effects on weapon performance (spacing, focus-fire, engagement-range modifiers) — nothing in the current dataset exposes them; would feed `src/components/database/WeaponBreakdown.jsx`.

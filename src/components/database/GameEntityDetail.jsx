@@ -2,6 +2,7 @@ import React from "react";
 import TierBadge from "@/components/shared/TierBadge";
 import StatBar from "@/components/shared/StatBar";
 import { fmtNum, countIds, fmtModifier } from "@/lib/gameData";
+import WeaponBreakdown from "@/components/database/WeaponBreakdown";
 
 // Detail panel for the real game entities. `onSelect(kind, game_id)` lets ids cross-link
 // (module → its weapons, unit → its equipment options, research → children).
@@ -150,27 +151,14 @@ export default function GameEntityDetail({ kind, record: r, byId, onSelect }) {
         {r.description && <p className="text-sm text-muted-foreground leading-relaxed">{r.description}</p>}
         <Grid cells={[
           ["DPS", fmtNum(r.dps, 1)], ["RANGE", fmtNum(r.range, 1)], ["ROF /s", fmtNum(r.rate_of_fire, 2)],
-          ["HULL /hit", fmtNum(r.hp_change, 2)], ["SHIELD /hit", fmtNum(r.shield_change, 2)], ["ARMOR PEN", fmtNum(r.armor_penetration, 2)],
-          ["BURST", r.burst_amount > 1 ? `${r.burst_amount} × ${fmtNum(r.burst_interval, 2)}s` : "—"], ["RELOAD", r.requires_reload ? `${fmtNum(r.reload_time, 1)}s` : "—"], ["SPEED", fmtNum(r.bullet_speed, 1)],
         ]} />
         <div className="space-y-3">
           {r.dps > 0 && <StatBar label="Damage / sec" value={r.dps} max={250} decimals={1} color="bg-[#d4713f]" />}
           {r.range > 0 && <StatBar label="Range" value={r.range} max={120} decimals={0} color="bg-[#c98a52]" />}
           {r.armor_penetration > 0 && <StatBar label="Armor penetration" value={r.armor_penetration * 100} max={100} unit="%" color="bg-[#b3663c]" />}
-          {r.area_radius > 0 && r.deal_area_damage && <StatBar label="Area radius" value={r.area_radius} max={20} decimals={1} color="bg-[#b8963f]" />}
         </div>
-        {r.class_damage_multipliers && r.class_damage_multipliers.length > 0 && (
-          <div>
-            <div className="tech-label mb-1">Damage vs class</div>
-            <div className="flex flex-wrap gap-1">
-              {r.class_damage_multipliers.map((m, i) => (
-                <span key={i} className="px-1.5 py-0.5 border border-border font-mono text-[10px]">{m.entity_class} ×{fmtNum(m.multiplier, 2)}</span>
-              ))}
-            </div>
-          </div>
-        )}
+        <WeaponBreakdown weapon={r} />
         <IdChips title="Requires research" ids={r.required_research} kind="ResearchNode" onSelect={onSelect} byId={byId} />
-        {r.applied_status_on_hit && <div className="tech-label">Applies // {r.applied_status_on_hit} for {r.status_duration}s</div>}
       </div>
     );
   }
