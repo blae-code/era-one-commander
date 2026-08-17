@@ -1,19 +1,34 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
-import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, UploadCloud, Ship, EyeOff } from "lucide-react";
+import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, Ship, EyeOff } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
 
 const NAV = [
-  { to: "/", label: "Command Deck", code: "01", icon: LayoutDashboard },
-  { to: "/builder", label: "Ship Builder", code: "02", icon: Wrench },
-  { to: "/blueprints", label: "Blueprints", code: "03", icon: Layers },
-  { to: "/database", label: "Databank", code: "04", icon: Database },
-  { to: "/compare", label: "Comparison", code: "05", icon: ArrowLeftRight },
-  { to: "/fleet", label: "Fleet Analysis", code: "06", icon: Ship },
-  { to: "/stealth", label: "Stealth Analysis", code: "07", icon: EyeOff },
-  { to: "/gamedata", label: "Game Data", code: "08", icon: DatabaseZap },
-  { to: "/import", label: "Data Import", code: "09", icon: UploadCloud },
+  {
+    group: "Overview",
+    items: [{ to: "/", label: "Command Deck", code: "01", icon: LayoutDashboard }],
+  },
+  {
+    group: "Design",
+    items: [
+      { to: "/builder", label: "Ship Builder", code: "02", icon: Wrench },
+      { to: "/blueprints", label: "Blueprints", code: "03", icon: Layers },
+    ],
+  },
+  {
+    group: "Analysis",
+    items: [
+      { to: "/database", label: "Databank", code: "04", icon: Database },
+      { to: "/compare", label: "Comparison", code: "05", icon: ArrowLeftRight },
+      { to: "/fleet", label: "Fleet", code: "06", icon: Ship },
+      { to: "/stealth", label: "Stealth", code: "07", icon: EyeOff },
+    ],
+  },
+  {
+    group: "System",
+    items: [{ to: "/data", label: "Data Ops", code: "08", icon: DatabaseZap }],
+  },
 ];
 
 export default function Layout() {
@@ -27,24 +42,29 @@ export default function Layout() {
             <div className="tech-label mt-0.5">Tactical Companion</div>
           </div>
         </div>
-        <nav className="flex-1 py-3">
-          {NAV.map(({ to, label, code, icon: Icon }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={to === "/"}
-              className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-2.5 border-l-2 transition-colors ${
-                  isActive
-                    ? "border-primary bg-primary/15 text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/70"
-                }`
-              }
-            >
-              <Icon size={16} />
-              <span className="font-display font-semibold text-sm tracking-wide uppercase flex-1">{label}</span>
-              <span className="font-mono text-[9px] opacity-50">{code}</span>
-            </NavLink>
+        <nav className="flex-1 py-2 overflow-y-auto">
+          {NAV.map(({ group, items }) => (
+            <div key={group} className="mb-1">
+              <div className="tech-label px-4 pt-2.5 pb-1 opacity-70">{group}</div>
+              {items.map(({ to, label, code, icon: Icon }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={to === "/"}
+                  className={({ isActive }) =>
+                    `flex items-center gap-3 px-4 py-2 border-l-2 transition-colors ${
+                      isActive
+                        ? "border-primary bg-primary/15 text-primary"
+                        : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/70"
+                    }`
+                  }
+                >
+                  <Icon size={16} />
+                  <span className="font-display font-semibold text-sm tracking-wide uppercase flex-1">{label}</span>
+                  <span className="font-mono text-[9px] opacity-50">{code}</span>
+                </NavLink>
+              ))}
+            </div>
           ))}
         </nav>
         <div className="px-4 py-3 border-t border-border">

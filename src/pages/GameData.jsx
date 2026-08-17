@@ -3,7 +3,6 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { seedGameData, loadIndex, ERA_ONE_ENTITIES } from "@/lib/seedGameData";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
 import GameDataHeader from "@/components/gamedata/GameDataHeader";
 
@@ -76,14 +75,14 @@ export default function GameData() {
   };
 
   return (
-    <div className="p-6 max-w-[1400px] mx-auto w-full">
+    <div className="p-6 max-w-[1200px] mx-auto w-full">
       <GameDataHeader
-        subtitle={`Bundled dataset // ERA ONE ${index?.game?.game_version ?? "—"} · Steam build ${bundledBuild ?? "—"} · extracted ${index?.game?.generated_utc ?? "—"}`}
+        subtitle={`Bundled dataset // ERA ONE ${index?.game?.game_version || "—"} · build ${bundledBuild || "—"} · extracted ${index?.game?.generated_utc || "—"}`}
         readout={[
-          ["TABLES", String((status || []).length).padStart(2, "0"), null],
-          ["SYNCED", String((status || []).filter((e) => e.state === "synced").length).padStart(2, "0"), "#34d399"],
-          ["ATTENTION", String((status || []).filter((e) => e.state !== "synced").length).padStart(2, "0"), "#ffb020"],
-          ["LIVE ROWS", (status || []).reduce((s, e) => s + (e.live?.count || 0), 0).toLocaleString("en-US"), null],
+          ["TABLES", (status || []).length],
+          ["SYNCED", (status || []).filter((e) => e.state === "synced").length, "#22c55e"],
+          ["PENDING", (status || []).filter((e) => e.state !== "synced").length, "#ffb020"],
+          ["BUNDLED ROWS", (status || []).reduce((s, e) => s + (e.rows || 0), 0)],
         ]}
         onRefetch={() => refetch()}
         isFetching={isFetching}
@@ -102,7 +101,7 @@ export default function GameData() {
 
       <div className="schematic-panel overflow-x-auto mb-4">
         <table className="w-full text-sm">
-          <thead className="bg-secondary/90 border-b border-primary/30">
+          <thead className="bg-secondary/90">
             <tr className="text-left">
               {["Entity", "Bundled rows", "Live rows", "Live build", "State"].map((h) => (
                 <th key={h} className="tech-label px-3 py-2 font-normal">{h}</th>
@@ -144,15 +143,11 @@ export default function GameData() {
         </div>
       )}
 
-      <div className="schematic-panel p-3 mb-4">
-        <div className="tech-label mb-2">Import options</div>
-        <label className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
-          <input type="checkbox" checked={deleteMissing} onChange={(e) => setDeleteMissing(e.target.checked)} disabled={running} />
-          Delete records whose game_id no longer exists in the bundled dataset (after a game patch)
-        </label>
-      </div>
+      <label className="flex items-center gap-2 font-mono text-xs text-muted-foreground mb-4">
+        <input type="checkbox" checked={deleteMissing} onChange={(e) => setDeleteMissing(e.target.checked)} disabled={running} />
+        Delete records whose game_id no longer exists in the bundled dataset (after a game patch)
+      </label>
 
-      <div className="tech-label mb-2">Import log</div>
       <div className="schematic-panel p-3 h-64 overflow-y-auto font-mono text-[11px] leading-relaxed">
         {log.length === 0 ? <span className="text-muted-foreground">Import log — nothing run yet.</span> : log.map((l, i) => <div key={i}>{l}</div>)}
       </div>

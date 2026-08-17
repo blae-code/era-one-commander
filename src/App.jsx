@@ -18,6 +18,7 @@ import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
 import FleetAnalysis from '@/pages/FleetAnalysis';
 import StealthAnalysis from '@/pages/StealthAnalysis';
+import DataOps from '@/pages/DataOps';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -55,6 +56,7 @@ const AuthenticatedApp = () => {
         <Route path="/compare" element={<Compare />} />
         <Route path="/fleet" element={<FleetAnalysis />} />
         <Route path="/stealth" element={<StealthAnalysis />} />
+        <Route path="/data" element={<DataOps />} />
         <Route path="/gamedata" element={<GameData />} />
         <Route path="/import" element={<ImportData />} />
       </Route>

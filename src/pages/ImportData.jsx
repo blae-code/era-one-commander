@@ -7,8 +7,8 @@ import FileDropZone from "@/components/gamedata/FileDropZone";
 import ImportQueue from "@/components/gamedata/ImportQueue";
 import FolderWatchPanel from "@/components/gamedata/FolderWatchPanel";
 import useFolderWatch from "@/hooks/useFolderWatch";
-import { Button } from "@/components/ui/button";
-import { DatabaseZap, AlertTriangle, Trash2 } from "lucide-react";
+import ImportHeader from "@/components/gamedata/ImportHeader";
+import { AlertTriangle } from "lucide-react";
 
 let seq = 0;
 
@@ -62,25 +62,22 @@ export default function ImportData() {
   const readyCount = items.filter((it) => it.state === "ready").length;
 
   return (
-    <div className="p-6 max-w-[1100px] mx-auto w-full">
-      <div className="flex items-end justify-between mb-4 flex-wrap gap-3">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Data Import</h1>
-          <p className="tech-label mt-0.5">
-            Upload extracted ERA ONE files // records are matched and updated by game_id
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          {items.length > 0 && (
-            <Button variant="outline" size="sm" className="rounded-none font-mono text-xs" onClick={() => { setItems([]); setLog([]); }} disabled={running}>
-              <Trash2 size={13} /> Clear
-            </Button>
-          )}
-          <Button size="sm" className="rounded-none font-mono text-xs" onClick={runAll} disabled={!isAdmin || running || items.every((it) => it.state === "error")}>
-            <DatabaseZap size={13} /> {running ? "Importing…" : `Import ${readyCount || ""} file${readyCount === 1 ? "" : "s"}`}
-          </Button>
-        </div>
-      </div>
+    <div className="p-6 max-w-[1200px] mx-auto w-full">
+      <ImportHeader
+        readout={[
+          ["QUEUED", items.length],
+          ["READY", readyCount, "#38bdf8"],
+          ["DONE", items.filter((it) => it.state === "done").length, "#22c55e"],
+          ["ERRORS", items.filter((it) => it.state === "error").length, "#ff2d55"],
+        ]}
+        onClear={() => { setItems([]); setLog([]); }}
+        onRun={runAll}
+        running={running}
+        canRun={isAdmin}
+        canClear={items.length > 0}
+        canImport={!items.every((it) => it.state === "error")}
+        readyCount={readyCount}
+      />
 
       {!isAdmin && (
         <div className="schematic-panel p-3 mb-4 flex items-center gap-2 text-[#ffb020] text-xs font-mono">
