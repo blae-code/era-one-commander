@@ -5,6 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import RadarCompare from "@/components/compare/RadarCompare";
 import DeltaTable from "@/components/compare/DeltaTable";
 import BarCompare from "@/components/compare/BarCompare";
+import CompareHeader from "@/components/compare/CompareHeader";
 
 const COMPONENT_BARS = [
   { key: "mass", label: "Mass", unit: "t", lowerBetter: true },
@@ -89,28 +90,20 @@ export default function Compare() {
   const switchMode = (m) => { setMode(m); setAId(null); setBId(null); };
 
   return (
-    <div className="p-6 max-w-[1200px] mx-auto">
-      <div className="flex items-end justify-between mb-5 flex-wrap gap-3">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Comparison Engine</h1>
-          <p className="tech-label mt-0.5">Side-by-side tactical delta analysis</p>
-        </div>
-        <div className="flex gap-1">
-          {["components", "hulls"].map((m) => (
-            <button
-              key={m}
-              onClick={() => switchMode(m)}
-              className={`px-4 py-1.5 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-                mode === m ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"
-              }`}
-            >
-              {m}
-            </button>
-          ))}
-        </div>
-      </div>
+    <div className="p-6 max-w-[1400px] mx-auto">
+      <CompareHeader
+        mode={mode}
+        onMode={switchMode}
+        modes={["components", "hulls"]}
+        subtitle={`Side-by-side tactical delta analysis // ${items.length} ${mode} in catalog`}
+        readout={[
+          ["ALPHA", a?.name ? String(a.name).slice(0, 10) : "—", "#ff7a1a"],
+          ["BRAVO", b?.name ? String(b.name).slice(0, 10) : "—", "#2f9bff"],
+          ["METRICS", String(rows.length)],
+        ]}
+      />
 
-      <div className="grid grid-cols-2 gap-4 mb-5">
+      <div className="schematic-panel p-3 mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <div className="tech-label mb-1.5 text-[#ff7a1a]">Unit Alpha ◆</div>
           <Picker items={items} value={aId} onChange={setAId} tint="border-[#ff7a1a]" />
@@ -123,17 +116,17 @@ export default function Compare() {
 
       {a && b ? (
         <>
-        <div className="mb-5">
-          <div className="tech-label mb-2">Key Metric Bars</div>
+        <div className="schematic-panel p-4 mb-4">
+          <div className="tech-label mb-2">Key metric bars // head-to-head</div>
           <BarCompare a={a} b={b} metrics={bars} />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="schematic-panel p-4">
-            <div className="tech-label mb-2">Normalized Profile</div>
+            <div className="tech-label mb-2">Normalized profile</div>
             <RadarCompare a={a} b={b} axes={axes} />
           </div>
-          <div>
-            <div className="tech-label mb-2">Raw Delta Readout</div>
+          <div className="schematic-panel p-4">
+            <div className="tech-label mb-2">Raw delta readout</div>
             <DeltaTable a={a} b={b} rows={rows} />
           </div>
         </div>

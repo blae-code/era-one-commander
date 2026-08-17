@@ -5,6 +5,7 @@ import FleetPicker from "@/components/fleet/FleetPicker";
 import FleetSummary from "@/components/fleet/FleetSummary";
 import FleetContribution from "@/components/fleet/FleetContribution";
 import FleetComposition from "@/components/fleet/FleetComposition";
+import FleetHeader from "@/components/fleet/FleetHeader";
 
 const SUM_KEYS = ["mass", "hp", "dps", "thrust", "power_gen", "power_use", "shield", "cargo"];
 
@@ -33,21 +34,8 @@ export default function FleetAnalysis() {
   const hulls = roster.reduce((s, r) => s + r.qty, 0);
 
   return (
-    <div className="p-6 max-w-[1200px] mx-auto">
-      <div className="flex items-end justify-between mb-5 flex-wrap gap-3">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Fleet Analysis</h1>
-          <p className="tech-label mt-0.5">Multi-build aggregate performance readout</p>
-        </div>
-        {roster.length > 0 && (
-          <button
-            onClick={() => setRoster([])}
-            className="px-4 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-border bg-card text-muted-foreground hover:border-primary/40 transition-colors"
-          >
-            Clear fleet
-          </button>
-        )}
-      </div>
+    <div className="p-6 max-w-[1400px] mx-auto">
+      <FleetHeader totals={totals} hulls={hulls} designs={roster.length} onClear={() => setRoster([])} />
 
       {isLoading ? (
         <div className="schematic-panel p-16 text-center tech-label">Loading designs…</div>
