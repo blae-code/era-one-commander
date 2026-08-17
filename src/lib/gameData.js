@@ -34,22 +34,38 @@ export function useGameEntity(entity, enabled = true) {
 }
 
 // Lookup maps keyed by game_id across the catalog entities used for cross-links.
-export function useGameCatalog() {
+// `extended` also loads doctrine (CombatTemplate/FormationModifier), GameBlueprint and StatDefinition.
+export function useGameCatalog(extended = false) {
   const modules = useGameEntity("Module");
   const units = useGameEntity("Unit");
   const weapons = useGameEntity("Weapon");
   const turrets = useGameEntity("Turret");
   const subsystems = useGameEntity("Subsystem");
   const research = useGameEntity("ResearchNode");
+  const combat = useGameEntity("CombatTemplate", extended);
+  const formations = useGameEntity("FormationModifier", extended);
+  const blueprints = useGameEntity("GameBlueprint", extended);
+  const statDefs = useGameEntity("StatDefinition", extended);
   const byId = {};
-  for (const q of [modules, units, weapons, turrets, subsystems, research]) {
+  for (const q of [modules, units, weapons, turrets, subsystems, research, combat, formations, blueprints]) {
     for (const r of q.data || []) byId[r.game_id] = r;
   }
+  const kindOf = (id) => {
+    if (!byId[id]) return null;
+    for (const [k, q] of [["Module", modules], ["Unit", units], ["Weapon", weapons], ["Turret", turrets], ["Subsystem", subsystems], ["ResearchNode", research], ["CombatTemplate", combat], ["FormationModifier", formations], ["GameBlueprint", blueprints]])
+      if ((q.data || []).some((r) => r.game_id === id)) return k;
+    return null;
+  };
+  const statLabels = {};
+  for (const d of statDefs.data || []) statLabels[d.game_id] = d.name;
+  const core = [modules, units, weapons, turrets, subsystems, research];
   return {
     modules: modules.data || [], units: units.data || [], weapons: weapons.data || [], turrets: turrets.data || [],
-    subsystems: subsystems.data || [], research: research.data || [], byId,
-    isLoading: [modules, units, weapons, turrets, subsystems, research].some((q) => q.isLoading),
-    isEmpty: ![modules, units, weapons, turrets, subsystems, research].some((q) => (q.data || []).length > 0),
+    subsystems: subsystems.data || [], research: research.data || [],
+    combatTemplates: combat.data || [], formations: formations.data || [], blueprints: blueprints.data || [], statLabels,
+    byId, kindOf,
+    isLoading: core.some((q) => q.isLoading),
+    isEmpty: !core.some((q) => (q.data || []).length > 0),
   };
 }
 

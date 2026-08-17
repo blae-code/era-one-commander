@@ -1,143 +1,98 @@
-import React, { useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { DatabaseZap } from "lucide-react";
-import TierBadge from "@/components/shared/TierBadge";
-import DatabankHeader from "@/components/database/DatabankHeader";
-import GameEntityDetail from "@/components/database/GameEntityDetail";
-import { useGameCatalog, fmtNum, countIds } from "@/lib/gameData";
+import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
+import { DatabaseZap, Database as DatabaseIcon } from "lucide-react";
+import { useGameCatalog, fmtNum } from "@/lib/gameData";
+import { KINDS, KIND_KEYS } from "@/components/databank/catalog";
+import { parseQuery, applyQuery, sortRows, columnStats, toCSV } from "@/components/databank/query";
+import { useDatabank } from "@/components/databank/useDatabank";
+import { KIND_ICON } from "@/components/databank/Cells";
+import Toolbar from "@/components/databank/Toolbar";
+import DataTable from "@/components/databank/DataTable";
+import { CardGrid, HeatmapView } from "@/components/databank/Views";
+import ComparePanel from "@/components/databank/ComparePanel";
+import DetailDrawer from "@/components/databank/DetailDrawer";
 
-// The Databank browses the real ERA ONE dataset (see /gamedata). Tabs are the game's own catalogs.
-const TABS = [
-  { key: "Module", label: "Modules", cols: ["Module", "Class", "Tier", "Cost", "HP", "Energy/s", "Armament"] },
-  { key: "Unit", label: "Ships", cols: ["Ship", "Class", "Tier", "Cost", "HP", "Speed", "Armament"] },
-  { key: "Weapon", label: "Weapons", cols: ["Weapon", "Type", "DPS", "Range", "Hull/hit", "Armor pen", "RoF"] },
-  { key: "Turret", label: "Turrets", cols: ["Turret", "Weapons", "DPS", "Rotation", "Volley", "Fixed"] },
-  { key: "ResearchNode", label: "Research", cols: ["Research", "Type", "Tier", "Cost", "Time", "Grants"] },
-];
-
-const armament = (ids, byId) => countIds(ids || []).map(([id, n]) => `${n > 1 ? n + "× " : ""}${byId[id]?.name || id}`).join(", ") || "—";
-
+// Databank v2 — the granular browser over the real ERA ONE dataset.
+// State lives in the URL (shareable) + localStorage (favourites, presets, columns, notes). See components/databank/.
 export default function Database() {
-  const [params, setParams] = useSearchParams();
-  const tab = TABS.find((t) => t.key === params.get("t")) || TABS[0];
-  const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("all");
-  const selectedId = params.get("id");
-  const cat = useGameCatalog();
+  const cat = useGameCatalog(true);
+  const db = useDatabank();
+  const kind = db.kind;
+  const ctx = cat;
+  const allRows = useMemo(() => kind.rows(cat) || [], [kind, cat]);
+  const parsed = useMemo(() => parseQuery(db.q), [db.q]);
+  const { rows: filtered, errors } = useMemo(
+    () => applyQuery(allRows, kind, ctx, parsed, { favorites: db.favorites, facetSel: db.facetSel, ranges: db.ranges, favOnly: db.favOnly, hideWip: db.hideWip }),
+    [allRows, kind, ctx, parsed, db.favorites, db.facetSel, db.ranges, db.favOnly, db.hideWip]);
+  const sorted = useMemo(() => sortRows(filtered, kind, ctx, db.sortKey, db.sortDir), [filtered, kind, ctx, db.sortKey, db.sortDir]);
+  const columns = useMemo(() => kind.columns.filter((c) => db.visibleCols.includes(c.key)), [kind, db.visibleCols]);
+  const stats = useMemo(() => columnStats(filtered, kind, ctx), [filtered, kind, ctx]);
+  const selected = db.selectedId ? cat.byId[db.selectedId] : null;
+  const toKind = (k) => (k === "CombatTemplate" || k === "FormationModifier" ? "Doctrine" : k);
+  const selectedKind = selected ? toKind(cat.kindOf(db.selectedId)) || db.kindKey : db.kindKey;
+  const compareRows = db.compareIds.map((id) => cat.byId[id]).filter(Boolean).filter((r) => allRows.includes(r));
 
-  const rowsByKind = { Module: cat.modules, Unit: cat.units, Weapon: cat.weapons, Turret: cat.turrets, ResearchNode: cat.research };
-  const rows = rowsByKind[tab.key] || [];
-  const groupKey = { Module: "module_class", Unit: "unit_class", Weapon: "weapon_type", Turret: null, ResearchNode: "research_type" }[tab.key];
-  const groups = useMemo(() => (groupKey ? [...new Set(rows.map((r) => r[groupKey]).filter(Boolean))].sort() : []), [rows, groupKey]);
-
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    return rows
-      .filter((r) => filter === "all" || !groupKey || r[groupKey] === filter)
-      .filter((r) => !q || [r.name, r.game_id, r.info, r.module_sub_type, r.unit_type, r.research_type].some((s) => s?.toLowerCase().includes(q)))
-      .sort((a, b) => (a.tier || 0) - (b.tier || 0) || (a.cost_resources || 0) - (b.cost_resources || 0) || String(a.name).localeCompare(String(b.name)));
-  }, [rows, search, filter, groupKey]);
-
-  const kindOf = (id) => {
-    for (const [k, list] of Object.entries(rowsByKind)) if (list.some((r) => r.game_id === id)) return k;
-    return null;
+  const selectId = (id) => {
+    if (!id) return;
+    const kk = toKind(cat.kindOf(id));
+    if (kk && kk !== db.kindKey && KIND_KEYS.includes(kk)) db.setKind(kk);
+    db.select(id);
   };
-  const select = (kindHint, id) => {
-    const k = kindOf(id) || kindHint;
-    setParams({ t: k, id });
+  const exportRows = (fmt) => {
+    const blob = fmt === "csv" ? new Blob([toCSV(sorted, kind, ctx, db.visibleCols)], { type: "text/csv" }) : new Blob([JSON.stringify(sorted, null, 1)], { type: "application/json" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `era-one-${kind.label.toLowerCase()}-${new Date().toISOString().slice(0, 10)}.${fmt}`; a.click(); URL.revokeObjectURL(a.href);
   };
-  const setTab = (k) => { setFilter("all"); setParams({ t: k }); };
-  const selected = selectedId ? cat.byId[selectedId] : null;
 
-  const cell = (r) => {
-    switch (tab.key) {
-      case "Module": return [r.module_class, <TierBadge tier={r.tier} />, fmtNum(r.cost_resources), fmtNum(r.max_health),
-        r.energy_per_second ? `−${fmtNum(r.energy_per_second, 1)}` : r.energy_production ? `+${fmtNum(r.energy_production, 1)}` : "0", armament(r.weapons, cat.byId)];
-      case "Unit": return [r.unit_class, <TierBadge tier={r.tier} />, fmtNum(r.cost_resources), fmtNum(r.max_health), fmtNum(r.max_speed, 2),
-        armament(r.weapons, cat.byId) === "—" && r.secondary_equip ? `slot: ${cat.byId[r.secondary_equip]?.name || r.secondary_equip}` : armament(r.weapons, cat.byId)];
-      case "Weapon": return [r.weapon_type, fmtNum(r.dps, 1), fmtNum(r.range, 1), fmtNum(r.hp_change, 2), fmtNum(r.armor_penetration, 2), fmtNum(r.rate_of_fire, 2)];
-      case "Turret": return [armament(r.weapons, cat.byId), fmtNum(r.dps, 1), `${fmtNum(r.horizontal_rotation_speed)}°/s`, `${fmtNum(r.time_between_volleys, 1)}s`, r.is_fixed ? "yes" : "no"];
-      case "ResearchNode": return [r.research_type, <TierBadge tier={r.tier} />, fmtNum(r.cost_resources), `${fmtNum(r.construction_time)}s`,
-        (r.modifiers || []).map((m) => m.stat).join(", ") || (r.unlocks || []).map((u) => cat.byId[u]?.name || u).join(", ") || "—"];
-      default: return [];
-    }
-  };
+  const readout = [["MODULES", cat.modules.length], ["SHIPS", cat.units.length], ["WEAPONS", cat.weapons.length], ["TURRETS", cat.turrets.length], ["RESEARCH", cat.research.length], ["BLUEPRINTS", cat.blueprints.length]];
 
   return (
-    <div className="p-6 h-full flex flex-col max-w-[1500px] mx-auto w-full">
-      <DatabankHeader
-        subtitle={`ERA ONE Catalog // ${filtered.length} of ${rows.length} ${tab.label.toLowerCase()} from the installed game files`}
-        search={search}
-        onSearch={setSearch}
-        placeholder={`Search ${tab.label.toLowerCase()} by name or id…`}
-        readout={[
-          ["MODULES", cat.modules.length],
-          ["SHIPS", cat.units.length],
-          ["WEAPONS", cat.weapons.length],
-          ["TURRETS", cat.turrets.length],
-          ["RESEARCH", cat.research.length],
-        ]}
-      />
-
-      <div className="schematic-panel p-3 mb-4 space-y-2">
-        <div className="flex flex-wrap items-center gap-1">
-          <span className="tech-label mr-2">Catalog</span>
-          {TABS.map((t) => (
-            <button key={t.key} onClick={() => setTab(t.key)}
-              className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-                tab.key === t.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>
-              {t.label} <span className="opacity-60">{(rowsByKind[t.key] || []).length}</span>
-            </button>
-          ))}
-        </div>
-        {groups.length > 1 && (
-          <div className="flex flex-wrap items-center gap-1 pt-2 border-t border-border">
-            <span className="tech-label mr-2">Filter</span>
-            {["all", ...groups].map((g) => (
-              <button key={g} onClick={() => setFilter(g)}
-                className={`px-2 py-1 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-                  filter === g ? "border-primary/70 text-primary bg-primary/10" : "border-border text-muted-foreground hover:border-primary/40"}`}>
-                {g}
-              </button>
-            ))}
+    <div className="p-4 md:p-6 h-full flex flex-col max-w-[1800px] mx-auto w-full min-h-0">
+      {/* header */}
+      <div className="schematic-panel p-3 mb-3 flex items-center justify-between gap-4 bg-gradient-to-r from-card to-primary/5">
+        <div className="flex items-center gap-3 min-w-0">
+          <DatabaseIcon size={30} className="text-primary shrink-0" />
+          <div className="min-w-0">
+            <h1 className="font-display font-bold text-xl tracking-[0.15em] leading-none">DATABANK</h1>
+            <p className="tech-label mt-1 truncate">Every value from the installed game · build {cat.modules[0]?.game_build || "—"} · shareable URL state</p>
           </div>
-        )}
+        </div>
+        <div className="hidden lg:flex gap-5 font-mono text-center">
+          {readout.map(([k, v]) => (<div key={k}><div className="text-lg font-semibold text-primary leading-none">{fmtNum(v)}</div><div className="text-[9px] tracking-[0.2em] text-muted-foreground mt-1">{k}</div></div>))}
+        </div>
+      </div>
+
+      {/* kind tabs */}
+      <div className="flex flex-wrap gap-1 mb-3">
+        {KIND_KEYS.map((k) => { const Icon = KIND_ICON[k]; const n = (KINDS[k].rows(cat) || []).length; return (
+          <button key={k} onClick={() => db.setKind(k)}
+            className={`inline-flex items-center gap-1.5 px-3 h-8 font-mono text-[10px] uppercase tracking-wider border transition-colors ${db.kindKey === k ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>
+            <Icon size={12} /> {KINDS[k].label} <span className="opacity-60">{n}</span>
+          </button>); })}
       </div>
 
       {cat.isEmpty && !cat.isLoading ? (
         <div className="schematic-panel p-8 text-center">
           <DatabaseZap size={28} className="mx-auto text-primary mb-3" />
           <div className="font-display font-bold uppercase tracking-wider">No game data loaded yet</div>
-          <p className="tech-label mt-1">Import the extracted ERA ONE dataset from the <Link to="/gamedata" className="text-primary underline">Game Data</Link> page (admin).</p>
+          <p className="tech-label mt-1">Import the dataset from the <Link to="/gamedata" className="text-primary underline">Game Data</Link> page (admin).</p>
         </div>
       ) : (
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 min-h-0">
-          <div className="schematic-panel overflow-auto">
-            <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-secondary/90 backdrop-blur border-b border-primary/30">
-                <tr className="text-left">{tab.cols.map((h) => <th key={h} className="tech-label px-3 py-2 font-normal whitespace-nowrap">{h}</th>)}</tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {cat.isLoading ? (
-                  <tr><td colSpan={tab.cols.length} className="tech-label text-center py-12 animate-pulse">Accessing databank...</td></tr>
-                ) : filtered.map((r) => (
-                  <tr key={r.game_id} onClick={() => select(tab.key, r.game_id)}
-                    className={`cursor-pointer transition-colors ${selectedId === r.game_id ? "bg-primary/5" : "hover:bg-secondary/50"}`}>
-                    <td className="px-3 py-2">
-                      <div className="font-medium text-xs">{r.name}</div>
-                      <div className="font-mono text-[9px] text-muted-foreground">{r.game_id}{r.info ? ` · ${r.info}` : ""}</div>
-                    </td>
-                    {cell(r).map((c, i) => <td key={i} className="px-3 py-2 font-mono text-xs whitespace-nowrap max-w-[260px] truncate">{c}</td>)}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <>
+          <Toolbar db={db} kind={kind} allRows={allRows} filteredRows={filtered} ctx={ctx} errors={errors} onExport={exportRows} />
+          <div className={`flex-1 min-h-0 grid gap-3 ${compareRows.length ? "grid-cols-1 xl:grid-cols-[1fr_440px]" : "grid-cols-1"}`}>
+            <div className="min-h-0">
+              {cat.isLoading ? <div className="schematic-panel p-12 tech-label text-center animate-pulse">Accessing databank…</div>
+                : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
+                : db.view === "heat" ? <HeatmapView rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
+                : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} />}
+            </div>
+            {compareRows.length > 0 && <div className="min-h-0"><ComparePanel rows={compareRows} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={kind.columns.filter((c) => db.visibleCols.includes(c.key) || c.type === "num")} onRemove={db.toggleCompare} onClear={db.clearCompare} onSelect={selectId} /></div>}
           </div>
-          <div className="schematic-panel p-4 overflow-y-auto bg-gradient-to-b from-primary/5 to-card">
-            <GameEntityDetail kind={selected ? kindOf(selected.game_id) : tab.key} record={selected} byId={cat.byId} onSelect={select} />
-          </div>
-        </div>
+        </>
       )}
+
+      <DetailDrawer row={selected} kindKey={selectedKind} ctx={ctx} open={!!selected} onClose={() => db.select(null)} onSelectId={selectId}
+        favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} note={db.notes[db.selectedId]} onNote={db.setNote} />
     </div>
   );
 }
