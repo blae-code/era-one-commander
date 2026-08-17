@@ -7,7 +7,7 @@ import { Wrench, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
 import { CategoryIcon, LogoIcon } from "@/components/icons/EraIcons";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 
-const CAT_HEX = { weapon: "#f08a45", engine: "#e3c08a", reactor: "#e0b64c", shield: "#a9bcc7", module: "#cf9a86" };
+const CAT_HEX = { weapon: "#ff7a1a", engine: "#2f9bff", reactor: "#ffd21a", shield: "#c9d6e3", module: "#00d1c1" };
 
 export default function Dashboard() {
   const { data: components = [] } = useQuery({ queryKey: ["components"], queryFn: () => base44.entities.Component.list("-created_date", 500) });

@@ -5,11 +5,11 @@ import { CategoryIcon } from "@/components/icons/EraIcons";
 const CELL = 52;
 
 const CAT_BG = {
-  weapon: "bg-[#f08a45]/15 border-[#f08a45]/80",
-  engine: "bg-[#e3c08a]/15 border-[#e3c08a]/80",
-  reactor: "bg-[#e0b64c]/15 border-[#e0b64c]/80",
-  shield: "bg-[#a9bcc7]/15 border-[#a9bcc7]/80",
-  module: "bg-[#cf9a86]/15 border-[#cf9a86]/80",
+  weapon: "bg-[#ff7a1a]/20 border-[#ff7a1a]",
+  engine: "bg-[#2f9bff]/20 border-[#2f9bff]",
+  reactor: "bg-[#ffd21a]/20 border-[#ffd21a]",
+  shield: "bg-[#c9d6e3]/20 border-[#c9d6e3]",
+  module: "bg-[#00d1c1]/20 border-[#00d1c1]",
 };
 
 export default function BuildGrid({ hull, placements, selectedComponent, onPlace, onRemove }) {
@@ -52,7 +52,11 @@ export default function BuildGrid({ hull, placements, selectedComponent, onPlace
               onMouseLeave={() => setHover(null)}
               onClick={() => selectedComponent && canPlace(x, y, cw, ch) && onPlace(selectedComponent, x, y)}
               className={`absolute border border-primary/15 transition-colors ${
-                isHoverZone ? (valid ? "bg-emerald-400/25 cursor-pointer" : "bg-red-400/25 cursor-not-allowed") : "hover:bg-primary/5"
+                isHoverZone
+                  ? valid
+                    ? "bg-[#38bdf8]/30 cursor-pointer"
+                    : "bg-[#ff2d55]/30 cursor-not-allowed"
+                  : "hover:bg-primary/10"
               }`}
               style={{ left: x * CELL, top: y * CELL, width: CELL, height: CELL }}
             />

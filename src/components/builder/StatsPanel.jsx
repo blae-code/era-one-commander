@@ -8,10 +8,10 @@ export default function StatsPanel({ stats }) {
     <div className="space-y-3">
       <PowerGauge gen={stats.power_gen} use={stats.power_use} />
       <div className="schematic-panel p-3 space-y-3">
-        <StatBar label="Hull Integrity" value={stats.hp} max={20000} unit="HP" color="bg-[#cf9a86]" />
-        <StatBar label="Shield Capacity" value={stats.shield} max={10000} unit="SP" color="bg-[#a9bcc7]" />
-        <StatBar label="Firepower" value={stats.dps} max={2000} unit="DPS" color="bg-[#f08a45]" />
-        <StatBar label="Thrust" value={stats.thrust} max={5000} unit="kN" color="bg-[#e0b64c]" />
+        <StatBar label="Hull Integrity" value={stats.hp} max={20000} unit="HP" color="bg-[#00d1c1]" />
+        <StatBar label="Shield Capacity" value={stats.shield} max={10000} unit="SP" color="bg-[#c9d6e3]" />
+        <StatBar label="Firepower" value={stats.dps} max={2000} unit="DPS" color="bg-[#ff7a1a]" />
+        <StatBar label="Thrust" value={stats.thrust} max={5000} unit="kN" color="bg-[#ffd21a]" />
       </div>
       <div className="grid grid-cols-2 gap-2">
         <div className="schematic-panel p-2.5 text-center">
@@ -20,8 +20,8 @@ export default function StatsPanel({ stats }) {
         </div>
         <div className="schematic-panel p-2.5 text-center">
           <div className="tech-label">TWR</div>
-          <div className={`font-mono text-lg font-semibold ${stats.twr >= 1 ? "text-emerald-400" : "text-amber-400"}`}>
-            {fmt(stats.twr, 2)}
+          <div className={`font-mono text-lg font-semibold ${stats.twr >= 1 ? "text-[#38bdf8]" : "text-[#ffb020]"}`}>
+            {stats.twr >= 1 ? "✔ " : "▲ "}{fmt(stats.twr, 2)}
           </div>
         </div>
         <div className="schematic-panel p-2.5 text-center col-span-2">

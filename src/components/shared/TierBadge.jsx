@@ -1,9 +1,9 @@
 import React from "react";
 
 const TIER_STYLE = {
-  1: "border-[#7a7166] text-[#b0a79b]",
-  2: "border-[#e3c08a]/70 text-[#e3c08a]",
-  3: "border-[#f08a45]/70 text-[#f08a45]",
+  1: "border-[#8b98a6] text-[#c9d6e3]",
+  2: "border-[#2f9bff] text-[#2f9bff]",
+  3: "border-[#ff7a1a] text-[#ff7a1a]",
 };
 
 export default function TierBadge({ tier = 1 }) {

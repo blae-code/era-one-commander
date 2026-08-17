@@ -5,9 +5,9 @@ export default function DeltaTable({ a, b, rows }) {
   return (
     <div className="schematic-panel divide-y divide-border">
       <div className="grid grid-cols-[1fr_auto_1fr] gap-2 px-3 py-2 bg-secondary/50">
-        <div className="font-display font-semibold text-sm text-[#f08a45] truncate">{a?.name || "—"}</div>
+        <div className="font-display font-semibold text-sm text-[#ff7a1a] truncate">{a?.name || "—"}</div>
         <div className="tech-label self-center">VS</div>
-        <div className="font-display font-semibold text-sm text-[#a9bcc7] text-right truncate">{b?.name || "—"}</div>
+        <div className="font-display font-semibold text-sm text-[#2f9bff] text-right truncate">{b?.name || "—"}</div>
       </div>
       {rows.map(({ key, label, unit, decimals = 0, lowerBetter }) => {
         const va = a?.[key] ?? 0;
@@ -17,18 +17,18 @@ export default function DeltaTable({ a, b, rows }) {
         const tie = va === vb;
         return (
           <div key={key} className="grid grid-cols-[1fr_auto_1fr] gap-2 px-3 py-2 items-center">
-            <div className={`font-mono text-sm ${!tie && aWins ? "font-semibold text-[#f08a45]" : "text-foreground/70"}`}>
+            <div className={`font-mono text-sm ${!tie && aWins ? "font-semibold text-[#ff7a1a]" : "text-foreground/70"}`}>
               {fmt(va, decimals)}{unit}
             </div>
             <div className="text-center min-w-[110px]">
               <div className="tech-label">{label}</div>
               {!tie && (
-                <div className={`font-mono text-[10px] ${diff > 0 ? "text-[#f08a45]" : "text-[#a9bcc7]"}`}>
+                <div className={`font-mono text-[10px] ${diff > 0 ? "text-[#ff7a1a]" : "text-[#2f9bff]"}`}>
                   {diff > 0 ? "▲" : "▼"} {fmt(Math.abs(diff), decimals)}
                 </div>
               )}
             </div>
-            <div className={`font-mono text-sm text-right ${!tie && !aWins ? "font-semibold text-[#a9bcc7]" : "text-foreground/70"}`}>
+            <div className={`font-mono text-sm text-right ${!tie && !aWins ? "font-semibold text-[#2f9bff]" : "text-foreground/70"}`}>
               {fmt(vb, decimals)}{unit}
             </div>
           </div>
