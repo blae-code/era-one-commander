@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T17:58:40Z",
+  "generated_utc": "2026-08-17T18:10:25Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -15,7 +15,7 @@
    "subsystems": 4,
    "modules": 103,
    "module_weapons": 41,
-   "stat_modifiers": 1249,
+   "stat_modifiers": 1286,
    "units": 27,
    "unit_weapons": 36,
    "unit_levels": 1080,
@@ -26,6 +26,12 @@
    "asteroids": 17,
    "blueprints": 42,
    "blueprint_parts": 2788,
+   "combat_templates": 12,
+   "formation_modifiers": 8,
+   "factions": 2,
+   "build_caps": 1,
+   "abilities": 5,
+   "game_settings": 1,
    "localization": 2448
   },
   "full_counts": {
@@ -39,11 +45,33 @@
    "UnitData": 27,
    "ModuleData": 103,
    "StationData": 6,
-   "RemainData": 1,
+   "RemainData": 27,
    "AsteroidData": 17,
    "LODTemplate": 5,
    "RadioactiveCloudData": 3,
-   "SceneryData": 3
+   "SceneryData": 3,
+   "FactDefinition": 86,
+   "ObjectiveData": 46,
+   "OperationDefinition": 42,
+   "AttackTemplate": 12,
+   "ModifiersTemplate": 8,
+   "AIColorScheme": 1,
+   "GoalDefinition": 15,
+   "ImprovedEngineAbility": 1,
+   "ExperienceTable": 1,
+   "AgentLogic": 13,
+   "GameHint": 12,
+   "ActorData": 2,
+   "TeamAgentPersonalityTemplate": 5,
+   "TemporaryShieldAbility": 1,
+   "MissionData": 1,
+   "SonarBooster": 1,
+   "IonUltimateShootAbility": 1,
+   "GameSettings": 1,
+   "BuildCapSettings": 1,
+   "FactionData": 2,
+   "FieldRepairAbility": 1,
+   "GameEventConfigurations": 1
   }
  },
  "entities": [
@@ -51,7 +79,7 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 86,
+   "columns": 87,
    "key": "game_id"
   },
   {
@@ -79,14 +107,14 @@
    "entity": "Unit",
    "source_table": "units",
    "rows": 27,
-   "columns": 87,
+   "columns": 89,
    "key": "game_id"
   },
   {
    "entity": "ResearchNode",
    "source_table": "research",
    "rows": 131,
-   "columns": 42,
+   "columns": 43,
    "key": "game_id"
   },
   {
@@ -118,9 +146,51 @@
    "key": "game_id"
   },
   {
+   "entity": "CombatTemplate",
+   "source_table": "combat_templates",
+   "rows": 12,
+   "columns": 7,
+   "key": "game_id"
+  },
+  {
+   "entity": "FormationModifier",
+   "source_table": "formation_modifiers",
+   "rows": 8,
+   "columns": 5,
+   "key": "game_id"
+  },
+  {
+   "entity": "Faction",
+   "source_table": "factions",
+   "rows": 2,
+   "columns": 10,
+   "key": "game_id"
+  },
+  {
+   "entity": "Ability",
+   "source_table": "abilities",
+   "rows": 5,
+   "columns": 28,
+   "key": "game_id"
+  },
+  {
+   "entity": "BuildCap",
+   "source_table": "build_caps",
+   "rows": 1,
+   "columns": 14,
+   "key": "game_id"
+  },
+  {
+   "entity": "GameSetting",
+   "source_table": "game_settings",
+   "rows": 1,
+   "columns": 165,
+   "key": "game_id"
+  },
+  {
    "entity": "StatModifier",
    "source_table": "stat_modifiers",
-   "rows": 1249,
+   "rows": 1286,
    "columns": 11,
    "key": "game_id"
   },

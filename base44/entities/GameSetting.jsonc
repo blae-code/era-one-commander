@@ -1,0 +1,509 @@
+{
+  "name": "GameSetting",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "m__name": {
+      "type": "string"
+    },
+    "ai_player_name": {
+      "type": "string"
+    },
+    "speaker_audio_response_cooldown": {
+      "type": "number"
+    },
+    "speech_local_size_multiplier": {
+      "type": "number"
+    },
+    "global_audio_response_cooldown": {
+      "type": "number"
+    },
+    "global_u_i_clip_cooldown": {
+      "type": "number"
+    },
+    "min_time_from_last_cloud_exit": {
+      "type": "number"
+    },
+    "cargo_deposited_response_probability": {
+      "type": "number"
+    },
+    "show_soundtrack_player": {
+      "type": "number"
+    },
+    "game_hints_enabled": {
+      "type": "number"
+    },
+    "game_hints_choice_at_start_enabled": {
+      "type": "number"
+    },
+    "leadership_check_interval": {
+      "type": "number"
+    },
+    "combat_zone_size": {
+      "type": "number"
+    },
+    "combat_ping_interval": {
+      "type": "number"
+    },
+    "damage_by_mass": {
+      "type": "number"
+    },
+    "unit_damage_from_collisions": {
+      "type": "number"
+    },
+    "min_resource_overlay_distance": {
+      "type": "number"
+    },
+    "hide_nearby_asteroids_overlays": {
+      "type": "number"
+    },
+    "field_of_view": {
+      "type": "number"
+    },
+    "mouse_sensitivity": {
+      "type": "number"
+    },
+    "scroll_sensitivity": {
+      "type": "number"
+    },
+    "edge_scrolling": {
+      "type": "number"
+    },
+    "cursor_lock": {
+      "type": "number"
+    },
+    "smart_camera_targeting": {
+      "type": "number"
+    },
+    "smart_camera_targeting_distance": {
+      "type": "number"
+    },
+    "camera_plane_lock": {
+      "type": "number"
+    },
+    "camera_plane_lock_flip": {
+      "type": "number"
+    },
+    "tactical_camera_distance_ratio": {
+      "type": "number"
+    },
+    "camera_idle_time": {
+      "type": "number"
+    },
+    "camera_idle_speed": {
+      "type": "number"
+    },
+    "camera_idle_oscillation": {
+      "type": "number"
+    },
+    "camera_idle_inversion": {
+      "type": "number"
+    },
+    "camera_idle_hide_interface": {
+      "type": "number"
+    },
+    "docking_block_distance": {
+      "type": "number"
+    },
+    "drag": {
+      "type": "number"
+    },
+    "angular_drag": {
+      "type": "number"
+    },
+    "collector_per_drop_points": {
+      "type": "number"
+    },
+    "category_temperature_heat_per_operation": {
+      "type": "number"
+    },
+    "category_temperature_cooling_per_second": {
+      "type": "number"
+    },
+    "category_temperature_cooling_grace_period": {
+      "type": "number"
+    },
+    "channel_temperature_heat_per_operation": {
+      "type": "number"
+    },
+    "channel_temperature_cooling_per_second": {
+      "type": "number"
+    },
+    "channel_temperature_cooling_grace_period": {
+      "type": "number"
+    },
+    "temperature_sub_zero_multiplier": {
+      "type": "number"
+    },
+    "facts_evaluated_budget": {
+      "type": "number"
+    },
+    "operations_scanned_budget": {
+      "type": "number"
+    },
+    "nodes_expanded_budget": {
+      "type": "number"
+    },
+    "goals_checked_budget": {
+      "type": "number"
+    },
+    "priority_operations_scanned_budget": {
+      "type": "number"
+    },
+    "advanced_pathfinder_mode": {
+      "type": "number"
+    },
+    "collision_control": {
+      "type": "number"
+    },
+    "collision_control_cancel_action": {
+      "type": "number"
+    },
+    "advanced_pathfinder_always_enabled": {
+      "type": "number"
+    },
+    "disable_command_unit_navigation_grids": {
+      "type": "number"
+    },
+    "enable_advanced_trajectory_prediction": {
+      "type": "number"
+    },
+    "min_compound_size_for_navigation_grid": {
+      "type": "number"
+    },
+    "max_displacement_for_advanced_pathfinder": {
+      "type": "number"
+    },
+    "los_probe_max_distance": {
+      "type": "number"
+    },
+    "los_probe_step": {
+      "type": "number"
+    },
+    "direction_sensitivity": {
+      "type": "number"
+    },
+    "los_probe_cone_half_angle_degrees": {
+      "type": "number"
+    },
+    "path_finder_interval": {
+      "type": "number"
+    },
+    "path_finder_speed_limit": {
+      "type": "number"
+    },
+    "avoidance_speed_limit": {
+      "type": "number"
+    },
+    "avoidance_multiplier": {
+      "type": "number"
+    },
+    "trajectory_prediction_interval": {
+      "type": "number"
+    },
+    "trajectory_prediction_steps": {
+      "type": "number"
+    },
+    "visual_range_strength": {
+      "type": "number"
+    },
+    "move_selecting_modules": {
+      "type": "number"
+    },
+    "skip_queue_distance": {
+      "type": "number"
+    },
+    "translation_distance": {
+      "type": "number"
+    },
+    "tumble_of_death_enabled": {
+      "type": "number"
+    },
+    "follow_distance": {
+      "type": "number"
+    },
+    "wipe_selecting_modules": {
+      "type": "number"
+    },
+    "waypoint_orbit_distance": {
+      "type": "number"
+    },
+    "visual_range_eclipse_multiplier": {
+      "type": "number"
+    },
+    "minimum_warp_distance": {
+      "type": "number"
+    },
+    "maximum_warp_distance": {
+      "type": "number"
+    },
+    "post_warp_disabled_time": {
+      "type": "number"
+    },
+    "station_turbo_mode_energy_cost": {
+      "type": "number"
+    },
+    "station_turbo_mode_energy_cost_fix": {
+      "type": "number"
+    },
+    "vertical_targeting_max_distance": {
+      "type": "number"
+    },
+    "vertical_targeting_max_sensitivity": {
+      "type": "number"
+    },
+    "vertical_targeting_min_sensitivity": {
+      "type": "number"
+    },
+    "warp_launch_speed": {
+      "type": "number"
+    },
+    "warp_breach_distance": {
+      "type": "number"
+    },
+    "minimum_environment_visibility": {
+      "type": "number"
+    },
+    "show_modules_in_tactical_mode": {
+      "type": "number"
+    },
+    "show_frigates_in_tactical_mode": {
+      "type": "number"
+    },
+    "show_all_units_in_tactical_mode": {
+      "type": "number"
+    },
+    "compound_noise_multiplier": {
+      "type": "number"
+    },
+    "overlay_line_ending_size": {
+      "type": "number"
+    },
+    "show_selection_boxes": {
+      "type": "number"
+    },
+    "show_targeted_enemy_boards": {
+      "type": "number"
+    },
+    "allow_non_owned_area_selection": {
+      "type": "number"
+    },
+    "select_facility_on_world_selection": {
+      "type": "number"
+    },
+    "show_navigation_entity_heights": {
+      "type": "number"
+    },
+    "navigation_entity_heights_alpha": {
+      "type": "number"
+    },
+    "show_focus_indicators": {
+      "type": "number"
+    },
+    "minimum_damageable_amount": {
+      "type": "number"
+    },
+    "little_damageable_amount": {
+      "type": "number"
+    },
+    "huge_damageable_amount": {
+      "type": "number"
+    },
+    "little_damageable_amount_distance": {
+      "type": "number"
+    },
+    "show_damageable_floating_messages": {
+      "type": "number"
+    },
+    "floating_text_cooldown": {
+      "type": "number"
+    },
+    "floating_text_expire": {
+      "type": "number"
+    },
+    "floating_text_queue_size": {
+      "type": "number"
+    },
+    "floating_text_duration": {
+      "type": "number"
+    },
+    "signals_visibility_constraint": {
+      "type": "number"
+    },
+    "stick_margin_from_border": {
+      "type": "number"
+    },
+    "stick_distance_from_camera": {
+      "type": "number"
+    },
+    "stick_on_borders_size_change": {
+      "type": "number"
+    },
+    "stick_behind_camera_alpha": {
+      "type": "number"
+    },
+    "stick_signals_to_screen": {
+      "type": "number"
+    },
+    "stick_command_tactics_to_screen": {
+      "type": "number"
+    },
+    "default_formation_spacing": {
+      "type": "number"
+    },
+    "flight_formation_strong_keep_formation": {
+      "type": "number"
+    },
+    "disable_range_visualization_with_overlays": {
+      "type": "number"
+    },
+    "flight_formation_scatter_distance": {
+      "type": "number"
+    },
+    "auto_repair_threshold": {
+      "type": "number"
+    },
+    "auto_emergency_repair_threshold": {
+      "type": "number"
+    },
+    "apply_exp_modifiers_only_to_leaders": {
+      "type": "number"
+    },
+    "leader_commands_interval": {
+      "type": "number"
+    },
+    "link_audio_clip_volume": {
+      "type": "number"
+    },
+    "link_audio_cooldown": {
+      "type": "number"
+    },
+    "module_in_construction_mass": {
+      "type": "number"
+    },
+    "building_tooltip_loc_key": {
+      "type": "string"
+    },
+    "building_tooltip": {
+      "type": "string"
+    },
+    "fxlod_distance": {
+      "type": "number"
+    },
+    "waypoint_mode_loc_key": {
+      "type": "string"
+    },
+    "waypoint_mode_tooltip": {
+      "type": "string"
+    },
+    "build_tooltip_disappear_time": {
+      "type": "number"
+    },
+    "difficulty_level": {
+      "type": "number"
+    },
+    "game_speed": {
+      "type": "number"
+    },
+    "ui_opacity_add": {
+      "type": "number"
+    },
+    "resources_amount": {
+      "type": "number"
+    },
+    "patrol_routes_always_visible": {
+      "type": "number"
+    },
+    "max_events_in_log": {
+      "type": "number"
+    },
+    "sensors_grid": {
+      "type": "number"
+    },
+    "hide_disabled_commands": {
+      "type": "number"
+    },
+    "show_cutscenes": {
+      "type": "number"
+    },
+    "show_waves_overlay": {
+      "type": "number"
+    },
+    "destroy_confirmations_enabled": {
+      "type": "number"
+    },
+    "letter_box_ratio": {
+      "type": "number"
+    },
+    "entity_shake_intensity": {
+      "type": "number"
+    },
+    "engine_shake_ratio": {
+      "type": "number"
+    },
+    "damage_shake_max_ratio": {
+      "type": "number"
+    },
+    "shake_entities_on_damage": {
+      "type": "number"
+    },
+    "max_experience_points": {
+      "type": "number"
+    },
+    "commands_cooldown": {
+      "type": "number"
+    },
+    "slow_down_time_scale": {
+      "type": "number"
+    },
+    "slow_down_transition_time": {
+      "type": "number"
+    },
+    "default_pool_capacity": {
+      "type": "number"
+    },
+    "steady_tap_time": {
+      "type": "number"
+    },
+    "steady_tap_movement_threshold": {
+      "type": "number"
+    },
+    "steady_tap_press_point": {
+      "type": "number"
+    },
+    "gamepad_enabled": {
+      "type": "number"
+    },
+    "exclusive_cockpit_commands": {
+      "type": "number"
+    },
+    "default_pool_size": {
+      "type": "number"
+    },
+    "team_score_entities_multiplier": {
+      "type": "number"
+    },
+    "team_score_dps_multiplier": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One GameSetting records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

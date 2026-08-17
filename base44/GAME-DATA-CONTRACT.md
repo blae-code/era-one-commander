@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 — 18 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 24 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -43,6 +43,12 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `BlueprintPart` | 2788 | Every part placement in every `GameBlueprint` | `blueprint_id`, `index`, `module_id`, `module_name`, `position` `[x,y,z]`, `rotation` `[x,y,z,w]`, `parent_part`, `parent_connection` — enough to draw the design |
 | `ResearchEdge` | 448 | Tech-tree edges | `from_id`, `to_id`, `kind` (child · requires) |
 | `ModuleWeapon` / `UnitWeapon` | 41 / 36 | Armament join tables | `module_id`/`unit_id`, `turret_id`, `weapon_id`, `count` |
+| `CombatTemplate` | 12 | **Stances / attack styles / orientations** (`kind` = Stance · Style · Orientation · Neutral) | `id` (`AT.STANCE_AGGRESSIVE`, `AT.STYLE_FLYBY`, …), `modifiers[] {stat, operation, value}` — e.g. Aggressive → AttackReactivity +16 %, FlyBy → WeaponRate +40 %, Armor +20 %, MaxSpeed… |
+| `FormationModifier` | 8 | **Formation effects** | `id` (`FM.CLAW_FORMATION`, `FM.DELTA_FORMATION`, `FM.SPHERE_FORMATION`, `FM.WALL_FORMATION`, `FM.GROUPED_FORMATION`, `FM.FORMATION` = base bonus for being in any formation, `FM.STATION_TURBO_MODE`, `FM.FRIGATE_SLOWDOWN`), `modifiers[]` — e.g. Claw → WeaponDamage +10 %, WeaponRate +10 %; base Formation → Armor/HP/Regen +20 %, WeaponDamage +20 %, AttackRange +10 %, MaxSpeed −10 % … |
+| `Faction` | 2 | Federation (CMX) / The Cosmo Kids (PIR) | `name`, `short_name`, `description`, `full` |
+| `Ability` | 5 | Ship abilities (Improved Engines, Field Repair, Ion Ultimate, Sonar, Temporary Shield) | numeric fields per ability class, `modifiers[]` |
+| `BuildCap` | 1 | Unit/module caps per class, single- vs multiplayer | `unit_class_cap_multiplayer {Corvette:100, Fighter:150 …}`, `module_class_cap_*`, global caps |
+| `GameSetting` | 1 | Global tunables (`combat_zone_size`, `damage_by_mass`, `unit_damage_from_collisions`, drag, camera…) | flat numeric/string fields |
 | `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
 
 **`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
@@ -109,4 +115,6 @@ All functions read the entities as service role; they need the data imported fir
 ## 4. Requests from the frontend to the backend
 _(append here — one line each: what you need, where you'd use it)_
 
-* Fleet-formation / stance effects on weapon performance (spacing, focus-fire, engagement-range modifiers) — nothing in the current dataset exposes them; would feed `src/components/database/WeaponBreakdown.jsx`.
+* ~~Fleet-formation / stance effects on weapon performance (spacing, focus-fire, engagement-range modifiers) — nothing in the current dataset exposes them; would feed `src/components/database/WeaponBreakdown.jsx`.~~
+  **DONE (backend, 2026-08-17):** extracted from the game's `AttackTemplate` / `ModifiersTemplate` assets → entities **`CombatTemplate`** (5 stances, 4 styles, 2 orientations, neutral) and **`FormationModifier`** (5 formations + base formation bonus + station turbo + frigate slowdown), each with `modifiers[] {stat, operation, value, abs}` in the same shape as research modifiers (`fmtModifier` renders them). They are also flattened into `StatModifier` with `source_type` `attack_template` / `formation`. Weapon-relevant stats: `WeaponDamage`, `WeaponRate`, `AttackRange`, `AttackReactivity`, `AttackSwitchTargetInterval`, `Armor`, `MaxHealth`, `MaxSpeed`. Spacing/focus-fire are behaviours, not numbers — nothing numeric exists for them in the game data.
+* —

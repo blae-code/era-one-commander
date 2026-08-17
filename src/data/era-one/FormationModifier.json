@@ -1,0 +1,255 @@
+[
+{
+"game_id": "FM.CLAW_FORMATION",
+"name": "Claw Formation Modifiers",
+"modifiers": [
+{
+"stat": "WeaponDamage",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "WeaponRate",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.DELTA_FORMATION",
+"name": "Delta Formation Modifiers",
+"modifiers": [
+{
+"stat": "MaxSpeed",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.FORMATION",
+"name": "Formation Modifiers",
+"modifiers": [
+{
+"stat": "Armor",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "MaxHealth",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "HealthRegenerationRate",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "MaxSpeed",
+"operation": "Subtract",
+"value": 0.1,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "AttackSwitchTargetInterval",
+"operation": "Subtract",
+"value": 0.25,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "WeaponDamage",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "WeaponRate",
+"operation": "Add",
+"value": 0.05,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "AttackRange",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "Power",
+"operation": "Subtract",
+"value": 0.05,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "MaxTurningSpeed",
+"operation": "Add",
+"value": 0.05,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "TurningPower",
+"operation": "Add",
+"value": 0.05,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "StructuralCollisionsResistance",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.FRIGATE_SLOWDOWN",
+"name": "Frigate SlowDown Template",
+"modifiers": [
+{
+"stat": "Power",
+"operation": "Set",
+"value": 7.0,
+"clamp": false,
+"abs": true
+},
+{
+"stat": "TurningPower",
+"operation": "Set",
+"value": 5.0,
+"clamp": false,
+"abs": true
+},
+{
+"stat": "MaxTurningSpeed",
+"operation": "Set",
+"value": 0.08,
+"clamp": false,
+"abs": true
+},
+{
+"stat": "MaxSpeed",
+"operation": "Set",
+"value": 0.08,
+"clamp": false,
+"abs": true
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.GROUPED_FORMATION",
+"name": "Grouped Formation Modifiers",
+"modifiers": [
+{
+"stat": "TurningPower",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "Power",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.SPHERE_FORMATION",
+"name": "Sphere Formation Modifiers",
+"modifiers": [
+{
+"stat": "Armor",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.STATION_TURBO_MODE",
+"name": "Station Turbo Mode Modifiers",
+"modifiers": [
+{
+"stat": "MaxSpeed",
+"operation": "Add",
+"value": 1.4,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "Power",
+"operation": "Add",
+"value": 1.8,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "TurningPower",
+"operation": "Add",
+"value": 1.4,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "MaxTurningSpeed",
+"operation": "Add",
+"value": 1.4,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "FM.WALL_FORMATION",
+"name": "Wall Formation Modifiers",
+"modifiers": [
+{
+"stat": "Armor",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+}
+],
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

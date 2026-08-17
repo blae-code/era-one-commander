@@ -64,6 +64,13 @@
         "SensorProbe"
       ]
     },
+    "faction": {
+      "type": "string",
+      "enum": [
+        "CMX",
+        "PIR"
+      ]
+    },
     "tier": {
       "type": "number",
       "description": "Tech tier"
@@ -297,6 +304,12 @@
         "type": "string"
       },
       "description": "Selectable secondary-slot equipment"
+    },
+    "researchable_abilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "experience_disabled": {
       "type": "boolean"

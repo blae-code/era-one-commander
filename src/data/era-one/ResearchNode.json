@@ -273,7 +273,7 @@
 "static_bonus_population_capacity": 0.0,
 "static_bonus_research_capacity": 0.0,
 "unlocks": [],
-"ability_unlocked": null,
+"ability_unlocked": "ABL.FRP",
 "modifiers": [],
 "agent_category": "Support",
 "unlocks_modules": [],
@@ -336,7 +336,7 @@
 ],
 "childNodes": [],
 "abilityResearchConfiguration": {
-"abilityToUnlock": "pptr:5493104324127775691"
+"abilityToUnlock": "ABL.FRP"
 },
 "unlocks": [],
 "extraFunctionCalls": [],
@@ -392,7 +392,7 @@
 "static_bonus_population_capacity": 0.0,
 "static_bonus_research_capacity": 0.0,
 "unlocks": [],
-"ability_unlocked": null,
+"ability_unlocked": "ABL.ENG",
 "modifiers": [],
 "agent_category": "None",
 "unlocks_modules": [],
@@ -456,7 +456,7 @@
 "R.A.SWW"
 ],
 "abilityResearchConfiguration": {
-"abilityToUnlock": "pptr:-7846234868544531096"
+"abilityToUnlock": "ABL.ENG"
 },
 "unlocks": [],
 "extraFunctionCalls": [],

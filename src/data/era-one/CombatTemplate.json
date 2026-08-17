@@ -1,0 +1,186 @@
+[
+{
+"game_id": "AT.NEUTRAL_ATTACK_TEMPLATE",
+"name": "Neutral Attack Template",
+"kind": "Neutral",
+"modifiers": [],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.ORIENTATION_FRONTAL",
+"name": "Orientation Frontal",
+"kind": "Orientation",
+"modifiers": [],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.ORIENTATION_LATERAL",
+"name": "Orientation Lateral",
+"kind": "Orientation",
+"modifiers": [],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STANCE_AGGRESSIVE",
+"name": "Stance Aggressive",
+"kind": "Stance",
+"modifiers": [
+{
+"stat": "AttackReactivity",
+"operation": "Add",
+"value": 0.16,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STANCE_DEFENSIVE",
+"name": "Stance Defensive",
+"kind": "Stance",
+"modifiers": [
+{
+"stat": "AttackReactivity",
+"operation": "Add",
+"value": 0.08,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STANCE_HUNTER",
+"name": "Stance Hunter",
+"kind": "Stance",
+"modifiers": [
+{
+"stat": "AttackReactivity",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STANCE_PASSIVE",
+"name": "Stance Passive",
+"kind": "Stance",
+"modifiers": [],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STANCE_REACTIVE",
+"name": "Stance Reactive",
+"kind": "Stance",
+"modifiers": [
+{
+"stat": "AttackReactivity",
+"operation": "Add",
+"value": 0.04,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STYLE_CHASE",
+"name": "Style Chase",
+"kind": "Style",
+"modifiers": [],
+"evade_actions": 5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STYLE_FLYBY",
+"name": "Style FlyBy",
+"kind": "Style",
+"modifiers": [
+{
+"stat": "TurningPower",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "WeaponRate",
+"operation": "Add",
+"value": 0.4,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "Armor",
+"operation": "Add",
+"value": 0.2,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "StructuralCollisionsResistance",
+"operation": "Add",
+"value": 0.1,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STYLE_HOLD",
+"name": "Style Hold",
+"kind": "Style",
+"modifiers": [
+{
+"stat": "Armor",
+"operation": "Add",
+"value": 0.4,
+"clamp": false,
+"abs": false
+},
+{
+"stat": "WeaponRate",
+"operation": "Add",
+"value": 0.4,
+"clamp": false,
+"abs": false
+}
+],
+"evade_actions": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AT.STYLE_ORBIT",
+"name": "Style Orbit",
+"kind": "Style",
+"modifiers": [],
+"evade_actions": 5,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

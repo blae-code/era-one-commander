@@ -1,0 +1,42 @@
+[
+{
+"game_id": "BUILDCAP",
+"name": "Build caps",
+"enabled_singleplayer": false,
+"enabled_multiplayer": true,
+"global_unit_cap_singleplayer": 300,
+"global_module_cap_singleplayer": 9000,
+"global_unit_cap_multiplayer": 300,
+"global_module_cap_multiplayer": 9000,
+"unit_class_cap_singleplayer": {
+"Corvette": 300,
+"Utility": 30,
+"Fighter": 150,
+"Frigate": 100,
+"Platform": 100
+},
+"unit_class_cap_multiplayer": {
+"Corvette": 100,
+"Utility": 60,
+"Fighter": 150,
+"Frigate": 50,
+"Platform": 50
+},
+"module_class_cap_singleplayer": {
+"Command": -1,
+"Structural": -1,
+"Weapon": 800,
+"Facility": 60,
+"Utility": -1
+},
+"module_class_cap_multiplayer": {
+"Command": -1,
+"Structural": -1,
+"Weapon": 200,
+"Facility": 60,
+"Utility": -1
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

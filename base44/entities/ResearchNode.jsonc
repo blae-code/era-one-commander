@@ -138,6 +138,9 @@
         "type": "string"
       }
     },
+    "ability_unlocked": {
+      "type": "string"
+    },
     "modifiers": {
       "type": "array",
       "items": {

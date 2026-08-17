@@ -162,6 +162,13 @@
         "type": "string"
       }
     },
+    "faction": {
+      "type": "string",
+      "enum": [
+        "CMX",
+        "PIR"
+      ]
+    },
     "tier": {
       "type": "number",
       "description": "Tech tier"

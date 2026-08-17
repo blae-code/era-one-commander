@@ -1,0 +1,102 @@
+{
+  "name": "Ability",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "asset_name": {
+      "type": "string",
+      "description": "Unity asset name inside the game bundle"
+    },
+    "info": {
+      "type": "string",
+      "description": "Short role text shown in-game (e.g. 'Anti-light armor')"
+    },
+    "description": {
+      "type": "string",
+      "description": "In-game description (rich-text tags stripped)"
+    },
+    "restriction": {
+      "type": "number"
+    },
+    "work_in_progress": {
+      "type": "boolean"
+    },
+    "ability_class": {
+      "type": "string"
+    },
+    "is_work_in_progress": {
+      "type": "number"
+    },
+    "construction_time": {
+      "type": "number",
+      "description": "Build time (s)"
+    },
+    "has_secondary": {
+      "type": "number"
+    },
+    "agent_category": {
+      "type": "number"
+    },
+    "duration": {
+      "type": "number"
+    },
+    "cooldown": {
+      "type": "number"
+    },
+    "can_be_interrupted": {
+      "type": "number"
+    },
+    "response": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    },
+    "restore_all_missing_health": {
+      "type": "number"
+    },
+    "health_to_restore": {
+      "type": "number"
+    },
+    "number_of_repair_steps": {
+      "type": "number"
+    },
+    "duration_scales_on_missing_health": {
+      "type": "number"
+    },
+    "stop_when_taking_damage": {
+      "type": "number"
+    },
+    "adaptive_radius": {
+      "type": "number"
+    },
+    "radius": {
+      "type": "number"
+    },
+    "extents_multiplier_percent": {
+      "type": "number"
+    },
+    "max_shield_health": {
+      "type": "number"
+    },
+    "regeneration_rate": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One Ability records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

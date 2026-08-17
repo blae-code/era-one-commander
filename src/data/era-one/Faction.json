@@ -1,0 +1,46 @@
+[
+{
+"game_id": "CMX",
+"name": "Federation of Free Worlds",
+"asset_name": "DATA FAC Federation",
+"info": "A human governing authority",
+"description": "The Federation of Free Worlds is a centralized technocracy established in 2550, following the construction of the first World Ship, the Apollyon.\nGoverned by the De Shars dynasty, the federation maintains control through four massive World Ships, encouraging the population to concentrate on them. \nAlthough nominally free, the federation enforces strict control and relocates inhabitants between the ships to strengthen the sense of belonging and loyalty, maintaining peace at the cost of individual freedom.",
+"restriction": null,
+"work_in_progress": false,
+"short_name": "Federation",
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Federation of Free Worlds",
+"shortName": "Federation",
+"identifier": "CMX",
+"info": "A human governing authority",
+"description": "The Federation of Free Worlds is a centralized technocracy established in 2550, following the construction of the first World Ship, the Apollyon.\nGoverned by the De Shars dynasty, the federation maintains control through four massive World Ships, encouraging the population to concentrate on them. \nAlthough nominally free, the federation enforces strict control and relocates inhabitants between the ships to strengthen the sense of belonging and loyalty, maintaining peace at the cost of individual freedom.",
+"responseTemplate": "pptr:-6489458161221448781"
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR",
+"name": "The Cosmo Kids",
+"asset_name": "DATA FAC Pirates",
+"info": "A pirate faction",
+"description": "The Cosmo Kids are a pirate faction that emerged from the chaos and power struggles among the space corporations. \nOriginally funded by corporations to disrupt competitors, they have grown into an independent and highly organized group. Comprised of defected warships, rogue miners, and adventurous rebels, the Cosmo Kids operate on the fringes of the Federation of Free Worlds. \nThey raid trade routes, attack corporate assets, and provide an alternative way of life for those disillusioned with the federation's strict control. \nTheir ultimate goal is to disrupt the federation's hold on power and carve out their own dominion in the cosmos.",
+"restriction": null,
+"work_in_progress": false,
+"short_name": "Cosmo Kids",
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "The Cosmo Kids",
+"shortName": "Cosmo Kids",
+"identifier": "PIR",
+"info": "A pirate faction",
+"description": "The Cosmo Kids are a pirate faction that emerged from the chaos and power struggles among the space corporations. \nOriginally funded by corporations to disrupt competitors, they have grown into an independent and highly organized group. Comprised of defected warships, rogue miners, and adventurous rebels, the Cosmo Kids operate on the fringes of the Federation of Free Worlds. \nThey raid trade routes, attack corporate assets, and provide an alternative way of life for those disillusioned with the federation's strict control. \nTheir ultimate goal is to disrupt the federation's hold on power and carve out their own dominion in the cosmos.",
+"responseTemplate": "pptr:5801516642146794214"
+},
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

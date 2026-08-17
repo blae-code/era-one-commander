@@ -9,6 +9,8 @@
     "source_type": {
       "type": "string",
       "enum": [
+        "attack_template",
+        "formation",
         "module",
         "research",
         "unit_level"
@@ -20,6 +22,7 @@
     "context": {
       "type": "string",
       "enum": [
+        "formation",
         "level_1",
         "level_10",
         "level_2",
@@ -32,6 +35,8 @@
         "level_9",
         "perfect_attachment_bonus",
         "power_on_modifiers",
+        "stance",
+        "style",
         "upgrade"
       ]
     },
@@ -40,6 +45,8 @@
       "enum": [
         "Armor",
         "AttackRange",
+        "AttackReactivity",
+        "AttackSwitchTargetInterval",
         "ConstructionRadius",
         "ConstructionTime",
         "EntityModifierRadius",
@@ -57,18 +64,21 @@
         "ReinforcementHealthBonusOnParts",
         "ShieldDepletedCooldown",
         "ShieldRegenerationRate",
+        "StructuralCollisionsResistance",
         "StructureDamageMultiplier",
         "TurningPower",
         "WarpActivationTime",
         "WarpEnergyRequirement",
         "WarpResourcesRequirement",
-        "WeaponDamage"
+        "WeaponDamage",
+        "WeaponRate"
       ]
     },
     "operation": {
       "type": "string",
       "enum": [
         "Add",
+        "Set",
         "Subtract"
       ]
     },

@@ -1,0 +1,56 @@
+{
+  "name": "BuildCap",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "enabled_singleplayer": {
+      "type": "boolean"
+    },
+    "enabled_multiplayer": {
+      "type": "boolean"
+    },
+    "global_unit_cap_singleplayer": {
+      "type": "number"
+    },
+    "global_module_cap_singleplayer": {
+      "type": "number"
+    },
+    "global_unit_cap_multiplayer": {
+      "type": "number"
+    },
+    "global_module_cap_multiplayer": {
+      "type": "number"
+    },
+    "unit_class_cap_singleplayer": {
+      "type": "object"
+    },
+    "unit_class_cap_multiplayer": {
+      "type": "object"
+    },
+    "module_class_cap_singleplayer": {
+      "type": "object"
+    },
+    "module_class_cap_multiplayer": {
+      "type": "object"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One BuildCap records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}
