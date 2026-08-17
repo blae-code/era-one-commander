@@ -1,0 +1,128 @@
+{
+ "game": {
+  "generated_utc": "2026-08-17T17:33:26Z",
+  "buildid": "24615926",
+  "LastUpdated": "1786131837",
+  "SizeOnDisk": "9075402610",
+  "catalog_hash": "56a9792e89e8ba478eb943a1c83b2ee9",
+  "build_guid": "d8d318d067ea460b8955dec4b200b8c7",
+  "game_version": "0.12.2",
+  "unity_version": "6000.3.11f1",
+  "row_counts": {
+   "resources": 5,
+   "weapons": 65,
+   "turrets": 51,
+   "subsystems": 4,
+   "modules": 103,
+   "module_weapons": 41,
+   "stat_modifiers": 1249,
+   "units": 27,
+   "unit_weapons": 36,
+   "unit_levels": 1080,
+   "research": 131,
+   "research_edges": 448,
+   "loot_tables": 71,
+   "stations": 6,
+   "asteroids": 17,
+   "blueprints": 42,
+   "blueprint_parts": 2788,
+   "localization": 2448
+  },
+  "full_counts": {
+   "ResourceData": 5,
+   "LootTable": 3,
+   "BattleArenaTurnConfigs": 1,
+   "ResearchData": 131,
+   "WeaponData": 65,
+   "TurretData": 51,
+   "SubsystemData": 4,
+   "UnitData": 27,
+   "ModuleData": 103,
+   "StationData": 6,
+   "RemainData": 1,
+   "AsteroidData": 17,
+   "LODTemplate": 5,
+   "RadioactiveCloudData": 3,
+   "SceneryData": 3
+  }
+ },
+ "entities": [
+  {
+   "entity": "Module",
+   "source_table": "modules",
+   "rows": 103,
+   "columns": 84,
+   "key": "game_id"
+  },
+  {
+   "entity": "Weapon",
+   "source_table": "weapons",
+   "rows": 65,
+   "columns": 58,
+   "key": "game_id"
+  },
+  {
+   "entity": "Turret",
+   "source_table": "turrets",
+   "rows": 51,
+   "columns": 30,
+   "key": "game_id"
+  },
+  {
+   "entity": "Subsystem",
+   "source_table": "subsystems",
+   "rows": 4,
+   "columns": 8,
+   "key": "game_id"
+  },
+  {
+   "entity": "Unit",
+   "source_table": "units",
+   "rows": 27,
+   "columns": 85,
+   "key": "game_id"
+  },
+  {
+   "entity": "ResearchNode",
+   "source_table": "research",
+   "rows": 131,
+   "columns": 36,
+   "key": "game_id"
+  },
+  {
+   "entity": "Resource",
+   "source_table": "resources",
+   "rows": 5,
+   "columns": 11,
+   "key": "game_id"
+  },
+  {
+   "entity": "Station",
+   "source_table": "stations",
+   "rows": 6,
+   "columns": 9,
+   "key": "game_id"
+  },
+  {
+   "entity": "GameBlueprint",
+   "source_table": "blueprints",
+   "rows": 42,
+   "columns": 23,
+   "key": "game_id"
+  },
+  {
+   "entity": "StatModifier",
+   "source_table": "stat_modifiers",
+   "rows": 1249,
+   "columns": 10,
+   "key": null
+  },
+  {
+   "entity": "LootEntry",
+   "source_table": "loot_tables",
+   "rows": 71,
+   "columns": 7,
+   "key": null
+  }
+ ]
+}

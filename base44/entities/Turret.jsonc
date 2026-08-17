@@ -1,0 +1,120 @@
+{
+  "name": "Turret",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "asset_name": {
+      "type": "string",
+      "description": "Unity asset name inside the game bundle"
+    },
+    "description": {
+      "type": "string",
+      "description": "In-game description (rich-text tags stripped)"
+    },
+    "work_in_progress": {
+      "type": "boolean"
+    },
+    "dps": {
+      "type": "number",
+      "description": "Damage per second (game-computed)"
+    },
+    "weapons_count": {
+      "type": "number"
+    },
+    "time_between_weapon_shots": {
+      "type": "number"
+    },
+    "time_between_volleys": {
+      "type": "number"
+    },
+    "use_explicit_weapon_timings": {
+      "type": "boolean"
+    },
+    "synchronized_weapons": {
+      "type": "boolean"
+    },
+    "synchronized_reloading": {
+      "type": "boolean"
+    },
+    "fire_rate_ramps_up": {
+      "type": "boolean"
+    },
+    "time_to_max_fire_rate": {
+      "type": "number"
+    },
+    "is_fixed": {
+      "type": "boolean"
+    },
+    "requires_line_of_sight": {
+      "type": "boolean"
+    },
+    "horizontal_fov": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "vertical_fov": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "horizontal_rotation_speed": {
+      "type": "number"
+    },
+    "vertical_rotation_speed": {
+      "type": "number"
+    },
+    "predictive_aim": {
+      "type": "boolean"
+    },
+    "leading_factor": {
+      "type": "number"
+    },
+    "aim_required": {
+      "type": "number"
+    },
+    "attack_priority": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exclusive_priority": {
+      "type": "boolean"
+    },
+    "completely_autonomous_targeting": {
+      "type": "boolean"
+    },
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Weapon game_ids mounted (repeat = count)"
+    },
+    "weapons_source": {
+      "type": "string"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One Turret records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

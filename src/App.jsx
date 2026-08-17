@@ -14,6 +14,7 @@ import Blueprints from '@/pages/Blueprints';
 import BlueprintDetail from '@/pages/BlueprintDetail';
 import Database from '@/pages/Database';
 import Compare from '@/pages/Compare';
+import GameData from '@/pages/GameData';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -49,6 +50,7 @@ const AuthenticatedApp = () => {
         <Route path="/blueprints/:id" element={<BlueprintDetail />} />
         <Route path="/database" element={<Database />} />
         <Route path="/compare" element={<Compare />} />
+        <Route path="/gamedata" element={<GameData />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

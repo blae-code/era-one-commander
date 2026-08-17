@@ -1,0 +1,641 @@
+[
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.CLO",
+"weight": 65.0,
+"probability": 0.00028,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.DFI",
+"weight": 80.0,
+"probability": 0.00035,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.DAR",
+"weight": 80.0,
+"probability": 0.00035,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.AFI",
+"weight": 95.0,
+"probability": 0.00042,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.HCS",
+"weight": 50.0,
+"probability": 0.00022,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.AME",
+"weight": 92.5,
+"probability": 0.0004,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.NFE",
+"weight": 90.0,
+"probability": 0.00039,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.QC",
+"weight": 65.0,
+"probability": 0.00028,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RSI",
+"weight": 55.0,
+"probability": 0.00024,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.ETS",
+"weight": 95.0,
+"probability": 0.00042,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUBM",
+"weight": 20.0,
+"probability": 9e-05,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUFUS",
+"weight": 75.0,
+"probability": 0.00033,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUMD",
+"weight": 55.0,
+"probability": 0.00024,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.SSO",
+"weight": 75.0,
+"probability": 0.00033,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.TAR",
+"weight": 95.0,
+"probability": 0.00042,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.WD",
+"weight": 60.0,
+"probability": 0.00026,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.WRP",
+"weight": 70.0,
+"probability": 0.00031,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.AWA",
+"weight": 90.0,
+"probability": 0.00039,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.ACMI",
+"weight": 80.0,
+"probability": 0.00035,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.CMI",
+"weight": 55.0,
+"probability": 0.00024,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.GAT",
+"weight": 92.5,
+"probability": 0.0004,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.SHV",
+"weight": 40.0,
+"probability": 0.00017,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.HKI",
+"weight": 40.0,
+"probability": 0.00017,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.WPL",
+"weight": 70.0,
+"probability": 0.00031,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.KIN",
+"weight": 90.0,
+"probability": 0.00039,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.LCA",
+"weight": 95.0,
+"probability": 0.00042,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.HMI",
+"weight": 75.0,
+"probability": 0.00033,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.HBL",
+"weight": 65.0,
+"probability": 0.00028,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.PCA",
+"weight": 80.0,
+"probability": 0.00035,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.LRM",
+"weight": 45.0,
+"probability": 0.0002,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.LRNB",
+"weight": 10.0,
+"probability": 4e-05,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RMI",
+"weight": 95.0,
+"probability": 0.00042,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": "R.T.RHIC",
+"weight": 50.0,
+"probability": 0.00022,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree",
+"tier_multiplier": 1000,
+"item_id": null,
+"weight": 226450.0,
+"probability": 0.98999,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.CLO",
+"weight": 65.0,
+"probability": 0.02838,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.DFI",
+"weight": 80.0,
+"probability": 0.03493,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.DAR",
+"weight": 80.0,
+"probability": 0.03493,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.AFI",
+"weight": 95.0,
+"probability": 0.04148,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.HCS",
+"weight": 50.0,
+"probability": 0.02183,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.AME",
+"weight": 92.5,
+"probability": 0.04039,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.NFE",
+"weight": 90.0,
+"probability": 0.0393,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.QC",
+"weight": 65.0,
+"probability": 0.02838,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RSI",
+"weight": 55.0,
+"probability": 0.02402,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.ETS",
+"weight": 95.0,
+"probability": 0.04148,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUBM",
+"weight": 20.0,
+"probability": 0.00873,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUFUS",
+"weight": 75.0,
+"probability": 0.03275,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RUMD",
+"weight": 55.0,
+"probability": 0.02402,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.SSO",
+"weight": 75.0,
+"probability": 0.03275,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.TAR",
+"weight": 95.0,
+"probability": 0.04148,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.WD",
+"weight": 60.0,
+"probability": 0.0262,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.WRP",
+"weight": 70.0,
+"probability": 0.03057,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.AWA",
+"weight": 90.0,
+"probability": 0.0393,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.ACMI",
+"weight": 80.0,
+"probability": 0.03493,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.CMI",
+"weight": 55.0,
+"probability": 0.02402,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.GAT",
+"weight": 92.5,
+"probability": 0.04039,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.SHV",
+"weight": 40.0,
+"probability": 0.01747,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.HKI",
+"weight": 40.0,
+"probability": 0.01747,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.WPL",
+"weight": 70.0,
+"probability": 0.03057,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.KIN",
+"weight": 90.0,
+"probability": 0.0393,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.LCA",
+"weight": 95.0,
+"probability": 0.04148,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.HMI",
+"weight": 75.0,
+"probability": 0.03275,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.HBL",
+"weight": 65.0,
+"probability": 0.02838,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.PCA",
+"weight": 80.0,
+"probability": 0.03493,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.LRM",
+"weight": 45.0,
+"probability": 0.01965,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.LRNB",
+"weight": 10.0,
+"probability": 0.00437,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RMI",
+"weight": 95.0,
+"probability": 0.04148,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research Whole Tree Guarantuees",
+"tier_multiplier": 1000,
+"item_id": "R.T.RHIC",
+"weight": 50.0,
+"probability": 0.02183,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research 1",
+"tier_multiplier": 1000,
+"item_id": "R.T.RHIC",
+"weight": 63.0,
+"probability": 0.05408,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research 1",
+"tier_multiplier": 1000,
+"item_id": "R.U.E2",
+"weight": 58.0,
+"probability": 0.04979,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research 1",
+"tier_multiplier": 1000,
+"item_id": "R.T.SHV",
+"weight": 44.0,
+"probability": 0.03777,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"table": "Research 1",
+"tier_multiplier": 1000,
+"item_id": null,
+"weight": 1000.0,
+"probability": 0.85837,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

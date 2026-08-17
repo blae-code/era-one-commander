@@ -1,0 +1,357 @@
+{
+  "name": "Unit",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "asset_name": {
+      "type": "string",
+      "description": "Unity asset name inside the game bundle"
+    },
+    "info": {
+      "type": "string",
+      "description": "Short role text shown in-game (e.g. 'Anti-light armor')"
+    },
+    "description": {
+      "type": "string",
+      "description": "In-game description (rich-text tags stripped)"
+    },
+    "restriction": {
+      "type": "string",
+      "enum": [
+        "NotAvailableInSinglePlayer|NotAvailableInMultiplayer"
+      ]
+    },
+    "work_in_progress": {
+      "type": "boolean"
+    },
+    "unit_class": {
+      "type": "string",
+      "enum": [
+        "Corvette",
+        "Fighter",
+        "Frigate",
+        "Mine",
+        "Platform",
+        "Utility"
+      ]
+    },
+    "unit_type": {
+      "type": "string",
+      "enum": [
+        "Bomber",
+        "BomberMk2",
+        "Collector",
+        "ContainerShip",
+        "Corvette",
+        "CorvetteLight",
+        "Deployer",
+        "Frigate",
+        "FrigateLight",
+        "FrigateTorpedo",
+        "Interceptor",
+        "InterceptorMk2",
+        "Platform",
+        "ProximityMine",
+        "RepairDrone",
+        "Scout",
+        "SensorProbe"
+      ]
+    },
+    "tier": {
+      "type": "number",
+      "description": "Tech tier"
+    },
+    "score": {
+      "type": "number",
+      "description": "Match score value"
+    },
+    "cost_resources": {
+      "type": "number",
+      "description": "Build cost in resource units (RU)"
+    },
+    "cost_population": {
+      "type": "number",
+      "description": "Crew required"
+    },
+    "cost_energy": {
+      "type": "number",
+      "description": "Energy required"
+    },
+    "cost_research": {
+      "type": "number"
+    },
+    "construction_time": {
+      "type": "number",
+      "description": "Build time (s)"
+    },
+    "max_health": {
+      "type": "number",
+      "description": "Hit points"
+    },
+    "armor": {
+      "type": "number",
+      "description": "Armor value"
+    },
+    "health_regen": {
+      "type": "number"
+    },
+    "radiation_resistance": {
+      "type": "number"
+    },
+    "structural_collision_resistance": {
+      "type": "number"
+    },
+    "max_ablative_shield": {
+      "type": "number"
+    },
+    "ablative_shield_regen": {
+      "type": "number"
+    },
+    "max_perimeter_shield": {
+      "type": "number"
+    },
+    "perimeter_shield_radius": {
+      "type": "number"
+    },
+    "perimeter_shield_regen": {
+      "type": "number"
+    },
+    "shield_depletion_cooldown": {
+      "type": "number"
+    },
+    "has_electrical_integrity": {
+      "type": "boolean"
+    },
+    "max_electrical_integrity": {
+      "type": "number"
+    },
+    "mass": {
+      "type": "number"
+    },
+    "cargo_capacity": {
+      "type": "number"
+    },
+    "extraction_rate": {
+      "type": "number"
+    },
+    "energy_production": {
+      "type": "number"
+    },
+    "energy_per_second": {
+      "type": "number"
+    },
+    "resource_production": {
+      "type": "number"
+    },
+    "resource_capacity_bonus": {
+      "type": "number"
+    },
+    "research_capacity_bonus": {
+      "type": "number"
+    },
+    "population_capacity_bonus": {
+      "type": "number"
+    },
+    "energy_capacity_bonus": {
+      "type": "number"
+    },
+    "requires_resource_capacity": {
+      "type": "number"
+    },
+    "requires_energy": {
+      "type": "number"
+    },
+    "repair_cost_multiplier": {
+      "type": "number"
+    },
+    "repair_time_multiplier": {
+      "type": "number"
+    },
+    "recycle_cost_ratio": {
+      "type": "number"
+    },
+    "recycle_rate_multiplier": {
+      "type": "number"
+    },
+    "visual_range": {
+      "type": "number"
+    },
+    "visual_strength": {
+      "type": "number"
+    },
+    "sensors_range": {
+      "type": "number"
+    },
+    "sensors_strength": {
+      "type": "number"
+    },
+    "cloak_range": {
+      "type": "number"
+    },
+    "cloak_strength": {
+      "type": "number"
+    },
+    "base_signature_noise": {
+      "type": "number"
+    },
+    "attack_noise": {
+      "type": "number"
+    },
+    "thrust_noise": {
+      "type": "number"
+    },
+    "link_range": {
+      "type": "number"
+    },
+    "attack_cooldown": {
+      "type": "number"
+    },
+    "attack_reactivity": {
+      "type": "number"
+    },
+    "default_stance": {
+      "type": "string",
+      "enum": [
+        "Aggressive",
+        "Defensive",
+        "Reactive"
+      ]
+    },
+    "enabled_stances": {
+      "type": "string"
+    },
+    "attack_priority": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "experience_reward": {
+      "type": "number"
+    },
+    "max_per_team_singleplayer": {
+      "type": "number"
+    },
+    "max_per_team_multiplayer": {
+      "type": "number"
+    },
+    "required_research": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Research game_ids required"
+    },
+    "agent_category": {
+      "type": "string"
+    },
+    "exclude_from_ai": {
+      "type": "boolean"
+    },
+    "max_speed": {
+      "type": "number"
+    },
+    "propulsion_power": {
+      "type": "number"
+    },
+    "turning_power": {
+      "type": "number"
+    },
+    "max_turning_speed": {
+      "type": "number"
+    },
+    "thrusters_power": {
+      "type": "number"
+    },
+    "max_thrusters_speed": {
+      "type": "number"
+    },
+    "directional": {
+      "type": "boolean"
+    },
+    "primary_equip": {
+      "type": "string",
+      "description": "Default primary-slot equipment (turret/weapon/subsystem game_id)"
+    },
+    "secondary_equip": {
+      "type": "string",
+      "description": "Default secondary-slot equipment"
+    },
+    "primary_equip_options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Selectable primary-slot equipment"
+    },
+    "secondary_equip_options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Selectable secondary-slot equipment"
+    },
+    "experience_disabled": {
+      "type": "boolean"
+    },
+    "prefab": {
+      "type": "string",
+      "description": "Prefab root the armament was read from"
+    },
+    "turrets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Turret game_ids on the prefab"
+    },
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Weapon game_ids mounted (repeat = count)"
+    },
+    "hardpoints": {
+      "type": "object",
+      "description": "Customizable hardpoint counts by slot type"
+    },
+    "levels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "number"
+          },
+          "experience_required": {
+            "type": "number"
+          },
+          "stat_upgrades": {
+            "type": "array"
+          }
+        }
+      },
+      "description": "Veterancy levels: experience_required + stat_upgrades"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One Unit records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

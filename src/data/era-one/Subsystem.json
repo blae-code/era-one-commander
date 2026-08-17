@@ -1,0 +1,54 @@
+[
+{
+"game_id": "SUB.001",
+"name": "Bomber Default Bottom",
+"asset_name": "DATA SUB CMX Bomber Default Bottom",
+"info": null,
+"description": "None.",
+"restriction": null,
+"work_in_progress": false,
+"dps": 0.0,
+"weapons": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SUB.002",
+"name": "Frigate Default Frontal",
+"asset_name": "DATA SUB CMX Frigate Default Frontal",
+"info": null,
+"description": "None.",
+"restriction": null,
+"work_in_progress": false,
+"dps": 0.0,
+"weapons": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SUB.003",
+"name": "Interceptor Default Wings",
+"asset_name": "DATA SUB CMX Interceptor Default Wings",
+"info": null,
+"description": "None.",
+"restriction": null,
+"work_in_progress": false,
+"dps": 0.0,
+"weapons": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SUB.004",
+"name": "Scout Default Wings",
+"asset_name": "DATA SUB CMX Scout Default Wings",
+"info": null,
+"description": "None.",
+"restriction": null,
+"work_in_progress": false,
+"dps": 0.0,
+"weapons": [],
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

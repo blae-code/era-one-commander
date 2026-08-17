@@ -75,3 +75,21 @@ Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.
 Base44 CLI command reference: [https://docs.base44.com/developers/references/cli/commands/introduction](https://docs.base44.com/developers/references/cli/commands/introduction)
 
 Support: [https://app.base44.com/support](https://app.base44.com/support)
+
+## Game data (real ERA ONE dataset)
+
+The Databank, Dashboard counters and the `/gamedata` page use entities extracted from the installed
+game by the sibling project `Code/era-one-data` (Unity 6 / IL2CPP / Odin reader):
+`Module`, `Weapon`, `Turret`, `Subsystem`, `Unit`, `ResearchNode`, `Resource`, `Station`,
+`GameBlueprint` (shipped/AI stations), `StatModifier`, `LootEntry`. Every record carries `game_id`
+(the game's own identifier, e.g. `TUR.002`) plus `game_version`/`game_build`.
+
+- Entity schemas: `base44/entities/*.jsonc` (generated — edit in era-one-data, not here).
+- Data: `src/data/era-one/*.json` (lazy-loaded chunks) + `INDEX.json`.
+- Load / refresh: sign in as admin → **Game Data** (`/gamedata`) → *Import / update all*. Upserts by
+  `game_id`; after a game patch re-run `era-one-data/run.fish`, copy `out/base44/data/*.json` here,
+  redeploy, import again.
+- Helpers: `src/lib/gameData.js` (`useGameCatalog`, `fmtModifier`), seeder `src/lib/seedGameData.js`.
+
+`Hull`/`Component` and the grid Ship Builder predate the real dataset (ERA ONE ships are module
+graphs, not hull grids) and are slated for replacement.

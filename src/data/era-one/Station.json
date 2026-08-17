@@ -1,0 +1,74 @@
+[
+{
+"game_id": "CMX_SECONDARY_STATION",
+"name": "Secondary Station",
+"asset_name": "DATA CMX Secondary Station",
+"info": "Main Station with Command Cube",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ERA_ONE",
+"name": "Era one Station\n\t#Station.MODULAR STATION.Info ||75DHf2hfaGd||\nModular Station / Ship\n\t#Station.MODULAR STATION.Name ||56KTTJUoaif||\nStation",
+"asset_name": "DATA CMX Era One",
+"info": "Main Station with Command Center",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MODULAR STATION",
+"name": "Station",
+"asset_name": "DATA Station",
+"info": "Modular Station / Ship",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_CTR",
+"name": "Era one Station\n\t#Station.MODULAR STATION.Info ||75DHf2hfaGd||\nModular Station / Ship\n\t#Station.MODULAR STATION.Name ||56KTTJUoaif||\nStation",
+"asset_name": "DATA PIR Pirate Center",
+"info": "Main Station with Command Center",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FORTRESS",
+"name": "Pirate Fortress",
+"asset_name": "DATA PIR Fortress",
+"info": "Pirate stronghold",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_STRONGHOLD",
+"name": "Pirate Stronghold",
+"asset_name": "DATA PIR Stronghold",
+"info": "Pirate stronghold",
+"description": "",
+"restriction": null,
+"work_in_progress": false,
+"experience_reward": 0,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

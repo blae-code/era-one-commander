@@ -1,0 +1,36 @@
+{
+  "name": "LootEntry",
+  "type": "object",
+  "properties": {
+    "table": {
+      "type": "string",
+      "enum": [
+        "Research 1",
+        "Research Whole Tree",
+        "Research Whole Tree Guarantuees"
+      ]
+    },
+    "tier_multiplier": {
+      "type": "number"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "probability": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [],
+  "description": "Era One LootEntry records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

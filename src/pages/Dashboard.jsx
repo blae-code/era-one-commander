@@ -4,21 +4,22 @@ import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
 import { Wrench, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
-import { CategoryIcon, LogoIcon } from "@/components/icons/EraIcons";
+import { LogoIcon } from "@/components/icons/EraIcons";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
+import { useGameCatalog } from "@/lib/gameData";
 
 const CAT_HEX = { weapon: "#ff7a1a", engine: "#2f9bff", reactor: "#ffd21a", shield: "#c9d6e3", module: "#00d1c1" };
 
 export default function Dashboard() {
   const { data: components = [] } = useQuery({ queryKey: ["components"], queryFn: () => base44.entities.Component.list("-created_date", 500) });
-  const { data: hulls = [] } = useQuery({ queryKey: ["hulls"], queryFn: () => base44.entities.Hull.list("-created_date", 100) });
   const { data: blueprints = [] } = useQuery({ queryKey: ["blueprints"], queryFn: () => base44.entities.Blueprint.list("-created_date", 6) });
+  const game = useGameCatalog();
 
-  const catData = ["weapon", "engine", "reactor", "shield", "module"].map((c) => ({
-    cat: c.toUpperCase().slice(0, 4),
-    category: c,
-    count: components.filter((k) => k.category === c).length,
-  }));
+  // Module classes from the real dataset (falls back to the legacy Component catalog if no game data yet)
+  const CLASS_HEX = { Weapon: "#ff7a1a", Structural: "#c9d6e3", Utility: "#00d1c1", Facility: "#2f9bff", Command: "#ffd21a" };
+  const catData = game.modules.length
+    ? Object.keys(CLASS_HEX).map((c) => ({ cat: c.toUpperCase().slice(0, 5), category: c, count: game.modules.filter((m) => m.module_class === c).length, hex: CLASS_HEX[c] }))
+    : ["weapon", "engine", "reactor", "shield", "module"].map((c) => ({ cat: c.toUpperCase().slice(0, 4), category: c, count: components.filter((k) => k.category === c).length, hex: CAT_HEX[c] }));
 
   return (
     <div className="p-6 max-w-[1400px] mx-auto">
@@ -33,8 +34,10 @@ export default function Dashboard() {
         </div>
         <div className="hidden md:flex gap-6 font-mono text-center">
           {[
-            ["HULLS", hulls.length],
-            ["COMPONENTS", components.length],
+            ["MODULES", game.modules.length],
+            ["SHIPS", game.units.length],
+            ["WEAPONS", game.weapons.length],
+            ["RESEARCH", game.research.length],
             ["BLUEPRINTS", blueprints.length],
           ].map(([k, v]) => (
             <div key={k}>
@@ -68,7 +71,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Armory distribution */}
         <div className="schematic-panel p-4">
-          <div className="tech-label mb-3">Databank Distribution</div>
+          <div className="tech-label mb-3">Databank // modules by class</div>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={catData} barSize={26}>
               <XAxis dataKey="cat" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(36 10% 70%)" }} axisLine={false} tickLine={false} />
@@ -79,7 +82,7 @@ export default function Dashboard() {
               />
               <Bar dataKey="count" radius={[2, 2, 0, 0]}>
                 {catData.map((d) => (
-                  <Cell key={d.category} fill={CAT_HEX[d.category]} />
+                  <Cell key={d.category} fill={d.hex} />
                 ))}
               </Bar>
             </BarChart>
@@ -87,8 +90,8 @@ export default function Dashboard() {
           <div className="flex flex-wrap gap-3 mt-2">
             {catData.map((d) => (
               <div key={d.category} className="flex items-center gap-1.5">
-                <CategoryIcon category={d.category} size={13} />
-                <span className="font-mono text-[10px] text-muted-foreground">{d.count}</span>
+                <span className="inline-block w-2 h-2" style={{ background: d.hex }} />
+                <span className="font-mono text-[10px] text-muted-foreground">{d.category} {d.count}</span>
               </div>
             ))}
           </div>
