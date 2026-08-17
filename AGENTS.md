@@ -32,3 +32,12 @@ npx skills add base44/skills
 - Prefer the existing Base44 CLI workflow over adding new npm scripts for Base44-specific tasks.
 - Reuse the existing SDK client and Vite plugin patterns before adding new Base44 integration paths.
 - Run the relevant checks from `package.json` before finishing code changes.
+
+## Game data (backend contract)
+
+The real ERA ONE dataset (entities `Module`, `Unit`, `Weapon`, `Turret`, `ResearchNode`, …) and the
+backend functions are documented in `base44/GAME-DATA-CONTRACT.md`. **Read it before touching data
+paths.** Ownership split: `base44/entities/*.jsonc` (generated), `base44/functions/**`,
+`src/data/era-one/**`, `src/lib/gameData.js`, `src/lib/seedGameData.js` belong to the backend
+pipeline (`Code/era-one-data`); the frontend (`src/pages`, `src/components`, styling) is yours.
+Add requests for new fields/functions to §4 of the contract.
