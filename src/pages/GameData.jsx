@@ -4,7 +4,8 @@ import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { seedGameData, loadIndex, ERA_ONE_ENTITIES } from "@/lib/seedGameData";
 import { Button } from "@/components/ui/button";
-import { DatabaseZap, RefreshCw, CheckCircle2, AlertTriangle, ShieldCheck } from "lucide-react";
+import { CheckCircle2, AlertTriangle } from "lucide-react";
+import GameDataHeader from "@/components/gamedata/GameDataHeader";
 
 // Admin page: shows the game build the bundled dataset was extracted from, compares it with what is
 // live in the app's entities, and runs the seeder (upsert by game_id).
@@ -75,26 +76,23 @@ export default function GameData() {
   };
 
   return (
-    <div className="p-6 max-w-[1100px] mx-auto w-full">
-      <div className="flex items-end justify-between mb-4 flex-wrap gap-3">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Game Data</h1>
-          <p className="tech-label mt-0.5">
-            Bundled dataset // ERA ONE {index?.game?.game_version} · Steam build {bundledBuild} · extracted {index?.game?.generated_utc}
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="rounded-none font-mono text-xs" onClick={() => refetch()} disabled={isFetching}>
-            <RefreshCw size={13} className={isFetching ? "animate-spin" : ""} /> Re-check
-          </Button>
-          <Button variant="outline" size="sm" className="rounded-none font-mono text-xs" onClick={runVerify} disabled={verifying}>
-            <ShieldCheck size={13} /> {verifying ? "Verifying…" : "Verify server-side"}
-          </Button>
-          <Button size="sm" className="rounded-none font-mono text-xs" onClick={run} disabled={!isAdmin || running}>
-            <DatabaseZap size={13} /> {running ? "Importing…" : "Import / update all"}
-          </Button>
-        </div>
-      </div>
+    <div className="p-6 max-w-[1400px] mx-auto w-full">
+      <GameDataHeader
+        subtitle={`Bundled dataset // ERA ONE ${index?.game?.game_version ?? "—"} · Steam build ${bundledBuild ?? "—"} · extracted ${index?.game?.generated_utc ?? "—"}`}
+        readout={[
+          ["TABLES", String((status || []).length).padStart(2, "0"), null],
+          ["SYNCED", String((status || []).filter((e) => e.state === "synced").length).padStart(2, "0"), "#34d399"],
+          ["ATTENTION", String((status || []).filter((e) => e.state !== "synced").length).padStart(2, "0"), "#ffb020"],
+          ["LIVE ROWS", (status || []).reduce((s, e) => s + (e.live?.count || 0), 0).toLocaleString("en-US"), null],
+        ]}
+        onRefetch={() => refetch()}
+        isFetching={isFetching}
+        onVerify={runVerify}
+        verifying={verifying}
+        onRun={run}
+        running={running}
+        canRun={isAdmin}
+      />
 
       {!isAdmin && (
         <div className="schematic-panel p-3 mb-4 flex items-center gap-2 text-amber-400 text-xs font-mono">
@@ -104,7 +102,7 @@ export default function GameData() {
 
       <div className="schematic-panel overflow-x-auto mb-4">
         <table className="w-full text-sm">
-          <thead className="bg-secondary/90">
+          <thead className="bg-secondary/90 border-b border-primary/30">
             <tr className="text-left">
               {["Entity", "Bundled rows", "Live rows", "Live build", "State"].map((h) => (
                 <th key={h} className="tech-label px-3 py-2 font-normal">{h}</th>
@@ -146,11 +144,15 @@ export default function GameData() {
         </div>
       )}
 
-      <label className="flex items-center gap-2 font-mono text-xs text-muted-foreground mb-4">
-        <input type="checkbox" checked={deleteMissing} onChange={(e) => setDeleteMissing(e.target.checked)} disabled={running} />
-        Delete records whose game_id no longer exists in the bundled dataset (after a game patch)
-      </label>
+      <div className="schematic-panel p-3 mb-4">
+        <div className="tech-label mb-2">Import options</div>
+        <label className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
+          <input type="checkbox" checked={deleteMissing} onChange={(e) => setDeleteMissing(e.target.checked)} disabled={running} />
+          Delete records whose game_id no longer exists in the bundled dataset (after a game patch)
+        </label>
+      </div>
 
+      <div className="tech-label mb-2">Import log</div>
       <div className="schematic-panel p-3 h-64 overflow-y-auto font-mono text-[11px] leading-relaxed">
         {log.length === 0 ? <span className="text-muted-foreground">Import log — nothing run yet.</span> : log.map((l, i) => <div key={i}>{l}</div>)}
       </div>
