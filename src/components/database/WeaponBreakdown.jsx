@@ -1,5 +1,6 @@
 import React from "react";
 import { fmtNum } from "@/lib/gameData";
+import WeaponTargetCharts from "@/components/database/WeaponTargetCharts";
 
 // Granular weapon analysis: per-shot damage, fire cycle, projectile flight, area effect and
 // effective damage per target class. Everything here is derived from the extracted Weapon record.
@@ -104,6 +105,8 @@ export default function WeaponBreakdown({ weapon: r }) {
           ]} />
         </Section>
       </div>
+
+      <WeaponTargetCharts weapon={r} />
 
       <Section
         title="Effective damage per target class"
