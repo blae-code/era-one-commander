@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T17:55:22Z",
+  "generated_utc": "2026-08-17T17:58:40Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -51,7 +51,7 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 84,
+   "columns": 85,
    "key": "game_id"
   },
   {
@@ -65,7 +65,7 @@
    "entity": "Turret",
    "source_table": "turrets",
    "rows": 51,
-   "columns": 30,
+   "columns": 31,
    "key": "game_id"
   },
   {
@@ -79,14 +79,14 @@
    "entity": "Unit",
    "source_table": "units",
    "rows": 27,
-   "columns": 85,
+   "columns": 86,
    "key": "game_id"
   },
   {
    "entity": "ResearchNode",
    "source_table": "research",
    "rows": 131,
-   "columns": 39,
+   "columns": 41,
    "key": "game_id"
   },
   {

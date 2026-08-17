@@ -453,6 +453,7 @@
 ]
 }
 ],
+"dps_total": 12.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -886,6 +887,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1319,6 +1321,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1769,6 +1772,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2218,6 +2222,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2653,6 +2658,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3115,6 +3121,7 @@
 ]
 }
 ],
+"dps_total": 16.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3577,6 +3584,7 @@
 ]
 }
 ],
+"dps_total": 37.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4030,6 +4038,7 @@
 ]
 }
 ],
+"dps_total": 10.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4482,6 +4491,7 @@
 ]
 }
 ],
+"dps_total": 5.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4934,6 +4944,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5386,6 +5397,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5855,6 +5867,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6299,6 +6312,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6735,6 +6749,7 @@
 ]
 }
 ],
+"dps_total": 7.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7186,6 +7201,7 @@
 ]
 }
 ],
+"dps_total": 4.9,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7619,6 +7635,7 @@
 ]
 }
 ],
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -8067,6 +8084,7 @@
 ]
 }
 ],
+"dps_total": 8.4,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -8520,6 +8538,7 @@
 ]
 }
 ],
+"dps_total": 16.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -8976,6 +8995,7 @@
 ]
 }
 ],
+"dps_total": 68.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -9437,6 +9457,7 @@
 ]
 }
 ],
+"dps_total": 59.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -9902,6 +9923,7 @@
 ]
 }
 ],
+"dps_total": 115.5,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -10359,6 +10381,7 @@
 ]
 }
 ],
+"dps_total": 40.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -10806,6 +10829,7 @@
 ]
 }
 ],
+"dps_total": 9.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -11257,6 +11281,7 @@
 ]
 }
 ],
+"dps_total": 18.4,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -11698,6 +11723,7 @@
 ]
 }
 ],
+"dps_total": 34.5,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -12144,6 +12170,7 @@
 ]
 }
 ],
+"dps_total": 4.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

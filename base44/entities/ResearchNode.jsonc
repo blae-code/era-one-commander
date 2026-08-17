@@ -183,6 +183,12 @@
         "type": "string"
       }
     },
+    "tree_depth": {
+      "type": "number"
+    },
+    "tree_order": {
+      "type": "number"
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

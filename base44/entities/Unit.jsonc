@@ -341,6 +341,9 @@
       },
       "description": "Veterancy levels: experience_required + stat_upgrades"
     },
+    "dps_total": {
+      "type": "number"
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

@@ -43,6 +43,7 @@
 "WPN.004"
 ],
 "weapons_source": "prefab",
+"dps_total": 20.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -91,6 +92,7 @@
 "WPN.005"
 ],
 "weapons_source": "prefab",
+"dps_total": 6.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -139,6 +141,7 @@
 "WPN.006"
 ],
 "weapons_source": "prefab",
+"dps_total": 10.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -191,6 +194,7 @@
 "WPN.007"
 ],
 "weapons_source": "prefab",
+"dps_total": 10.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -239,6 +243,7 @@
 "WPN.064"
 ],
 "weapons_source": "prefab",
+"dps_total": 4.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -287,6 +292,7 @@
 "WPN.009"
 ],
 "weapons_source": "prefab",
+"dps_total": 7.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -337,6 +343,7 @@
 "WPN.028"
 ],
 "weapons_source": "prefab",
+"dps_total": 14.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -385,6 +392,7 @@
 "WPN.011"
 ],
 "weapons_source": "prefab",
+"dps_total": 4.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -439,6 +447,7 @@
 "WPN.012"
 ],
 "weapons_source": "prefab",
+"dps_total": 18.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -494,6 +503,7 @@
 "WPN.013"
 ],
 "weapons_source": "prefab",
+"dps_total": 37.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -548,6 +558,7 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_total": 17.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -596,6 +607,7 @@
 "WPN.015"
 ],
 "weapons_source": "prefab",
+"dps_total": 5.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -648,6 +660,7 @@
 "WPN.016"
 ],
 "weapons_source": "prefab",
+"dps_total": 10.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -698,6 +711,7 @@
 "WPN.017"
 ],
 "weapons_source": "prefab",
+"dps_total": 100.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -750,6 +764,7 @@
 "WPN.018"
 ],
 "weapons_source": "prefab",
+"dps_total": 9.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -802,6 +817,7 @@
 "WPN.036"
 ],
 "weapons_source": "shared_prefab:TURT.029",
+"dps_total": 48.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -850,6 +866,7 @@
 "WPN.019"
 ],
 "weapons_source": "prefab",
+"dps_total": 4.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -898,6 +915,7 @@
 "WPN.020"
 ],
 "weapons_source": "prefab",
+"dps_total": 3.4,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -948,6 +966,7 @@
 "WPN.021"
 ],
 "weapons_source": "prefab",
+"dps_total": 16.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1000,6 +1019,7 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_total": 32.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1048,6 +1068,7 @@
 "WPN.027"
 ],
 "weapons_source": "prefab",
+"dps_total": 179.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1098,6 +1119,7 @@
 "WPN.028"
 ],
 "weapons_source": "prefab",
+"dps_total": 14.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1150,6 +1172,7 @@
 "WPN.029"
 ],
 "weapons_source": "prefab",
+"dps_total": 59.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1204,6 +1227,7 @@
 "WPN.030"
 ],
 "weapons_source": "prefab",
+"dps_total": 18.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1254,6 +1278,7 @@
 "WPN.031"
 ],
 "weapons_source": "prefab",
+"dps_total": 136.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1308,6 +1333,7 @@
 "WPN.032"
 ],
 "weapons_source": "prefab",
+"dps_total": 163.4,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1362,6 +1388,7 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_total": 17.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1412,6 +1439,7 @@
 "WPN.035"
 ],
 "weapons_source": "prefab",
+"dps_total": 100.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1464,6 +1492,7 @@
 "WPN.036"
 ],
 "weapons_source": "prefab",
+"dps_total": 48.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1516,6 +1545,7 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_total": 32.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1561,6 +1591,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1606,6 +1637,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1651,6 +1683,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_total": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1705,6 +1738,7 @@
 "WPN.045"
 ],
 "weapons_source": "prefab",
+"dps_total": 32.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1758,6 +1792,7 @@
 "WPN.046"
 ],
 "weapons_source": "prefab",
+"dps_total": 28.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1812,6 +1847,7 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_total": 17.6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1865,6 +1901,7 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_total": 42.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1915,6 +1952,7 @@
 "WPN.051"
 ],
 "weapons_source": "prefab",
+"dps_total": 62.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1965,6 +2003,7 @@
 "WPN.050"
 ],
 "weapons_source": "prefab",
+"dps_total": 62.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2019,6 +2058,7 @@
 "WPN.052"
 ],
 "weapons_source": "prefab",
+"dps_total": 18.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2073,6 +2113,7 @@
 "WPN.052"
 ],
 "weapons_source": "prefab",
+"dps_total": 18.8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2121,6 +2162,7 @@
 "WPN.053"
 ],
 "weapons_source": "prefab",
+"dps_total": 179.2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2168,6 +2210,7 @@
 "WPN.056"
 ],
 "weapons_source": "prefab",
+"dps_total": 43.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2219,6 +2262,7 @@
 "WPN.057"
 ],
 "weapons_source": "prefab",
+"dps_total": 24.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2270,6 +2314,7 @@
 "WPN.059"
 ],
 "weapons_source": "prefab",
+"dps_total": 74.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2321,6 +2366,7 @@
 "WPN.061"
 ],
 "weapons_source": "prefab",
+"dps_total": 115.0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2371,6 +2417,7 @@
 "WPN.063"
 ],
 "weapons_source": "prefab",
+"dps_total": 216.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2426,6 +2473,7 @@
 "WPN.054"
 ],
 "weapons_source": "prefab",
+"dps_total": 72.9,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2481,6 +2529,7 @@
 "WPN.055"
 ],
 "weapons_source": "prefab",
+"dps_total": 72.9,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2534,6 +2583,7 @@
 "WPN.044"
 ],
 "weapons_source": "prefab",
+"dps_total": 3.1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2581,6 +2631,7 @@
 "WPN.062"
 ],
 "weapons_source": "prefab",
+"dps_total": 43.7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

@@ -48,6 +48,8 @@
 "WPN.002"
 ],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 35,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -97,6 +99,8 @@
 "WPN.040"
 ],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 2,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -147,6 +151,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 65,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -198,6 +204,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 3,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -254,6 +262,8 @@
 "WPN.064"
 ],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 47,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -303,6 +313,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 0,
+"tree_order": 1,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -355,6 +367,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 36,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -446,6 +460,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 48,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -503,6 +519,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 4,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -559,6 +577,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 5,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -624,6 +644,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 75,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -684,6 +706,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 6,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -735,6 +759,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 37,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -789,6 +815,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 38,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -853,6 +881,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 39,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -908,6 +938,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 7,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -961,6 +993,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 8,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1012,6 +1046,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 9,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1061,6 +1097,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 40,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1113,6 +1151,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 10,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1163,6 +1203,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 92,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1216,6 +1258,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 66,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1269,6 +1313,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 93,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1322,6 +1368,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 67,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1371,6 +1419,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 11,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1425,6 +1475,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 12,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1476,6 +1528,8 @@
 "WPN.024"
 ],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 13,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1529,6 +1583,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 94,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1581,6 +1637,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 112,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1635,6 +1693,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 68,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1689,6 +1749,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 14,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1739,6 +1801,8 @@
 "WPN.064"
 ],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 41,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1793,6 +1857,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 69,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1844,6 +1910,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 113,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1903,6 +1971,8 @@
 "WPN.026"
 ],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 15,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -1955,6 +2025,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 70,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2007,6 +2079,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 114,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2068,6 +2142,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 19,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2126,6 +2202,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 42,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2181,6 +2259,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 71,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2234,6 +2314,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 72,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2300,6 +2382,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 20,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2351,6 +2435,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 16,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2419,6 +2505,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 17,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2471,6 +2559,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 62,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2523,6 +2613,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 73,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2580,6 +2672,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 43,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2634,6 +2728,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 44,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2689,6 +2785,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 45,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2747,6 +2845,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 96,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2804,6 +2904,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 21,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2862,6 +2964,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 49,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2920,6 +3024,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 76,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -2978,6 +3084,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 97,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3034,6 +3142,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 115,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3094,6 +3204,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 22,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3155,6 +3267,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 50,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3216,6 +3330,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 77,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3277,6 +3393,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 98,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3336,6 +3454,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 116,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3393,6 +3513,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 23,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3451,6 +3573,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 51,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3509,6 +3633,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 78,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3567,6 +3693,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 99,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3623,6 +3751,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 117,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3687,6 +3817,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 24,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3752,6 +3884,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 52,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3817,6 +3951,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 79,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3882,6 +4018,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 100,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -3945,6 +4083,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 118,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4009,6 +4149,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 25,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4074,6 +4216,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 53,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4139,6 +4283,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 80,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4204,6 +4350,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 101,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4267,6 +4415,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 119,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4348,6 +4498,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 34,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4429,6 +4581,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 63,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4510,6 +4664,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 91,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4591,6 +4747,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 111,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4670,6 +4828,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 6,
+"tree_order": 129,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4728,6 +4888,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 81,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4808,6 +4970,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 0,
+"tree_order": 0,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4888,6 +5052,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 18,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -4965,6 +5131,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 46,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5037,6 +5205,8 @@
 ],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 74,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5103,6 +5273,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 95,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5160,6 +5332,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 26,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5218,6 +5392,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 54,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5276,6 +5452,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 82,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5334,6 +5512,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 102,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5390,6 +5570,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 120,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5447,6 +5629,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 27,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5505,6 +5689,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 55,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5563,6 +5749,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 83,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5621,6 +5809,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 103,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5677,6 +5867,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 121,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5734,6 +5926,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 28,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5792,6 +5986,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 56,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5850,6 +6046,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 84,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5908,6 +6106,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 104,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -5964,6 +6164,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 122,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6021,6 +6223,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 29,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6079,6 +6283,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 57,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6137,6 +6343,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 85,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6195,6 +6403,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 105,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6251,6 +6461,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 123,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6315,6 +6527,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 30,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6380,6 +6594,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 58,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6445,6 +6661,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 86,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6510,6 +6728,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 106,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6573,6 +6793,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 124,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6637,6 +6859,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 31,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6702,6 +6926,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 59,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6767,6 +6993,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 87,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6832,6 +7060,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 107,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6895,6 +7125,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 125,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -6952,6 +7184,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 32,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7010,6 +7244,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 60,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7068,6 +7304,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 88,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7126,6 +7364,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 108,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7182,6 +7422,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 126,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7246,6 +7488,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 1,
+"tree_order": 33,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7311,6 +7555,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 2,
+"tree_order": 61,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7376,6 +7622,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 89,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7441,6 +7689,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 109,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7504,6 +7754,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 127,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7578,6 +7830,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 3,
+"tree_order": 64,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7652,6 +7906,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 4,
+"tree_order": 90,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7726,6 +7982,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 5,
+"tree_order": 110,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7800,6 +8058,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 6,
+"tree_order": 128,
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -7872,6 +8132,8 @@
 "unlocks_units": [],
 "unlocks_weapons": [],
 "unlocks_turrets": [],
+"tree_depth": 7,
+"tree_order": 130,
 "game_version": "0.12.2",
 "game_build": "24615926"
 }
