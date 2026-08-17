@@ -50,6 +50,21 @@
 "WPN.004"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 20.8,
+"CorvetteUnit": 20.8,
+"FrigateUnit": 20.8,
+"UtilityUnit": 20.8,
+"PlatformUnit": 20.8,
+"MineUnit": 20.8,
+"CommandModule": 20.8,
+"StructuralModule": 20.8,
+"WeaponModule": 20.8,
+"FacilityModule": 20.8,
+"UtilityModule": 20.8,
+"Station": 20.8,
+"Wreckage": 20.8
+},
 "dps_total": 20.8,
 "full": {
 "isWorkInProgress": 0,
@@ -171,6 +186,21 @@
 "WPN.005"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 6.8,
+"CorvetteUnit": 6.8,
+"FrigateUnit": 6.8,
+"UtilityUnit": 6.8,
+"PlatformUnit": 6.8,
+"MineUnit": 6.8,
+"CommandModule": 6.8,
+"StructuralModule": 6.8,
+"WeaponModule": 6.8,
+"FacilityModule": 6.8,
+"UtilityModule": 6.8,
+"Station": 6.8,
+"Wreckage": 6.8
+},
 "dps_total": 6.8,
 "full": {
 "isWorkInProgress": 0,
@@ -294,6 +324,21 @@
 "WPN.006"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 10.6,
+"CorvetteUnit": 10.6,
+"FrigateUnit": 10.6,
+"UtilityUnit": 10.6,
+"PlatformUnit": 10.6,
+"MineUnit": 10.6,
+"CommandModule": 10.6,
+"StructuralModule": 10.6,
+"WeaponModule": 10.6,
+"FacilityModule": 10.6,
+"UtilityModule": 10.6,
+"Station": 10.6,
+"Wreckage": 10.6
+},
 "dps_total": 10.6,
 "full": {
 "isWorkInProgress": 0,
@@ -421,6 +466,21 @@
 "WPN.007"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 10.8,
+"CorvetteUnit": 10.8,
+"FrigateUnit": 10.8,
+"UtilityUnit": 10.8,
+"PlatformUnit": 10.8,
+"MineUnit": 10.8,
+"CommandModule": 10.8,
+"StructuralModule": 10.8,
+"WeaponModule": 10.8,
+"FacilityModule": 10.8,
+"UtilityModule": 10.8,
+"Station": 10.8,
+"Wreckage": 10.8
+},
 "dps_total": 10.8,
 "full": {
 "isWorkInProgress": 0,
@@ -544,6 +604,21 @@
 "WPN.064"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 4.8,
+"CorvetteUnit": 4.8,
+"FrigateUnit": 4.8,
+"UtilityUnit": 4.8,
+"PlatformUnit": 4.8,
+"MineUnit": 4.8,
+"CommandModule": 4.8,
+"StructuralModule": 4.8,
+"WeaponModule": 4.8,
+"FacilityModule": 4.8,
+"UtilityModule": 4.8,
+"Station": 4.8,
+"Wreckage": 4.8
+},
 "dps_total": 4.8,
 "full": {
 "isWorkInProgress": 0,
@@ -669,6 +744,21 @@
 "WPN.009"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 7.6,
+"CorvetteUnit": 7.6,
+"FrigateUnit": 7.6,
+"UtilityUnit": 7.6,
+"PlatformUnit": 7.6,
+"MineUnit": 7.6,
+"CommandModule": 7.6,
+"StructuralModule": 7.6,
+"WeaponModule": 7.6,
+"FacilityModule": 7.6,
+"UtilityModule": 7.6,
+"Station": 7.6,
+"Wreckage": 7.6
+},
 "dps_total": 7.6,
 "full": {
 "isWorkInProgress": 0,
@@ -794,6 +884,21 @@
 "WPN.028"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.4,
+"CorvetteUnit": 14.0,
+"FrigateUnit": 14.0,
+"UtilityUnit": 14.0,
+"PlatformUnit": 14.0,
+"MineUnit": 14.0,
+"CommandModule": 14.0,
+"StructuralModule": 14.0,
+"WeaponModule": 14.0,
+"FacilityModule": 14.0,
+"UtilityModule": 14.0,
+"Station": 14.0,
+"Wreckage": 14.0
+},
 "dps_total": 14.0,
 "full": {
 "isWorkInProgress": 0,
@@ -915,6 +1020,21 @@
 "WPN.011"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 4.2,
+"CorvetteUnit": 4.2,
+"FrigateUnit": 4.2,
+"UtilityUnit": 4.2,
+"PlatformUnit": 4.2,
+"MineUnit": 4.2,
+"CommandModule": 4.2,
+"StructuralModule": 4.2,
+"WeaponModule": 4.2,
+"FacilityModule": 4.2,
+"UtilityModule": 4.2,
+"Station": 4.2,
+"Wreckage": 4.2
+},
 "dps_total": 4.2,
 "full": {
 "isWorkInProgress": 0,
@@ -1044,6 +1164,21 @@
 "WPN.012"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -1180,6 +1315,21 @@
 "WPN.013"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 26.46,
+"CorvetteUnit": 30.24,
+"FrigateUnit": 37.8,
+"UtilityUnit": 37.8,
+"PlatformUnit": 37.8,
+"MineUnit": 37.8,
+"CommandModule": 37.8,
+"StructuralModule": 37.8,
+"WeaponModule": 37.8,
+"FacilityModule": 37.8,
+"UtilityModule": 37.8,
+"Station": 37.8,
+"Wreckage": 37.8
+},
 "dps_total": 37.8,
 "full": {
 "isWorkInProgress": 0,
@@ -1315,6 +1465,21 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 10.56,
+"CorvetteUnit": 12.32,
+"FrigateUnit": 17.6,
+"UtilityUnit": 17.6,
+"PlatformUnit": 17.6,
+"MineUnit": 17.6,
+"CommandModule": 17.6,
+"StructuralModule": 17.6,
+"WeaponModule": 17.6,
+"FacilityModule": 17.6,
+"UtilityModule": 17.6,
+"Station": 17.6,
+"Wreckage": 17.6
+},
 "dps_total": 17.6,
 "full": {
 "isWorkInProgress": 0,
@@ -1446,6 +1611,21 @@
 "WPN.015"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 5.6,
+"CorvetteUnit": 5.6,
+"FrigateUnit": 5.6,
+"UtilityUnit": 5.6,
+"PlatformUnit": 5.6,
+"MineUnit": 5.6,
+"CommandModule": 5.6,
+"StructuralModule": 5.6,
+"WeaponModule": 5.6,
+"FacilityModule": 5.6,
+"UtilityModule": 5.6,
+"Station": 5.6,
+"Wreckage": 5.6
+},
 "dps_total": 5.6,
 "full": {
 "isWorkInProgress": 0,
@@ -1573,6 +1753,21 @@
 "WPN.016"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 13.375,
+"CorvetteUnit": 13.375,
+"FrigateUnit": 10.7,
+"UtilityUnit": 10.7,
+"PlatformUnit": 10.7,
+"MineUnit": 10.7,
+"CommandModule": 10.7,
+"StructuralModule": 10.7,
+"WeaponModule": 10.7,
+"FacilityModule": 10.7,
+"UtilityModule": 10.7,
+"Station": 10.7,
+"Wreckage": 10.7
+},
 "dps_total": 10.7,
 "full": {
 "isWorkInProgress": 0,
@@ -1703,6 +1898,21 @@
 "WPN.017"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 100.0,
+"CorvetteUnit": 100.0,
+"FrigateUnit": 100.0,
+"UtilityUnit": 100.0,
+"PlatformUnit": 100.0,
+"MineUnit": 100.0,
+"CommandModule": 100.0,
+"StructuralModule": 100.0,
+"WeaponModule": 100.0,
+"FacilityModule": 100.0,
+"UtilityModule": 100.0,
+"Station": 100.0,
+"Wreckage": 100.0
+},
 "dps_total": 100.0,
 "full": {
 "isWorkInProgress": 0,
@@ -1833,6 +2043,21 @@
 "WPN.018"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 9.0,
+"CorvetteUnit": 9.0,
+"FrigateUnit": 9.0,
+"UtilityUnit": 9.0,
+"PlatformUnit": 9.0,
+"MineUnit": 9.0,
+"CommandModule": 9.0,
+"StructuralModule": 9.0,
+"WeaponModule": 9.0,
+"FacilityModule": 9.0,
+"UtilityModule": 9.0,
+"Station": 9.0,
+"Wreckage": 9.0
+},
 "dps_total": 9.0,
 "full": {
 "isWorkInProgress": 0,
@@ -1960,6 +2185,21 @@
 "WPN.036"
 ],
 "weapons_source": "shared_prefab:TURT.029",
+"dps_vs_class": {
+"FighterUnit": 48.6,
+"CorvetteUnit": 48.6,
+"FrigateUnit": 48.6,
+"UtilityUnit": 48.6,
+"PlatformUnit": 48.6,
+"MineUnit": 48.6,
+"CommandModule": 48.6,
+"StructuralModule": 43.74,
+"WeaponModule": 43.74,
+"FacilityModule": 43.74,
+"UtilityModule": 43.74,
+"Station": 48.6,
+"Wreckage": 48.6
+},
 "dps_total": 48.6,
 "full": {
 "isWorkInProgress": 0,
@@ -2085,6 +2325,21 @@
 "WPN.019"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 4.8,
+"CorvetteUnit": 4.8,
+"FrigateUnit": 4.8,
+"UtilityUnit": 4.8,
+"PlatformUnit": 4.8,
+"MineUnit": 4.8,
+"CommandModule": 4.8,
+"StructuralModule": 4.8,
+"WeaponModule": 4.8,
+"FacilityModule": 4.8,
+"UtilityModule": 4.8,
+"Station": 4.8,
+"Wreckage": 4.8
+},
 "dps_total": 4.8,
 "full": {
 "isWorkInProgress": 0,
@@ -2210,6 +2465,21 @@
 "WPN.020"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 3.4,
+"CorvetteUnit": 3.4,
+"FrigateUnit": 3.4,
+"UtilityUnit": 3.4,
+"PlatformUnit": 3.4,
+"MineUnit": 3.4,
+"CommandModule": 3.4,
+"StructuralModule": 3.4,
+"WeaponModule": 3.4,
+"FacilityModule": 3.4,
+"UtilityModule": 3.4,
+"Station": 3.4,
+"Wreckage": 3.4
+},
 "dps_total": 3.4,
 "full": {
 "isWorkInProgress": 0,
@@ -2335,6 +2605,21 @@
 "WPN.021"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 16.0,
+"CorvetteUnit": 16.0,
+"FrigateUnit": 16.0,
+"UtilityUnit": 16.0,
+"PlatformUnit": 16.0,
+"MineUnit": 16.0,
+"CommandModule": 16.0,
+"StructuralModule": 16.0,
+"WeaponModule": 16.0,
+"FacilityModule": 16.0,
+"UtilityModule": 16.0,
+"Station": 16.0,
+"Wreckage": 16.0
+},
 "dps_total": 16.0,
 "full": {
 "isWorkInProgress": 0,
@@ -2465,6 +2750,21 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 32.1,
+"CorvetteUnit": 32.1,
+"FrigateUnit": 32.1,
+"UtilityUnit": 32.1,
+"PlatformUnit": 32.1,
+"MineUnit": 32.1,
+"CommandModule": 32.1,
+"StructuralModule": 32.1,
+"WeaponModule": 32.1,
+"FacilityModule": 32.1,
+"UtilityModule": 32.1,
+"Station": 32.1,
+"Wreckage": 32.1
+},
 "dps_total": 32.1,
 "full": {
 "isWorkInProgress": 0,
@@ -2591,6 +2891,21 @@
 "WPN.027"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 17.92,
+"CorvetteUnit": 17.92,
+"FrigateUnit": 17.92,
+"UtilityUnit": 17.92,
+"PlatformUnit": 17.92,
+"MineUnit": 179.2,
+"CommandModule": 17.92,
+"StructuralModule": 17.92,
+"WeaponModule": 17.92,
+"FacilityModule": 17.92,
+"UtilityModule": 17.92,
+"Station": 17.92,
+"Wreckage": 17.92
+},
 "dps_total": 179.2,
 "full": {
 "isWorkInProgress": 0,
@@ -2712,6 +3027,21 @@
 "WPN.028"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.4,
+"CorvetteUnit": 14.0,
+"FrigateUnit": 14.0,
+"UtilityUnit": 14.0,
+"PlatformUnit": 14.0,
+"MineUnit": 14.0,
+"CommandModule": 14.0,
+"StructuralModule": 14.0,
+"WeaponModule": 14.0,
+"FacilityModule": 14.0,
+"UtilityModule": 14.0,
+"Station": 14.0,
+"Wreckage": 14.0
+},
 "dps_total": 14.0,
 "full": {
 "isWorkInProgress": 0,
@@ -2837,6 +3167,21 @@
 "WPN.029"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 41.79,
+"CorvetteUnit": 47.76,
+"FrigateUnit": 59.7,
+"UtilityUnit": 59.7,
+"PlatformUnit": 59.7,
+"MineUnit": 59.7,
+"CommandModule": 59.7,
+"StructuralModule": 59.7,
+"WeaponModule": 59.7,
+"FacilityModule": 59.7,
+"UtilityModule": 59.7,
+"Station": 59.7,
+"Wreckage": 59.7
+},
 "dps_total": 59.7,
 "full": {
 "isWorkInProgress": 0,
@@ -2967,6 +3312,21 @@
 "WPN.030"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -3096,6 +3456,21 @@
 "WPN.031"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 95.69,
+"CorvetteUnit": 109.36,
+"FrigateUnit": 136.7,
+"UtilityUnit": 136.7,
+"PlatformUnit": 136.7,
+"MineUnit": 136.7,
+"CommandModule": 136.7,
+"StructuralModule": 136.7,
+"WeaponModule": 136.7,
+"FacilityModule": 136.7,
+"UtilityModule": 136.7,
+"Station": 136.7,
+"Wreckage": 136.7
+},
 "dps_total": 136.7,
 "full": {
 "isWorkInProgress": 0,
@@ -3228,6 +3603,21 @@
 "WPN.032"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 114.38,
+"CorvetteUnit": 130.72,
+"FrigateUnit": 163.4,
+"UtilityUnit": 163.4,
+"PlatformUnit": 163.4,
+"MineUnit": 163.4,
+"CommandModule": 163.4,
+"StructuralModule": 163.4,
+"WeaponModule": 163.4,
+"FacilityModule": 163.4,
+"UtilityModule": 163.4,
+"Station": 163.4,
+"Wreckage": 163.4
+},
 "dps_total": 163.4,
 "full": {
 "isWorkInProgress": 0,
@@ -3365,6 +3755,21 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 10.56,
+"CorvetteUnit": 12.32,
+"FrigateUnit": 17.6,
+"UtilityUnit": 17.6,
+"PlatformUnit": 17.6,
+"MineUnit": 17.6,
+"CommandModule": 17.6,
+"StructuralModule": 17.6,
+"WeaponModule": 17.6,
+"FacilityModule": 17.6,
+"UtilityModule": 17.6,
+"Station": 17.6,
+"Wreckage": 17.6
+},
 "dps_total": 17.6,
 "full": {
 "isWorkInProgress": 0,
@@ -3496,6 +3901,21 @@
 "WPN.035"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 100.0,
+"CorvetteUnit": 100.0,
+"FrigateUnit": 100.0,
+"UtilityUnit": 100.0,
+"PlatformUnit": 100.0,
+"MineUnit": 100.0,
+"CommandModule": 100.0,
+"StructuralModule": 100.0,
+"WeaponModule": 100.0,
+"FacilityModule": 100.0,
+"UtilityModule": 100.0,
+"Station": 100.0,
+"Wreckage": 100.0
+},
 "dps_total": 100.0,
 "full": {
 "isWorkInProgress": 0,
@@ -3624,6 +4044,21 @@
 "WPN.036"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 48.6,
+"CorvetteUnit": 48.6,
+"FrigateUnit": 48.6,
+"UtilityUnit": 48.6,
+"PlatformUnit": 48.6,
+"MineUnit": 48.6,
+"CommandModule": 48.6,
+"StructuralModule": 43.74,
+"WeaponModule": 43.74,
+"FacilityModule": 43.74,
+"UtilityModule": 43.74,
+"Station": 48.6,
+"Wreckage": 48.6
+},
 "dps_total": 48.6,
 "full": {
 "isWorkInProgress": 0,
@@ -3751,6 +4186,21 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 32.1,
+"CorvetteUnit": 32.1,
+"FrigateUnit": 32.1,
+"UtilityUnit": 32.1,
+"PlatformUnit": 32.1,
+"MineUnit": 32.1,
+"CommandModule": 32.1,
+"StructuralModule": 32.1,
+"WeaponModule": 32.1,
+"FacilityModule": 32.1,
+"UtilityModule": 32.1,
+"Station": 32.1,
+"Wreckage": 32.1
+},
 "dps_total": 32.1,
 "full": {
 "isWorkInProgress": 0,
@@ -3874,6 +4324,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -3992,6 +4443,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4110,6 +4562,7 @@
 "completely_autonomous_targeting": false,
 "weapons": [],
 "weapons_source": null,
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4237,6 +4690,21 @@
 "WPN.045"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 26.24,
+"CorvetteUnit": 29.52,
+"FrigateUnit": 32.8,
+"UtilityUnit": 32.8,
+"PlatformUnit": 32.8,
+"MineUnit": 32.8,
+"CommandModule": 32.8,
+"StructuralModule": 32.8,
+"WeaponModule": 32.8,
+"FacilityModule": 32.8,
+"UtilityModule": 32.8,
+"Station": 32.8,
+"Wreckage": 32.8
+},
 "dps_total": 32.8,
 "full": {
 "isWorkInProgress": 0,
@@ -4369,6 +4837,21 @@
 "WPN.046"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 28.0,
+"CorvetteUnit": 28.0,
+"FrigateUnit": 28.0,
+"UtilityUnit": 28.0,
+"PlatformUnit": 28.0,
+"MineUnit": 28.0,
+"CommandModule": 28.0,
+"StructuralModule": 28.0,
+"WeaponModule": 28.0,
+"FacilityModule": 28.0,
+"UtilityModule": 28.0,
+"Station": 28.0,
+"Wreckage": 28.0
+},
 "dps_total": 28.0,
 "full": {
 "isWorkInProgress": 0,
@@ -4501,6 +4984,21 @@
 "WPN.014"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 10.56,
+"CorvetteUnit": 12.32,
+"FrigateUnit": 17.6,
+"UtilityUnit": 17.6,
+"PlatformUnit": 17.6,
+"MineUnit": 17.6,
+"CommandModule": 17.6,
+"StructuralModule": 17.6,
+"WeaponModule": 17.6,
+"FacilityModule": 17.6,
+"UtilityModule": 17.6,
+"Station": 17.6,
+"Wreckage": 17.6
+},
 "dps_total": 17.6,
 "full": {
 "isWorkInProgress": 0,
@@ -4637,6 +5135,21 @@
 "WPN.022"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 42.8,
+"CorvetteUnit": 42.8,
+"FrigateUnit": 42.8,
+"UtilityUnit": 42.8,
+"PlatformUnit": 42.8,
+"MineUnit": 42.8,
+"CommandModule": 42.8,
+"StructuralModule": 42.8,
+"WeaponModule": 42.8,
+"FacilityModule": 42.8,
+"UtilityModule": 42.8,
+"Station": 42.8,
+"Wreckage": 42.8
+},
 "dps_total": 42.8,
 "full": {
 "isWorkInProgress": 0,
@@ -4767,6 +5280,21 @@
 "WPN.051"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 62.1,
+"CorvetteUnit": 62.1,
+"FrigateUnit": 62.1,
+"UtilityUnit": 62.1,
+"PlatformUnit": 62.1,
+"MineUnit": 62.1,
+"CommandModule": 62.1,
+"StructuralModule": 62.1,
+"WeaponModule": 62.1,
+"FacilityModule": 62.1,
+"UtilityModule": 62.1,
+"Station": 62.1,
+"Wreckage": 62.1
+},
 "dps_total": 62.1,
 "full": {
 "isWorkInProgress": 0,
@@ -4897,6 +5425,21 @@
 "WPN.050"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 62.1,
+"CorvetteUnit": 62.1,
+"FrigateUnit": 62.1,
+"UtilityUnit": 62.1,
+"PlatformUnit": 62.1,
+"MineUnit": 62.1,
+"CommandModule": 62.1,
+"StructuralModule": 62.1,
+"WeaponModule": 62.1,
+"FacilityModule": 62.1,
+"UtilityModule": 62.1,
+"Station": 62.1,
+"Wreckage": 62.1
+},
 "dps_total": 62.1,
 "full": {
 "isWorkInProgress": 0,
@@ -5031,6 +5574,21 @@
 "WPN.052"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -5168,6 +5726,21 @@
 "WPN.052"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -5299,6 +5872,21 @@
 "WPN.053"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 17.92,
+"CorvetteUnit": 17.92,
+"FrigateUnit": 17.92,
+"UtilityUnit": 17.92,
+"PlatformUnit": 17.92,
+"MineUnit": 179.2,
+"CommandModule": 17.92,
+"StructuralModule": 17.92,
+"WeaponModule": 17.92,
+"FacilityModule": 17.92,
+"UtilityModule": 17.92,
+"Station": 17.92,
+"Wreckage": 17.92
+},
 "dps_total": 179.2,
 "full": {
 "isWorkInProgress": 0,
@@ -5419,6 +6007,21 @@
 "WPN.056"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 58.995,
+"CorvetteUnit": 54.625,
+"FrigateUnit": 30.59,
+"UtilityUnit": 26.22,
+"PlatformUnit": 30.59,
+"MineUnit": 43.7,
+"CommandModule": 43.7,
+"StructuralModule": 26.22,
+"WeaponModule": 26.22,
+"FacilityModule": 26.22,
+"UtilityModule": 26.22,
+"Station": 43.7,
+"Wreckage": 43.7
+},
 "dps_total": 43.7,
 "full": {
 "isWorkInProgress": 0,
@@ -5545,6 +6148,21 @@
 "WPN.057"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 24.0,
+"CorvetteUnit": 24.0,
+"FrigateUnit": 24.0,
+"UtilityUnit": 24.0,
+"PlatformUnit": 24.0,
+"MineUnit": 24.0,
+"CommandModule": 24.0,
+"StructuralModule": 24.0,
+"WeaponModule": 24.0,
+"FacilityModule": 24.0,
+"UtilityModule": 24.0,
+"Station": 24.0,
+"Wreckage": 24.0
+},
 "dps_total": 24.0,
 "full": {
 "isWorkInProgress": 0,
@@ -5676,6 +6294,21 @@
 "WPN.059"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 74.0,
+"CorvetteUnit": 74.0,
+"FrigateUnit": 74.0,
+"UtilityUnit": 74.0,
+"PlatformUnit": 74.0,
+"MineUnit": 74.0,
+"CommandModule": 74.0,
+"StructuralModule": 74.0,
+"WeaponModule": 74.0,
+"FacilityModule": 74.0,
+"UtilityModule": 74.0,
+"Station": 74.0,
+"Wreckage": 74.0
+},
 "dps_total": 74.0,
 "full": {
 "isWorkInProgress": 0,
@@ -5807,6 +6440,21 @@
 "WPN.061"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 92.0,
+"CorvetteUnit": 103.5,
+"FrigateUnit": 115.0,
+"UtilityUnit": 115.0,
+"PlatformUnit": 115.0,
+"MineUnit": 115.0,
+"CommandModule": 115.0,
+"StructuralModule": 115.0,
+"WeaponModule": 115.0,
+"FacilityModule": 115.0,
+"UtilityModule": 115.0,
+"Station": 115.0,
+"Wreckage": 115.0
+},
 "dps_total": 115.0,
 "full": {
 "isWorkInProgress": 0,
@@ -5937,6 +6585,21 @@
 "WPN.063"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 173.36,
+"CorvetteUnit": 173.36,
+"FrigateUnit": 216.7,
+"UtilityUnit": 216.7,
+"PlatformUnit": 216.7,
+"MineUnit": 216.7,
+"CommandModule": 216.7,
+"StructuralModule": 216.7,
+"WeaponModule": 216.7,
+"FacilityModule": 216.7,
+"UtilityModule": 216.7,
+"Station": 216.7,
+"Wreckage": 216.7
+},
 "dps_total": 216.7,
 "full": {
 "isWorkInProgress": 0,
@@ -6072,6 +6735,21 @@
 "WPN.054"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 51.03,
+"CorvetteUnit": 51.03,
+"FrigateUnit": 72.9,
+"UtilityUnit": 72.9,
+"PlatformUnit": 72.9,
+"MineUnit": 72.9,
+"CommandModule": 72.9,
+"StructuralModule": 72.9,
+"WeaponModule": 72.9,
+"FacilityModule": 72.9,
+"UtilityModule": 72.9,
+"Station": 72.9,
+"Wreckage": 72.9
+},
 "dps_total": 72.9,
 "full": {
 "isWorkInProgress": 0,
@@ -6210,6 +6888,21 @@
 "WPN.055"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 51.03,
+"CorvetteUnit": 51.03,
+"FrigateUnit": 72.9,
+"UtilityUnit": 72.9,
+"PlatformUnit": 72.9,
+"MineUnit": 72.9,
+"CommandModule": 72.9,
+"StructuralModule": 72.9,
+"WeaponModule": 72.9,
+"FacilityModule": 72.9,
+"UtilityModule": 72.9,
+"Station": 72.9,
+"Wreckage": 72.9
+},
 "dps_total": 72.9,
 "full": {
 "isWorkInProgress": 0,
@@ -6344,6 +7037,21 @@
 "WPN.044"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 3.1,
+"CorvetteUnit": 3.1,
+"FrigateUnit": 3.1,
+"UtilityUnit": 3.1,
+"PlatformUnit": 3.1,
+"MineUnit": 3.1,
+"CommandModule": 3.1,
+"StructuralModule": 3.1,
+"WeaponModule": 3.1,
+"FacilityModule": 3.1,
+"UtilityModule": 3.1,
+"Station": 3.1,
+"Wreckage": 3.1
+},
 "dps_total": 3.1,
 "full": {
 "isWorkInProgress": 0,
@@ -6472,6 +7180,21 @@
 "WPN.062"
 ],
 "weapons_source": "prefab",
+"dps_vs_class": {
+"FighterUnit": 58.995,
+"CorvetteUnit": 54.625,
+"FrigateUnit": 30.59,
+"UtilityUnit": 26.22,
+"PlatformUnit": 30.59,
+"MineUnit": 43.7,
+"CommandModule": 43.7,
+"StructuralModule": 26.22,
+"WeaponModule": 26.22,
+"FacilityModule": 26.22,
+"UtilityModule": 26.22,
+"Station": 43.7,
+"Wreckage": 43.7
+},
 "dps_total": 43.7,
 "full": {
 "isWorkInProgress": 0,

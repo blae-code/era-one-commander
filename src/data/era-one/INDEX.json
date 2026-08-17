@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T18:46:40Z",
+  "generated_utc": "2026-08-17T18:50:24Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -24,6 +24,7 @@
    "loot_tables": 71,
    "stations": 6,
    "asteroids": 17,
+   "effectiveness": 845,
    "blueprints": 42,
    "blueprint_parts": 2788,
    "combat_templates": 12,
@@ -80,21 +81,21 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 100,
+   "columns": 101,
    "key": "game_id"
   },
   {
    "entity": "Weapon",
    "source_table": "weapons",
    "rows": 65,
-   "columns": 59,
+   "columns": 61,
    "key": "game_id"
   },
   {
    "entity": "Turret",
    "source_table": "turrets",
    "rows": 51,
-   "columns": 39,
+   "columns": 40,
    "key": "game_id"
   },
   {
@@ -108,7 +109,7 @@
    "entity": "Unit",
    "source_table": "units",
    "rows": 27,
-   "columns": 128,
+   "columns": 129,
    "key": "game_id"
   },
   {
@@ -249,6 +250,13 @@
    "source_table": "localization",
    "rows": 2448,
    "columns": 6,
+   "key": "game_id"
+  },
+  {
+   "entity": "Effectiveness",
+   "source_table": "effectiveness",
+   "rows": 845,
+   "columns": 12,
    "key": "game_id"
   }
  ]

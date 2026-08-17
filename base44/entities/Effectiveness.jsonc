@@ -1,0 +1,52 @@
+{
+  "name": "Effectiveness",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "weapon_id": {
+      "type": "string"
+    },
+    "weapon_name": {
+      "type": "string"
+    },
+    "target_class": {
+      "type": "string"
+    },
+    "multiplier": {
+      "type": "number"
+    },
+    "dps": {
+      "type": "number",
+      "description": "Damage per second (game-computed)"
+    },
+    "hp_per_hit": {
+      "type": "number"
+    },
+    "armor_penetration": {
+      "type": "number",
+      "description": "Armor penetration 0..1"
+    },
+    "range": {
+      "type": "number",
+      "description": "Weapon range"
+    },
+    "explicit": {
+      "type": "boolean"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One Effectiveness records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

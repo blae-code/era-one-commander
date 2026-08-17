@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 — 25 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 26 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -11,7 +11,8 @@ each other. Kept in `base44/` because it is the backend's statement of its own s
 
 | Owner | Paths | Notes |
 |---|---|---|
-| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** — change them upstream in era-one-data, never by hand here. |
+| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (2026-08-17, Phase 0+1 shipped):** `StatDefinition` (real stat names — use in every modifier chip), `Effectiveness` + `dps_vs_class` (counters matrix / heatmap), decoded unit doctrine + flight fields, turret costs, and functions `unitLoadout` (loadout configurator with ranked fits) and `engagement` (TTK / modifier stack). Suggested wiring: Compare page → `Unit`/`Module` + `engagement`; Fleet Analysis → `fleetPlan`; a Loadout panel on Unit detail → `unitLoadout`; `gameFileImport.importEntityRows` → `upsertEntityRows`.
+* — change them upstream in era-one-data, never by hand here. |
 | **Frontend** (Base44 builder / Blae) | `src/pages/**`, `src/components/**`, `src/index.css`, `tailwind.config.js`, `src/App.jsx` routes, `src/components/Layout.jsx` nav | The backend only touched `src/pages/Database.jsx`, `src/pages/GameData.jsx`, `src/pages/Dashboard.jsx` and `src/components/database/GameEntityDetail.jsx` once to prove the data flows; from here on they are yours to restyle or replace. |
 
 Both sides commit to `main`; the backend always `git fetch && git rebase` before pushing and never force-pushes.
@@ -50,6 +51,7 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `BuildCap` | 1 | Unit/module caps per class, single- vs multiplayer | `unit_class_cap_multiplayer {Corvette:100, Fighter:150 …}`, `module_class_cap_*`, global caps |
 | `GameSetting` | 1 | Global tunables (`combat_zone_size`, `damage_by_mass`, `unit_damage_from_collisions`, drag, camera…) | flat numeric/string fields |
 | `StatDefinition` | 47 | Every `StatModifier` stat with the **game's own display name** (`MaxSpeed`→"Speed", `MaxHealth`→"Health"…), `enum_value`, `higher_is_better`, `typically_percent`, `used_by {research, unit_level, module, attack_template, formation}`, `usage_count` | use for every modifier label: `useStatDefinitions().labels` + `fmtModifier(m, labels)` |
+| `Effectiveness` | 845 | **Counters matrix**: weapon × target class (13 classes) | `weapon_id`, `target_class`, `multiplier` (1.0 when the game defines none; `explicit` flags real entries), `dps`, `hp_per_hit`, `armor_penetration`, `range` |
 | `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
 
 **`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
@@ -61,6 +63,8 @@ granular views and comparisons the curated columns don't cover.
 All relation tables also have a synthetic `game_id` (e.g. `unit_id#level#stat`), so every entity upserts idempotently.
 
 **Phase 0 additions (2026-08-17):** `Unit` now carries the decoded doctrine/flight model — `default_style`, `enabled_styles` (Flyby·Hold·Chase·Orbit), `default_orientation`, `enabled_orientations` (Frontal·Back·Lateral·Top·Bottom), `evade_actions[]`, `evade_on_attack_probability`, `switch_target_interval/probability`, `disengage_multiplier_by_class {EntityClass: ×}`, `hardpoints` (primary/secondary/tertiary from the game's own table), flyby/swing/banking/backflip/oversteer fields. `Turret` gains `cost_resources`, `cost_population`, `cost_energy`, `construction_time`, `required_research`, `additional_dps`. Module/Unit gain `shield_noise`, `activation_noise`, `electrical_integrity_regen`, `jammed_duration` (EMP), `structural_damage_multiplier`, `max_concurrent_healers`, `predictive_aim`, `leading_factor`, `aim_required`, `requirements{}`, `static_bonuses{}`. `GameSetting.score_calculation_weights` = the per-entity score formula weights (TierWeight, ArmamentWeight, …). `Ability.agent_category` decoded.
+
+**Phase 1 additions:** `Weapon`, `Module`, `Unit`, `Turret` carry **`dps_vs_class {FighterUnit, CorvetteUnit, FrigateUnit, UtilityUnit, PlatformUnit, MineUnit, CommandModule, StructuralModule, WeaponModule, FacilityModule, UtilityModule, Station, Wreckage}`** (Σ weapon dps × class multiplier); `Weapon` also `hp_per_hit_vs_class`. **Doctrine profile** of a unit = `enabled_stances`/`default_stance`, `enabled_styles`/`default_style`, `enabled_orientations`/`default_orientation`, `attack_priority[]`, `evade_actions[]`, `evade_on_attack_probability`, `switch_target_interval`, `disengage_multiplier_by_class`, `attack_reactivity`, `attack_cooldown` — all flat columns now; join `CombatTemplate` for what each stance/style changes.
 
 ### Interpretation rules (please respect in the UI)
 * **Armament:** `Module.weapons` / `Unit.weapons` already include the guns inside their turrets. Don't add `Turret.weapons` on top (double count).
@@ -110,6 +114,16 @@ DPS per module/unit = Σ over `weapons` of `Weapon.dps` (the game's own per-weap
 `state` ∈ synced · partial · stale · empty · missing_entity. The expected counts and every expected `game_id` are
 **embedded at generation time**, so this is the authoritative "is the data present and accounted for" check
 (the `/gamedata` page has a *Verify server-side* button that calls it). GENERATED file — regenerate via era-one-data.
+
+**`unitLoadout`** — configurable-ship fits. `{ unit_id, primary?, secondary?, tertiary?, enumerate? }` →
+`{ unit, fixed {weapons, dps}, slots {primary|secondary|tertiary: {count, default, options[{game_id,name,kind,weapons,dps,dps_vs_class,range,cost_resources,required_research}]}},
+   fit {choice, lines[], errors[], totals {dps, dps_vs_class, cost_resources (unit + turrets×slots), construction_time, max_health, armor, max_speed}, required_research[]},
+   fits?[ {primary, secondary, dps, cost_resources, dps_vs_class} ] }` (enumerate = every primary×secondary combination, best dps first).
+
+**`engagement`** — attacker vs defender with the modifier stack. `{ attacker: {game_id, primary?, secondary?, stance?, style?, formation?, level?}, defender: {game_id, stance?, formation?, level?} }` →
+`{ attacker {…, weapons[], factors {weapon_damage, weapon_rate, attack_range}}, defender {…, max_health, armor, health_regen, factors}, per_weapon[{game_id, base_dps, class_multiplier, dps, range, armor_penetration, hp_per_hit}],
+   result {dps, alpha, net_dps, time_to_kill_s, shots_to_kill, max_range, armor_model}, modifiers_applied {attacker, defender} }`.
+Stances: `passive|reactive|defensive|aggressive|hunter`; styles: `flyby|hold|chase|orbit`; formations: `claw|delta|sphere|wall|grouped` (base `FM.FORMATION` bonus is added automatically); `level` 1–10 applies UnitLevel upgrades. Additive fractions stack per stat (`1 + Σadd`), then Multiply/Set. **Armor is reported, not applied** — the game's armor formula is not in the extracted data; present it alongside.
 
 All functions read the entities as service role; they need the data imported first (`/gamedata`).
 

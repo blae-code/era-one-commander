@@ -216,6 +216,94 @@
     "show_in_ui": {
       "type": "boolean"
     },
+    "dps_vs_class": {
+      "type": "object",
+      "properties": {
+        "FighterUnit": {
+          "type": "number"
+        },
+        "CorvetteUnit": {
+          "type": "number"
+        },
+        "FrigateUnit": {
+          "type": "number"
+        },
+        "UtilityUnit": {
+          "type": "number"
+        },
+        "PlatformUnit": {
+          "type": "number"
+        },
+        "MineUnit": {
+          "type": "number"
+        },
+        "CommandModule": {
+          "type": "number"
+        },
+        "StructuralModule": {
+          "type": "number"
+        },
+        "WeaponModule": {
+          "type": "number"
+        },
+        "FacilityModule": {
+          "type": "number"
+        },
+        "UtilityModule": {
+          "type": "number"
+        },
+        "Station": {
+          "type": "number"
+        },
+        "Wreckage": {
+          "type": "number"
+        }
+      }
+    },
+    "hp_per_hit_vs_class": {
+      "type": "object",
+      "properties": {
+        "FighterUnit": {
+          "type": "number"
+        },
+        "CorvetteUnit": {
+          "type": "number"
+        },
+        "FrigateUnit": {
+          "type": "number"
+        },
+        "UtilityUnit": {
+          "type": "number"
+        },
+        "PlatformUnit": {
+          "type": "number"
+        },
+        "MineUnit": {
+          "type": "number"
+        },
+        "CommandModule": {
+          "type": "number"
+        },
+        "StructuralModule": {
+          "type": "number"
+        },
+        "WeaponModule": {
+          "type": "number"
+        },
+        "FacilityModule": {
+          "type": "number"
+        },
+        "UtilityModule": {
+          "type": "number"
+        },
+        "Station": {
+          "type": "number"
+        },
+        "Wreckage": {
+          "type": "number"
+        }
+      }
+    },
     "full": {
       "type": "object",
       "description": "Complete decoded game record (all fields; PPtrs -> game_ids, Fix64 -> float, Odin dictionaries decoded). Enum-valued fields are raw ints here; the curated columns carry the names."

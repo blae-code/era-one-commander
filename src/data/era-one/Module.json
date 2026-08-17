@@ -99,6 +99,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -378,6 +379,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -657,6 +659,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -939,6 +942,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -1224,6 +1228,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -1509,6 +1514,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -1791,6 +1797,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -2070,6 +2077,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -2352,6 +2360,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -2637,6 +2646,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -2922,6 +2932,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -3207,6 +3218,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -3492,6 +3504,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -3776,6 +3789,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4057,6 +4071,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4336,6 +4351,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4615,6 +4631,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -4894,6 +4911,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -5175,6 +5193,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -5466,6 +5485,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -5775,6 +5795,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 20.8,
+"CorvetteUnit": 20.8,
+"FrigateUnit": 20.8,
+"UtilityUnit": 20.8,
+"PlatformUnit": 20.8,
+"MineUnit": 20.8,
+"CommandModule": 20.8,
+"StructuralModule": 20.8,
+"WeaponModule": 20.8,
+"FacilityModule": 20.8,
+"UtilityModule": 20.8,
+"Station": 20.8,
+"Wreckage": 20.8
+},
 "dps_total": 20.8,
 "full": {
 "isWorkInProgress": 0,
@@ -6080,6 +6115,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -6369,6 +6405,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -6648,6 +6685,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -6929,6 +6967,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -7213,6 +7252,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -7505,6 +7545,7 @@
 }
 ],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -7794,6 +7835,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -8073,6 +8115,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -8352,6 +8395,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -8631,6 +8675,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -8910,6 +8955,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -9189,6 +9235,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -9468,6 +9515,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -9747,6 +9795,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -10026,6 +10075,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -10305,6 +10355,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -10621,6 +10672,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -10939,6 +10991,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -11220,6 +11273,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -11499,6 +11553,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -11778,6 +11833,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -12057,6 +12113,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -12336,6 +12393,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -12615,6 +12673,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -12896,6 +12955,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -13179,6 +13239,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -13462,6 +13523,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -13745,6 +13807,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -14026,6 +14089,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -14309,6 +14373,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -14592,6 +14657,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -14875,6 +14941,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -15158,6 +15225,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -15453,6 +15521,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -15753,6 +15822,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -16052,6 +16122,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -16350,6 +16421,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -16637,6 +16709,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -16922,6 +16995,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 51.5,
+"CorvetteUnit": 51.5,
+"FrigateUnit": 51.5,
+"UtilityUnit": 51.5,
+"PlatformUnit": 51.5,
+"MineUnit": 51.5,
+"CommandModule": 51.5,
+"StructuralModule": 51.5,
+"WeaponModule": 51.5,
+"FacilityModule": 51.5,
+"UtilityModule": 51.5,
+"Station": 51.5,
+"Wreckage": 51.5
+},
 "dps_total": 51.5,
 "full": {
 "isWorkInProgress": 0,
@@ -17207,6 +17295,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 99.1,
+"CorvetteUnit": 99.1,
+"FrigateUnit": 99.1,
+"UtilityUnit": 99.1,
+"PlatformUnit": 99.1,
+"MineUnit": 99.1,
+"CommandModule": 99.1,
+"StructuralModule": 99.1,
+"WeaponModule": 99.1,
+"FacilityModule": 99.1,
+"UtilityModule": 99.1,
+"Station": 99.1,
+"Wreckage": 99.1
+},
 "dps_total": 99.1,
 "full": {
 "isWorkInProgress": 0,
@@ -17490,6 +17593,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -17773,6 +17877,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -18054,6 +18159,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -18343,6 +18449,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -18632,6 +18739,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -18911,6 +19019,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -19190,6 +19299,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -19469,6 +19579,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -19751,6 +19862,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -20033,6 +20145,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -20314,6 +20427,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -20595,6 +20709,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -20878,6 +20993,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -21163,6 +21279,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 1,
@@ -21449,6 +21566,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -21758,6 +21876,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 15.4,
+"CorvetteUnit": 14.0,
+"FrigateUnit": 14.0,
+"UtilityUnit": 14.0,
+"PlatformUnit": 14.0,
+"MineUnit": 14.0,
+"CommandModule": 14.0,
+"StructuralModule": 14.0,
+"WeaponModule": 14.0,
+"FacilityModule": 14.0,
+"UtilityModule": 14.0,
+"Station": 14.0,
+"Wreckage": 14.0
+},
 "dps_total": 14.0,
 "full": {
 "isWorkInProgress": 0,
@@ -22076,6 +22209,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 114.38,
+"CorvetteUnit": 130.72,
+"FrigateUnit": 163.4,
+"UtilityUnit": 163.4,
+"PlatformUnit": 163.4,
+"MineUnit": 163.4,
+"CommandModule": 163.4,
+"StructuralModule": 163.4,
+"WeaponModule": 163.4,
+"FacilityModule": 163.4,
+"UtilityModule": 163.4,
+"Station": 163.4,
+"Wreckage": 163.4
+},
 "dps_total": 163.4,
 "full": {
 "isWorkInProgress": 0,
@@ -22402,6 +22550,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 10.56,
+"CorvetteUnit": 12.32,
+"FrigateUnit": 17.6,
+"UtilityUnit": 17.6,
+"PlatformUnit": 17.6,
+"MineUnit": 17.6,
+"CommandModule": 17.6,
+"StructuralModule": 17.6,
+"WeaponModule": 17.6,
+"FacilityModule": 17.6,
+"UtilityModule": 17.6,
+"Station": 17.6,
+"Wreckage": 17.6
+},
 "dps_total": 17.6,
 "full": {
 "isWorkInProgress": 0,
@@ -22738,6 +22901,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 100.0,
+"CorvetteUnit": 100.0,
+"FrigateUnit": 100.0,
+"UtilityUnit": 100.0,
+"PlatformUnit": 100.0,
+"MineUnit": 100.0,
+"CommandModule": 100.0,
+"StructuralModule": 100.0,
+"WeaponModule": 100.0,
+"FacilityModule": 100.0,
+"UtilityModule": 100.0,
+"Station": 100.0,
+"Wreckage": 100.0
+},
 "dps_total": 100.0,
 "full": {
 "isWorkInProgress": 0,
@@ -23073,6 +23251,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 48.6,
+"CorvetteUnit": 48.6,
+"FrigateUnit": 48.6,
+"UtilityUnit": 48.6,
+"PlatformUnit": 48.6,
+"MineUnit": 48.6,
+"CommandModule": 48.6,
+"StructuralModule": 43.74,
+"WeaponModule": 43.74,
+"FacilityModule": 43.74,
+"UtilityModule": 43.74,
+"Station": 48.6,
+"Wreckage": 48.6
+},
 "dps_total": 48.6,
 "full": {
 "isWorkInProgress": 0,
@@ -23406,6 +23599,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 32.1,
+"CorvetteUnit": 32.1,
+"FrigateUnit": 32.1,
+"UtilityUnit": 32.1,
+"PlatformUnit": 32.1,
+"MineUnit": 32.1,
+"CommandModule": 32.1,
+"StructuralModule": 32.1,
+"WeaponModule": 32.1,
+"FacilityModule": 32.1,
+"UtilityModule": 32.1,
+"Station": 32.1,
+"Wreckage": 32.1
+},
 "dps_total": 32.1,
 "full": {
 "isWorkInProgress": 0,
@@ -23744,6 +23952,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -24068,6 +24291,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 41.79,
+"CorvetteUnit": 47.76,
+"FrigateUnit": 59.7,
+"UtilityUnit": 59.7,
+"PlatformUnit": 59.7,
+"MineUnit": 59.7,
+"CommandModule": 59.7,
+"StructuralModule": 59.7,
+"WeaponModule": 59.7,
+"FacilityModule": 59.7,
+"UtilityModule": 59.7,
+"Station": 59.7,
+"Wreckage": 59.7
+},
 "dps_total": 59.7,
 "full": {
 "isWorkInProgress": 0,
@@ -24394,6 +24632,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 17.92,
+"CorvetteUnit": 17.92,
+"FrigateUnit": 17.92,
+"UtilityUnit": 17.92,
+"PlatformUnit": 17.92,
+"MineUnit": 179.2,
+"CommandModule": 17.92,
+"StructuralModule": 17.92,
+"WeaponModule": 17.92,
+"FacilityModule": 17.92,
+"UtilityModule": 17.92,
+"Station": 17.92,
+"Wreckage": 17.92
+},
 "dps_total": 179.2,
 "full": {
 "isWorkInProgress": 0,
@@ -24716,6 +24969,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 95.69,
+"CorvetteUnit": 109.36,
+"FrigateUnit": 136.7,
+"UtilityUnit": 136.7,
+"PlatformUnit": 136.7,
+"MineUnit": 136.7,
+"CommandModule": 136.7,
+"StructuralModule": 136.7,
+"WeaponModule": 136.7,
+"FacilityModule": 136.7,
+"UtilityModule": 136.7,
+"Station": 136.7,
+"Wreckage": 136.7
+},
 "dps_total": 136.7,
 "full": {
 "isWorkInProgress": 0,
@@ -25040,6 +25308,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 10.56,
+"CorvetteUnit": 12.32,
+"FrigateUnit": 17.6,
+"UtilityUnit": 17.6,
+"PlatformUnit": 17.6,
+"MineUnit": 17.6,
+"CommandModule": 17.6,
+"StructuralModule": 17.6,
+"WeaponModule": 17.6,
+"FacilityModule": 17.6,
+"UtilityModule": 17.6,
+"Station": 17.6,
+"Wreckage": 17.6
+},
 "dps_total": 17.6,
 "full": {
 "isWorkInProgress": 0,
@@ -25380,6 +25663,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 42.8,
+"CorvetteUnit": 42.8,
+"FrigateUnit": 42.8,
+"UtilityUnit": 42.8,
+"PlatformUnit": 42.8,
+"MineUnit": 42.8,
+"CommandModule": 42.8,
+"StructuralModule": 42.8,
+"WeaponModule": 42.8,
+"FacilityModule": 42.8,
+"UtilityModule": 42.8,
+"Station": 42.8,
+"Wreckage": 42.8
+},
 "dps_total": 42.8,
 "full": {
 "isWorkInProgress": 0,
@@ -25714,6 +26012,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 62.1,
+"CorvetteUnit": 62.1,
+"FrigateUnit": 62.1,
+"UtilityUnit": 62.1,
+"PlatformUnit": 62.1,
+"MineUnit": 62.1,
+"CommandModule": 62.1,
+"StructuralModule": 62.1,
+"WeaponModule": 62.1,
+"FacilityModule": 62.1,
+"UtilityModule": 62.1,
+"Station": 62.1,
+"Wreckage": 62.1
+},
 "dps_total": 62.1,
 "full": {
 "isWorkInProgress": 0,
@@ -26051,6 +26364,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 15.04,
+"CorvetteUnit": 16.92,
+"FrigateUnit": 18.8,
+"UtilityUnit": 18.8,
+"PlatformUnit": 18.8,
+"MineUnit": 18.8,
+"CommandModule": 18.8,
+"StructuralModule": 18.8,
+"WeaponModule": 18.8,
+"FacilityModule": 18.8,
+"UtilityModule": 18.8,
+"Station": 18.8,
+"Wreckage": 18.8
+},
 "dps_total": 18.8,
 "full": {
 "isWorkInProgress": 0,
@@ -26392,6 +26720,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 51.03,
+"CorvetteUnit": 51.03,
+"FrigateUnit": 72.9,
+"UtilityUnit": 72.9,
+"PlatformUnit": 72.9,
+"MineUnit": 72.9,
+"CommandModule": 72.9,
+"StructuralModule": 72.9,
+"WeaponModule": 72.9,
+"FacilityModule": 72.9,
+"UtilityModule": 72.9,
+"Station": 72.9,
+"Wreckage": 72.9
+},
 "dps_total": 72.9,
 "full": {
 "isWorkInProgress": 0,
@@ -26725,6 +27068,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 58.995,
+"CorvetteUnit": 54.625,
+"FrigateUnit": 30.59,
+"UtilityUnit": 26.22,
+"PlatformUnit": 30.59,
+"MineUnit": 43.7,
+"CommandModule": 43.7,
+"StructuralModule": 26.22,
+"WeaponModule": 26.22,
+"FacilityModule": 26.22,
+"UtilityModule": 26.22,
+"Station": 43.7,
+"Wreckage": 43.7
+},
 "dps_total": 43.7,
 "full": {
 "isWorkInProgress": 0,
@@ -27058,6 +27416,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 24.0,
+"CorvetteUnit": 24.0,
+"FrigateUnit": 24.0,
+"UtilityUnit": 24.0,
+"PlatformUnit": 24.0,
+"MineUnit": 24.0,
+"CommandModule": 24.0,
+"StructuralModule": 24.0,
+"WeaponModule": 24.0,
+"FacilityModule": 24.0,
+"UtilityModule": 24.0,
+"Station": 24.0,
+"Wreckage": 24.0
+},
 "dps_total": 24.0,
 "full": {
 "isWorkInProgress": 0,
@@ -27381,6 +27754,21 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 92.0,
+"CorvetteUnit": 103.5,
+"FrigateUnit": 115.0,
+"UtilityUnit": 115.0,
+"PlatformUnit": 115.0,
+"MineUnit": 115.0,
+"CommandModule": 115.0,
+"StructuralModule": 115.0,
+"WeaponModule": 115.0,
+"FacilityModule": 115.0,
+"UtilityModule": 115.0,
+"Station": 115.0,
+"Wreckage": 115.0
+},
 "dps_total": 115.0,
 "full": {
 "isWorkInProgress": 0,
@@ -27702,6 +28090,21 @@
 ],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {
+"FighterUnit": 173.36,
+"CorvetteUnit": 173.36,
+"FrigateUnit": 216.7,
+"UtilityUnit": 216.7,
+"PlatformUnit": 216.7,
+"MineUnit": 216.7,
+"CommandModule": 216.7,
+"StructuralModule": 216.7,
+"WeaponModule": 216.7,
+"FacilityModule": 216.7,
+"UtilityModule": 216.7,
+"Station": 216.7,
+"Wreckage": 216.7
+},
 "dps_total": 216.7,
 "full": {
 "isWorkInProgress": 0,
@@ -28010,6 +28413,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -28295,6 +28699,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -28580,6 +28985,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -28865,6 +29271,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -29150,6 +29557,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -29435,6 +29843,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -29719,6 +30128,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,
@@ -30003,6 +30413,7 @@
 "perfect_attachment_bonus": [],
 "power_on_modifiers": [],
 "bonus_when_not_moving": [],
+"dps_vs_class": {},
 "dps_total": 0,
 "full": {
 "isWorkInProgress": 0,

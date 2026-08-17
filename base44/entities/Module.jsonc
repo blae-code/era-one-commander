@@ -494,6 +494,50 @@
         }
       }
     },
+    "dps_vs_class": {
+      "type": "object",
+      "properties": {
+        "FighterUnit": {
+          "type": "number"
+        },
+        "CorvetteUnit": {
+          "type": "number"
+        },
+        "FrigateUnit": {
+          "type": "number"
+        },
+        "UtilityUnit": {
+          "type": "number"
+        },
+        "PlatformUnit": {
+          "type": "number"
+        },
+        "MineUnit": {
+          "type": "number"
+        },
+        "CommandModule": {
+          "type": "number"
+        },
+        "StructuralModule": {
+          "type": "number"
+        },
+        "WeaponModule": {
+          "type": "number"
+        },
+        "FacilityModule": {
+          "type": "number"
+        },
+        "UtilityModule": {
+          "type": "number"
+        },
+        "Station": {
+          "type": "number"
+        },
+        "Wreckage": {
+          "type": "number"
+        }
+      }
+    },
     "dps_total": {
       "type": "number"
     },

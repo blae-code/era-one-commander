@@ -32,6 +32,7 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'ModuleWeapon', file: 'ModuleWeapon', keyed: true },
   { entity: 'UnitWeapon', file: 'UnitWeapon', keyed: true },
   { entity: 'LocalizedString', file: 'LocalizedString', keyed: true },
+  { entity: 'Effectiveness', file: 'Effectiveness', keyed: true },
 ];
 
 const CHUNK = 100;
