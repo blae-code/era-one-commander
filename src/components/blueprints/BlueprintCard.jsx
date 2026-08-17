@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HullIcon } from "@/components/icons/EraIcons";
 import { fmt } from "@/lib/shipStats";
 import { Heart } from "lucide-react";
+import BlueprintThumb from "@/components/blueprints/BlueprintThumb";
 
 export default function BlueprintCard({ bp, index = 0 }) {
   const s = bp.stats || {};
@@ -33,6 +34,9 @@ export default function BlueprintCard({ bp, index = 0 }) {
             {bp.role}
           </span>
         )}
+        <div className="mt-3">
+          <BlueprintThumb placements={bp.placements} />
+        </div>
         <div className="grid grid-cols-4 gap-px bg-border mt-3 border border-border">
           {[
             ["DPS", fmt(s.dps)],
