@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import { useGameCatalog, fmtNum } from "@/lib/gameData";
+import { useGameCatalog } from "@/lib/gameData";
 import { STATES, signatureFor, detectorsFrom } from "@/lib/stealth";
 import SignatureProfile from "@/components/stealth/SignatureProfile";
 import DetectionMatrix from "@/components/stealth/DetectionMatrix";
 import EngagementRings from "@/components/stealth/EngagementRings";
+import StealthHeader from "@/components/stealth/StealthHeader";
 
 export default function StealthAnalysis() {
   const game = useGameCatalog();
@@ -23,16 +24,20 @@ export default function StealthAnalysis() {
 
   return (
     <div className="p-6 max-w-[1400px] mx-auto">
-      <div className="mb-5">
-        <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Stealth Analysis</h1>
-        <p className="tech-label mt-0.5">Signature emission, cloak suppression and detection reach</p>
-      </div>
+      <StealthHeader
+        contact={contact}
+        signature={signature}
+        detectors={detectors.length}
+        cloaked={cloaked}
+        onCloak={setCloaked}
+        stateLabel={STATES.find((s) => s.key === state)?.label || ""}
+      />
 
       {game.isEmpty ? (
         <div className="schematic-panel p-16 text-center tech-label">Import game data first to run stealth analysis</div>
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-5">
+          <div className="schematic-panel p-3 grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div>
               <div className="tech-label mb-1.5">Contact (emitter)</div>
               <Select value={contactId || ""} onValueChange={setContactId}>
@@ -65,20 +70,6 @@ export default function StealthAnalysis() {
                     {s.key}
                   </button>
                 ))}
-              </div>
-            </div>
-            <div>
-              <div className="tech-label mb-1.5">Cloak</div>
-              <button
-                onClick={() => setCloaked(!cloaked)}
-                className={`w-full px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-                  cloaked ? "border-[#38bdf8] text-[#38bdf8] bg-[#38bdf8]/10" : "border-border bg-card text-muted-foreground"
-                }`}
-              >
-                {cloaked ? "✔ Suppression active" : "✖ Suppression off"}
-              </button>
-              <div className="font-mono text-[10px] text-muted-foreground mt-1.5">
-                Current signature // <span className="text-primary font-semibold">{fmtNum(signature, 2)}</span>
               </div>
             </div>
           </div>
