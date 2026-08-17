@@ -52,6 +52,7 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'AiColorScheme', file: 'AiColorScheme', keyed: true },
   { entity: 'MatchOption', file: 'MatchOption', keyed: true },
   { entity: 'ScoreWeight', file: 'ScoreWeight', keyed: true },
+  { entity: 'AttachmentRule', file: 'AttachmentRule', keyed: true },
 ];
 
 const CHUNK = 100;

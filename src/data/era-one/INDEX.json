@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T19:14:15Z",
+  "generated_utc": "2026-08-17T19:18:27Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -53,6 +53,7 @@
    "ai_color_schemes": 1,
    "match_options": 56,
    "score_weights": 20,
+   "attachment_rules": 103,
    "localization": 2448
   },
   "full_counts": {
@@ -100,7 +101,7 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 101,
+   "columns": 102,
    "key": "game_id"
   },
   {
@@ -163,7 +164,7 @@
    "entity": "GameBlueprint",
    "source_table": "blueprints",
    "rows": 42,
-   "columns": 23,
+   "columns": 35,
    "key": "game_id"
   },
   {
@@ -409,6 +410,13 @@
    "source_table": "score_weights",
    "rows": 20,
    "columns": 5,
+   "key": "game_id"
+  },
+  {
+   "entity": "AttachmentRule",
+   "source_table": "attachment_rules",
+   "rows": 103,
+   "columns": 15,
    "key": "game_id"
   }
  ]

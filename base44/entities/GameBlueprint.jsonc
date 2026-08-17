@@ -23,6 +23,168 @@
     "folder": {
       "type": "string"
     },
+    "assembly": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "number"
+        },
+        "module_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "rotation": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "connection": {
+          "type": "number"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "number"
+              },
+              "module_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "position": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "rotation": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "connection": {
+                "type": "number"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "assembly_depth": {
+      "type": "number"
+    },
+    "orphan_parts": {
+      "type": "number"
+    },
+    "dps_total": {
+      "type": "number"
+    },
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Weapon game_ids mounted (repeat = count)"
+    },
+    "dps_vs_class": {
+      "type": "object",
+      "properties": {
+        "FighterUnit": {
+          "type": "number"
+        },
+        "CorvetteUnit": {
+          "type": "number"
+        },
+        "FrigateUnit": {
+          "type": "number"
+        },
+        "UtilityUnit": {
+          "type": "number"
+        },
+        "PlatformUnit": {
+          "type": "number"
+        },
+        "MineUnit": {
+          "type": "number"
+        },
+        "CommandModule": {
+          "type": "number"
+        },
+        "StructuralModule": {
+          "type": "number"
+        },
+        "WeaponModule": {
+          "type": "number"
+        },
+        "FacilityModule": {
+          "type": "number"
+        },
+        "UtilityModule": {
+          "type": "number"
+        },
+        "Station": {
+          "type": "number"
+        },
+        "Wreckage": {
+          "type": "number"
+        }
+      }
+    },
+    "energy_production": {
+      "type": "number"
+    },
+    "energy_use": {
+      "type": "number"
+    },
+    "mass_total": {
+      "type": "number"
+    },
+    "crew_total": {
+      "type": "number"
+    },
+    "cargo_capacity": {
+      "type": "number"
+    },
+    "module_classes": {
+      "type": "object",
+      "properties": {
+        "Command": {
+          "type": "number"
+        },
+        "Structural": {
+          "type": "number"
+        },
+        "Utility": {
+          "type": "number"
+        },
+        "Facility": {
+          "type": "number"
+        },
+        "Weapon": {
+          "type": "number"
+        }
+      }
+    },
     "era_one_version": {
       "type": "string"
     },

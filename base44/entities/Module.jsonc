@@ -434,6 +434,9 @@
       "type": "string",
       "description": "Prefab root the armament was read from"
     },
+    "prefab_guid": {
+      "type": "string"
+    },
     "turrets": {
       "type": "array",
       "items": {

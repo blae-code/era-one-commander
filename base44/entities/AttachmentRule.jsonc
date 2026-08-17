@@ -1,0 +1,128 @@
+{
+  "name": "AttachmentRule",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "module_type": {
+      "type": "string",
+      "enum": [
+        "Angle30",
+        "Angle45",
+        "Armor",
+        "AsteroidMiner",
+        "BasicModule",
+        "Bridge",
+        "Cloak",
+        "CommandCenter",
+        "CommandCube",
+        "Decoration",
+        "Drill",
+        "DropPoint",
+        "Engine",
+        "Extender",
+        "Facility",
+        "Fusion",
+        "HardpointHeavy",
+        "LightHouse",
+        "Pipe",
+        "Plate",
+        "Population",
+        "Power",
+        "PowerAccumulator",
+        "RadiationShield",
+        "RepairBay",
+        "Research",
+        "Ring",
+        "Rotator",
+        "Sensor",
+        "Shield",
+        "SpaceSonar",
+        "Split45",
+        "Storage",
+        "WarpDisruptor",
+        "WarpDrive",
+        "Weapon",
+        "WeaponHardpoint"
+      ]
+    },
+    "module_class": {
+      "type": "string",
+      "enum": [
+        "Command",
+        "Facility",
+        "Structural",
+        "Utility",
+        "Weapon"
+      ]
+    },
+    "mount_size": {
+      "type": "number"
+    },
+    "is_command": {
+      "type": "boolean"
+    },
+    "link_range": {
+      "type": "number"
+    },
+    "perfect_attachment_requires": {
+      "type": "string"
+    },
+    "perfect_attachment_bonus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stat": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "clamp": {
+            "type": "boolean"
+          },
+          "abs": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "prohibited_attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "can_be_upgraded": {
+      "type": "boolean"
+    },
+    "provides_hardpoint": {
+      "type": "boolean"
+    },
+    "requires_hardpoint": {
+      "type": "boolean"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One AttachmentRule records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}
