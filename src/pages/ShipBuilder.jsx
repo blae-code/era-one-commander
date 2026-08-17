@@ -2,9 +2,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Save, Trash2 } from "lucide-react";
 import { toast } from "sonner";
+import BuilderHeader from "@/components/builder/BuilderHeader";
 import HullSelector from "@/components/builder/HullSelector";
 import ComponentPalette from "@/components/builder/ComponentPalette";
 import BuildGrid from "@/components/builder/BuildGrid";
@@ -80,25 +79,17 @@ export default function ShipBuilder() {
   };
 
   return (
-    <div className="p-5 h-full flex flex-col">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Ship Builder</h1>
-          <p className="tech-label mt-0.5">
-            {loadedName ? `Loaded // ${loadedName}` : hull ? `Frame // ${hull.name}` : "Select a hull frame to begin"}
-          </p>
-        </div>
-        <div className="flex gap-2">
-          <Button variant="outline" className="rounded-none font-display uppercase tracking-wider" disabled={placements.length === 0} onClick={() => setPlacements([])}>
-            <Trash2 size={14} className="mr-1.5" /> Clear
-          </Button>
-          <Button className="rounded-none font-display uppercase tracking-wider" disabled={!hull || placements.length === 0} onClick={() => setSaveOpen(true)}>
-            <Save size={14} className="mr-1.5" /> Save Blueprint
-          </Button>
-        </div>
-      </div>
+    <div className="p-6 h-full flex flex-col max-w-[1400px] mx-auto w-full">
+      <BuilderHeader
+        hull={hull}
+        loadedName={loadedName}
+        placements={placements}
+        stats={stats}
+        onClear={() => setPlacements([])}
+        onSave={() => setSaveOpen(true)}
+      />
 
-      <div className="flex-1 grid grid-cols-[240px_1fr_260px] gap-4 min-h-0">
+      <div className="flex-1 grid grid-cols-[250px_1fr_280px] gap-4 min-h-0">
         {/* Left: hull + palette */}
         <div className="flex flex-col min-h-0 gap-3">
           <div className="schematic-panel p-3 overflow-y-auto max-h-[38%]">
@@ -112,12 +103,12 @@ export default function ShipBuilder() {
         </div>
 
         {/* Center: grid */}
-        <div className="overflow-auto flex items-start justify-center pt-4">
+        <div className="schematic-panel bp-grid p-4 min-h-0 overflow-auto flex items-start justify-center">
           <BuildGrid hull={hull} placements={placements} selectedComponent={selectedComponent} onPlace={place} onRemove={remove} />
         </div>
 
         {/* Right: stats */}
-        <div className="overflow-y-auto">
+        <div className="schematic-panel p-3 min-h-0 overflow-y-auto">
           <div className="tech-label mb-2">Live Telemetry</div>
           <StatsPanel stats={stats} />
         </div>
