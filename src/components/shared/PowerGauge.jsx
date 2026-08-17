@@ -6,16 +6,16 @@ export default function PowerGauge({ gen = 0, use = 0 }) {
   const pct = gen > 0 ? Math.min(100, (use / gen) * 100) : use > 0 ? 100 : 0;
   const ok = net >= 0;
   return (
-    <div className={`p-3 border ${ok ? "border-border bg-card" : "border-red-400 bg-red-50"}`}>
+    <div className={`p-3 border ${ok ? "border-border bg-card" : "border-red-500/70 bg-red-500/10"}`}>
       <div className="flex justify-between items-baseline mb-1.5">
         <span className="tech-label">Power Grid</span>
-        <span className={`font-mono text-xs font-semibold ${ok ? "text-emerald-600" : "text-red-600"}`}>
+        <span className={`font-mono text-xs font-semibold ${ok ? "text-emerald-400" : "text-red-400"}`}>
           {net >= 0 ? "+" : ""}{fmt(net)} MW
         </span>
       </div>
       <div className="h-2 bg-secondary relative overflow-hidden">
         <div
-          className={`h-full transition-all duration-500 ${pct > 90 ? "bg-red-500" : pct > 70 ? "bg-amber-500" : "bg-emerald-500"}`}
+          className={`h-full transition-all duration-500 ${pct > 90 ? "bg-red-500" : pct > 70 ? "bg-amber-400" : "bg-emerald-500"}`}
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -23,7 +23,7 @@ export default function PowerGauge({ gen = 0, use = 0 }) {
         <span>DRAW {fmt(use)}</span>
         <span>OUTPUT {fmt(gen)}</span>
       </div>
-      {!ok && <div className="mt-1.5 font-mono text-[10px] text-red-600 uppercase tracking-wider">⚠ Power deficit — add reactor capacity</div>}
+      {!ok && <div className="mt-1.5 font-mono text-[10px] text-red-400 uppercase tracking-wider">⚠ Power deficit — add reactor capacity</div>}
     </div>
   );
 }

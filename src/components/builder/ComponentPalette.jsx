@@ -30,7 +30,7 @@ export default function ComponentPalette({ components, selected, onSelect }) {
             key={c.id}
             onClick={() => onSelect(selected?.id === c.id ? null : c)}
             className={`w-full text-left px-2.5 py-2 border flex items-center gap-2.5 transition-colors ${
-              selected?.id === c.id ? "border-accent bg-accent/10" : "border-border bg-card hover:border-accent/50"
+              selected?.id === c.id ? "border-accent bg-accent/15" : "border-border bg-card hover:border-accent/60"
             }`}
           >
             <CategoryIcon category={c.category} size={16} />

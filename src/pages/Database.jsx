@@ -84,7 +84,7 @@ export default function Database() {
                   </td>
                   <td className="px-3 py-2"><TierBadge tier={c.tier} /></td>
                   <td className="px-3 py-2 font-mono text-xs">{fmt(c.mass)}t</td>
-                  <td className={`px-3 py-2 font-mono text-xs ${c.power >= 0 ? "text-emerald-600" : "text-red-500"}`}>
+                  <td className={`px-3 py-2 font-mono text-xs ${c.power >= 0 ? "text-emerald-400" : "text-red-400"}`}>
                     {c.power >= 0 ? "+" : ""}{fmt(c.power)}
                   </td>
                   <td className="px-3 py-2 font-mono text-xs">{fmt(c.hp)}</td>

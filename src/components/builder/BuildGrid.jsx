@@ -5,11 +5,11 @@ import { CategoryIcon } from "@/components/icons/EraIcons";
 const CELL = 52;
 
 const CAT_BG = {
-  weapon: "bg-red-500/10 border-red-500/60",
-  engine: "bg-amber-500/10 border-amber-500/60",
-  reactor: "bg-emerald-500/10 border-emerald-500/60",
-  shield: "bg-cyan-500/10 border-cyan-500/60",
-  module: "bg-violet-500/10 border-violet-500/60",
+  weapon: "bg-[#d4713f]/15 border-[#d4713f]/70",
+  engine: "bg-[#c9a678]/15 border-[#c9a678]/70",
+  reactor: "bg-[#b8963f]/15 border-[#b8963f]/70",
+  shield: "bg-[#8c9aa3]/15 border-[#8c9aa3]/70",
+  module: "bg-[#a1786b]/15 border-[#a1786b]/70",
 };
 
 export default function BuildGrid({ hull, placements, selectedComponent, onPlace, onRemove }) {
@@ -66,11 +66,11 @@ export default function BuildGrid({ hull, placements, selectedComponent, onPlace
             animate={{ scale: 1, opacity: 1 }}
             onClick={() => onRemove(p.key)}
             title={`${p.component.name} — click to remove`}
-            className={`absolute flex flex-col items-center justify-center gap-0.5 border-2 ${CAT_BG[p.component.category] || "bg-secondary border-border"} hover:brightness-90`}
+            className={`absolute flex flex-col items-center justify-center gap-0.5 border-2 ${CAT_BG[p.component.category] || "bg-secondary border-border"} hover:brightness-125`}
             style={{ left: p.x * CELL + 2, top: p.y * CELL + 2, width: p.w * CELL - 4, height: p.h * CELL - 4 }}
           >
             <CategoryIcon category={p.component.category} size={p.w > 1 || p.h > 1 ? 22 : 16} />
-            <span className="font-mono text-[8px] leading-none text-foreground/70 px-0.5 truncate max-w-full">
+            <span className="font-mono text-[8px] leading-none text-foreground/80 px-0.5 truncate max-w-full">
               {p.component.name}
             </span>
           </motion.button>

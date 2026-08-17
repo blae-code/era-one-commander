@@ -10,11 +10,11 @@ import { toast } from "sonner";
 
 const CELL = 40;
 const CAT_BG = {
-  weapon: "bg-red-500/10 border-red-500/60",
-  engine: "bg-amber-500/10 border-amber-500/60",
-  reactor: "bg-emerald-500/10 border-emerald-500/60",
-  shield: "bg-cyan-500/10 border-cyan-500/60",
-  module: "bg-violet-500/10 border-violet-500/60",
+  weapon: "bg-[#d4713f]/15 border-[#d4713f]/70",
+  engine: "bg-[#c9a678]/15 border-[#c9a678]/70",
+  reactor: "bg-[#b8963f]/15 border-[#b8963f]/70",
+  shield: "bg-[#8c9aa3]/15 border-[#8c9aa3]/70",
+  module: "bg-[#a1786b]/15 border-[#a1786b]/70",
 };
 
 export default function BlueprintDetail() {
@@ -66,7 +66,7 @@ export default function BlueprintDetail() {
           <Button variant="outline" className="rounded-none font-mono text-xs" onClick={like}>
             <Heart size={13} className="mr-1.5" /> {bp.likes || 0}
           </Button>
-          <Button variant="outline" className="rounded-none text-red-600 hover:text-red-700" onClick={del}>
+          <Button variant="outline" className="rounded-none text-red-400 hover:text-red-300" onClick={del}>
             <Trash2 size={13} />
           </Button>
           <Button className="rounded-none font-display uppercase tracking-wider" asChild>

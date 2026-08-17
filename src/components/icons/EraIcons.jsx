@@ -76,12 +76,12 @@ export const CATEGORY_ICONS = {
 };
 
 export const CATEGORY_COLORS = {
-  weapon: "text-red-600",
-  engine: "text-amber-600",
-  reactor: "text-emerald-600",
-  shield: "text-cyan-600",
-  module: "text-violet-600",
-  hull: "text-blue-700",
+  weapon: "text-[#d4713f]",
+  engine: "text-[#c9a678]",
+  reactor: "text-[#b8963f]",
+  shield: "text-[#8c9aa3]",
+  module: "text-[#a1786b]",
+  hull: "text-[#d9a86a]",
 };
 
 export function CategoryIcon({ category, size = 18, className = "" }) {

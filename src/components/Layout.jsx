@@ -32,7 +32,7 @@ export default function Layout() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2.5 border-l-2 transition-colors ${
                   isActive
-                    ? "border-primary bg-primary/5 text-primary"
+                    ? "border-primary bg-primary/10 text-primary"
                     : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/60"
                 }`
               }
@@ -46,7 +46,7 @@ export default function Layout() {
         <div className="px-4 py-3 border-t border-border">
           <div className="tech-label">SYS // NOMINAL</div>
           <div className="mt-1.5 h-1 bg-secondary overflow-hidden">
-            <div className="h-full w-3/4 bg-emerald-500/70" />
+            <div className="h-full w-3/4 bg-emerald-500/80" />
           </div>
         </div>
       </aside>
