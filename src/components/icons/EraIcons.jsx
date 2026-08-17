@@ -79,8 +79,8 @@ export const CATEGORY_COLORS = {
   weapon: "text-[#ff7a1a]",
   engine: "text-[#2f9bff]",
   reactor: "text-[#ffd21a]",
-  shield: "text-[#c9d6e3]",
-  module: "text-[#00d1c1]",
+  shield: "text-[#eef4fa]",
+  module: "text-[#d24bff]",
   hull: "text-[#ff9d33]",
 };
 

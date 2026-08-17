@@ -8,8 +8,8 @@ export default function StatsPanel({ stats }) {
     <div className="space-y-3">
       <PowerGauge gen={stats.power_gen} use={stats.power_use} />
       <div className="schematic-panel p-3 space-y-3">
-        <StatBar label="Hull Integrity" value={stats.hp} max={20000} unit="HP" color="bg-[#00d1c1]" />
-        <StatBar label="Shield Capacity" value={stats.shield} max={10000} unit="SP" color="bg-[#c9d6e3]" />
+        <StatBar label="Hull Integrity" value={stats.hp} max={20000} unit="HP" color="bg-[#d24bff]" />
+        <StatBar label="Shield Capacity" value={stats.shield} max={10000} unit="SP" color="bg-[#eef4fa]" />
         <StatBar label="Firepower" value={stats.dps} max={2000} unit="DPS" color="bg-[#ff7a1a]" />
         <StatBar label="Thrust" value={stats.thrust} max={5000} unit="kN" color="bg-[#ffd21a]" />
       </div>

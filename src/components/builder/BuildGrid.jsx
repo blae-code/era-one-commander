@@ -8,8 +8,8 @@ const CAT_BG = {
   weapon: "bg-[#ff7a1a]/20 border-[#ff7a1a]",
   engine: "bg-[#2f9bff]/20 border-[#2f9bff]",
   reactor: "bg-[#ffd21a]/20 border-[#ffd21a]",
-  shield: "bg-[#c9d6e3]/20 border-[#c9d6e3]",
-  module: "bg-[#00d1c1]/20 border-[#00d1c1]",
+  shield: "bg-[#eef4fa]/20 border-[#eef4fa]",
+  module: "bg-[#d24bff]/20 border-[#d24bff]",
 };
 
 export default function BuildGrid({ hull, placements, selectedComponent, onPlace, onRemove }) {

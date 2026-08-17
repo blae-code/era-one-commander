@@ -8,7 +8,7 @@ import { LogoIcon } from "@/components/icons/EraIcons";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 import { useGameCatalog } from "@/lib/gameData";
 
-const CAT_HEX = { weapon: "#ff7a1a", engine: "#2f9bff", reactor: "#ffd21a", shield: "#c9d6e3", module: "#00d1c1" };
+const CAT_HEX = { weapon: "#ff7a1a", engine: "#2f9bff", reactor: "#ffd21a", shield: "#eef4fa", module: "#d24bff" };
 
 export default function Dashboard() {
   const { data: components = [] } = useQuery({ queryKey: ["components"], queryFn: () => base44.entities.Component.list("-created_date", 500) });

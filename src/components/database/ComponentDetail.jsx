@@ -9,9 +9,9 @@ const STAT_ROWS = [
   { key: "range", label: "Range", max: 5000, color: "bg-[#ffa64d]", unit: "m" },
   { key: "fire_rate", label: "Fire Rate", max: 10, color: "bg-[#ff5c00]", decimals: 1 },
   { key: "thrust", label: "Thrust", max: 2000, color: "bg-[#ffd21a]", unit: "kN" },
-  { key: "shield_hp", label: "Shield Capacity", max: 5000, color: "bg-[#c9d6e3]" },
+  { key: "shield_hp", label: "Shield Capacity", max: 5000, color: "bg-[#eef4fa]" },
   { key: "shield_regen", label: "Shield Regen", max: 100, color: "bg-[#8fa3b8]", unit: "/s" },
-  { key: "cargo", label: "Cargo", max: 2000, color: "bg-[#00d1c1]", unit: "m³" },
+  { key: "cargo", label: "Cargo", max: 2000, color: "bg-[#d24bff]", unit: "m³" },
 ];
 
 export default function ComponentDetail({ component: c }) {

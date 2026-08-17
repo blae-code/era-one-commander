@@ -1,7 +1,7 @@
 import React from "react";
 
 const TIER_STYLE = {
-  1: "border-[#8b98a6] text-[#c9d6e3]",
+  1: "border-[#8b98a6] text-[#eef4fa]",
   2: "border-[#2f9bff] text-[#2f9bff]",
   3: "border-[#ff7a1a] text-[#ff7a1a]",
 };
