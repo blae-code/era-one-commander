@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T18:10:25Z",
+  "generated_utc": "2026-08-17T18:46:40Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -32,6 +32,7 @@
    "build_caps": 1,
    "abilities": 5,
    "game_settings": 1,
+   "stat_definitions": 47,
    "localization": 2448
   },
   "full_counts": {
@@ -79,7 +80,7 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 87,
+   "columns": 100,
    "key": "game_id"
   },
   {
@@ -93,7 +94,7 @@
    "entity": "Turret",
    "source_table": "turrets",
    "rows": 51,
-   "columns": 32,
+   "columns": 39,
    "key": "game_id"
   },
   {
@@ -107,14 +108,14 @@
    "entity": "Unit",
    "source_table": "units",
    "rows": 27,
-   "columns": 89,
+   "columns": 128,
    "key": "game_id"
   },
   {
    "entity": "ResearchNode",
    "source_table": "research",
    "rows": 131,
-   "columns": 43,
+   "columns": 44,
    "key": "game_id"
   },
   {
@@ -135,7 +136,7 @@
    "entity": "Asteroid",
    "source_table": "asteroids",
    "rows": 17,
-   "columns": 22,
+   "columns": 13,
    "key": "game_id"
   },
   {
@@ -184,7 +185,14 @@
    "entity": "GameSetting",
    "source_table": "game_settings",
    "rows": 1,
-   "columns": 165,
+   "columns": 166,
+   "key": "game_id"
+  },
+  {
+   "entity": "StatDefinition",
+   "source_table": "stat_definitions",
+   "rows": 47,
+   "columns": 11,
    "key": "game_id"
   },
   {

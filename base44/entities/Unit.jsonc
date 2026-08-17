@@ -214,6 +214,42 @@
     "thrust_noise": {
       "type": "number"
     },
+    "shield_noise": {
+      "type": "number"
+    },
+    "activation_noise": {
+      "type": "number"
+    },
+    "electrical_integrity_regen": {
+      "type": "number"
+    },
+    "jammed_duration": {
+      "type": "number"
+    },
+    "structural_damage_multiplier": {
+      "type": "number"
+    },
+    "max_concurrent_healers": {
+      "type": "number"
+    },
+    "predictive_aim": {
+      "type": "boolean"
+    },
+    "leading_factor": {
+      "type": "number"
+    },
+    "aim_required": {
+      "type": "number"
+    },
+    "synchronized_weapons": {
+      "type": "boolean"
+    },
+    "loose_target_after_shoot": {
+      "type": "boolean"
+    },
+    "stand_by_on_low_energy": {
+      "type": "boolean"
+    },
     "link_range": {
       "type": "number"
     },
@@ -314,6 +350,113 @@
     "experience_disabled": {
       "type": "boolean"
     },
+    "default_style": {
+      "type": "string"
+    },
+    "enabled_styles": {
+      "type": "string"
+    },
+    "default_orientation": {
+      "type": "string"
+    },
+    "enabled_orientations": {
+      "type": "string"
+    },
+    "evade_on_attack_probability": {
+      "type": "number"
+    },
+    "evade_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "switch_target_interval": {
+      "type": "number"
+    },
+    "switch_target_probability": {
+      "type": "number"
+    },
+    "disengage_multiplier_by_class": {
+      "type": "object",
+      "properties": {
+        "CorvetteUnit": {
+          "type": "number"
+        },
+        "UtilityUnit": {
+          "type": "number"
+        },
+        "FighterUnit": {
+          "type": "number"
+        },
+        "FrigateUnit": {
+          "type": "number"
+        },
+        "PlatformUnit": {
+          "type": "number"
+        },
+        "Enviromental": {
+          "type": "number"
+        },
+        "CommandModule": {
+          "type": "number"
+        }
+      }
+    },
+    "flyby_disengage_distance": {
+      "type": "number"
+    },
+    "flyby_return_distance": {
+      "type": "number"
+    },
+    "flyby_slowdown_distance": {
+      "type": "number"
+    },
+    "flyby_slowdown_speed_multiplier": {
+      "type": "number"
+    },
+    "swing_enabled": {
+      "type": "boolean"
+    },
+    "swing_amount": {
+      "type": "number"
+    },
+    "swing_probability": {
+      "type": "number"
+    },
+    "banking_enabled": {
+      "type": "boolean"
+    },
+    "banking_amount": {
+      "type": "number"
+    },
+    "backflip_enabled": {
+      "type": "boolean"
+    },
+    "backflip_probability": {
+      "type": "number"
+    },
+    "backflip_angle": {
+      "type": "number"
+    },
+    "oversteer_enabled": {
+      "type": "boolean"
+    },
+    "oversteer_angle": {
+      "type": "number"
+    },
+    "stay_horizontal": {
+      "type": "boolean"
+    },
+    "activation_distance": {
+      "type": "number"
+    },
+    "waypoint_tolerance": {
+      "type": "number"
+    },
+    "destination_tolerance": {
+      "type": "number"
+    },
     "prefab": {
       "type": "string",
       "description": "Prefab root the armament was read from"
@@ -335,10 +478,10 @@
     "hardpoints": {
       "type": "object",
       "properties": {
-        "secondary": {
+        "primary": {
           "type": "number"
         },
-        "primary": {
+        "secondary": {
           "type": "number"
         }
       },

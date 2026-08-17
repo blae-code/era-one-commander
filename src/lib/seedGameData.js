@@ -23,6 +23,7 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'Ability', file: 'Ability', keyed: true },
   { entity: 'BuildCap', file: 'BuildCap', keyed: true },
   { entity: 'GameSetting', file: 'GameSetting', keyed: true },
+  { entity: 'StatDefinition', file: 'StatDefinition', keyed: true },
   { entity: 'StatModifier', file: 'StatModifier', keyed: true },
   { entity: 'LootEntry', file: 'LootEntry', keyed: true },
   { entity: 'UnitLevel', file: 'UnitLevel', keyed: true },

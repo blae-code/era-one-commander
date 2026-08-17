@@ -163,6 +163,26 @@
 "default_pool_size": 20,
 "team_score_entities_multiplier": 0.01,
 "team_score_dps_multiplier": 0.6,
+"score_calculation_weights": {
+"ScoreNormalization": 5.0,
+"TierWeight": 0.8,
+"ResourceCostWeight": 0.02,
+"PopulationCostWeight": 0.5,
+"ConstructionTimeWeight": 0.01,
+"HealthWeight": 0.005,
+"ArmorWeight": 0.7,
+"ArmamentWeight": 2.0,
+"AttackRangeWeight": 0.8,
+"CloakWeight": 0.5,
+"DetectionRangeWeight": 0.06,
+"SensorStrengthWeight": 2.5,
+"PowerControlWeight": 1.5,
+"EnergyProductionWeight": 0.3,
+"EntityModifiersWeight": 2.0,
+"StaticBonusWeight": 0.001,
+"UnlockedConstructableWeight": 0.5,
+"UpgradeModifierWeight": 8.0
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

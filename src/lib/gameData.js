@@ -53,12 +53,22 @@ export function useGameCatalog() {
   };
 }
 
+// StatDefinition: the game's own display names for StatModifier stats (e.g. MaxSpeed -> "Speed").
+export function useStatDefinitions() {
+  const q = useGameEntity("StatDefinition");
+  const labels = {};
+  for (const d of q.data || []) labels[d.game_id] = d.name;
+  return { ...q, labels };
+}
+
 // The game's "Add 0.11" on a rate/health stat means +11 %; on absolute stats (abs=true) it is a raw amount.
-export const fmtModifier = (m) => {
+// Pass `labels` (from useStatDefinitions) to render the player-facing stat name instead of the enum name.
+export const fmtModifier = (m, labels = null) => {
   if (!m) return "";
+  const stat = (labels && labels[m.stat]) || m.stat;
   const v = m.value ?? 0;
   const sign = m.operation === "Subtract" ? "−" : m.operation === "Add" ? "+" : "";
-  if (m.operation === "Multiply") return `${m.stat} ×${fmtNum(v, 2)}`;
-  if (m.operation === "Set") return `${m.stat} = ${fmtNum(v, 2)}`;
-  return m.abs ? `${m.stat} ${sign}${fmtNum(v, 2)}` : `${m.stat} ${sign}${fmtNum(v * 100, 0)}%`;
+  if (m.operation === "Multiply") return `${stat} ×${fmtNum(v, 2)}`;
+  if (m.operation === "Set") return `${stat} = ${fmtNum(v, 2)}`;
+  return m.abs ? `${stat} ${sign}${fmtNum(v, 2)}` : `${stat} ${sign}${fmtNum(v * 100, 0)}%`;
 };

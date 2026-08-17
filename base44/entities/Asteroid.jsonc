@@ -22,15 +22,6 @@
       "type": "string",
       "description": "In-game description (rich-text tags stripped)"
     },
-    "restriction": {
-      "type": "number"
-    },
-    "work_in_progress": {
-      "type": "boolean"
-    },
-    "is_work_in_progress": {
-      "type": "number"
-    },
     "base_signature_noise": {
       "type": "number"
     },
@@ -44,24 +35,6 @@
       "type": "number"
     },
     "pool_init_capacity": {
-      "type": "number"
-    },
-    "disable_entity_shake": {
-      "type": "number"
-    },
-    "construction_special_event": {
-      "type": "number"
-    },
-    "destruction_special_event": {
-      "type": "number"
-    },
-    "experience_reward": {
-      "type": "number"
-    },
-    "under_attack_special_event": {
-      "type": "number"
-    },
-    "mass": {
       "type": "number"
     },
     "full": {

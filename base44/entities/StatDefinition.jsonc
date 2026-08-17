@@ -1,0 +1,64 @@
+{
+  "name": "StatDefinition",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "enum_value": {
+      "type": "number"
+    },
+    "display_name_source": {
+      "type": "string"
+    },
+    "higher_is_better": {
+      "type": "boolean"
+    },
+    "typically_percent": {
+      "type": "boolean"
+    },
+    "used_by": {
+      "type": "object",
+      "properties": {
+        "module": {
+          "type": "number"
+        },
+        "unit_level": {
+          "type": "number"
+        },
+        "attack_template": {
+          "type": "number"
+        },
+        "formation": {
+          "type": "number"
+        },
+        "research": {
+          "type": "number"
+        }
+      }
+    },
+    "usage_count": {
+      "type": "number"
+    },
+    "stat_label_loc": {
+      "type": "string"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One StatDefinition records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

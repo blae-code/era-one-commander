@@ -32,7 +32,7 @@
 },
 {
 "game_id": "ERA_ONE",
-"name": "Era one Station\n\t#Station.MODULAR STATION.Info ||75DHf2hfaGd||\nModular Station / Ship\n\t#Station.MODULAR STATION.Name ||56KTTJUoaif||\nStation",
+"name": "Era one Station",
 "asset_name": "DATA CMX Era One",
 "info": "Main Station with Command Center",
 "description": "",
@@ -94,7 +94,7 @@
 },
 {
 "game_id": "PIR_CTR",
-"name": "Era one Station\n\t#Station.MODULAR STATION.Info ||75DHf2hfaGd||\nModular Station / Ship\n\t#Station.MODULAR STATION.Name ||56KTTJUoaif||\nStation",
+"name": "Era one Station",
 "asset_name": "DATA PIR Pirate Center",
 "info": "Main Station with Command Center",
 "description": "",

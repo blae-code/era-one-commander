@@ -493,6 +493,65 @@
     "team_score_dps_multiplier": {
       "type": "number"
     },
+    "score_calculation_weights": {
+      "type": "object",
+      "properties": {
+        "ScoreNormalization": {
+          "type": "number"
+        },
+        "TierWeight": {
+          "type": "number"
+        },
+        "ResourceCostWeight": {
+          "type": "number"
+        },
+        "PopulationCostWeight": {
+          "type": "number"
+        },
+        "ConstructionTimeWeight": {
+          "type": "number"
+        },
+        "HealthWeight": {
+          "type": "number"
+        },
+        "ArmorWeight": {
+          "type": "number"
+        },
+        "ArmamentWeight": {
+          "type": "number"
+        },
+        "AttackRangeWeight": {
+          "type": "number"
+        },
+        "CloakWeight": {
+          "type": "number"
+        },
+        "DetectionRangeWeight": {
+          "type": "number"
+        },
+        "SensorStrengthWeight": {
+          "type": "number"
+        },
+        "PowerControlWeight": {
+          "type": "number"
+        },
+        "EnergyProductionWeight": {
+          "type": "number"
+        },
+        "EntityModifiersWeight": {
+          "type": "number"
+        },
+        "StaticBonusWeight": {
+          "type": "number"
+        },
+        "UnlockedConstructableWeight": {
+          "type": "number"
+        },
+        "UpgradeModifierWeight": {
+          "type": "number"
+        }
+      }
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

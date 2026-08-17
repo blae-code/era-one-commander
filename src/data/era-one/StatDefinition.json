@@ -1,0 +1,689 @@
+[
+{
+"game_id": "Armor",
+"name": "Armor",
+"enum_value": 0,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"module": 15,
+"unit_level": 270,
+"attack_template": 2,
+"formation": 3
+},
+"usage_count": 290,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackCooldown",
+"name": "Attack Cooldown",
+"enum_value": 22,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackEvadeProbability",
+"name": "Attack Evade Probability",
+"enum_value": 7,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackLinkRange",
+"name": "Attack Link Range",
+"enum_value": 8,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackRange",
+"name": "Attack Range",
+"enum_value": 21,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 1,
+"formation": 1
+},
+"usage_count": 2,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackReactivity",
+"name": "Attack Reactivity",
+"enum_value": 500,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"attack_template": 4
+},
+"usage_count": 4,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackSwitchTargetInterval",
+"name": "Attack Switch Target Interval",
+"enum_value": 9,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"formation": 1
+},
+"usage_count": 1,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "AttackSwitchTargetProbability",
+"name": "Attack Switch Target Probability",
+"enum_value": 10,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CloakFieldRange",
+"name": "Cloak Field Range",
+"enum_value": 601,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CloakFieldStrength",
+"name": "Cloak Field Strength",
+"enum_value": 600,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ConstructionCost",
+"name": "Construction Cost",
+"enum_value": 18,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ConstructionRadius",
+"name": "Construction radius",
+"enum_value": 15,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Construction radius",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ConstructionTime",
+"name": "Construction Time",
+"enum_value": 17,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"research": 1
+},
+"usage_count": 1,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "EnergyProduction",
+"name": "Energy Production",
+"enum_value": 400,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "EnergyUsage",
+"name": "Energy Usage",
+"enum_value": 401,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "EntityModifierRadius",
+"name": "Entity Modifier Radius",
+"enum_value": 800,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 1
+},
+"usage_count": 1,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ExtractionRate",
+"name": "Extraction rate",
+"enum_value": 26,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Extraction rate",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "HealthBonus",
+"name": "Health Bonus",
+"enum_value": 31,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "HealthRegenerationRate",
+"name": "Health Regeneration Rate",
+"enum_value": 2,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"unit_level": 270,
+"formation": 1
+},
+"usage_count": 271,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "LoadCapacity",
+"name": "Load capacity",
+"enum_value": 27,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Load capacity",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MaxAblativeShield",
+"name": "Max Ablative Shield",
+"enum_value": 11,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MaxHealth",
+"name": "Health",
+"enum_value": 1,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"module": 15,
+"unit_level": 270,
+"research": 20,
+"formation": 1
+},
+"usage_count": 306,
+"stat_label_loc": "Health",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MaxPerimeterShield",
+"name": "Resistance",
+"enum_value": 12,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Resistance",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MaxSpeed",
+"name": "Speed",
+"enum_value": 6,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 21,
+"formation": 4
+},
+"usage_count": 25,
+"stat_label_loc": "Speed",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MaxTurningSpeed",
+"name": "Max Turning Speed",
+"enum_value": 30,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 1,
+"formation": 3
+},
+"usage_count": 4,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PerimeterShieldRadius",
+"name": "Coverage radius",
+"enum_value": 13,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Coverage radius",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "Power",
+"name": "Power",
+"enum_value": 5,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 21,
+"formation": 4
+},
+"usage_count": 25,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ProductionSpeed",
+"name": "Production Speed",
+"enum_value": 16,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 1
+},
+"usage_count": 1,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "RadiationResistance",
+"name": "Radiation Resistance",
+"enum_value": 900,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "RefiningRate",
+"name": "Refining Rate",
+"enum_value": 28,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ReinforcementHealthBonusOnCompound",
+"name": "Reinforcement Health Bonus On Compound",
+"enum_value": 701,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 2
+},
+"usage_count": 2,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ReinforcementHealthBonusOnParts",
+"name": "Reinforcement Health Bonus On Parts",
+"enum_value": 700,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 2
+},
+"usage_count": 2,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SensorsRange",
+"name": "Sensors Range",
+"enum_value": 24,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SensorsStrength",
+"name": "Sensors Strength",
+"enum_value": 25,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ShieldDepletedCooldown",
+"name": "Shield Depleted Cooldown",
+"enum_value": 14,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ShieldRegenerationRate",
+"name": "Regeneration time",
+"enum_value": 3,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Regeneration time",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "StructuralCollisionsResistance",
+"name": "Structural Collisions Resistance",
+"enum_value": 4,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"attack_template": 1,
+"formation": 1
+},
+"usage_count": 2,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "StructureDamageMultiplier",
+"name": "Structure Damage Multiplier",
+"enum_value": 501,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"module": 1,
+"research": 1
+},
+"usage_count": 2,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TurningPower",
+"name": "Turning Power",
+"enum_value": 29,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": false,
+"used_by": {
+"research": 1,
+"attack_template": 1,
+"formation": 4
+},
+"usage_count": 6,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "VisualRange",
+"name": "Visual Range",
+"enum_value": 23,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WarpActivationTime",
+"name": "Activation time",
+"enum_value": 101,
+"display_name_source": "game",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Activation time",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WarpDisruptionDamageRatio",
+"name": "Warp Disruption Damage Ratio",
+"enum_value": 104,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WarpEnergyRequirement",
+"name": "Warp Energy Requirement",
+"enum_value": 103,
+"display_name_source": "derived",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WarpRange",
+"name": "Warp Range",
+"enum_value": 100,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {},
+"usage_count": 0,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WarpResourcesRequirement",
+"name": "Cost",
+"enum_value": 102,
+"display_name_source": "game",
+"higher_is_better": false,
+"typically_percent": true,
+"used_by": {
+"research": 5
+},
+"usage_count": 5,
+"stat_label_loc": "Cost",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WeaponDamage",
+"name": "Weapon damage",
+"enum_value": 19,
+"display_name_source": "game",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"unit_level": 270,
+"research": 15,
+"formation": 2
+},
+"usage_count": 287,
+"stat_label_loc": "Weapon damage",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "WeaponRate",
+"name": "Weapon Rate",
+"enum_value": 20,
+"display_name_source": "derived",
+"higher_is_better": true,
+"typically_percent": true,
+"used_by": {
+"attack_template": 2,
+"formation": 2
+},
+"usage_count": 4,
+"stat_label_loc": null,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

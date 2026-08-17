@@ -759,7 +759,9 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.042"
+],
 "tree_depth": 2,
 "tree_order": 36,
 "full": {
@@ -1733,7 +1735,12 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.020",
+"TURT.030",
+"TURT.037",
+"TURT.044"
+],
 "tree_depth": 2,
 "tree_order": 38,
 "full": {
@@ -2345,7 +2352,9 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.056"
+],
 "tree_depth": 2,
 "tree_order": 40,
 "full": {
@@ -2462,7 +2471,11 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.016",
+"TURT.027",
+"TURT.036"
+],
 "tree_depth": 1,
 "tree_order": 10,
 "full": {
@@ -2698,7 +2711,10 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.038",
+"TURT.039"
+],
 "tree_depth": 3,
 "tree_order": 66,
 "full": {
@@ -3059,7 +3075,9 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.014"
+],
 "tree_depth": 1,
 "tree_order": 11,
 "full": {
@@ -3178,7 +3196,11 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.011",
+"TURT.026",
+"TURT.046"
+],
 "tree_depth": 1,
 "tree_order": 12,
 "full": {
@@ -3296,7 +3318,10 @@
 "unlocks_weapons": [
 "WPN.024"
 ],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.003",
+"TURT.012"
+],
 "tree_depth": 1,
 "tree_order": 13,
 "full": {
@@ -3659,7 +3684,9 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.045"
+],
 "tree_depth": 3,
 "tree_order": 68,
 "full": {
@@ -3903,7 +3930,10 @@
 "unlocks_weapons": [
 "WPN.064"
 ],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.005",
+"TURT.017"
+],
 "tree_depth": 2,
 "tree_order": 41,
 "full": {
@@ -4270,7 +4300,10 @@
 "unlocks_weapons": [
 "WPN.026"
 ],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.006",
+"TURT.018"
+],
 "tree_depth": 1,
 "tree_order": 15,
 "full": {
@@ -5796,7 +5829,11 @@
 "PIR_FRI_ION"
 ],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.009",
+"TURT.040",
+"TURT.041"
+],
 "tree_depth": 2,
 "tree_order": 43,
 "full": {
@@ -5917,7 +5954,11 @@
 ],
 "unlocks_units": [],
 "unlocks_weapons": [],
-"unlocks_turrets": [],
+"unlocks_turrets": [
+"TURT.047",
+"TURT.053",
+"TURT.054"
+],
 "tree_depth": 2,
 "tree_order": 44,
 "full": {

@@ -312,6 +312,56 @@
     "thrust_noise": {
       "type": "number"
     },
+    "shield_noise": {
+      "type": "number"
+    },
+    "activation_noise": {
+      "type": "number"
+    },
+    "electrical_integrity_regen": {
+      "type": "number"
+    },
+    "jammed_duration": {
+      "type": "number"
+    },
+    "structural_damage_multiplier": {
+      "type": "number"
+    },
+    "max_concurrent_healers": {
+      "type": "number"
+    },
+    "predictive_aim": {
+      "type": "boolean"
+    },
+    "leading_factor": {
+      "type": "number"
+    },
+    "aim_required": {
+      "type": "number"
+    },
+    "synchronized_weapons": {
+      "type": "boolean"
+    },
+    "loose_target_after_shoot": {
+      "type": "boolean"
+    },
+    "stand_by_on_low_energy": {
+      "type": "boolean"
+    },
+    "static_bonuses": {
+      "type": "object",
+      "properties": {
+        "population_capacity": {
+          "type": "number"
+        },
+        "energy_capacity": {
+          "type": "number"
+        },
+        "resource_capacity": {
+          "type": "number"
+        }
+      }
+    },
     "link_range": {
       "type": "number"
     },

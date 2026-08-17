@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 — 24 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 25 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -49,6 +49,7 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `Ability` | 5 | Ship abilities (Improved Engines, Field Repair, Ion Ultimate, Sonar, Temporary Shield) | numeric fields per ability class, `modifiers[]` |
 | `BuildCap` | 1 | Unit/module caps per class, single- vs multiplayer | `unit_class_cap_multiplayer {Corvette:100, Fighter:150 …}`, `module_class_cap_*`, global caps |
 | `GameSetting` | 1 | Global tunables (`combat_zone_size`, `damage_by_mass`, `unit_damage_from_collisions`, drag, camera…) | flat numeric/string fields |
+| `StatDefinition` | 47 | Every `StatModifier` stat with the **game's own display name** (`MaxSpeed`→"Speed", `MaxHealth`→"Health"…), `enum_value`, `higher_is_better`, `typically_percent`, `used_by {research, unit_level, module, attack_template, formation}`, `usage_count` | use for every modifier label: `useStatDefinitions().labels` + `fmtModifier(m, labels)` |
 | `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
 
 **`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
@@ -58,6 +59,8 @@ dictionaries under `full.odin`). Enum-valued fields are raw ints there; the cura
 granular views and comparisons the curated columns don't cover.
 
 All relation tables also have a synthetic `game_id` (e.g. `unit_id#level#stat`), so every entity upserts idempotently.
+
+**Phase 0 additions (2026-08-17):** `Unit` now carries the decoded doctrine/flight model — `default_style`, `enabled_styles` (Flyby·Hold·Chase·Orbit), `default_orientation`, `enabled_orientations` (Frontal·Back·Lateral·Top·Bottom), `evade_actions[]`, `evade_on_attack_probability`, `switch_target_interval/probability`, `disengage_multiplier_by_class {EntityClass: ×}`, `hardpoints` (primary/secondary/tertiary from the game's own table), flyby/swing/banking/backflip/oversteer fields. `Turret` gains `cost_resources`, `cost_population`, `cost_energy`, `construction_time`, `required_research`, `additional_dps`. Module/Unit gain `shield_noise`, `activation_noise`, `electrical_integrity_regen`, `jammed_duration` (EMP), `structural_damage_multiplier`, `max_concurrent_healers`, `predictive_aim`, `leading_factor`, `aim_required`, `requirements{}`, `static_bonuses{}`. `GameSetting.score_calculation_weights` = the per-entity score formula weights (TierWeight, ArmamentWeight, …). `Ability.agent_category` decoded.
 
 ### Interpretation rules (please respect in the UI)
 * **Armament:** `Module.weapons` / `Unit.weapons` already include the guns inside their turrets. Don't add `Turret.weapons` on top (double count).
@@ -70,7 +73,7 @@ All relation tables also have a synthetic `game_id` (e.g. `unit_id#level#stat`),
 ---
 
 ## 2. Frontend helpers already in the repo
-* `src/lib/gameData.js` — `useGameEntity(entity)`, `useGameCatalog()` (all catalogs + `byId` map), `fmtNum`, `countIds`, `fmtModifier`.
+* `src/lib/gameData.js` — `useGameEntity(entity)`, `useGameCatalog()` (all catalogs + `byId` map), `useStatDefinitions()` (`labels` map), `fmtNum`, `countIds`, `fmtModifier(m, labels?)`.
 * `src/lib/seedGameData.js` — `seedGameData(base44, {onProgress, deleteMissing})`, `loadIndex()`, and **`upsertEntityRows(base44, entity, rows, opts)`** (the single upsert routine — `/gamedata` uses it; `src/lib/gameFileImport.js` can call it instead of its own copy so the two import paths can't drift).
 * Bundled data: `src/data/era-one/*.json` + `INDEX.json` (build stamp + row counts) — lazy chunks.
 

@@ -186,6 +186,12 @@
         "type": "string"
       }
     },
+    "unlocks_turrets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "tree_depth": {
       "type": "number"
     },

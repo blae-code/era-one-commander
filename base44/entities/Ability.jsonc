@@ -42,7 +42,7 @@
       "type": "number"
     },
     "agent_category": {
-      "type": "number"
+      "type": "string"
     },
     "duration": {
       "type": "number"

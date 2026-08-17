@@ -25,8 +25,37 @@
       "type": "number",
       "description": "Damage per second (game-computed)"
     },
+    "additional_dps": {
+      "type": "number"
+    },
     "weapons_count": {
       "type": "number"
+    },
+    "cost_resources": {
+      "type": "number",
+      "description": "Build cost in resource units (RU)"
+    },
+    "cost_population": {
+      "type": "number",
+      "description": "Crew required"
+    },
+    "cost_energy": {
+      "type": "number",
+      "description": "Energy required"
+    },
+    "construction_time": {
+      "type": "number",
+      "description": "Build time (s)"
+    },
+    "required_research": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Research game_ids required"
+    },
+    "show_in_ui": {
+      "type": "boolean"
     },
     "time_between_weapon_shots": {
       "type": "number"
