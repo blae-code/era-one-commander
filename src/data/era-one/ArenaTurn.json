@@ -1,0 +1,368 @@
+[
+{
+"game_id": "ARENA.T1",
+"turn": 1,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 1000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/1_Defender",
+"shipped:BattleArenaBlueprints/1_Light Platform"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 3,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T2",
+"turn": 2,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 2000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/2_Heavy Platform",
+"shipped:BattleArenaBlueprints/2_Light Cruiser"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 3,
+"random_extra": 3
+},
+"bombers": {
+"count": 3,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T3",
+"turn": 3,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 3000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/3_Cruiser"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 3,
+"random_extra": 3
+},
+"bombers": {
+"count": 3,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 3,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T4",
+"turn": 4,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 4000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/4_Breachdriller",
+"shipped:BattleArenaBlueprints/4_Heavy Cruiser"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 3,
+"random_extra": 3
+},
+"bombers": {
+"count": 3,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 3,
+"random_extra": 3
+},
+"corvettes": {
+"count": 3,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T5",
+"turn": 5,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 5000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/5_Heavy Cruiser Evo"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 4,
+"random_extra": 3
+},
+"bombers": {
+"count": 4,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 4,
+"random_extra": 3
+},
+"corvettes": {
+"count": 4,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T6",
+"turn": 6,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 6000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/6_Battleship"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 5,
+"random_extra": 3
+},
+"bombers": {
+"count": 5,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 5,
+"random_extra": 3
+},
+"corvettes": {
+"count": 5,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T7",
+"turn": 7,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 7000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/7_Annihitron"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 6,
+"random_extra": 3
+},
+"bombers": {
+"count": 6,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 6,
+"random_extra": 3
+},
+"corvettes": {
+"count": 6,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T8",
+"turn": 8,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 8000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/8_Grinder"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 7,
+"random_extra": 3
+},
+"bombers": {
+"count": 7,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 7,
+"random_extra": 3
+},
+"corvettes": {
+"count": 7,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "ARENA.T9",
+"turn": 9,
+"build_time_by_difficulty": {
+"VeryEasy": 600,
+"Easy": 540,
+"Normal": 480,
+"Hard": 420,
+"Insane": 360
+},
+"reward_for_victory": 9000.0,
+"max_combat_time": 660,
+"opponent_blueprints": [
+"shipped:BattleArenaBlueprints/9_Battlecruiser"
+],
+"support_wave_units": {
+"interceptors": {
+"count": 8,
+"random_extra": 3
+},
+"bombers": {
+"count": 8,
+"random_extra": 3
+},
+"lightCorvettes": {
+"count": 8,
+"random_extra": 3
+},
+"corvettes": {
+"count": 8,
+"random_extra": 3
+}
+},
+"support_wave_probability": 100,
+"support_wave_time_to_spawn": 0,
+"support_trade_chance": 0.0,
+"support_trade_resources": 0.0,
+"initial_delay": 25,
+"time_to_join_arena": 90,
+"stay_in_arena_grace_period": 30,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

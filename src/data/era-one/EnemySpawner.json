@@ -1,0 +1,30 @@
+[
+{
+"game_id": "SPAWN.CMX",
+"prefab": "ENTT CMX Enemy Command",
+"faction": "CMX",
+"initial_delay": 140.0,
+"spawn_speed": 1.0,
+"only_spawn_when_enemy_detected": true,
+"mode": 2,
+"wave_count": 13,
+"alternative_wave_count": 0,
+"upgrade_steps": 8,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR",
+"prefab": "ENTT PIR Capital Station",
+"faction": "PIR",
+"initial_delay": 140.0,
+"spawn_speed": 1.0,
+"only_spawn_when_enemy_detected": true,
+"mode": 2,
+"wave_count": 16,
+"alternative_wave_count": 3,
+"upgrade_steps": 8,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

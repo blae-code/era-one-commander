@@ -33,6 +33,17 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'UnitWeapon', file: 'UnitWeapon', keyed: true },
   { entity: 'LocalizedString', file: 'LocalizedString', keyed: true },
   { entity: 'Effectiveness', file: 'Effectiveness', keyed: true },
+  { entity: 'Scenario', file: 'Scenario', keyed: true },
+  { entity: 'ScenarioEntity', file: 'ScenarioEntity', keyed: true },
+  { entity: 'ScenarioObjective', file: 'ScenarioObjective', keyed: true },
+  { entity: 'Objective', file: 'Objective', keyed: true },
+  { entity: 'GameHint', file: 'GameHint', keyed: true },
+  { entity: 'GameEvent', file: 'GameEvent', keyed: true },
+  { entity: 'Remain', file: 'Remain', keyed: true },
+  { entity: 'EnemySpawner', file: 'EnemySpawner', keyed: true },
+  { entity: 'EnemyWave', file: 'EnemyWave', keyed: true },
+  { entity: 'EnemyUpgrade', file: 'EnemyUpgrade', keyed: true },
+  { entity: 'ArenaTurn', file: 'ArenaTurn', keyed: true },
 ];
 
 const CHUNK = 100;

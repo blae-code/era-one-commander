@@ -1,0 +1,268 @@
+[
+{
+"game_id": "SPAWN.CMX.UPG.1",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 2000.0,
+"research_ids": [
+"R.U.FA1",
+"R.U.FH1",
+"R.A.SWW"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.2",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 2500.0,
+"research_ids": [
+"R.U.FA2",
+"R.U.FH2",
+"R.U.CA1",
+"R.U.CH1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.3",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 3500.0,
+"research_ids": [
+"R.U.FA3",
+"R.U.FH3",
+"R.U.CA2",
+"R.U.CH2",
+"R.U.FRA1",
+"R.U.FRH1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.4",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 5000.0,
+"research_ids": [
+"R.U.FA4",
+"R.U.FH4",
+"R.U.CA3",
+"R.U.CH3",
+"R.U.FRA2",
+"R.U.FRH2",
+"R.U.FRS1",
+"R.U.DF1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.5",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 7000.0,
+"research_ids": [
+"R.U.FA5",
+"R.U.FH5",
+"R.U.CA4",
+"R.U.CH4",
+"R.U.CS1",
+"R.U.FRA3",
+"R.U.FRH3",
+"R.U.FRS2",
+"R.U.DF2"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.6",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 9500.0,
+"research_ids": [
+"R.U.FS1",
+"R.U.CA5",
+"R.U.CH5",
+"R.U.CS2",
+"R.U.FRA4",
+"R.U.FRH4",
+"R.U.FRS3",
+"R.U.DF3"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.7",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 12500.0,
+"research_ids": [
+"R.U.FS2",
+"R.U.CS3",
+"R.U.FRA5",
+"R.U.FRH5",
+"R.U.FRS4",
+"R.U.DF4"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.CMX.UPG.8",
+"spawner_id": "SPAWN.CMX",
+"faction": "CMX",
+"time_to_upgrade": 16000.0,
+"research_ids": [
+"R.U.FS3",
+"R.U.CS4",
+"R.U.FRS5",
+"R.U.DF5"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.1",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 2000.0,
+"research_ids": [
+"R.U.FA1",
+"R.U.FH1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.2",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 2500.0,
+"research_ids": [
+"R.U.FA2",
+"R.U.FH2",
+"R.U.CA1",
+"R.U.CH1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.3",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 3500.0,
+"research_ids": [
+"R.U.FA3",
+"R.U.FH3",
+"R.U.CA2",
+"R.U.CH2",
+"R.U.FRA1",
+"R.U.FRH1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.4",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 5000.0,
+"research_ids": [
+"R.U.FA4",
+"R.U.FH4",
+"R.U.CA3",
+"R.U.CH3",
+"R.U.FRA2",
+"R.U.FRH2",
+"R.U.FRS1"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.5",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 7000.0,
+"research_ids": [
+"R.U.FA5",
+"R.U.FH5",
+"R.U.CA4",
+"R.U.CH4",
+"R.U.CS1",
+"R.U.FRA3",
+"R.U.FRH3",
+"R.U.FRS2"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.6",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 9500.0,
+"research_ids": [
+"R.U.FS1",
+"R.U.CA5",
+"R.U.CH5",
+"R.U.CS2",
+"R.U.FRA4",
+"R.U.FRH4",
+"R.U.FRS3"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.7",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 12500.0,
+"research_ids": [
+"R.U.FS2",
+"R.U.CS3",
+"R.U.FRA5",
+"R.U.FRH5",
+"R.U.FRS4"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "SPAWN.PIR.UPG.8",
+"spawner_id": "SPAWN.PIR",
+"faction": "PIR",
+"time_to_upgrade": 16000.0,
+"research_ids": [
+"R.U.FS3",
+"R.U.CS4",
+"R.U.FRS5"
+],
+"fire_event": true,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

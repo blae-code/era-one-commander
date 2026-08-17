@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T18:50:24Z",
+  "generated_utc": "2026-08-17T18:58:36Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -34,6 +34,17 @@
    "abilities": 5,
    "game_settings": 1,
    "stat_definitions": 47,
+   "objectives": 46,
+   "game_hints": 12,
+   "remains": 27,
+   "game_events": 63,
+   "enemy_waves": 32,
+   "enemy_upgrades": 16,
+   "enemy_spawners": 2,
+   "arena_turns": 9,
+   "scenarios": 24,
+   "scenario_entities": 6596,
+   "scenario_objectives": 338,
    "localization": 2448
   },
   "full_counts": {
@@ -257,6 +268,83 @@
    "source_table": "effectiveness",
    "rows": 845,
    "columns": 12,
+   "key": "game_id"
+  },
+  {
+   "entity": "Scenario",
+   "source_table": "scenarios",
+   "rows": 24,
+   "columns": 35,
+   "key": "game_id"
+  },
+  {
+   "entity": "ScenarioEntity",
+   "source_table": "scenario_entities",
+   "rows": 6596,
+   "columns": 18,
+   "key": "game_id"
+  },
+  {
+   "entity": "ScenarioObjective",
+   "source_table": "scenario_objectives",
+   "rows": 338,
+   "columns": 8,
+   "key": "game_id"
+  },
+  {
+   "entity": "Objective",
+   "source_table": "objectives",
+   "rows": 46,
+   "columns": 22,
+   "key": "game_id"
+  },
+  {
+   "entity": "GameHint",
+   "source_table": "game_hints",
+   "rows": 12,
+   "columns": 12,
+   "key": "game_id"
+  },
+  {
+   "entity": "GameEvent",
+   "source_table": "game_events",
+   "rows": 63,
+   "columns": 14,
+   "key": "game_id"
+  },
+  {
+   "entity": "Remain",
+   "source_table": "remains",
+   "rows": 27,
+   "columns": 11,
+   "key": "game_id"
+  },
+  {
+   "entity": "EnemySpawner",
+   "source_table": "enemy_spawners",
+   "rows": 2,
+   "columns": 12,
+   "key": "game_id"
+  },
+  {
+   "entity": "EnemyWave",
+   "source_table": "enemy_waves",
+   "rows": 32,
+   "columns": 32,
+   "key": "game_id"
+  },
+  {
+   "entity": "EnemyUpgrade",
+   "source_table": "enemy_upgrades",
+   "rows": 16,
+   "columns": 8,
+   "key": "game_id"
+  },
+  {
+   "entity": "ArenaTurn",
+   "source_table": "arena_turns",
+   "rows": 9,
+   "columns": 16,
    "key": "game_id"
   }
  ]

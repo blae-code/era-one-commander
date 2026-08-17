@@ -1,0 +1,56 @@
+{
+  "name": "GameEvent",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "enum_value": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "event_category": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "expire_time": {
+      "type": "number"
+    },
+    "cooldown": {
+      "type": "number"
+    },
+    "audio_only": {
+      "type": "boolean"
+    },
+    "show_notification": {
+      "type": "boolean"
+    },
+    "notification_duration": {
+      "type": "number"
+    },
+    "focus_distance": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One GameEvent records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

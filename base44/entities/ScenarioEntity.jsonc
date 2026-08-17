@@ -1,0 +1,68 @@
+{
+  "name": "ScenarioEntity",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "scenario_id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "identifier": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "entity_class": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "x": {
+      "type": "number"
+    },
+    "y": {
+      "type": "number"
+    },
+    "z": {
+      "type": "number"
+    },
+    "local_x": {
+      "type": "number"
+    },
+    "local_z": {
+      "type": "number"
+    },
+    "parent_index": {
+      "type": "number"
+    },
+    "resources": {
+      "type": "object"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "spawner": {
+      "type": "boolean"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One ScenarioEntity records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

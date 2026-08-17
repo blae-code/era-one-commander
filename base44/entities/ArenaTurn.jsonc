@@ -1,0 +1,127 @@
+{
+  "name": "ArenaTurn",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "turn": {
+      "type": "number"
+    },
+    "build_time_by_difficulty": {
+      "type": "object",
+      "properties": {
+        "VeryEasy": {
+          "type": "number"
+        },
+        "Easy": {
+          "type": "number"
+        },
+        "Normal": {
+          "type": "number"
+        },
+        "Hard": {
+          "type": "number"
+        },
+        "Insane": {
+          "type": "number"
+        }
+      }
+    },
+    "reward_for_victory": {
+      "type": "number"
+    },
+    "max_combat_time": {
+      "type": "number"
+    },
+    "opponent_blueprints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "support_wave_units": {
+      "type": "object",
+      "properties": {
+        "interceptors": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            }
+          }
+        },
+        "bombers": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            }
+          }
+        },
+        "lightCorvettes": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            }
+          }
+        },
+        "corvettes": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "support_wave_probability": {
+      "type": "number"
+    },
+    "support_wave_time_to_spawn": {
+      "type": "number"
+    },
+    "support_trade_chance": {
+      "type": "number"
+    },
+    "support_trade_resources": {
+      "type": "number"
+    },
+    "initial_delay": {
+      "type": "number"
+    },
+    "time_to_join_arena": {
+      "type": "number"
+    },
+    "stay_in_arena_grace_period": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One ArenaTurn records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

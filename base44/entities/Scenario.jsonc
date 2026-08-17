@@ -1,0 +1,140 @@
+{
+  "name": "Scenario",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "file": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "short_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "description": "In-game description (rich-text tags stripped)"
+    },
+    "description_statistics": {
+      "type": "string"
+    },
+    "loc_id": {
+      "type": "string"
+    },
+    "scene_key": {
+      "type": "string"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "is_multiplayer": {
+      "type": "boolean"
+    },
+    "teams": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entity_count": {
+      "type": "number"
+    },
+    "asteroid_count": {
+      "type": "number"
+    },
+    "wreck_count": {
+      "type": "number"
+    },
+    "module_count": {
+      "type": "number"
+    },
+    "station_count": {
+      "type": "number"
+    },
+    "objective_count": {
+      "type": "number"
+    },
+    "unit_count": {
+      "type": "number"
+    },
+    "hazard_count": {
+      "type": "number"
+    },
+    "bbox": {
+      "type": "object",
+      "properties": {
+        "x_min": {
+          "type": "number"
+        },
+        "x_max": {
+          "type": "number"
+        },
+        "z_min": {
+          "type": "number"
+        },
+        "z_max": {
+          "type": "number"
+        }
+      }
+    },
+    "size_x": {
+      "type": "number"
+    },
+    "size_z": {
+      "type": "number"
+    },
+    "resources_total": {
+      "type": "object"
+    },
+    "resources_sum": {
+      "type": "number"
+    },
+    "enemy_modules": {
+      "type": "object"
+    },
+    "enemy_module_count": {
+      "type": "number"
+    },
+    "enemy_hp_total": {
+      "type": "number"
+    },
+    "enemy_dps_total": {
+      "type": "number"
+    },
+    "enemy_cost_total": {
+      "type": "number"
+    },
+    "enemy_weapon_modules": {
+      "type": "object"
+    },
+    "has_spawner": {
+      "type": "boolean"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "asteroid_types": {
+      "type": "object"
+    },
+    "playable": {
+      "type": "boolean"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One Scenario records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

@@ -1,0 +1,3382 @@
+[
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.DEFTW.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.DEFTW.1",
+"name": "DefeatWaves",
+"category": "Secondary",
+"description": "Focus on defensive activities and eliminate the incoming enemy waves.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.EXPL",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.EXPL",
+"name": "ExploreSector",
+"category": "Secondary",
+"description": "Send a reconnaissance patrol to explore the signaled area.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.RES.0",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.RES.0",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.RES.0",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.RES.0",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.RES.0",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.RES.0",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.RES.0",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.RES.0",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.RES.0",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.RES.0",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.RES.0",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.RES.0",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.RES.0",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.RES.0",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.RES.0",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.RES.0",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.RES.0",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.RES.0",
+"name": "GatherResources0",
+"category": "Challenge",
+"description": "Collect 10000 RUs.\nReward 5000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.RES.1",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.RES.1",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.RES.1",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.RES.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.RES.1",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.RES.1",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.RES.1",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.RES.1",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.RES.1",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.RES.1",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.RES.1",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.RES.1",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.RES.1",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.RES.1",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.RES.1",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.RES.1",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.RES.1",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.RES.1",
+"name": "GatherResources1",
+"category": "Challenge",
+"description": "Collect 20000 RUs.\nReward 10000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.RES.2",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.RES.2",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.RES.2",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.RES.2",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.RES.2",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.RES.2",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.RES.2",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.RES.2",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.RES.2",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.RES.2",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.RES.2",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.RES.2",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.RES.2",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.RES.2",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.RES.2",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.RES.2",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.RES.2",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.RES.2",
+"name": "GatherResources2",
+"category": "Challenge",
+"description": "Collect 40000 RUs.\nReward 20000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.RES.3",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.RES.3",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.RES.3",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.RES.3",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.RES.3",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.RES.3",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.RES.3",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.RES.3",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.RES.3",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.RES.3",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.RES.3",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.RES.3",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.RES.3",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.RES.3",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.RES.3",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.RES.3",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.RES.3",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.RES.3",
+"name": "GatherResources3",
+"category": "Challenge",
+"description": "Collect 80000 RUs.\nReward 40000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.RES.4",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.RES.4",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.RES.4",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.RES.4",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.RES.4",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.RES.4",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.RES.4",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.RES.4",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.RES.4",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.RES.4",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.RES.4",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.RES.4",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.RES.4",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.RES.4",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.RES.4",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.RES.4",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.RES.4",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.RES.4",
+"name": "GatherResources4",
+"category": "Challenge",
+"description": "Collect 160000 RUs.\nReward 80000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.HNT.1",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.HNT.1",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.HNT.1",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.HNT.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.HNT.1",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.HNT.1",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.HNT.1",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.HNT.1",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.HNT.1",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.HNT.1",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.HNT.1",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.HNT.1",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.HNT.1",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.HNT.1",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.HNT.1",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.HNT.1",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.HNT.1",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.HNT.1",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.HNT.1",
+"name": "Hint-Only1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.HNT.2",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.HNT.2",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.HNT.2",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.HNT.2",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.HNT.2",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.HNT.2",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.HNT.2",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.HNT.2",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.HNT.2",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.HNT.2",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.HNT.2",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.HNT.2",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.HNT.2",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.HNT.2",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.HNT.2",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.HNT.2",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.HNT.2",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.HNT.2",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.HNT.2",
+"name": "Hint-Only2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.HNT.3",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.HNT.3",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.HNT.3",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.HNT.3",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.HNT.3",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.HNT.3",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.HNT.3",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.HNT.3",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.HNT.3",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.HNT.3",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.HNT.3",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.HNT.3",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.HNT.3",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.HNT.3",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.HNT.3",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.HNT.3",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.HNT.3",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.HNT.3",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.HNT.3",
+"name": "Hint-Only3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.HNT.4",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.HNT.4",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.HNT.4",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.HNT.4",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.HNT.4",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.HNT.4",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.HNT.4",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.HNT.4",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.HNT.4",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.HNT.4",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.HNT.4",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.HNT.4",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.HNT.4",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.HNT.4",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.HNT.4",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.HNT.4",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.HNT.4",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.HNT.4",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.HNT.4",
+"name": "Hint-Only4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.HNT.5",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.HNT.5",
+"name": "Hint-Only5",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.0",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.0",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.0",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.0",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.0",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.0",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.0",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.0",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.0",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.0",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.0",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.0",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.0",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.0",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.KILL.0",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.0",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.0",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.0",
+"name": "KillAnyEnemies0",
+"category": "Challenge",
+"description": "Eliminate 10 enemy ships.\nReward 1000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.1",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.1",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.1",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.1",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.1",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.1",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.1",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.1",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.1",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.1",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.1",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.1",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.1",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.KILL.1",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.1",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.1",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.1",
+"name": "KillAnyEnemies1",
+"category": "Challenge",
+"description": "Eliminate 20 enemy ships.\nReward 2000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.2",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.2",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.2",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.2",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.2",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.2",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.2",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.2",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.2",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.2",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.2",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.2",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.2",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.2",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.KILL.2",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.2",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.2",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.2",
+"name": "KillAnyEnemies2",
+"category": "Challenge",
+"description": "Eliminate 40 enemy ships.\nReward 4000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.3",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.3",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.3",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.3",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.3",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.3",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.3",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.3",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.3",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.3",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.3",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.3",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.3",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.3",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.KILL.3",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.3",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.3",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.3",
+"name": "KillAnyEnemies3",
+"category": "Challenge",
+"description": "Eliminate 80 enemy ships.\nReward 8000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.4",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.4",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.4",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.4",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.4",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.4",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.4",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.4",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.4",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.4",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.4",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.4",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.4",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.4",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.KILL.4",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.4",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.4",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.4",
+"name": "KillAnyEnemies4",
+"category": "Challenge",
+"description": "Eliminate 160 enemy ships.\nReward 16000 RUs.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.KILL.MAIN",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.KILL.MAIN",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.MAIN",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.KILL.MAIN",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.MAIN",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.KILL.MAIN",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.KILL.MAIN",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.KILL.MAIN",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.KILL.MAIN",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.MAIN",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.KILL.MAIN",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.KILL.MAIN",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.KILL.MAIN",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.MAIN",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.KILL.MAIN",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.KILL.MAIN",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.KILL.MAIN",
+"name": "KillMainEnemy",
+"category": "Primary",
+"description": "Protect the Command Center and organize a defense fleet. Destroy enemy Command Fortress.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.KILL.SPEC",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.KILL.SPEC",
+"name": "KillSpecificEnemy",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.SPEC2",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.SPEC2",
+"name": "KillSpecificEnemy2",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.SPEC2",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.SPEC2",
+"name": "KillSpecificEnemy2",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.KILL.SPEC.PLU",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.KILL.SPEC.PLU",
+"name": "KillSpecificEnemyPlural",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.KILL.SPEC.PLU",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.KILL.SPEC.PLU",
+"name": "KillSpecificEnemyPlural",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.KILL.SPEC.PLU",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.KILL.SPEC.PLU",
+"name": "KillSpecificEnemyPlural",
+"category": "Secondary",
+"description": "Eliminate the enemy's fortified resource extraction outpost.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.LSTEC.NARR.4",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.LSTEC.NARR.4",
+"name": "LostEcplipsesNarration4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.LSTEC.NARR.4",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.LSTEC.NARR.4",
+"name": "LostEcplipsesNarration4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.LSTEC.NARR.4",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.LSTEC.NARR.4",
+"name": "LostEcplipsesNarration4",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.NARR.1",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.NARR.1",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.NARR.1",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.NARR.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.NARR.1",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.NARR.1",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.NARR.1",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.NARR.1",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.NARR.1",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.NARR.1",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.NARR.1",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.NARR.1",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.NARR.1",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.NARR.1",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.NARR.1",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.NARR.1",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.NARR.1",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.NARR.1",
+"name": "Narration1",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.NARR.1T",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.NARR.1T",
+"name": "Narration1 Training",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.NARR.2",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.NARR.2",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.NARR.2",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.NARR.2",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.NARR.2",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.NARR.2",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.NARR.2",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.NARR.2",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.NARR.2",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.NARR.2",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.NARR.2",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.NARR.2",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.NARR.2",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.NARR.2",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.NARR.2",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.NARR.2",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.NARR.2",
+"name": "Narration2",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.NARR.3.PLU",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.NARR.3.PLU",
+"name": "Narration3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.NARR.3.PLU",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.NARR.3.PLU",
+"name": "Narration3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.NARR.3",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.NARR.3",
+"name": "Narration3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.NARR.3.PLU",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.NARR.3.PLU",
+"name": "Narration3",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.ALYA#OBJV.START.HARV",
+"scenario_id": "MAP.ALYA",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEFRONT#OBJV.START.HARV",
+"scenario_id": "MAP.BATTLEFRONT",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.BATTLEGRAVEWASTES#OBJV.START.HARV",
+"scenario_id": "MAP.BATTLEGRAVEWASTES",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV.START.HARV",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.DEEPVOID#OBJV.START.HARV",
+"scenario_id": "MAP.DEEPVOID",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.EMPTYSPACE#OBJV.START.HARV",
+"scenario_id": "MAP.EMPTYSPACE",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FROSTVEILORBITS#OBJV.START.HARV",
+"scenario_id": "MAP.FROSTVEILORBITS",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.FULLCOMBAT#OBJV.START.HARV",
+"scenario_id": "MAP.FULLCOMBAT",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.GATHERINGBELT#OBJV.START.HARV",
+"scenario_id": "MAP.GATHERINGBELT",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.HORIZON#OBJV.START.HARV",
+"scenario_id": "MAP.HORIZON",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOCUS#OBJV.START.HARV",
+"scenario_id": "MAP.LOCUS",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.LOSTECLIPSES#OBJV.START.HARV",
+"scenario_id": "MAP.LOSTECLIPSES",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.OMEN#OBJV.START.HARV",
+"scenario_id": "MAP.OMEN",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.PATHBREAKER#OBJV.START.HARV",
+"scenario_id": "MAP.PATHBREAKER",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARV",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELONGTRAVEL#OBJV.START.HARV",
+"scenario_id": "MAP.THELONGTRAVEL",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THEPIRATETITAN#OBJV.START.HARV",
+"scenario_id": "MAP.THEPIRATETITAN",
+"objective_id": "OBJV.START.HARV",
+"name": "StartHarvestEventObjective",
+"category": "Primary",
+"description": "Establish a base and begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.TRAININGSHIPYARD#OBJV.START.HARVT",
+"scenario_id": "MAP.TRAININGSHIPYARD",
+"objective_id": "OBJV.START.HARVT",
+"name": "StartHarvestEventObjectiveTraining",
+"category": "Primary",
+"description": "Begin gathering nearby resources. Order the Resource Collectors to mine the nearby asteroids.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ1",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ1",
+"name": "StartHarvestObjective1",
+"category": "Primary",
+"description": "Store a total of 11000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ10",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ10",
+"name": "StartHarvestObjective10",
+"category": "Primary",
+"description": "Store a total of 110000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ11",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ11",
+"name": "StartHarvestObjective11",
+"category": "Primary",
+"description": "Store a total of 175000 RUs in 33 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ2",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ2",
+"name": "StartHarvestObjective2",
+"category": "Primary",
+"description": "Store a total of 22000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ3",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ3",
+"name": "StartHarvestObjective3",
+"category": "Primary",
+"description": "Store a total of 33000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ4",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ4",
+"name": "StartHarvestObjective4",
+"category": "Primary",
+"description": "Store a total of 44000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ5",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ5",
+"name": "StartHarvestObjective5",
+"category": "Primary",
+"description": "Store a total of 55000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ6",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ6",
+"name": "StartHarvestObjective6",
+"category": "Primary",
+"description": "Store a total of 66000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ7",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ7",
+"name": "StartHarvestObjective7",
+"category": "Primary",
+"description": "Store a total of 77000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ8",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ8",
+"name": "StartHarvestObjective8",
+"category": "Primary",
+"description": "Store a total of 88000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.THELASTOUTPOST#OBJV.START.HARVOBJ9",
+"scenario_id": "MAP.THELASTOUTPOST",
+"objective_id": "OBJV.START.HARVOBJ9",
+"name": "StartHarvestObjective9",
+"category": "Primary",
+"description": "Store a total of 99000 RUs in 11 minutes.",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "MAP.CLOSEIMPACT#OBJV:DFTWN.1",
+"scenario_id": "MAP.CLOSEIMPACT",
+"objective_id": "OBJV:DFTWN.1",
+"name": "WavesDefeatedNarration",
+"category": null,
+"description": "",
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

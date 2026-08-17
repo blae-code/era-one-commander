@@ -1,0 +1,54 @@
+{
+  "name": "EnemySpawner",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "prefab": {
+      "type": "string",
+      "description": "Prefab root the armament was read from"
+    },
+    "faction": {
+      "type": "string",
+      "enum": [
+        "CMX",
+        "PIR"
+      ]
+    },
+    "initial_delay": {
+      "type": "number"
+    },
+    "spawn_speed": {
+      "type": "number"
+    },
+    "only_spawn_when_enemy_detected": {
+      "type": "boolean"
+    },
+    "mode": {
+      "type": "number"
+    },
+    "wave_count": {
+      "type": "number"
+    },
+    "alternative_wave_count": {
+      "type": "number"
+    },
+    "upgrade_steps": {
+      "type": "number"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One EnemySpawner records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}

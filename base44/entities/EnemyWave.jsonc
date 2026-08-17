@@ -1,0 +1,333 @@
+{
+  "name": "EnemyWave",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
+    "spawner_id": {
+      "type": "string"
+    },
+    "spawner_prefab": {
+      "type": "string"
+    },
+    "faction": {
+      "type": "string",
+      "enum": [
+        "CMX",
+        "PIR"
+      ]
+    },
+    "index": {
+      "type": "number"
+    },
+    "replaces_wave": {
+      "type": "number"
+    },
+    "alternative_probability": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (English localization; falls back to the asset's internal name)"
+    },
+    "spawn_type": {
+      "type": "string"
+    },
+    "time_to_spawn": {
+      "type": "number"
+    },
+    "random_time_to_spawn": {
+      "type": "number"
+    },
+    "probability": {
+      "type": "number"
+    },
+    "can_be_skipped_if_undetected": {
+      "type": "boolean"
+    },
+    "stations_to_spawn": {
+      "type": "number"
+    },
+    "station_blueprint": {
+      "type": "string"
+    },
+    "assets_to_use": {
+      "type": "number"
+    },
+    "units": {
+      "type": "object",
+      "properties": {
+        "scouts": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "interceptors": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "bombers": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "frigates": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "torpedoFrigates": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "corvettes": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "bombersMk2": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "perforationMines": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "interceptorsMk2": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "ionFrigates": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        },
+        "heavyFrigates": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "number"
+            },
+            "random_extra": {
+              "type": "number"
+            },
+            "unit_id": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "unit_total": {
+      "type": "number"
+    },
+    "unit_total_max": {
+      "type": "number"
+    },
+    "use_formation": {
+      "type": "boolean"
+    },
+    "possible_formations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "formation_stance": {
+      "type": "string"
+    },
+    "command_center_bias": {
+      "type": "number"
+    },
+    "trade_chance": {
+      "type": "number"
+    },
+    "trade_resources": {
+      "type": "number"
+    },
+    "trade_time_reward": {
+      "type": "number"
+    },
+    "reward_resources": {
+      "type": "number"
+    },
+    "difficulty_deltas": {
+      "type": "object",
+      "properties": {
+        "VeryEasy": {
+          "type": "object",
+          "properties": {
+            "interceptorsMk2": {
+              "type": "number"
+            },
+            "bombersMk2": {
+              "type": "number"
+            },
+            "frigates": {
+              "type": "number"
+            },
+            "ionFrigates": {
+              "type": "number"
+            },
+            "torpedoFrigates": {
+              "type": "number"
+            },
+            "heavyFrigates": {
+              "type": "number"
+            },
+            "interceptors": {
+              "type": "number"
+            },
+            "bombers": {
+              "type": "number"
+            }
+          }
+        },
+        "Insane": {
+          "type": "object",
+          "properties": {
+            "interceptorsMk2": {
+              "type": "number"
+            },
+            "bombersMk2": {
+              "type": "number"
+            },
+            "frigates": {
+              "type": "number"
+            },
+            "ionFrigates": {
+              "type": "number"
+            },
+            "torpedoFrigates": {
+              "type": "number"
+            },
+            "heavyFrigates": {
+              "type": "number"
+            },
+            "interceptors": {
+              "type": "number"
+            },
+            "bombers": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "overlay_name": {
+      "type": "string"
+    },
+    "cutscene": {
+      "type": "boolean"
+    },
+    "game_version": {
+      "type": "string",
+      "description": "Era One version the record was extracted from"
+    },
+    "game_build": {
+      "type": "string",
+      "description": "Steam buildid the record was extracted from"
+    }
+  },
+  "required": [
+    "game_id"
+  ],
+  "description": "Era One EnemyWave records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+}
