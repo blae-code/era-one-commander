@@ -4,6 +4,18 @@ import { base44 } from "@/api/base44Client";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import RadarCompare from "@/components/compare/RadarCompare";
 import DeltaTable from "@/components/compare/DeltaTable";
+import BarCompare from "@/components/compare/BarCompare";
+
+const COMPONENT_BARS = [
+  { key: "mass", label: "Mass", unit: "t", lowerBetter: true },
+  { key: "power", label: "Power", unit: "MW", decimals: 1 },
+  { key: "dps", label: "Damage / sec", decimals: 1 },
+];
+const HULL_BARS = [
+  { key: "mass", label: "Mass", unit: "t", lowerBetter: true },
+  { key: "base_power", label: "Base Power", unit: "MW", decimals: 1 },
+  { key: "hp", label: "Hull HP" },
+];
 
 const COMPONENT_AXES = [
   { key: "dps", label: "DPS" },
@@ -72,6 +84,7 @@ export default function Compare() {
   const b = items.find((i) => i.id === bId);
   const axes = mode === "components" ? COMPONENT_AXES : HULL_AXES;
   const rows = mode === "components" ? COMPONENT_ROWS : HULL_ROWS;
+  const bars = mode === "components" ? COMPONENT_BARS : HULL_BARS;
 
   const switchMode = (m) => { setMode(m); setAId(null); setBId(null); };
 
@@ -109,6 +122,11 @@ export default function Compare() {
       </div>
 
       {a && b ? (
+        <>
+        <div className="mb-5">
+          <div className="tech-label mb-2">Key Metric Bars</div>
+          <BarCompare a={a} b={b} metrics={bars} />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="schematic-panel p-4">
             <div className="tech-label mb-2">Normalized Profile</div>
@@ -119,6 +137,7 @@ export default function Compare() {
             <DeltaTable a={a} b={b} rows={rows} />
           </div>
         </div>
+        </>
       ) : (
         <div className="schematic-panel p-16 text-center tech-label">
           Select two units to initiate delta analysis
