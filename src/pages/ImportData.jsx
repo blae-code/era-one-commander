@@ -5,6 +5,8 @@ import { useAuth } from "@/lib/AuthContext";
 import { parseGameFile, importEntityRows } from "@/lib/gameFileImport";
 import FileDropZone from "@/components/gamedata/FileDropZone";
 import ImportQueue from "@/components/gamedata/ImportQueue";
+import FolderWatchPanel from "@/components/gamedata/FolderWatchPanel";
+import useFolderWatch from "@/hooks/useFolderWatch";
 import { Button } from "@/components/ui/button";
 import { DatabaseZap, AlertTriangle, Trash2 } from "lucide-react";
 
@@ -18,6 +20,12 @@ export default function ImportData() {
   const [log, setLog] = useState([]);
   const [running, setRunning] = useState(false);
   const [deleteMissing, setDeleteMissing] = useState(false);
+
+  const watch = useFolderWatch({
+    enabled: isAdmin && !running,
+    deleteMissing,
+    onLog: (m) => setLog((l) => [...l.slice(-200), m]),
+  });
 
   const addFiles = async (files) => {
     const parsed = (await Promise.all(files.map(parseGameFile))).flat();
@@ -79,6 +87,10 @@ export default function ImportData() {
           <AlertTriangle size={14} /> Importing requires an admin account.
         </div>
       )}
+
+      <div className="mb-4">
+        <FolderWatchPanel w={watch} disabled={!isAdmin || running} />
+      </div>
 
       <div className="mb-4">
         <FileDropZone onFiles={addFiles} disabled={running} />
