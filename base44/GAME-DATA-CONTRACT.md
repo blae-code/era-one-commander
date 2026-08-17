@@ -51,7 +51,7 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 
 ## 2. Frontend helpers already in the repo
 * `src/lib/gameData.js` — `useGameEntity(entity)`, `useGameCatalog()` (all catalogs + `byId` map), `fmtNum`, `countIds`, `fmtModifier`.
-* `src/lib/seedGameData.js` — `seedGameData(base44, {onProgress, deleteMissing})`, `loadIndex()`; used by `/gamedata`.
+* `src/lib/seedGameData.js` — `seedGameData(base44, {onProgress, deleteMissing})`, `loadIndex()`, and **`upsertEntityRows(base44, entity, rows, opts)`** (the single upsert routine — `/gamedata` uses it; `src/lib/gameFileImport.js` can call it instead of its own copy so the two import paths can't drift).
 * Bundled data: `src/data/era-one/*.json` + `INDEX.json` (build stamp + row counts) — lazy chunks.
 
 ---

@@ -46,16 +46,14 @@ function changed(existing, incoming) {
   return false;
 }
 
-export async function seedGameData(base44, { onProgress = () => {}, deleteMissing = false, only = null } = {}) {
-  const summary = {};
-  for (const { entity, file, keyed } of ERA_ONE_ENTITIES) {
-    if (only && !only.includes(entity)) continue;
-    const api = base44.entities[entity];
-    if (!api) { onProgress(`${entity}: skipped — entity not defined in this app yet`); summary[entity] = { skipped: true }; continue; }
-    const rows = await loadRows(file);
-    const build = rows[0]?.game_build;
-    let created = 0, updated = 0, deleted = 0, unchanged = 0;
-
+/** Upsert rows into one entity (keyed: match on game_id; long tables: replace wholesale). Reusable by any importer. */
+export async function upsertEntityRows(base44, entity, rows, { onProgress = () => {}, deleteMissing = false } = {}) {
+  const api = base44.entities[entity];
+  if (!api) throw new Error(`entity ${entity} is not deployed in this app`);
+  const keyed = ERA_ONE_ENTITIES.find((e) => e.entity === entity)?.keyed ?? Boolean(rows[0]?.game_id);
+  const build = rows[0]?.game_build;
+  let created = 0, updated = 0, deleted = 0, unchanged = 0;
+  {
     if (keyed) {
       const existing = await api.list('game_id', 5000);
       const byKey = new Map(existing.map((r) => [r.game_id, r]));
@@ -80,8 +78,18 @@ export async function seedGameData(base44, { onProgress = () => {}, deleteMissin
       }
       for (const c of chunk(rows, CHUNK)) { await api.bulkCreate(c); created += c.length; onProgress(`${entity}: created ${created}/${rows.length}`); }
     }
-    summary[entity] = { build, created, updated, deleted, unchanged };
-    onProgress(`${entity}: done — created ${created}, updated ${updated}, unchanged ${unchanged}, deleted ${deleted}`);
+  }
+  onProgress(`${entity}: done — created ${created}, updated ${updated}, unchanged ${unchanged}, deleted ${deleted}`);
+  return { build, created, updated, deleted, unchanged };
+}
+
+export async function seedGameData(base44, { onProgress = () => {}, deleteMissing = false, only = null } = {}) {
+  const summary = {};
+  for (const { entity, file } of ERA_ONE_ENTITIES) {
+    if (only && !only.includes(entity)) continue;
+    if (!base44.entities[entity]) { onProgress(`${entity}: skipped — entity not defined in this app yet`); summary[entity] = { skipped: true }; continue; }
+    const rows = await loadRows(file);
+    summary[entity] = await upsertEntityRows(base44, entity, rows, { onProgress, deleteMissing });
   }
   return summary;
 }
