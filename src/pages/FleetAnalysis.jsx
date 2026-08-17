@@ -4,6 +4,7 @@ import { base44 } from "@/api/base44Client";
 import FleetPicker from "@/components/fleet/FleetPicker";
 import FleetSummary from "@/components/fleet/FleetSummary";
 import FleetContribution from "@/components/fleet/FleetContribution";
+import FleetComposition from "@/components/fleet/FleetComposition";
 
 const SUM_KEYS = ["mass", "hp", "dps", "thrust", "power_gen", "power_use", "shield", "cargo"];
 
@@ -19,7 +20,7 @@ export default function FleetAnalysis() {
     setRoster((prev) =>
       prev.some((r) => r.id === bp.id)
         ? prev.map((r) => (r.id === bp.id ? { ...r, qty: r.qty + 1 } : r))
-        : [...prev, { id: bp.id, name: bp.name, stats: bp.stats || {}, qty: 1 }]
+        : [...prev, { id: bp.id, name: bp.name, ship_class: bp.ship_class, role: bp.role, stats: bp.stats || {}, qty: 1 }]
     );
   const setQty = (id, qty) =>
     setRoster((prev) => (qty <= 0 ? prev.filter((r) => r.id !== id) : prev.map((r) => (r.id === id ? { ...r, qty } : r))));
@@ -57,6 +58,7 @@ export default function FleetAnalysis() {
           {roster.length > 0 ? (
             <>
               <FleetSummary totals={totals} hulls={hulls} designs={roster.length} />
+              <FleetComposition roster={roster} hulls={hulls} />
               <FleetContribution roster={roster} />
             </>
           ) : (
