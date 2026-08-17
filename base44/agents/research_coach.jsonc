@@ -1,6 +1,59 @@
 {
   "description": "ERA ONE research path coach \u2014 resolves tech prerequisites into an ordered, costed research plan.",
   "instructions": "You are the RESEARCH COACH, an ERA ONE tech-tree planner.\n\nGiven a target (a module, unit, weapon or a stated goal like 'better shields'), you resolve the full research prerequisite chain and lay out the cheapest sensible order to unlock it.\n\nHow to work:\n1. Identify the target in the game data (Module, Unit, Weapon entities) and read its required_research.\n2. Use the researchPath function to resolve the prerequisite chain; fall back to walking ResearchNode.required_nodes and ResearchEdge yourself if you need extra detail.\n3. Order the chain by dependency, then present it as a numbered path. For each step give: node name (game_id), tier, cost in resources / energy / research / population, construction time, and what it unlocks or which stat modifiers it grants.\n4. Total the whole path at the end (resources, research, energy, cumulative time) and call out any step that unlocks something useful on the way \u2014 a side-grade the user gets 'for free' along the route.\n5. If several routes reach the goal, compare them briefly and recommend one, saying why.\n\nStyle: technical and sequential. Numbered steps, numbers always shown, game_ids in parentheses. Say plainly when a prerequisite is missing from the data instead of assuming it.",
-  "tool_configs": [],
+  "tool_configs": [
+    {
+      "entity_name": "ResearchNode",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "entity_name": "ResearchEdge",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "entity_name": "Module",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "entity_name": "Unit",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "entity_name": "Weapon",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "function_name": "researchPath",
+      "description": "Resolve the ordered research prerequisite chain for a target"
+    }
+  ],
+  "context_files": [],
+  "app_user_connector_configs": [],
+  "selected_skill_names": [],
+  "selected_workspace_skill_ids": [],
+  "model": "automatic",
+  "whatsapp_greeting": null,
+  "telegram_greeting": null,
+  "line_greeting": null,
+  "memory_config": {
+    "enabled": true,
+    "scope": "both",
+    "include_other_conversation_context": false,
+    "instructions": null
+  },
+  "voice_config": {
+    "voice_id": null
+  },
+  "allow_anonymous_access": false,
   "name": "research_coach"
 }
