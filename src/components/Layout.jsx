@@ -15,7 +15,7 @@ const NAV = [
 export default function Layout() {
   return (
     <div className="h-screen flex bg-background overflow-hidden">
-      <aside className="w-52 shrink-0 border-r border-border bg-card flex flex-col">
+      <aside className="w-52 shrink-0 border-r border-border bg-[hsl(30_8%_7%)] flex flex-col">
         <div className="h-14 flex items-center gap-2.5 px-4 border-b border-border">
           <LogoIcon size={26} className="text-primary" />
           <div className="leading-none">
@@ -32,8 +32,8 @@ export default function Layout() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2.5 border-l-2 transition-colors ${
                   isActive
-                    ? "border-primary bg-primary/10 text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/60"
+                    ? "border-primary bg-primary/15 text-primary"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/70"
                 }`
               }
             >

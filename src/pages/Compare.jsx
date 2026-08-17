@@ -99,12 +99,12 @@ export default function Compare() {
 
       <div className="grid grid-cols-2 gap-4 mb-5">
         <div>
-          <div className="tech-label mb-1.5 text-[#d4713f]">Unit Alpha</div>
-          <Picker items={items} value={aId} onChange={setAId} tint="border-[#d4713f]/60" />
+          <div className="tech-label mb-1.5 text-[#f08a45]">Unit Alpha</div>
+          <Picker items={items} value={aId} onChange={setAId} tint="border-[#f08a45]/70" />
         </div>
         <div>
-          <div className="tech-label mb-1.5 text-[#8c9aa3]">Unit Bravo</div>
-          <Picker items={items} value={bId} onChange={setBId} tint="border-[#8c9aa3]/60" />
+          <div className="tech-label mb-1.5 text-[#a9bcc7]">Unit Bravo</div>
+          <Picker items={items} value={bId} onChange={setBId} tint="border-[#a9bcc7]/70" />
         </div>
       </div>
 

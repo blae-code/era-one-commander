@@ -7,7 +7,7 @@ import { Wrench, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
 import { CategoryIcon, LogoIcon } from "@/components/icons/EraIcons";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 
-const CAT_HEX = { weapon: "#d4713f", engine: "#c9a678", reactor: "#b8963f", shield: "#8c9aa3", module: "#a1786b" };
+const CAT_HEX = { weapon: "#f08a45", engine: "#e3c08a", reactor: "#e0b64c", shield: "#a9bcc7", module: "#cf9a86" };
 
 export default function Dashboard() {
   const { data: components = [] } = useQuery({ queryKey: ["components"], queryFn: () => base44.entities.Component.list("-created_date", 500) });
@@ -71,11 +71,11 @@ export default function Dashboard() {
           <div className="tech-label mb-3">Databank Distribution</div>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={catData} barSize={26}>
-              <XAxis dataKey="cat" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(36 12% 62%)" }} axisLine={false} tickLine={false} />
+              <XAxis dataKey="cat" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(36 10% 70%)" }} axisLine={false} tickLine={false} />
               <YAxis hide />
               <Tooltip
-                cursor={{ fill: "hsl(32 8% 18%)" }}
-                contentStyle={{ fontFamily: "IBM Plex Mono", fontSize: 11, borderRadius: 0, background: "hsl(32 9% 12%)", border: "1px solid hsl(32 9% 23%)", color: "hsl(38 22% 90%)" }}
+                cursor={{ fill: "hsl(30 6% 15%)" }}
+                contentStyle={{ fontFamily: "IBM Plex Mono", fontSize: 11, borderRadius: 0, background: "hsl(30 7% 10%)", border: "1px solid hsl(30 7% 22%)", color: "hsl(40 18% 95%)" }}
               />
               <Bar dataKey="count" radius={[2, 2, 0, 0]}>
                 {catData.map((d) => (

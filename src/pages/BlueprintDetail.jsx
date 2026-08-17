@@ -10,11 +10,11 @@ import { toast } from "sonner";
 
 const CELL = 40;
 const CAT_BG = {
-  weapon: "bg-[#d4713f]/15 border-[#d4713f]/70",
-  engine: "bg-[#c9a678]/15 border-[#c9a678]/70",
-  reactor: "bg-[#b8963f]/15 border-[#b8963f]/70",
-  shield: "bg-[#8c9aa3]/15 border-[#8c9aa3]/70",
-  module: "bg-[#a1786b]/15 border-[#a1786b]/70",
+  weapon: "bg-[#f08a45]/15 border-[#f08a45]/80",
+  engine: "bg-[#e3c08a]/15 border-[#e3c08a]/80",
+  reactor: "bg-[#e0b64c]/15 border-[#e0b64c]/80",
+  shield: "bg-[#a9bcc7]/15 border-[#a9bcc7]/80",
+  module: "bg-[#cf9a86]/15 border-[#cf9a86]/80",
 };
 
 export default function BlueprintDetail() {

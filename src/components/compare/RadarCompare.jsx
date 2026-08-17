@@ -15,11 +15,11 @@ export default function RadarCompare({ a, b, axes }) {
   return (
     <ResponsiveContainer width="100%" height={340}>
       <RadarChart data={data} outerRadius="72%">
-        <PolarGrid stroke="hsl(32 9% 26%)" />
-        <PolarAngleAxis dataKey="axis" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(36 12% 62%)" }} />
-        <Radar name={a?.name || "A"} dataKey="A" stroke="#d4713f" fill="#d4713f" fillOpacity={0.25} strokeWidth={2} />
-        <Radar name={b?.name || "B"} dataKey="B" stroke="#8c9aa3" fill="#8c9aa3" fillOpacity={0.2} strokeWidth={2} />
-        <Legend wrapperStyle={{ fontFamily: "Rajdhani", fontSize: 13, textTransform: "uppercase", letterSpacing: "0.1em", color: "hsl(38 22% 90%)" }} />
+        <PolarGrid stroke="hsl(30 7% 24%)" />
+        <PolarAngleAxis dataKey="axis" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(36 10% 70%)" }} />
+        <Radar name={a?.name || "A"} dataKey="A" stroke="#f08a45" fill="#f08a45" fillOpacity={0.25} strokeWidth={2} />
+        <Radar name={b?.name || "B"} dataKey="B" stroke="#a9bcc7" fill="#a9bcc7" fillOpacity={0.2} strokeWidth={2} />
+        <Legend wrapperStyle={{ fontFamily: "Rajdhani", fontSize: 13, textTransform: "uppercase", letterSpacing: "0.1em", color: "hsl(40 18% 95%)" }} />
       </RadarChart>
     </ResponsiveContainer>
   );
