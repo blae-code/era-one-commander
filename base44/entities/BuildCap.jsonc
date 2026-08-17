@@ -29,16 +29,84 @@
       "type": "number"
     },
     "unit_class_cap_singleplayer": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "Corvette": {
+          "type": "number"
+        },
+        "Utility": {
+          "type": "number"
+        },
+        "Fighter": {
+          "type": "number"
+        },
+        "Frigate": {
+          "type": "number"
+        },
+        "Platform": {
+          "type": "number"
+        }
+      }
     },
     "unit_class_cap_multiplayer": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "Corvette": {
+          "type": "number"
+        },
+        "Utility": {
+          "type": "number"
+        },
+        "Fighter": {
+          "type": "number"
+        },
+        "Frigate": {
+          "type": "number"
+        },
+        "Platform": {
+          "type": "number"
+        }
+      }
     },
     "module_class_cap_singleplayer": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "Command": {
+          "type": "number"
+        },
+        "Structural": {
+          "type": "number"
+        },
+        "Weapon": {
+          "type": "number"
+        },
+        "Facility": {
+          "type": "number"
+        },
+        "Utility": {
+          "type": "number"
+        }
+      }
     },
     "module_class_cap_multiplayer": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "Command": {
+          "type": "number"
+        },
+        "Structural": {
+          "type": "number"
+        },
+        "Weapon": {
+          "type": "number"
+        },
+        "Facility": {
+          "type": "number"
+        },
+        "Utility": {
+          "type": "number"
+        }
+      }
     },
     "game_version": {
       "type": "string",

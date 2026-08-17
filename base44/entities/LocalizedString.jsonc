@@ -19,6 +19,9 @@
     "game_build": {
       "type": "string",
       "description": "Steam buildid the record was extracted from"
+    },
+    "text_en_truncated": {
+      "type": "boolean"
     }
   },
   "required": [

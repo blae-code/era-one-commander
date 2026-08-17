@@ -334,6 +334,14 @@
     },
     "hardpoints": {
       "type": "object",
+      "properties": {
+        "secondary": {
+          "type": "number"
+        },
+        "primary": {
+          "type": "number"
+        }
+      },
       "description": "Customizable hardpoint counts by slot type"
     },
     "levels": {
@@ -348,7 +356,27 @@
             "type": "number"
           },
           "stat_upgrades": {
-            "type": "array"
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stat": {
+                  "type": "string"
+                },
+                "operation": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                },
+                "clamp": {
+                  "type": "boolean"
+                },
+                "abs": {
+                  "type": "boolean"
+                }
+              }
+            }
           }
         }
       },

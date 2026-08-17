@@ -78,10 +78,56 @@
       }
     },
     "root_part": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "$type": {
+          "type": "string"
+        },
+        "$id": {
+          "type": "number"
+        },
+        "m_AssetGUID": {
+          "type": "string"
+        },
+        "m_SubObjectName": {
+          "type": "string"
+        },
+        "m_SubObjectType": {
+          "type": "string"
+        },
+        "m_SubObjectGUID": {
+          "type": "string"
+        },
+        "m_EditorAssetChanged": {
+          "type": "boolean"
+        }
+      }
     },
     "command_part": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "$type": {
+          "type": "string"
+        },
+        "$id": {
+          "type": "number"
+        },
+        "m_AssetGUID": {
+          "type": "string"
+        },
+        "m_SubObjectName": {
+          "type": "string"
+        },
+        "m_SubObjectType": {
+          "type": "string"
+        },
+        "m_SubObjectGUID": {
+          "type": "string"
+        },
+        "m_EditorAssetChanged": {
+          "type": "boolean"
+        }
+      }
     },
     "game_version": {
       "type": "string",

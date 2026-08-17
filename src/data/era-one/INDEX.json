@@ -240,7 +240,7 @@
    "entity": "LocalizedString",
    "source_table": "localization",
    "rows": 2448,
-   "columns": 5,
+   "columns": 6,
    "key": "game_id"
   }
  ]
