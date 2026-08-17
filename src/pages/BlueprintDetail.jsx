@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Wrench, Heart, Trash2 } from "lucide-react";
 import { CategoryIcon, HullIcon } from "@/components/icons/EraIcons";
 import StatsPanel from "@/components/builder/StatsPanel";
+import VersionHistory from "@/components/blueprints/VersionHistory";
 import { toast } from "sonner";
 
 const CELL = 40;
@@ -130,6 +131,10 @@ export default function BlueprintDetail() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mt-5">
+        <VersionHistory blueprint={bp} />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ export default function ShipBuilder() {
   const [saveOpen, setSaveOpen] = useState(false);
   const [saving, setSaving] = useState(false);
   const [loadedName, setLoadedName] = useState(null);
+  const [loadedId, setLoadedId] = useState(null);
 
   const { data: hulls = [] } = useQuery({ queryKey: ["hulls"], queryFn: () => base44.entities.Hull.list("-created_date", 100) });
   const { data: components = [] } = useQuery({ queryKey: ["components"], queryFn: () => base44.entities.Component.list("-created_date", 500) });
@@ -37,6 +38,7 @@ export default function ShipBuilder() {
           .map((p, i) => ({ key: `${p.component_id}-${i}-${Date.now()}`, component: byId[p.component_id], x: p.x, y: p.y, w: p.w, h: p.h }))
       );
       setLoadedName(bp.name);
+      setLoadedId(bp.id);
     });
   }, [hulls, components]);
 
@@ -46,6 +48,7 @@ export default function ShipBuilder() {
     setHull(h);
     setPlacements([]);
     setLoadedName(null);
+    setLoadedId(null);
   };
 
   const place = (comp, x, y) => {
@@ -59,7 +62,7 @@ export default function ShipBuilder() {
 
   const save = async (meta) => {
     setSaving(true);
-    const bp = await base44.entities.Blueprint.create({
+    const payload = {
       ...meta,
       hull_id: hull.id,
       hull_name: hull.name,
@@ -71,11 +74,28 @@ export default function ShipBuilder() {
         x: p.x, y: p.y, w: p.w, h: p.h,
       })),
       stats,
+    };
+    let bpId = loadedId;
+    if (loadedId) {
+      await base44.entities.Blueprint.update(loadedId, payload);
+    } else {
+      const bp = await base44.entities.Blueprint.create(payload);
+      bpId = bp.id;
+    }
+    const prior = await base44.entities.BlueprintVersion.filter({ blueprint_id: bpId }, "-version", 1);
+    await base44.entities.BlueprintVersion.create({
+      blueprint_id: bpId,
+      version: prior.length ? (prior[0].version || 0) + 1 : 1,
+      name: meta.name,
+      hull_id: hull.id,
+      hull_name: hull.name,
+      placements: payload.placements,
+      stats,
     });
     setSaving(false);
     setSaveOpen(false);
-    toast.success("Blueprint registered", { description: meta.name });
-    navigate(`/blueprints/${bp.id}`);
+    toast.success(loadedId ? "Blueprint revision saved" : "Blueprint registered", { description: meta.name });
+    navigate(`/blueprints/${bpId}`);
   };
 
   return (
@@ -115,7 +135,7 @@ export default function ShipBuilder() {
       </div>
 
       {saveOpen && (
-        <SaveBlueprintDialog open={saveOpen} onOpenChange={setSaveOpen} onSave={save} saving={saving} defaults={{ name: loadedName ? `${loadedName} (Rev)` : "" }} />
+        <SaveBlueprintDialog open={saveOpen} onOpenChange={setSaveOpen} onSave={save} saving={saving} defaults={{ name: loadedName || "" }} />
       )}
     </div>
   );
