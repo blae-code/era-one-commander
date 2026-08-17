@@ -15,9 +15,16 @@ export const ERA_ONE_ENTITIES = [
   { entity: 'ResearchNode', file: 'ResearchNode', keyed: true },
   { entity: 'Resource', file: 'Resource', keyed: true },
   { entity: 'Station', file: 'Station', keyed: true },
+  { entity: 'Asteroid', file: 'Asteroid', keyed: true },
   { entity: 'GameBlueprint', file: 'GameBlueprint', keyed: true },
-  { entity: 'StatModifier', file: 'StatModifier', keyed: false },
-  { entity: 'LootEntry', file: 'LootEntry', keyed: false },
+  { entity: 'StatModifier', file: 'StatModifier', keyed: true },
+  { entity: 'LootEntry', file: 'LootEntry', keyed: true },
+  { entity: 'UnitLevel', file: 'UnitLevel', keyed: true },
+  { entity: 'BlueprintPart', file: 'BlueprintPart', keyed: true },
+  { entity: 'ResearchEdge', file: 'ResearchEdge', keyed: true },
+  { entity: 'ModuleWeapon', file: 'ModuleWeapon', keyed: true },
+  { entity: 'UnitWeapon', file: 'UnitWeapon', keyed: true },
+  { entity: 'LocalizedString', file: 'LocalizedString', keyed: true },
 ];
 
 const CHUNK = 100;
@@ -39,6 +46,23 @@ export async function loadIndex() {
   try { return await loadJson('INDEX'); } catch { return null; }
 }
 
+/** Read every record of an entity, paging with skip when the SDK supports it (stops if a page repeats). */
+export async function listAll(api, sort = 'game_id', page = 1000) {
+  const out = [];
+  let skip = 0, lastFirst = null;
+  for (let i = 0; i < 100; i++) {
+    let rows;
+    try { rows = await api.list(sort, page, skip); } catch { rows = await api.list(sort, page); }
+    if (!rows || rows.length === 0) break;
+    if (rows[0]?.id && rows[0].id === lastFirst) break; // skip unsupported -> same page again
+    lastFirst = rows[0]?.id ?? null;
+    out.push(...rows);
+    if (rows.length < page) break;
+    skip += rows.length;
+  }
+  return out;
+}
+
 function changed(existing, incoming) {
   for (const [k, v] of Object.entries(incoming)) {
     if (JSON.stringify(existing[k] ?? null) !== JSON.stringify(v ?? null)) return true;
@@ -55,7 +79,7 @@ export async function upsertEntityRows(base44, entity, rows, { onProgress = () =
   let created = 0, updated = 0, deleted = 0, unchanged = 0;
   {
     if (keyed) {
-      const existing = await api.list('game_id', 5000);
+      const existing = await listAll(api, 'game_id');
       const byKey = new Map(existing.map((r) => [r.game_id, r]));
       const toCreate = [], toUpdate = [];
       for (const r of rows) {

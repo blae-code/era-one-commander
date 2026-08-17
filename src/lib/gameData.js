@@ -14,8 +14,9 @@ export const countIds = (ids = []) => {
   return [...m.entries()];
 };
 
-const LIMITS = { Module: 500, Unit: 200, Weapon: 300, Turret: 300, Subsystem: 100, ResearchNode: 500, Resource: 50, Station: 50, GameBlueprint: 200 };
+import { listAll } from "@/lib/seedGameData";
 
+// Every game entity is keyed by game_id (synthetic for the relation tables). listAll pages if needed.
 export function useGameEntity(entity, enabled = true) {
   return useQuery({
     queryKey: ["game", entity],
@@ -23,7 +24,8 @@ export function useGameEntity(entity, enabled = true) {
     staleTime: 5 * 60 * 1000,
     queryFn: async () => {
       try {
-        return await base44.entities[entity].list("game_id", LIMITS[entity] || 500);
+        const api = base44.entities[entity];
+        return api ? await listAll(api, "game_id") : [];
       } catch {
         return []; // entity not deployed yet — pages show the "import game data" hint
       }

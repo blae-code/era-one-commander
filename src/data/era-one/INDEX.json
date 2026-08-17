@@ -51,56 +51,63 @@
    "entity": "Module",
    "source_table": "modules",
    "rows": 103,
-   "columns": 85,
+   "columns": 86,
    "key": "game_id"
   },
   {
    "entity": "Weapon",
    "source_table": "weapons",
    "rows": 65,
-   "columns": 58,
+   "columns": 59,
    "key": "game_id"
   },
   {
    "entity": "Turret",
    "source_table": "turrets",
    "rows": 51,
-   "columns": 31,
+   "columns": 32,
    "key": "game_id"
   },
   {
    "entity": "Subsystem",
    "source_table": "subsystems",
    "rows": 4,
-   "columns": 8,
+   "columns": 9,
    "key": "game_id"
   },
   {
    "entity": "Unit",
    "source_table": "units",
    "rows": 27,
-   "columns": 86,
+   "columns": 87,
    "key": "game_id"
   },
   {
    "entity": "ResearchNode",
    "source_table": "research",
    "rows": 131,
-   "columns": 41,
+   "columns": 42,
    "key": "game_id"
   },
   {
    "entity": "Resource",
    "source_table": "resources",
    "rows": 5,
-   "columns": 11,
+   "columns": 12,
    "key": "game_id"
   },
   {
    "entity": "Station",
    "source_table": "stations",
    "rows": 6,
-   "columns": 9,
+   "columns": 10,
+   "key": "game_id"
+  },
+  {
+   "entity": "Asteroid",
+   "source_table": "asteroids",
+   "rows": 17,
+   "columns": 22,
    "key": "game_id"
   },
   {
@@ -114,15 +121,57 @@
    "entity": "StatModifier",
    "source_table": "stat_modifiers",
    "rows": 1249,
-   "columns": 10,
-   "key": null
+   "columns": 11,
+   "key": "game_id"
   },
   {
    "entity": "LootEntry",
    "source_table": "loot_tables",
    "rows": 71,
-   "columns": 8,
-   "key": null
+   "columns": 9,
+   "key": "game_id"
+  },
+  {
+   "entity": "UnitLevel",
+   "source_table": "unit_levels",
+   "rows": 1080,
+   "columns": 11,
+   "key": "game_id"
+  },
+  {
+   "entity": "BlueprintPart",
+   "source_table": "blueprint_parts",
+   "rows": 2788,
+   "columns": 13,
+   "key": "game_id"
+  },
+  {
+   "entity": "ResearchEdge",
+   "source_table": "research_edges",
+   "rows": 448,
+   "columns": 6,
+   "key": "game_id"
+  },
+  {
+   "entity": "ModuleWeapon",
+   "source_table": "module_weapons",
+   "rows": 41,
+   "columns": 7,
+   "key": "game_id"
+  },
+  {
+   "entity": "UnitWeapon",
+   "source_table": "unit_weapons",
+   "rows": 36,
+   "columns": 7,
+   "key": "game_id"
+  },
+  {
+   "entity": "LocalizedString",
+   "source_table": "localization",
+   "rows": 2448,
+   "columns": 5,
+   "key": "game_id"
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Resource",
+  "name": "Asteroid",
   "type": "object",
   "properties": {
     "game_id": {
@@ -22,20 +22,47 @@
       "type": "string",
       "description": "In-game description (rich-text tags stripped)"
     },
+    "restriction": {
+      "type": "number"
+    },
     "work_in_progress": {
       "type": "boolean"
     },
-    "extraction_rate": {
+    "is_work_in_progress": {
       "type": "number"
     },
-    "refining_rate": {
+    "base_signature_noise": {
       "type": "number"
     },
-    "color_rgba": {
-      "type": "array",
-      "items": {
-        "type": "number"
-      }
+    "use_pool": {
+      "type": "number"
+    },
+    "use_pool_defaults": {
+      "type": "number"
+    },
+    "pool_max_size": {
+      "type": "number"
+    },
+    "pool_init_capacity": {
+      "type": "number"
+    },
+    "disable_entity_shake": {
+      "type": "number"
+    },
+    "construction_special_event": {
+      "type": "number"
+    },
+    "destruction_special_event": {
+      "type": "number"
+    },
+    "experience_reward": {
+      "type": "number"
+    },
+    "under_attack_special_event": {
+      "type": "number"
+    },
+    "mass": {
+      "type": "number"
     },
     "full": {
       "type": "object",
@@ -53,5 +80,5 @@
   "required": [
     "game_id"
   ],
-  "description": "Era One Resource records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+  "description": "Era One Asteroid records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
 }

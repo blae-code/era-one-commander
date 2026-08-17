@@ -2,6 +2,10 @@
   "name": "StatModifier",
   "type": "object",
   "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
+    },
     "source_type": {
       "type": "string",
       "enum": [
@@ -86,6 +90,8 @@
       "description": "Steam buildid the record was extracted from"
     }
   },
-  "required": [],
+  "required": [
+    "game_id"
+  ],
   "description": "Era One StatModifier records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
 }

@@ -1,0 +1,326 @@
+[
+{
+"game_id": "CMX_BOM##WPN.001",
+"unit_id": "CMX_BOM",
+"turret_id": null,
+"weapon_id": "WPN.001",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI2#TURT.019#",
+"unit_id": "CMX_FRI2",
+"turret_id": "TURT.019",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI2##WPN.021",
+"unit_id": "CMX_FRI2",
+"turret_id": null,
+"weapon_id": "WPN.021",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI3#TURT.010#",
+"unit_id": "CMX_FRI3",
+"turret_id": "TURT.010",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI3##WPN.013",
+"unit_id": "CMX_FRI3",
+"turret_id": null,
+"weapon_id": "WPN.013",
+"count": 3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI4#TURT.013#",
+"unit_id": "CMX_FRI4",
+"turret_id": "TURT.013",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_FRI4##WPN.016",
+"unit_id": "CMX_FRI4",
+"turret_id": null,
+"weapon_id": "WPN.016",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_INT##WPN.023",
+"unit_id": "CMX_INT",
+"turret_id": null,
+"weapon_id": "WPN.023",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_REPD##WPN.038",
+"unit_id": "CMX_REPD",
+"turret_id": null,
+"weapon_id": "WPN.038",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "CMX_SCO##WPN.039",
+"unit_id": "CMX_SCO",
+"turret_id": null,
+"weapon_id": "WPN.039",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_BOM##WPN.042",
+"unit_id": "PIR_BOM",
+"turret_id": null,
+"weapon_id": "WPN.042",
+"count": 3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_BOM2##WPN.042",
+"unit_id": "PIR_BOM2",
+"turret_id": null,
+"weapon_id": "WPN.042",
+"count": 6,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI#TURT.055#",
+"unit_id": "PIR_FRI",
+"turret_id": "TURT.055",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI#TURT.034#",
+"unit_id": "PIR_FRI",
+"turret_id": "TURT.034",
+"weapon_id": null,
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI##WPN.045",
+"unit_id": "PIR_FRI",
+"turret_id": null,
+"weapon_id": "WPN.045",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI##WPN.044",
+"unit_id": "PIR_FRI",
+"turret_id": null,
+"weapon_id": "WPN.044",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI1#TURT.035#",
+"unit_id": "PIR_FRI1",
+"turret_id": "TURT.035",
+"weapon_id": null,
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI1#TURT.055#",
+"unit_id": "PIR_FRI1",
+"turret_id": "TURT.055",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI1##WPN.046",
+"unit_id": "PIR_FRI1",
+"turret_id": null,
+"weapon_id": "WPN.046",
+"count": 8,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI1##WPN.044",
+"unit_id": "PIR_FRI1",
+"turret_id": null,
+"weapon_id": "WPN.044",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY#TURT.055#",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": "TURT.055",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY#TURT.040#",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": "TURT.040",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY#TURT.034#",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": "TURT.034",
+"weapon_id": null,
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY#TURT.035#",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": "TURT.035",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY##WPN.046",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": null,
+"weapon_id": "WPN.046",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY##WPN.045",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": null,
+"weapon_id": "WPN.045",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY##WPN.052",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": null,
+"weapon_id": "WPN.052",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_HVY##WPN.044",
+"unit_id": "PIR_FRI_HVY",
+"turret_id": null,
+"weapon_id": "WPN.044",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_ION#TURT.040#",
+"unit_id": "PIR_FRI_ION",
+"turret_id": "TURT.040",
+"weapon_id": null,
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_ION#TURT.055#",
+"unit_id": "PIR_FRI_ION",
+"turret_id": "TURT.055",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_ION##WPN.052",
+"unit_id": "PIR_FRI_ION",
+"turret_id": null,
+"weapon_id": "WPN.052",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_FRI_ION##WPN.044",
+"unit_id": "PIR_FRI_ION",
+"turret_id": null,
+"weapon_id": "WPN.044",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_INT##WPN.043",
+"unit_id": "PIR_INT",
+"turret_id": null,
+"weapon_id": "WPN.043",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_INT2##WPN.043",
+"unit_id": "PIR_INT2",
+"turret_id": null,
+"weapon_id": "WPN.043",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_PERF_MINE##WPN.065",
+"unit_id": "PIR_PERF_MINE",
+"turret_id": null,
+"weapon_id": "WPN.065",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PIR_SCO##WPN.043",
+"unit_id": "PIR_SCO",
+"turret_id": null,
+"weapon_id": "WPN.043",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

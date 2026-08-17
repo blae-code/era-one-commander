@@ -1,5 +1,6 @@
 [
 {
+"game_id": "Research Whole Tree#R.T.CLO",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.CLO",
@@ -10,6 +11,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.DFI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.DFI",
@@ -20,6 +22,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.DAR",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.DAR",
@@ -30,6 +33,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.AFI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.AFI",
@@ -40,6 +44,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.HCS",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.HCS",
@@ -50,6 +55,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.AME",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.AME",
@@ -60,6 +66,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.NFE",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.NFE",
@@ -70,6 +77,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.QC",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.QC",
@@ -80,6 +88,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RSI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RSI",
@@ -90,6 +99,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.ETS",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.ETS",
@@ -100,6 +110,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RUBM",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUBM",
@@ -110,6 +121,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RUFUS",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUFUS",
@@ -120,6 +132,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RUMD",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUMD",
@@ -130,6 +143,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.SSO",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.SSO",
@@ -140,6 +154,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.TAR",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.TAR",
@@ -150,6 +165,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.WD",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.WD",
@@ -160,6 +176,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.WRP",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.WRP",
@@ -170,6 +187,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.AWA",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.AWA",
@@ -180,6 +198,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.ACMI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.ACMI",
@@ -190,6 +209,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.CMI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.CMI",
@@ -200,6 +220,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.GAT",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.GAT",
@@ -210,6 +231,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.SHV",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.SHV",
@@ -220,6 +242,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.HKI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.HKI",
@@ -230,6 +253,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.WPL",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.WPL",
@@ -240,6 +264,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.KIN",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.KIN",
@@ -250,6 +275,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.LCA",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.LCA",
@@ -260,6 +286,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.HMI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.HMI",
@@ -270,6 +297,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.HBL",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.HBL",
@@ -280,6 +308,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.PCA",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.PCA",
@@ -290,6 +319,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.LRM",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.LRM",
@@ -300,6 +330,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.LRNB",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.LRNB",
@@ -310,6 +341,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RMI",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RMI",
@@ -320,6 +352,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#R.T.RHIC",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": "R.T.RHIC",
@@ -330,6 +363,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree#",
 "table": "Research Whole Tree",
 "tier_multiplier": 1000,
 "item_id": null,
@@ -340,6 +374,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.CLO",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.CLO",
@@ -350,6 +385,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.DFI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.DFI",
@@ -360,6 +396,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.DAR",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.DAR",
@@ -370,6 +407,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.AFI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.AFI",
@@ -380,6 +418,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.HCS",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.HCS",
@@ -390,6 +429,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.AME",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.AME",
@@ -400,6 +440,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.NFE",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.NFE",
@@ -410,6 +451,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.QC",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.QC",
@@ -420,6 +462,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RSI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RSI",
@@ -430,6 +473,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.ETS",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.ETS",
@@ -440,6 +484,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RUBM",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUBM",
@@ -450,6 +495,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RUFUS",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUFUS",
@@ -460,6 +506,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RUMD",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RUMD",
@@ -470,6 +517,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.SSO",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.SSO",
@@ -480,6 +528,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.TAR",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.TAR",
@@ -490,6 +539,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.WD",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.WD",
@@ -500,6 +550,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.WRP",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.WRP",
@@ -510,6 +561,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.AWA",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.AWA",
@@ -520,6 +572,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.ACMI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.ACMI",
@@ -530,6 +583,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.CMI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.CMI",
@@ -540,6 +594,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.GAT",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.GAT",
@@ -550,6 +605,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.SHV",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.SHV",
@@ -560,6 +616,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.HKI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.HKI",
@@ -570,6 +627,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.WPL",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.WPL",
@@ -580,6 +638,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.KIN",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.KIN",
@@ -590,6 +649,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.LCA",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.LCA",
@@ -600,6 +660,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.HMI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.HMI",
@@ -610,6 +671,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.HBL",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.HBL",
@@ -620,6 +682,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.PCA",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.PCA",
@@ -630,6 +693,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.LRM",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.LRM",
@@ -640,6 +704,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.LRNB",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.LRNB",
@@ -650,6 +715,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RMI",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RMI",
@@ -660,6 +726,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research Whole Tree Guarantuees#R.T.RHIC",
 "table": "Research Whole Tree Guarantuees",
 "tier_multiplier": 1000,
 "item_id": "R.T.RHIC",
@@ -670,6 +737,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research 1#R.T.RHIC",
 "table": "Research 1",
 "tier_multiplier": 1000,
 "item_id": "R.T.RHIC",
@@ -680,6 +748,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research 1#R.U.E2",
 "table": "Research 1",
 "tier_multiplier": 1000,
 "item_id": "R.U.E2",
@@ -690,6 +759,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research 1#R.T.SHV",
 "table": "Research 1",
 "tier_multiplier": 1000,
 "item_id": "R.T.SHV",
@@ -700,6 +770,7 @@
 "game_build": "24615926"
 },
 {
+"game_id": "Research 1#",
 "table": "Research 1",
 "tier_multiplier": 1000,
 "item_id": null,

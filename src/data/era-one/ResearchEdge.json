@@ -1,0 +1,3586 @@
+[
+{
+"game_id": "R.A.SIE#R.A.SWW#requires",
+"from_id": "R.A.SIE",
+"to_id": "R.A.SWW",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.A.SIE#R.A.SWW#child",
+"from_id": "R.A.SIE",
+"to_id": "R.A.SWW",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.S.UNAVAILABLE#R.T.RUBM#child",
+"from_id": "R.S.UNAVAILABLE",
+"to_id": "R.T.RUBM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.S.UNAVAILABLE#R.T.RUMD#child",
+"from_id": "R.S.UNAVAILABLE",
+"to_id": "R.T.RUMD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.S.UNAVAILABLE#R.T.RUFIE#child",
+"from_id": "R.S.UNAVAILABLE",
+"to_id": "R.T.RUFIE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.ACMI#R.U.ACMI2#requires",
+"from_id": "R.T.ACMI",
+"to_id": "R.U.ACMI2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.ACMI#R.U.ACMI2#child",
+"from_id": "R.T.ACMI",
+"to_id": "R.U.ACMI2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.AFI#R.A.BML#requires",
+"from_id": "R.T.AFI",
+"to_id": "R.A.BML",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.AFI#R.A.BML#child",
+"from_id": "R.T.AFI",
+"to_id": "R.A.BML",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.AME#R.A.FRE#requires",
+"from_id": "R.T.AME",
+"to_id": "R.A.FRE",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.AME#R.A.FRE#child",
+"from_id": "R.T.AME",
+"to_id": "R.A.FRE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.CMI#R.T.MRTR#requires",
+"from_id": "R.T.CMI",
+"to_id": "R.T.MRTR",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.CMI#R.T.LRM#requires",
+"from_id": "R.T.CMI",
+"to_id": "R.T.LRM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.CMI#R.T.MRTR#child",
+"from_id": "R.T.CMI",
+"to_id": "R.T.MRTR",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DFI#R.U.DF1#child",
+"from_id": "R.T.DFI",
+"to_id": "R.U.DF1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DFI#R.T.RSI#child",
+"from_id": "R.T.DFI",
+"to_id": "R.T.RSI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DFI#R.U.DF1#requires",
+"from_id": "R.T.DFI",
+"to_id": "R.U.DF1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DFI#R.T.RSI#requires",
+"from_id": "R.T.DFI",
+"to_id": "R.T.RSI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DRLL#R.U.DRL1#child",
+"from_id": "R.T.DRLL",
+"to_id": "R.U.DRL1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.DRLL#R.U.DRL1#requires",
+"from_id": "R.T.DRLL",
+"to_id": "R.U.DRL1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.ETS#R.T.AETS#requires",
+"from_id": "R.T.ETS",
+"to_id": "R.T.AETS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.ETS#R.T.AETS#child",
+"from_id": "R.T.ETS",
+"to_id": "R.T.AETS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.GAT#R.T.ACMI#child",
+"from_id": "R.T.GAT",
+"to_id": "R.T.ACMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.GAT#R.T.ACMI#requires",
+"from_id": "R.T.GAT",
+"to_id": "R.T.ACMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.HBL#R.T.LRNB#requires",
+"from_id": "R.T.HBL",
+"to_id": "R.T.LRNB",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.HBL#R.T.LRNB#child",
+"from_id": "R.T.HBL",
+"to_id": "R.T.LRNB",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.HKI#R.T.HAC#child",
+"from_id": "R.T.HKI",
+"to_id": "R.T.HAC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.HKI#R.T.HAC#requires",
+"from_id": "R.T.HKI",
+"to_id": "R.T.HAC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.KIN#R.T.HKI#requires",
+"from_id": "R.T.KIN",
+"to_id": "R.T.HKI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.KIN#R.T.HKI#child",
+"from_id": "R.T.KIN",
+"to_id": "R.T.HKI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.LCA#R.T.PCA#requires",
+"from_id": "R.T.LCA",
+"to_id": "R.T.PCA",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.LCA#R.T.PCA#child",
+"from_id": "R.T.LCA",
+"to_id": "R.T.PCA",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.MRTR#R.T.LRM#child",
+"from_id": "R.T.MRTR",
+"to_id": "R.T.LRM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.NFE#R.T.QC#requires",
+"from_id": "R.T.NFE",
+"to_id": "R.T.QC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.NFE#R.T.HCS#requires",
+"from_id": "R.T.NFE",
+"to_id": "R.T.HCS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.NFE#R.T.QC#child",
+"from_id": "R.T.NFE",
+"to_id": "R.T.QC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.NFE#R.T.HCS#child",
+"from_id": "R.T.NFE",
+"to_id": "R.T.HCS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.QC#R.T.HCS#child",
+"from_id": "R.T.QC",
+"to_id": "R.T.HCS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.QC#R.T.HCS#requires",
+"from_id": "R.T.QC",
+"to_id": "R.T.HCS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RMI#R.T.CMI#child",
+"from_id": "R.T.RMI",
+"to_id": "R.T.CMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RMI#R.T.LRM#child",
+"from_id": "R.T.RMI",
+"to_id": "R.T.LRM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RMI#R.T.LRM#requires",
+"from_id": "R.T.RMI",
+"to_id": "R.T.LRM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RMI#R.T.CMI#requires",
+"from_id": "R.T.RMI",
+"to_id": "R.T.CMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUMD#requires",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUMD",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUBM#requires",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUBM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUFUS#child",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUFUS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUMD#child",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUMD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUBM#child",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUBM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFIE#R.T.RUFUS#requires",
+"from_id": "R.T.RUFIE",
+"to_id": "R.T.RUFUS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFUS#R.T.RUMD#requires",
+"from_id": "R.T.RUFUS",
+"to_id": "R.T.RUMD",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFUS#R.T.RUBM#requires",
+"from_id": "R.T.RUFUS",
+"to_id": "R.T.RUBM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFUS#R.T.RUMD#child",
+"from_id": "R.T.RUFUS",
+"to_id": "R.T.RUMD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUFUS#R.T.RUBM#child",
+"from_id": "R.T.RUFUS",
+"to_id": "R.T.RUBM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUMD#R.T.RUBM#child",
+"from_id": "R.T.RUMD",
+"to_id": "R.T.RUBM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.RUMD#R.T.RUBM#requires",
+"from_id": "R.T.RUMD",
+"to_id": "R.T.RUBM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.SHV#R.T.RHIC#requires",
+"from_id": "R.T.SHV",
+"to_id": "R.T.RHIC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.SHV#R.T.RHIC#child",
+"from_id": "R.T.SHV",
+"to_id": "R.T.RHIC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.SSI#R.T.ASSI#child",
+"from_id": "R.T.SSI",
+"to_id": "R.T.ASSI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.SSI#R.T.ASSI#requires",
+"from_id": "R.T.SSI",
+"to_id": "R.T.ASSI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.TAR#R.T.DAR#child",
+"from_id": "R.T.TAR",
+"to_id": "R.T.DAR",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.TAR#R.T.DAR#requires",
+"from_id": "R.T.TAR",
+"to_id": "R.T.DAR",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WPL#R.T.SHV#child",
+"from_id": "R.T.WPL",
+"to_id": "R.T.SHV",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WPL#R.T.RHIC#requires",
+"from_id": "R.T.WPL",
+"to_id": "R.T.RHIC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WPL#R.T.SHV#requires",
+"from_id": "R.T.WPL",
+"to_id": "R.T.SHV",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WPPL#R.T.WPFPC#requires",
+"from_id": "R.T.WPPL",
+"to_id": "R.T.WPFPC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WPPL#R.T.WPFPC#child",
+"from_id": "R.T.WPPL",
+"to_id": "R.T.WPFPC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WRP#R.U.WD1#child",
+"from_id": "R.T.WRP",
+"to_id": "R.U.WD1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WRP#R.T.WD#child",
+"from_id": "R.T.WRP",
+"to_id": "R.T.WD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WRP#R.U.WD1#requires",
+"from_id": "R.T.WRP",
+"to_id": "R.U.WD1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.T.WRP#R.T.WD#requires",
+"from_id": "R.T.WRP",
+"to_id": "R.T.WD",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA1#R.U.CA2#child",
+"from_id": "R.U.CA1",
+"to_id": "R.U.CA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA1#R.U.CA2#requires",
+"from_id": "R.U.CA1",
+"to_id": "R.U.CA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA2#R.U.CA3#requires",
+"from_id": "R.U.CA2",
+"to_id": "R.U.CA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA2#R.U.CA3#child",
+"from_id": "R.U.CA2",
+"to_id": "R.U.CA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA3#R.U.CA4#requires",
+"from_id": "R.U.CA3",
+"to_id": "R.U.CA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA3#R.U.CA4#child",
+"from_id": "R.U.CA3",
+"to_id": "R.U.CA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA4#R.U.CA5#child",
+"from_id": "R.U.CA4",
+"to_id": "R.U.CA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CA4#R.U.CA5#requires",
+"from_id": "R.U.CA4",
+"to_id": "R.U.CA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC1#R.U.CC2#requires",
+"from_id": "R.U.CC1",
+"to_id": "R.U.CC2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC1#R.U.CC2#child",
+"from_id": "R.U.CC1",
+"to_id": "R.U.CC2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC2#R.U.CC3#requires",
+"from_id": "R.U.CC2",
+"to_id": "R.U.CC3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC2#R.U.CC3#child",
+"from_id": "R.U.CC2",
+"to_id": "R.U.CC3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC3#R.U.CC4#child",
+"from_id": "R.U.CC3",
+"to_id": "R.U.CC4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC3#R.U.CC4#requires",
+"from_id": "R.U.CC3",
+"to_id": "R.U.CC4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC4#R.U.CC5#child",
+"from_id": "R.U.CC4",
+"to_id": "R.U.CC5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CC4#R.U.CC5#requires",
+"from_id": "R.U.CC4",
+"to_id": "R.U.CC5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH1#R.U.CH2#child",
+"from_id": "R.U.CH1",
+"to_id": "R.U.CH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH1#R.U.CH2#requires",
+"from_id": "R.U.CH1",
+"to_id": "R.U.CH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH2#R.U.CH3#requires",
+"from_id": "R.U.CH2",
+"to_id": "R.U.CH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH2#R.U.CH3#child",
+"from_id": "R.U.CH2",
+"to_id": "R.U.CH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH3#R.U.CH4#requires",
+"from_id": "R.U.CH3",
+"to_id": "R.U.CH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH3#R.U.CH4#child",
+"from_id": "R.U.CH3",
+"to_id": "R.U.CH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH4#R.U.CH5#child",
+"from_id": "R.U.CH4",
+"to_id": "R.U.CH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CH4#R.U.CH5#requires",
+"from_id": "R.U.CH4",
+"to_id": "R.U.CH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA1#R.U.CHA2#child",
+"from_id": "R.U.CHA1",
+"to_id": "R.U.CHA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA1#R.U.CHA2#requires",
+"from_id": "R.U.CHA1",
+"to_id": "R.U.CHA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA2#R.U.CHA3#child",
+"from_id": "R.U.CHA2",
+"to_id": "R.U.CHA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA2#R.U.CHA3#requires",
+"from_id": "R.U.CHA2",
+"to_id": "R.U.CHA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA3#R.U.CHA4#child",
+"from_id": "R.U.CHA3",
+"to_id": "R.U.CHA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA3#R.U.CHA4#requires",
+"from_id": "R.U.CHA3",
+"to_id": "R.U.CHA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA4#R.U.CHA5#requires",
+"from_id": "R.U.CHA4",
+"to_id": "R.U.CHA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CHA4#R.U.CHA5#child",
+"from_id": "R.U.CHA4",
+"to_id": "R.U.CHA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS1#R.U.CS2#child",
+"from_id": "R.U.CS1",
+"to_id": "R.U.CS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS1#R.U.CS2#requires",
+"from_id": "R.U.CS1",
+"to_id": "R.U.CS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS2#R.U.CS3#child",
+"from_id": "R.U.CS2",
+"to_id": "R.U.CS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS2#R.U.CS3#requires",
+"from_id": "R.U.CS2",
+"to_id": "R.U.CS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS3#R.U.CS4#requires",
+"from_id": "R.U.CS3",
+"to_id": "R.U.CS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS3#R.U.CS4#child",
+"from_id": "R.U.CS3",
+"to_id": "R.U.CS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS4#R.U.CS5#requires",
+"from_id": "R.U.CS4",
+"to_id": "R.U.CS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.CS4#R.U.CS5#child",
+"from_id": "R.U.CS4",
+"to_id": "R.U.CS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF1#R.U.DF2#child",
+"from_id": "R.U.DF1",
+"to_id": "R.U.DF2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF1#R.U.DF2#requires",
+"from_id": "R.U.DF1",
+"to_id": "R.U.DF2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF2#R.U.DF3#requires",
+"from_id": "R.U.DF2",
+"to_id": "R.U.DF3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF2#R.U.DF3#child",
+"from_id": "R.U.DF2",
+"to_id": "R.U.DF3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF3#R.U.DF4#child",
+"from_id": "R.U.DF3",
+"to_id": "R.U.DF4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF3#R.U.DF4#requires",
+"from_id": "R.U.DF3",
+"to_id": "R.U.DF4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF4#R.U.DF5#child",
+"from_id": "R.U.DF4",
+"to_id": "R.U.DF5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.DF4#R.U.DF5#requires",
+"from_id": "R.U.DF4",
+"to_id": "R.U.DF5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRS1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRS1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FH1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FH1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.RMI#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.RMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.DRLL#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.DRLL",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CS1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.CS1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRA1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRA1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CHA1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.CHA1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.DFI#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.DFI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AME#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.AME",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.LCA#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.LCA",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.E2#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.E2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.SSI#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.SSI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.RUFIE#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.RUFIE",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.SSI#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.SSI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRA1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRA1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRH1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRH1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CS1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.CS1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FA1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FA1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FH1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FH1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.WD1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.WD1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.RUFIE#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.RUFIE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.US1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.US1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CC1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.CC1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.DF1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.DF1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FS1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FS1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CH1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.CH1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CA1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.CA1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRS1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRS1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.UH1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.UH1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CHA1#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.CHA1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.A.EMP#child",
+"from_id": "R.U.E1",
+"to_id": "R.A.EMP",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.A.SIE#child",
+"from_id": "R.U.E1",
+"to_id": "R.A.SIE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.HMI#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.HMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.GAT#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.GAT",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.ETS#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.ETS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.RMI#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.RMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.LCA#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.LCA",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.NFE#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.NFE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.SSO#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.SSO",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.TAR#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.TAR",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AME#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.AME",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.DRLL#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.DRLL",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.KIN#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.KIN",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AFI#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.AFI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AWA#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.AWA",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.DFI#child",
+"from_id": "R.U.E1",
+"to_id": "R.T.DFI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.E2#child",
+"from_id": "R.U.E1",
+"to_id": "R.U.E2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.DF1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.DF1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AWA#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.AWA",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FRH1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FRH1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FS1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FS1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.FA1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.FA1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.TAR#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.TAR",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CA1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.CA1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.NFE#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.NFE",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.WD1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.WD1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.ETS#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.ETS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.KIN#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.KIN",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.SSO#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.SSO",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.US1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.US1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CC1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.CC1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.CH1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.CH1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.A.SIE#requires",
+"from_id": "R.U.E1",
+"to_id": "R.A.SIE",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.AFI#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.AFI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.A.EMP#requires",
+"from_id": "R.U.E1",
+"to_id": "R.A.EMP",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.GAT#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.GAT",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.T.HMI#requires",
+"from_id": "R.U.E1",
+"to_id": "R.T.HMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E1#R.U.UH1#requires",
+"from_id": "R.U.E1",
+"to_id": "R.U.UH1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.A.BML#requires",
+"from_id": "R.U.E2",
+"to_id": "R.A.BML",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.AETS#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.AETS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WPL#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.WPL",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRS2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.FLMTHRW#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.FLMTHRW",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.PCA#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.PCA",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CHA2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.CHA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.UH2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.UH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.AETS#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.AETS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.UH2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.UH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRH2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CHA2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.CHA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FH2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FA2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CC2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.CC2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.A.SWW#child",
+"from_id": "R.U.E2",
+"to_id": "R.A.SWW",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CS2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.CS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.WD2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.WD2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CH2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.CH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.DF2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.DF2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FS2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.US2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.US2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CA2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.CA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRA2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRS2#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.A.BML#child",
+"from_id": "R.U.E2",
+"to_id": "R.A.BML",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.FLMTHRW#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.FLMTHRW",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WPL#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.WPL",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.PCA#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.PCA",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.DAR#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.DAR",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WRP#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.WRP",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.CMI#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.CMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.RUFUS#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.RUFUS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.ACMI#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.ACMI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.CLO#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.CLO",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WPPL#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.WPPL",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WD#child",
+"from_id": "R.U.E2",
+"to_id": "R.T.WD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.E3#child",
+"from_id": "R.U.E2",
+"to_id": "R.U.E3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.US2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.US2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CC2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.CC2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRA2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.A.SWW#requires",
+"from_id": "R.U.E2",
+"to_id": "R.A.SWW",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CS2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.CS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.E3#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.E3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.DF2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.DF2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FH2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FA2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WRP#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.WRP",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CA2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.CA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.CMI#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.CMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.CH2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.CH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.RUFUS#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.RUFUS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WPPL#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.WPPL",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.CLO#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.CLO",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.WD#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.WD",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FS2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.WD2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.WD2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.U.FRH2#requires",
+"from_id": "R.U.E2",
+"to_id": "R.U.FRH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.ACMI#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.ACMI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E2#R.T.DAR#requires",
+"from_id": "R.U.E2",
+"to_id": "R.T.DAR",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.UH3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.UH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.MRTR#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.MRTR",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FS3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.HKI#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.HKI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRH3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.A.FRE#requires",
+"from_id": "R.U.E3",
+"to_id": "R.A.FRE",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.RUMD#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.RUMD",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.SHV#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.SHV",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRS3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.DF3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.DF3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.US3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.US3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CC3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.CC3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.QC#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.QC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.DRL1#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.DRL1",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRA3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.ASSI#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.ASSI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.DF3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.DF3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FS3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FA3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CA3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.CA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.UH3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.UH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRS3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FH3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CHA3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.CHA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CS3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.CS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRH3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FRA3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.FRA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CH3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.CH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.US3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.US3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.WD3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.WD3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.DRL1#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.DRL1",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CC3#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.CC3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.A.FRE#child",
+"from_id": "R.U.E3",
+"to_id": "R.A.FRE",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.QC#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.QC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.MRTR#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.MRTR",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.HKI#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.HKI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.SHV#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.SHV",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.WPFPC#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.WPFPC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.RUMD#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.RUMD",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.HBL#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.HBL",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.RSI#child",
+"from_id": "R.U.E3",
+"to_id": "R.T.RSI",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.E4#child",
+"from_id": "R.U.E3",
+"to_id": "R.U.E4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.WD3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.WD3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.WPFPC#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.WPFPC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CHA3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.CHA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.RSI#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.RSI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CH3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.CH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CA3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.CA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FH3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.FA3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.FA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.CS3#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.CS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.ASSI#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.ASSI",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.T.HBL#requires",
+"from_id": "R.U.E3",
+"to_id": "R.T.HBL",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E3#R.U.E4#requires",
+"from_id": "R.U.E3",
+"to_id": "R.U.E4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FS4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRA4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.ACMI2#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.ACMI2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.LRM#requires",
+"from_id": "R.U.E4",
+"to_id": "R.T.LRM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CH4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.CH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.WD4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.WD4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.US4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.US4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.DF4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.DF4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRH4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CA4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.CA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.HCS#requires",
+"from_id": "R.U.E4",
+"to_id": "R.T.HCS",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FH4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CC4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.CC4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRS4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CHA4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.CHA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.E5#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.E5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CS4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.CS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.HAC#requires",
+"from_id": "R.U.E4",
+"to_id": "R.T.HAC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FA4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.FA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.UH4#requires",
+"from_id": "R.U.E4",
+"to_id": "R.U.UH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.ACMI2#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.ACMI2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CHA4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.CHA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FH4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.UH4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.UH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FA4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CC4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.CC4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.WD4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.WD4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FS4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.DF4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.DF4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CH4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.CH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRH4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRS4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.FRA4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.FRA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CS4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.CS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.US4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.US4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.CA4#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.CA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.HAC#child",
+"from_id": "R.U.E4",
+"to_id": "R.T.HAC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.LRM#child",
+"from_id": "R.U.E4",
+"to_id": "R.T.LRM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.T.HCS#child",
+"from_id": "R.U.E4",
+"to_id": "R.T.HCS",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E4#R.U.E5#child",
+"from_id": "R.U.E4",
+"to_id": "R.U.E5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FH5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRA5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CHA5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.CHA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.RUBM#requires",
+"from_id": "R.U.E5",
+"to_id": "R.T.RUBM",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FS5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.US5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.US5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRH5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.RHIC#requires",
+"from_id": "R.U.E5",
+"to_id": "R.T.RHIC",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.LRNB#requires",
+"from_id": "R.U.E5",
+"to_id": "R.T.LRNB",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.UH5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.UH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FA5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CS5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.CS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CA5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.CA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CH5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.CH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.WD5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.WD5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CC5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.CC5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.US5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.US5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CH5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.CH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.WD5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.WD5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.DF5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.DF5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FH5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FA5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FS5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CS5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.CS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRH5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRS5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRA5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.UH5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.UH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CA5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.CA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CHA5#child",
+"from_id": "R.U.E5",
+"to_id": "R.U.CHA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.RHIC#child",
+"from_id": "R.U.E5",
+"to_id": "R.T.RHIC",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.LRNB#child",
+"from_id": "R.U.E5",
+"to_id": "R.T.LRNB",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.T.RUBM#child",
+"from_id": "R.U.E5",
+"to_id": "R.T.RUBM",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.CC5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.CC5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.FRS5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.FRS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.E5#R.U.DF5#requires",
+"from_id": "R.U.E5",
+"to_id": "R.U.DF5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA1#R.U.FA2#child",
+"from_id": "R.U.FA1",
+"to_id": "R.U.FA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA1#R.U.FA2#requires",
+"from_id": "R.U.FA1",
+"to_id": "R.U.FA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA2#R.U.FA3#child",
+"from_id": "R.U.FA2",
+"to_id": "R.U.FA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA2#R.U.FA3#requires",
+"from_id": "R.U.FA2",
+"to_id": "R.U.FA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA3#R.U.FA4#child",
+"from_id": "R.U.FA3",
+"to_id": "R.U.FA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA3#R.U.FA4#requires",
+"from_id": "R.U.FA3",
+"to_id": "R.U.FA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA4#R.U.FA5#requires",
+"from_id": "R.U.FA4",
+"to_id": "R.U.FA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FA4#R.U.FA5#child",
+"from_id": "R.U.FA4",
+"to_id": "R.U.FA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH1#R.U.FH2#child",
+"from_id": "R.U.FH1",
+"to_id": "R.U.FH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH1#R.U.FH2#requires",
+"from_id": "R.U.FH1",
+"to_id": "R.U.FH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH2#R.U.FH3#child",
+"from_id": "R.U.FH2",
+"to_id": "R.U.FH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH2#R.U.FH3#requires",
+"from_id": "R.U.FH2",
+"to_id": "R.U.FH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH3#R.U.FH4#requires",
+"from_id": "R.U.FH3",
+"to_id": "R.U.FH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH3#R.U.FH4#child",
+"from_id": "R.U.FH3",
+"to_id": "R.U.FH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH4#R.U.FH5#requires",
+"from_id": "R.U.FH4",
+"to_id": "R.U.FH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FH4#R.U.FH5#child",
+"from_id": "R.U.FH4",
+"to_id": "R.U.FH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA1#R.U.FRA2#child",
+"from_id": "R.U.FRA1",
+"to_id": "R.U.FRA2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA1#R.U.FRA2#requires",
+"from_id": "R.U.FRA1",
+"to_id": "R.U.FRA2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA2#R.U.FRA3#requires",
+"from_id": "R.U.FRA2",
+"to_id": "R.U.FRA3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA2#R.U.FRA3#child",
+"from_id": "R.U.FRA2",
+"to_id": "R.U.FRA3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA3#R.U.FRA4#requires",
+"from_id": "R.U.FRA3",
+"to_id": "R.U.FRA4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA3#R.U.FRA4#child",
+"from_id": "R.U.FRA3",
+"to_id": "R.U.FRA4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA4#R.U.FRA5#requires",
+"from_id": "R.U.FRA4",
+"to_id": "R.U.FRA5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRA4#R.U.FRA5#child",
+"from_id": "R.U.FRA4",
+"to_id": "R.U.FRA5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH1#R.U.FRH2#child",
+"from_id": "R.U.FRH1",
+"to_id": "R.U.FRH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH1#R.U.FRH2#requires",
+"from_id": "R.U.FRH1",
+"to_id": "R.U.FRH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH2#R.U.FRH3#requires",
+"from_id": "R.U.FRH2",
+"to_id": "R.U.FRH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH2#R.U.FRH3#child",
+"from_id": "R.U.FRH2",
+"to_id": "R.U.FRH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH3#R.U.FRH4#child",
+"from_id": "R.U.FRH3",
+"to_id": "R.U.FRH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH3#R.U.FRH4#requires",
+"from_id": "R.U.FRH3",
+"to_id": "R.U.FRH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH4#R.U.FRH5#requires",
+"from_id": "R.U.FRH4",
+"to_id": "R.U.FRH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRH4#R.U.FRH5#child",
+"from_id": "R.U.FRH4",
+"to_id": "R.U.FRH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS1#R.U.FRS2#child",
+"from_id": "R.U.FRS1",
+"to_id": "R.U.FRS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS1#R.U.FRS2#requires",
+"from_id": "R.U.FRS1",
+"to_id": "R.U.FRS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS2#R.U.FRS3#child",
+"from_id": "R.U.FRS2",
+"to_id": "R.U.FRS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS2#R.U.FRS3#requires",
+"from_id": "R.U.FRS2",
+"to_id": "R.U.FRS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS3#R.U.FRS4#child",
+"from_id": "R.U.FRS3",
+"to_id": "R.U.FRS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS3#R.U.FRS4#requires",
+"from_id": "R.U.FRS3",
+"to_id": "R.U.FRS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS4#R.U.FRS5#child",
+"from_id": "R.U.FRS4",
+"to_id": "R.U.FRS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FRS4#R.U.FRS5#requires",
+"from_id": "R.U.FRS4",
+"to_id": "R.U.FRS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS1#R.U.FS2#child",
+"from_id": "R.U.FS1",
+"to_id": "R.U.FS2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS1#R.U.FS2#requires",
+"from_id": "R.U.FS1",
+"to_id": "R.U.FS2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS2#R.U.FS3#requires",
+"from_id": "R.U.FS2",
+"to_id": "R.U.FS3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS2#R.U.FS3#child",
+"from_id": "R.U.FS2",
+"to_id": "R.U.FS3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS3#R.U.FS4#child",
+"from_id": "R.U.FS3",
+"to_id": "R.U.FS4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS3#R.U.FS4#requires",
+"from_id": "R.U.FS3",
+"to_id": "R.U.FS4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS4#R.U.FS5#child",
+"from_id": "R.U.FS4",
+"to_id": "R.U.FS5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.FS4#R.U.FS5#requires",
+"from_id": "R.U.FS4",
+"to_id": "R.U.FS5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH1#R.U.UH2#requires",
+"from_id": "R.U.UH1",
+"to_id": "R.U.UH2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH1#R.U.UH2#child",
+"from_id": "R.U.UH1",
+"to_id": "R.U.UH2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH2#R.U.UH3#requires",
+"from_id": "R.U.UH2",
+"to_id": "R.U.UH3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH2#R.U.UH3#child",
+"from_id": "R.U.UH2",
+"to_id": "R.U.UH3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH3#R.U.UH4#child",
+"from_id": "R.U.UH3",
+"to_id": "R.U.UH4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH3#R.U.UH4#requires",
+"from_id": "R.U.UH3",
+"to_id": "R.U.UH4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH4#R.U.UH5#requires",
+"from_id": "R.U.UH4",
+"to_id": "R.U.UH5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.UH4#R.U.UH5#child",
+"from_id": "R.U.UH4",
+"to_id": "R.U.UH5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US1#R.U.US2#requires",
+"from_id": "R.U.US1",
+"to_id": "R.U.US2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US1#R.U.US2#child",
+"from_id": "R.U.US1",
+"to_id": "R.U.US2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US2#R.U.US3#requires",
+"from_id": "R.U.US2",
+"to_id": "R.U.US3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US2#R.U.US3#child",
+"from_id": "R.U.US2",
+"to_id": "R.U.US3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US3#R.U.US4#child",
+"from_id": "R.U.US3",
+"to_id": "R.U.US4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US3#R.U.US4#requires",
+"from_id": "R.U.US3",
+"to_id": "R.U.US4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US4#R.U.US5#requires",
+"from_id": "R.U.US4",
+"to_id": "R.U.US5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.US4#R.U.US5#child",
+"from_id": "R.U.US4",
+"to_id": "R.U.US5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD1#R.U.WD2#child",
+"from_id": "R.U.WD1",
+"to_id": "R.U.WD2",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD1#R.U.WD2#requires",
+"from_id": "R.U.WD1",
+"to_id": "R.U.WD2",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD2#R.U.WD3#requires",
+"from_id": "R.U.WD2",
+"to_id": "R.U.WD3",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD2#R.U.WD3#child",
+"from_id": "R.U.WD2",
+"to_id": "R.U.WD3",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD3#R.U.WD4#requires",
+"from_id": "R.U.WD3",
+"to_id": "R.U.WD4",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD3#R.U.WD4#child",
+"from_id": "R.U.WD3",
+"to_id": "R.U.WD4",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD4#R.U.WD5#child",
+"from_id": "R.U.WD4",
+"to_id": "R.U.WD5",
+"kind": "child",
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "R.U.WD4#R.U.WD5#requires",
+"from_id": "R.U.WD4",
+"to_id": "R.U.WD5",
+"kind": "requires",
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

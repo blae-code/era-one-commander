@@ -1,32 +1,18 @@
 {
-  "name": "LootEntry",
+  "name": "ResearchEdge",
   "type": "object",
   "properties": {
     "game_id": {
       "type": "string",
       "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
     },
-    "table": {
-      "type": "string",
-      "enum": [
-        "Research 1",
-        "Research Whole Tree",
-        "Research Whole Tree Guarantuees"
-      ]
-    },
-    "tier_multiplier": {
-      "type": "number"
-    },
-    "item_id": {
+    "from_id": {
       "type": "string"
     },
-    "weight": {
-      "type": "number"
+    "to_id": {
+      "type": "string"
     },
-    "probability": {
-      "type": "number"
-    },
-    "item_name": {
+    "kind": {
       "type": "string"
     },
     "game_version": {
@@ -41,5 +27,5 @@
   "required": [
     "game_id"
   ],
-  "description": "Era One LootEntry records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+  "description": "Era One ResearchEdge records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
 }

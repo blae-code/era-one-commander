@@ -1,33 +1,50 @@
 {
-  "name": "LootEntry",
+  "name": "BlueprintPart",
   "type": "object",
   "properties": {
     "game_id": {
       "type": "string",
       "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
     },
-    "table": {
+    "blueprint_id": {
+      "type": "string"
+    },
+    "blueprint": {
+      "type": "string"
+    },
+    "source": {
       "type": "string",
       "enum": [
-        "Research 1",
-        "Research Whole Tree",
-        "Research Whole Tree Guarantuees"
+        "player",
+        "shipped"
       ]
     },
-    "tier_multiplier": {
+    "index": {
       "type": "number"
     },
-    "item_id": {
+    "module_id": {
       "type": "string"
     },
-    "weight": {
-      "type": "number"
-    },
-    "probability": {
-      "type": "number"
-    },
-    "item_name": {
+    "module_name": {
       "type": "string"
+    },
+    "position": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "rotation": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "parent_part": {
+      "type": "number"
+    },
+    "parent_connection": {
+      "type": "number"
     },
     "game_version": {
       "type": "string",
@@ -41,5 +58,5 @@
   "required": [
     "game_id"
   ],
-  "description": "Era One LootEntry records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+  "description": "Era One BlueprintPart records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
 }

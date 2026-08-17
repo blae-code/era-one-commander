@@ -3,7 +3,7 @@
 What the backend provides to the frontend, and how the two sides share this repo without stepping on
 each other. Kept in `base44/` because it is the backend's statement of its own surface.
 
-**Last updated 2026-08-17 (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
+**Last updated 2026-08-17 — 18 entities (dataset: game 0.12.2, Steam build 24615926). Sync from era-one-data: `./sync-app.fish`.**
 
 ---
 
@@ -38,6 +38,20 @@ Every record has `game_id` (the game's own identifier, e.g. `TUR.002`, `CMX_FRI3
 | `GameBlueprint` | 42 | Ship/station designs shipped with the game (+ AI stations) | `modules` `{game_id: count}`, `part_count`, `cost_resources`, `cost_population`, `construction_time`, `required_research[]`, `sum_module_*` roll-ups, `weapon_modules[]`, `source` (shipped/player), `folder` |
 | `StatModifier` | 1249 | Long table of every stat modifier | `source_type` (research · unit_level · module), `source_id`, `context` (upgrade · level_N · perfect_attachment_bonus · power_on_modifiers), `stat`, `operation` (Add · Subtract · Multiply · Divide · Set), `value`, `abs` |
 | `LootEntry` | 71 | Research loot tables (wreck drops) | `table`, `item_id` (research id; null = nothing), `item_name`, `weight`, `probability` |
+| `Asteroid` | 17 | Asteroid archetypes (ENV.*) | resource yields, size, health |
+| `UnitLevel` | 1080 | Veterancy, one row per unit × level × stat | `unit_id`, `level`, `experience_required`, `stat`, `operation`, `value` |
+| `BlueprintPart` | 2788 | Every part placement in every `GameBlueprint` | `blueprint_id`, `index`, `module_id`, `module_name`, `position` `[x,y,z]`, `rotation` `[x,y,z,w]`, `parent_part`, `parent_connection` — enough to draw the design |
+| `ResearchEdge` | 448 | Tech-tree edges | `from_id`, `to_id`, `kind` (child · requires) |
+| `ModuleWeapon` / `UnitWeapon` | 41 / 36 | Armament join tables | `module_id`/`unit_id`, `turret_id`, `weapon_id`, `count` |
+| `LocalizedString` | 2448 | Every English game string | `key` (e.g. `Module.TUR.002.Description`, `GameHint.HNT.003.Text`, UI tooltips), `text_en` |
+
+**`full`** — every catalog entity (Module, Weapon, Turret, Subsystem, Unit, ResearchNode, Resource, Station, Asteroid) also carries a
+`full` object: the **complete decoded game record** (e.g. 124 fields on a module: tumble/AI/attack/noise/cloak/shield/pool
+settings, `cost`/`requirements`/`staticBonuses` Quantities, `radarDetection` bits, `attackPriority` ints, decoded Odin
+dictionaries under `full.odin`). Enum-valued fields are raw ints there; the curated columns carry the names. Use it for
+granular views and comparisons the curated columns don't cover.
+
+All relation tables also have a synthetic `game_id` (e.g. `unit_id#level#stat`), so every entity upserts idempotently.
 
 ### Interpretation rules (please respect in the UI)
 * **Armament:** `Module.weapons` / `Unit.weapons` already include the guns inside their turrets. Don't add `Turret.weapons` on top (double count).

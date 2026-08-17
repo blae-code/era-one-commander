@@ -344,6 +344,10 @@
     "dps_total": {
       "type": "number"
     },
+    "full": {
+      "type": "object",
+      "description": "Complete decoded game record (all fields; PPtrs -> game_ids, Fix64 -> float, Odin dictionaries decoded). Enum-valued fields are raw ints here; the curated columns carry the names."
+    },
     "game_version": {
       "type": "string",
       "description": "Era One version the record was extracted from"

@@ -1,0 +1,371 @@
+[
+{
+"game_id": "COM.001#TURT.001#",
+"module_id": "COM.001",
+"turret_id": "TURT.001",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "COM.001##WPN.004",
+"module_id": "COM.001",
+"turret_id": null,
+"weapon_id": "WPN.004",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PRD.006##WPN.048",
+"module_id": "PRD.006",
+"turret_id": null,
+"weapon_id": "WPN.048",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "PRD.007##WPN.049",
+"module_id": "PRD.007",
+"turret_id": null,
+"weapon_id": "WPN.049",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.001#TURT.022#",
+"module_id": "TUR.001",
+"turret_id": "TURT.022",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.001##WPN.028",
+"module_id": "TUR.001",
+"turret_id": null,
+"weapon_id": "WPN.028",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.002#TURT.026#",
+"module_id": "TUR.002",
+"turret_id": "TURT.026",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.002##WPN.032",
+"module_id": "TUR.002",
+"turret_id": null,
+"weapon_id": "WPN.032",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.003#TURT.027#",
+"module_id": "TUR.003",
+"turret_id": "TURT.027",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.003##WPN.014",
+"module_id": "TUR.003",
+"turret_id": null,
+"weapon_id": "WPN.014",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.004#TURT.028#",
+"module_id": "TUR.004",
+"turret_id": "TURT.028",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.004##WPN.035",
+"module_id": "TUR.004",
+"turret_id": null,
+"weapon_id": "WPN.035",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.005#TURT.029#",
+"module_id": "TUR.005",
+"turret_id": "TURT.029",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.005##WPN.036",
+"module_id": "TUR.005",
+"turret_id": null,
+"weapon_id": "WPN.036",
+"count": 6,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.006#TURT.030#",
+"module_id": "TUR.006",
+"turret_id": "TURT.030",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.006##WPN.022",
+"module_id": "TUR.006",
+"turret_id": null,
+"weapon_id": "WPN.022",
+"count": 3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.007#TURT.024#",
+"module_id": "TUR.007",
+"turret_id": "TURT.024",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.007##WPN.030",
+"module_id": "TUR.007",
+"turret_id": null,
+"weapon_id": "WPN.030",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.008#TURT.023#",
+"module_id": "TUR.008",
+"turret_id": "TURT.023",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.008##WPN.029",
+"module_id": "TUR.008",
+"turret_id": null,
+"weapon_id": "WPN.029",
+"count": 3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.009#TURT.021#",
+"module_id": "TUR.009",
+"turret_id": "TURT.021",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.009##WPN.027",
+"module_id": "TUR.009",
+"turret_id": null,
+"weapon_id": "WPN.027",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.010##WPN.031",
+"module_id": "TUR.010",
+"turret_id": null,
+"weapon_id": "WPN.031",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.011#TURT.036#",
+"module_id": "TUR.011",
+"turret_id": "TURT.036",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.011##WPN.014",
+"module_id": "TUR.011",
+"turret_id": null,
+"weapon_id": "WPN.014",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.012#TURT.037#",
+"module_id": "TUR.012",
+"turret_id": "TURT.037",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.012##WPN.022",
+"module_id": "TUR.012",
+"turret_id": null,
+"weapon_id": "WPN.022",
+"count": 4,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.013#TURT.039#",
+"module_id": "TUR.013",
+"turret_id": "TURT.039",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.013##WPN.050",
+"module_id": "TUR.013",
+"turret_id": null,
+"weapon_id": "WPN.050",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.014#TURT.041#",
+"module_id": "TUR.014",
+"turret_id": "TURT.041",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.014##WPN.052",
+"module_id": "TUR.014",
+"turret_id": null,
+"weapon_id": "WPN.052",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.015#TURT.054#",
+"module_id": "TUR.015",
+"turret_id": "TURT.054",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.015##WPN.055",
+"module_id": "TUR.015",
+"turret_id": null,
+"weapon_id": "WPN.055",
+"count": 3,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.016#TURT.022#",
+"module_id": "TUR.016",
+"turret_id": "TURT.022",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.016##WPN.056",
+"module_id": "TUR.016",
+"turret_id": null,
+"weapon_id": "WPN.056",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.017#TURT.044#",
+"module_id": "TUR.017",
+"turret_id": "TURT.044",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.017##WPN.057",
+"module_id": "TUR.017",
+"turret_id": null,
+"weapon_id": "WPN.057",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.018#TURT.046#",
+"module_id": "TUR.018",
+"turret_id": "TURT.046",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.018##WPN.061",
+"module_id": "TUR.018",
+"turret_id": null,
+"weapon_id": "WPN.061",
+"count": 2,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.019#TURT.047#",
+"module_id": "TUR.019",
+"turret_id": "TURT.047",
+"weapon_id": null,
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+},
+{
+"game_id": "TUR.019##WPN.063",
+"module_id": "TUR.019",
+"turret_id": null,
+"weapon_id": "WPN.063",
+"count": 1,
+"game_version": "0.12.2",
+"game_build": "24615926"
+}
+]

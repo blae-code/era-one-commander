@@ -15,6 +15,23 @@
 0.3529,
 0.098
 ],
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Carbonaceous",
+"shortName": "",
+"identifier": "RU.CRB",
+"info": "Carbonaceous Deposit",
+"description": "A carbonaceous asteroid, commonly found in moderate quantities, with a standard extraction and refining rate. It has average capacity and resistance, making it a reliable resource.",
+"extractionRate": 1.0,
+"refiningRate": 1.0,
+"color": {
+"r": 0.35294,
+"g": 0.35294,
+"b": 0.35294,
+"a": 0.09804
+}
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -34,6 +51,23 @@
 0.5882,
 0.098
 ],
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Metallic",
+"shortName": "",
+"identifier": "RU.MET",
+"info": "Metallic Deposit",
+"description": "A metallic asteroid, commonly found in large quantities, with a slow extraction and refining rate. It has a high capacity and strong resistance, making it a durable resource.",
+"extractionRate": 0.6,
+"refiningRate": 0.9,
+"color": {
+"r": 0.27451,
+"g": 0.47059,
+"b": 0.58824,
+"a": 0.09804
+}
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -53,6 +87,23 @@
 0.1569,
 0.098
 ],
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Silicaceous",
+"shortName": "",
+"identifier": "RU.SIL",
+"info": "Silicaceous Deposit",
+"description": "A silicaceous asteroid, commonly found in rare quantities, with a high extraction and refining rate. It has high capacity and resistance, making it a valuable resource.",
+"extractionRate": 3.0,
+"refiningRate": 1.5,
+"color": {
+"r": 0.86275,
+"g": 0.62745,
+"b": 0.15686,
+"a": 0.09804
+}
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -72,6 +123,23 @@
 0.1749,
 0.0157
 ],
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Uranian",
+"shortName": "",
+"identifier": "RU.URA",
+"info": "Uranian Deposit",
+"description": "A uranian asteroid, commonly found inside nebulau, with a very high extraction and refining rate. It has very low capacity and resistance, making it a special resource.",
+"extractionRate": 10.0,
+"refiningRate": 10.0,
+"color": {
+"r": 0.22372,
+"g": 0.28302,
+"b": 0.17488,
+"a": 0.01569
+}
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 },
@@ -91,6 +159,23 @@
 0.3529,
 0.098
 ],
+"full": {
+"isWorkInProgress": 0,
+"restriction": 0,
+"name": "Wreck",
+"shortName": "",
+"identifier": "RU.WRE",
+"info": "Scrap metal parts",
+"description": "Resource derived from the destruction of objects or enemy ships, featuring a very high extraction and refining rate.",
+"extractionRate": 5.0,
+"refiningRate": 3.0,
+"color": {
+"r": 0.11765,
+"g": 0.35294,
+"b": 0.35294,
+"a": 0.09804
+}
+},
 "game_version": "0.12.2",
 "game_build": "24615926"
 }

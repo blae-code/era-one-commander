@@ -1,33 +1,43 @@
 {
-  "name": "LootEntry",
+  "name": "UnitLevel",
   "type": "object",
   "properties": {
     "game_id": {
       "type": "string",
       "description": "Era One internal identifier (e.g. TUR.002, CMX_FRI3, R.U.FRS1) — the join key across all entities and localization"
     },
-    "table": {
+    "unit_id": {
+      "type": "string"
+    },
+    "level": {
+      "type": "number"
+    },
+    "experience_required": {
+      "type": "number"
+    },
+    "stat": {
       "type": "string",
       "enum": [
-        "Research 1",
-        "Research Whole Tree",
-        "Research Whole Tree Guarantuees"
+        "Armor",
+        "HealthRegenerationRate",
+        "MaxHealth",
+        "WeaponDamage"
       ]
     },
-    "tier_multiplier": {
+    "operation": {
+      "type": "string",
+      "enum": [
+        "Add"
+      ]
+    },
+    "value": {
       "type": "number"
     },
-    "item_id": {
-      "type": "string"
+    "clamp": {
+      "type": "boolean"
     },
-    "weight": {
-      "type": "number"
-    },
-    "probability": {
-      "type": "number"
-    },
-    "item_name": {
-      "type": "string"
+    "abs": {
+      "type": "boolean"
     },
     "game_version": {
       "type": "string",
@@ -41,5 +51,5 @@
   "required": [
     "game_id"
   ],
-  "description": "Era One LootEntry records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
+  "description": "Era One UnitLevel records extracted from the game files (see era-one-data). Extracted from game 0.12.2 build 24615926."
 }
