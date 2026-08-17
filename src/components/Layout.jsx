@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
-import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, Ship, EyeOff } from "lucide-react";
+import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, Ship, EyeOff, BrainCircuit } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
 
 const NAV = [
@@ -26,8 +26,12 @@ const NAV = [
     ],
   },
   {
+    group: "Advisory",
+    items: [{ to: "/advisory", label: "AI Advisors", code: "08", icon: BrainCircuit }],
+  },
+  {
     group: "System",
-    items: [{ to: "/data", label: "Data Ops", code: "08", icon: DatabaseZap }],
+    items: [{ to: "/data", label: "Data Ops", code: "09", icon: DatabaseZap }],
   },
 ];
 
