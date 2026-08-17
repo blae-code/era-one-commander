@@ -95,15 +95,15 @@ export default function Compare() {
         mode={mode}
         onMode={switchMode}
         modes={["components", "hulls"]}
-        subtitle={`Side-by-side tactical delta analysis // ${items.length} ${mode} in catalog`}
+        subtitle={a && b ? `Delta // ${a.name} vs ${b.name}` : "Side-by-side tactical delta analysis"}
         readout={[
-          ["ALPHA", a?.name ? String(a.name).slice(0, 10) : "—", "#ff7a1a"],
-          ["BRAVO", b?.name ? String(b.name).slice(0, 10) : "—", "#2f9bff"],
-          ["METRICS", String(rows.length)],
+          ["ALPHA", a ? a.name.slice(0, 12) : "—", "#ff7a1a"],
+          ["BRAVO", b ? b.name.slice(0, 12) : "—", "#2f9bff"],
+          ["POOL", items.length, null],
         ]}
       />
 
-      <div className="schematic-panel p-3 mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="schematic-panel p-3 grid grid-cols-2 gap-4 mb-4">
         <div>
           <div className="tech-label mb-1.5 text-[#ff7a1a]">Unit Alpha ◆</div>
           <Picker items={items} value={aId} onChange={setAId} tint="border-[#ff7a1a]" />
@@ -116,17 +116,17 @@ export default function Compare() {
 
       {a && b ? (
         <>
-        <div className="schematic-panel p-4 mb-4">
-          <div className="tech-label mb-2">Key metric bars // head-to-head</div>
+        <div className="mb-5">
+          <div className="tech-label mb-2">Key Metric Bars</div>
           <BarCompare a={a} b={b} metrics={bars} />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="schematic-panel p-4">
-            <div className="tech-label mb-2">Normalized profile</div>
+            <div className="tech-label mb-2">Normalized Profile</div>
             <RadarCompare a={a} b={b} axes={axes} />
           </div>
-          <div className="schematic-panel p-4">
-            <div className="tech-label mb-2">Raw delta readout</div>
+          <div>
+            <div className="tech-label mb-2">Raw Delta Readout</div>
             <DeltaTable a={a} b={b} rows={rows} />
           </div>
         </div>
