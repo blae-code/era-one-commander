@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Input } from "@/components/ui/input";
-import { Search, DatabaseZap } from "lucide-react";
+import { DatabaseZap } from "lucide-react";
 import TierBadge from "@/components/shared/TierBadge";
+import DatabankHeader from "@/components/database/DatabankHeader";
 import GameEntityDetail from "@/components/database/GameEntityDetail";
 import { useGameCatalog, fmtNum, countIds } from "@/lib/gameData";
 
@@ -65,37 +65,44 @@ export default function Database() {
 
   return (
     <div className="p-6 h-full flex flex-col max-w-[1500px] mx-auto w-full">
-      <div className="flex items-end justify-between mb-4 flex-wrap gap-3">
-        <div>
-          <h1 className="font-display font-bold text-xl tracking-[0.15em] uppercase">Databank</h1>
-          <p className="tech-label mt-0.5">{filtered.length} of {rows.length} {tab.label.toLowerCase()} · from the installed game files</p>
-        </div>
-        <div className="relative w-72">
-          <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
-          <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder={`Search ${tab.label.toLowerCase()} by name or id…`} className="pl-8 rounded-none font-mono text-xs" />
-        </div>
-      </div>
+      <DatabankHeader
+        subtitle={`ERA ONE Catalog // ${filtered.length} of ${rows.length} ${tab.label.toLowerCase()} from the installed game files`}
+        search={search}
+        onSearch={setSearch}
+        placeholder={`Search ${tab.label.toLowerCase()} by name or id…`}
+        readout={[
+          ["MODULES", cat.modules.length],
+          ["SHIPS", cat.units.length],
+          ["WEAPONS", cat.weapons.length],
+          ["TURRETS", cat.turrets.length],
+          ["RESEARCH", cat.research.length],
+        ]}
+      />
 
-      <div className="flex flex-wrap gap-1 mb-2">
-        {TABS.map((t) => (
-          <button key={t.key} onClick={() => setTab(t.key)}
-            className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-              tab.key === t.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>
-            {t.label} <span className="opacity-60">{(rowsByKind[t.key] || []).length}</span>
-          </button>
-        ))}
-      </div>
-      {groups.length > 1 && (
-        <div className="flex flex-wrap gap-1 mb-4">
-          {["all", ...groups].map((g) => (
-            <button key={g} onClick={() => setFilter(g)}
-              className={`px-2 py-1 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
-                filter === g ? "border-primary/70 text-primary bg-primary/10" : "border-border text-muted-foreground hover:border-primary/40"}`}>
-              {g}
+      <div className="schematic-panel p-3 mb-4 space-y-2">
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="tech-label mr-2">Catalog</span>
+          {TABS.map((t) => (
+            <button key={t.key} onClick={() => setTab(t.key)}
+              className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
+                tab.key === t.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>
+              {t.label} <span className="opacity-60">{(rowsByKind[t.key] || []).length}</span>
             </button>
           ))}
         </div>
-      )}
+        {groups.length > 1 && (
+          <div className="flex flex-wrap items-center gap-1 pt-2 border-t border-border">
+            <span className="tech-label mr-2">Filter</span>
+            {["all", ...groups].map((g) => (
+              <button key={g} onClick={() => setFilter(g)}
+                className={`px-2 py-1 font-mono text-[10px] uppercase tracking-wider border transition-colors ${
+                  filter === g ? "border-primary/70 text-primary bg-primary/10" : "border-border text-muted-foreground hover:border-primary/40"}`}>
+                {g}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       {cat.isEmpty && !cat.isLoading ? (
         <div className="schematic-panel p-8 text-center">
@@ -107,7 +114,7 @@ export default function Database() {
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 min-h-0">
           <div className="schematic-panel overflow-auto">
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-secondary/90 backdrop-blur">
+              <thead className="sticky top-0 bg-secondary/90 backdrop-blur border-b border-primary/30">
                 <tr className="text-left">{tab.cols.map((h) => <th key={h} className="tech-label px-3 py-2 font-normal whitespace-nowrap">{h}</th>)}</tr>
               </thead>
               <tbody className="divide-y divide-border">
@@ -126,7 +133,7 @@ export default function Database() {
               </tbody>
             </table>
           </div>
-          <div className="schematic-panel p-4 overflow-y-auto">
+          <div className="schematic-panel p-4 overflow-y-auto bg-gradient-to-b from-primary/5 to-card">
             <GameEntityDetail kind={selected ? kindOf(selected.game_id) : tab.key} record={selected} byId={cat.byId} onSelect={select} />
           </div>
         </div>
