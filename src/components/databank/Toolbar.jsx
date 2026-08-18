@@ -1,24 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
-import { Search, X, Columns3, LayoutGrid, Table2, Grid3x3, Rows3, Star, Download, Bookmark, SlidersHorizontal, HelpCircle, Filter } from "lucide-react";
+import { X, Columns3, LayoutGrid, Table2, Grid3x3, Rows3, Star, Download, Bookmark, SlidersHorizontal, HelpCircle, Filter, Layers, Link2, ScatterChart } from "lucide-react";
+import { toast } from "sonner";
 import { ClassDot } from "./Cells";
+import SearchSuggest from "./SearchSuggest";
 import { fmtNum } from "@/lib/gameData";
 
 const Btn = ({ active, children, ...p }) => (
   <button {...p} className={`inline-flex items-center gap-1 px-2 h-7 border font-mono text-[10px] uppercase tracking-wider transition-colors ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"} ${p.className || ""}`}>{children}</button>
 );
 
-export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, onExport }) {
-  const [draft, setDraft] = useState(db.q);
-  const inputRef = useRef(null);
-  useEffect(() => setDraft(db.q), [db.q]);
-  useEffect(() => { const t = setTimeout(() => { if (draft !== db.q) db.setQuery(draft); }, 180); return () => clearTimeout(t); }, [draft]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) { e.preventDefault(); inputRef.current?.focus(); } if (e.key === "Escape") { inputRef.current?.blur(); } };
-    window.addEventListener("keydown", onKey); return () => window.removeEventListener("keydown", onKey);
-  }, []);
+export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, onExport, onJump }) {
+  const copyLink = () => { navigator.clipboard.writeText(window.location.href); toast.success("Share link copied", { description: "Query, filters, sort and view included" }); };
 
   const facetValues = useMemo(() => {
     const out = {};
@@ -44,12 +39,7 @@ export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, 
   return (
     <div className="flex flex-col gap-2 mb-3">
       <div className="flex items-center gap-2 flex-wrap">
-        <div className="relative flex-1 min-w-[280px]">
-          <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
-          <input ref={inputRef} value={draft} onChange={(e) => setDraft(e.target.value)} placeholder={`Search ${kind.label.toLowerCase()} — try:  class:weapon tier:3 dps>50   (press / to focus)`}
-            className={`w-full h-8 pl-8 pr-8 bg-background/60 border font-mono text-xs outline-none focus:border-primary ${errors.length ? "border-amber-500/70" : "border-border"}`} />
-          {draft && <button onClick={() => { setDraft(""); db.setQuery(""); }} className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"><X size={12} /></button>}
-        </div>
+        <SearchSuggest db={db} kind={kind} kindKey={db.kindKey} allRows={allRows} ctx={ctx} errors={errors} onJump={onJump} />
         <Popover>
           <PopoverTrigger asChild><Btn title="query syntax"><HelpCircle size={12} /></Btn></PopoverTrigger>
           <PopoverContent className="w-96 text-[11px] font-mono leading-relaxed" align="end">
@@ -68,6 +58,8 @@ export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, 
         <Btn active={db.view === "table"} onClick={() => db.setView("table")} title="table"><Table2 size={12} /></Btn>
         <Btn active={db.view === "cards"} onClick={() => db.setView("cards")} title="cards"><LayoutGrid size={12} /></Btn>
         <Btn active={db.view === "heat"} onClick={() => db.setView("heat")} title="dps vs class heatmap"><Grid3x3 size={12} /></Btn>
+        <Btn active={db.view === "plot"} onClick={() => db.setView("plot")} title="scatter plot — any stat vs any stat"><ScatterChart size={12} /></Btn>
+        {kind.groupBy && <Btn active={db.grouped} onClick={() => db.setGrouped(!db.grouped)} title="group rows by class"><Layers size={12} /></Btn>}
         <div className="h-5 w-px bg-border mx-1" />
         <Popover>
           <PopoverTrigger asChild><Btn title="columns"><Columns3 size={12} /> cols</Btn></PopoverTrigger>
@@ -107,6 +99,7 @@ export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, 
             <button onClick={() => onExport("json")} className="block w-full text-left px-2 py-1 font-mono text-[10px] uppercase text-muted-foreground hover:text-primary">JSON (full rows)</button>
           </PopoverContent>
         </Popover>
+        <Btn onClick={copyLink} title="copy shareable link — sends your friend this exact view"><Link2 size={12} /></Btn>
         {(activeFilters > 0 || db.q) && <Btn onClick={db.clearAll} title="clear query, filters, ranges"><X size={12} /> clear{activeFilters ? ` ${activeFilters}` : ""}</Btn>}
       </div>
 

@@ -32,6 +32,9 @@ export function useDatabank() {
   }, [params, kind]);
   const favOnly = params.get("fav") === "1";
   const hideWip = params.get("wip") !== "1";
+  const grouped = params.get("grp") === "1";
+  const plotX = params.get("px") || null;
+  const plotY = params.get("py") || null;
 
   const patch = useCallback((changes) => {
     setParams((prev) => {
@@ -58,6 +61,8 @@ export function useDatabank() {
   const clearFacet = (fk) => patch({ [`f.${fk}`]: null });
   const setRange = (rk, lo, hi) => patch({ [`r.${rk}`]: lo == null && hi == null ? null : `${lo ?? ""}..${hi ?? ""}` });
   const setFavOnly = (v) => patch({ fav: v ? "1" : null });
+  const setGrouped = (v) => patch({ grp: v ? "1" : null });
+  const setPlotAxes = (x, y) => patch({ px: x, py: y });
   const setHideWip = (v) => patch({ wip: v ? null : "1" });
   const clearAll = () => setParams({ t: kindKey }, { replace: true });
 
@@ -83,8 +88,8 @@ export function useDatabank() {
   useEffect(() => { /* keep hook order stable */ }, []);
 
   return {
-    kindKey, kind, q, sortKey, sortDir, view, selectedId, compareIds, facetSel, ranges, favOnly, hideWip,
-    setKind, setQuery, setSort, setView, select, toggleCompare, clearCompare, toggleFacet, clearFacet, setRange, setFavOnly, setHideWip, clearAll,
+    kindKey, kind, q, sortKey, sortDir, view, selectedId, compareIds, facetSel, ranges, favOnly, hideWip, grouped, plotX, plotY,
+    setKind, setQuery, setSort, setView, select, toggleCompare, clearCompare, toggleFacet, clearFacet, setRange, setFavOnly, setHideWip, setGrouped, setPlotAxes, clearAll,
     favorites, toggleFavorite, density, setDensity, visibleCols, setVisibleCols, resetCols, presets, savePreset, loadPreset, deletePreset, notes, setNote,
     params,
   };

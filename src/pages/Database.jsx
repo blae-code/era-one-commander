@@ -10,6 +10,9 @@ import Toolbar from "@/components/databank/Toolbar";
 import DataTable from "@/components/databank/DataTable";
 import { CardGrid, HeatmapView } from "@/components/databank/Views";
 import ComparePanel from "@/components/databank/ComparePanel";
+import ActiveChips from "@/components/databank/ActiveChips";
+import StatsStrip from "@/components/databank/StatsStrip";
+import ScatterView from "@/components/databank/ScatterView";
 import DetailDrawer from "@/components/databank/DetailDrawer";
 
 // Databank v2 — the granular browser over the real ERA ONE dataset.
@@ -78,13 +81,16 @@ export default function Database() {
         </div>
       ) : (
         <>
-          <Toolbar db={db} kind={kind} allRows={allRows} filteredRows={filtered} ctx={ctx} errors={errors} onExport={exportRows} />
+          <Toolbar db={db} kind={kind} allRows={allRows} filteredRows={filtered} ctx={ctx} errors={errors} onExport={exportRows} onJump={selectId} />
+          <ActiveChips db={db} kind={kind} parsed={parsed} />
+          {(db.view === "table" || db.view === "cards") && !cat.isLoading && filtered.length > 0 && <StatsStrip rows={filtered} kind={kind} ctx={ctx} db={db} />}
           <div className={`flex-1 min-h-0 grid gap-3 ${compareRows.length ? "grid-cols-1 xl:grid-cols-[1fr_440px]" : "grid-cols-1"}`}>
             <div className="min-h-0">
               {cat.isLoading ? <div className="schematic-panel p-12 tech-label text-center animate-pulse">Accessing databank…</div>
                 : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
                 : db.view === "heat" ? <HeatmapView rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
-                : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} />}
+                : db.view === "plot" ? <ScatterView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} db={db} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
+                : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} grouped={db.grouped} groupBy={kind.groupBy} />}
             </div>
             {compareRows.length > 0 && <div className="min-h-0"><ComparePanel rows={compareRows} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={kind.columns.filter((c) => db.visibleCols.includes(c.key) || c.type === "num")} onRemove={db.toggleCompare} onClear={db.clearCompare} onSelect={selectId} /></div>}
           </div>

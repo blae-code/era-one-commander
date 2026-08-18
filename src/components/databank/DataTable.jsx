@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from "react";
-import { ArrowUp, ArrowDown, Star, GitCompare } from "lucide-react";
-import { Cell, EntityIcon, TierPips } from "./Cells";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { ArrowUp, ArrowDown, Star, GitCompare, ChevronDown, ChevronRight } from "lucide-react";
+import { Cell, EntityIcon, TierPips, ClassDot } from "./Cells";
 
-// Sortable, keyboard-navigable table with heat-shaded numeric cells and mini bars.
-export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, sortKey, sortDir, onSort, selectedId, onSelect, favorites, onFav, compareIds, onCompare, density, notes }) {
+// Sortable, keyboard-navigable table with heat-shaded numeric cells, mini bars and optional grouping.
+export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, sortKey, sortDir, onSort, selectedId, onSelect, favorites, onFav, compareIds, onCompare, density, notes, grouped, groupBy }) {
   const ref = useRef(null);
   const pad = density === "compact" ? "py-1" : density === "comfortable" ? "py-3" : "py-1.5";
+  const [collapsed, setCollapsed] = useState(() => new Set());
+
   useEffect(() => {
     const el = ref.current; if (!el) return;
     const onKey = (e) => {
@@ -18,6 +20,42 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
     };
     window.addEventListener("keydown", onKey); return () => window.removeEventListener("keydown", onKey);
   }, [rows, selectedId, onSelect, onCompare, onFav]);
+
+  const groups = useMemo(() => {
+    if (!grouped || !groupBy) return null;
+    const map = new Map();
+    for (const r of rows) { const k = String(r[groupBy] ?? "—"); if (!map.has(k)) map.set(k, []); map.get(k).push(r); }
+    return [...map.entries()].sort((a, b) => b[1].length - a[1].length);
+  }, [rows, grouped, groupBy]);
+  const toggleGroup = (g) => setCollapsed((prev) => { const s = new Set(prev); if (s.has(g)) s.delete(g); else s.add(g); return s; });
+
+  const renderRow = (r) => {
+    const sel = r.game_id === selectedId, fav = favorites.has(r.game_id), cmp = compareIds.includes(r.game_id);
+    return (
+      <tr key={r.game_id} onClick={() => onSelect(r.game_id)}
+        className={`cursor-pointer transition-colors border-b border-border ${sel ? "bg-primary/10" : cmp ? "bg-[#2f9bff]/5" : "hover:bg-secondary/50"}`}>
+        <td className={`px-2 ${pad} border-b border-border/60 align-middle`}>
+          <span className="inline-flex items-center gap-1">
+            <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} title="favourite (f)" className={`p-0.5 ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><Star size={12} fill={fav ? "currentColor" : "none"} /></button>
+            <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} title="compare (c)" className={`p-0.5 ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><GitCompare size={12} /></button>
+          </span>
+        </td>
+        {columns.map((c, i) => (
+          <td key={c.key} className={`px-2 ${pad} border-b border-border/60 align-middle ${c.type === "list" ? "max-w-[260px]" : ""}`}>
+            {i === 0 && c.key === "name" ? (
+              <span className="flex items-center gap-2 min-w-0">
+                <EntityIcon row={r} kindKey={kindKey} />
+                <span className="min-w-0">
+                  <span className="block text-xs font-medium truncate">{r.name}{notes?.[r.game_id] ? <span className="ml-1 text-[9px] text-primary" title={notes[r.game_id]}>✎</span> : null}</span>
+                  <span className="block font-mono text-[9px] text-muted-foreground truncate">{r.game_id}{r.info ? ` · ${r.info}` : ""} {r.tier ? <TierPips tier={r.tier} /> : null}</span>
+                </span>
+              </span>
+            ) : <Cell col={c} row={r} ctx={ctx} stats={stats} />}
+          </td>
+        ))}
+      </tr>
+    );
+  };
 
   return (
     <div ref={ref} className="schematic-panel overflow-auto h-full">
@@ -34,33 +72,22 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
           </tr>
         </thead>
         <tbody>
-          {rows.map((r) => {
-            const sel = r.game_id === selectedId, fav = favorites.has(r.game_id), cmp = compareIds.includes(r.game_id);
-            return (
-              <tr key={r.game_id} onClick={() => onSelect(r.game_id)}
-                className={`cursor-pointer transition-colors border-b border-border ${sel ? "bg-primary/10" : cmp ? "bg-[#2f9bff]/5" : "hover:bg-secondary/50"}`}>
-                <td className={`px-2 ${pad} border-b border-border/60 align-middle`}>
-                  <span className="inline-flex items-center gap-1">
-                    <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} title="favourite (f)" className={`p-0.5 ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><Star size={12} fill={fav ? "currentColor" : "none"} /></button>
-                    <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} title="compare (c)" className={`p-0.5 ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><GitCompare size={12} /></button>
-                  </span>
-                </td>
-                {columns.map((c, i) => (
-                  <td key={c.key} className={`px-2 ${pad} border-b border-border/60 align-middle ${c.type === "list" ? "max-w-[260px]" : ""}`}>
-                    {i === 0 && c.key === "name" ? (
-                      <span className="flex items-center gap-2 min-w-0">
-                        <EntityIcon row={r} kindKey={kindKey} />
-                        <span className="min-w-0">
-                          <span className="block text-xs font-medium truncate">{r.name}{notes?.[r.game_id] ? <span className="ml-1 text-[9px] text-primary" title={notes[r.game_id]}>✎</span> : null}</span>
-                          <span className="block font-mono text-[9px] text-muted-foreground truncate">{r.game_id}{r.info ? ` · ${r.info}` : ""} {r.tier ? <TierPips tier={r.tier} /> : null}</span>
-                        </span>
+          {groups
+            ? groups.map(([g, rs]) => (
+                <React.Fragment key={g}>
+                  <tr onClick={() => toggleGroup(g)} className="cursor-pointer bg-secondary/60 hover:bg-secondary">
+                    <td colSpan={columns.length + 1} className="px-2 py-1.5 border-b border-border">
+                      <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
+                        {collapsed.has(g) ? <ChevronRight size={11} /> : <ChevronDown size={11} />}
+                        <ClassDot value={g} />{g}
+                        <span className="text-muted-foreground">· {rs.length}</span>
                       </span>
-                    ) : <Cell col={c} row={r} ctx={ctx} stats={stats} />}
-                  </td>
-                ))}
-              </tr>
-            );
-          })}
+                    </td>
+                  </tr>
+                  {!collapsed.has(g) && rs.map(renderRow)}
+                </React.Fragment>
+              ))
+            : rows.map(renderRow)}
           {rows.length === 0 && <tr><td colSpan={columns.length + 1} className="tech-label text-center py-12">No entries match — clear a filter or loosen the query</td></tr>}
         </tbody>
       </table>
