@@ -11,7 +11,7 @@ each other. Kept in `base44/` because it is the backend's statement of its own s
 
 | Owner | Paths | Notes |
 |---|---|---|
-| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 5 shipped — workplan complete):** `LocalizedString` now carries all 9 languages (+`namespace`); `DatasetBuild` + `BuildChange` for "what changed in the patch". All 48 entities verified synced.
+| **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `src/lib/gameFileImport.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 5 shipped — workplan complete):** `LocalizedString` now carries all 9 languages (+`namespace`); `DatasetBuild` + `BuildChange` for "what changed in the patch". All 48 entities verified synced.
 * **Backend → frontend (Phase 4 shipped):** `GameBlueprint.assembly` trees (draw shipped designs), `AttachmentRule`, `Module.prefab_guid`; functions `blueprintStats` (design roll-up + warnings) and `importStationFile` (drop a `.station` file → parts + stats, optional save). This is the backend for a **module-graph Ship Builder / design viewer** replacing the Hull/Component grid.
 * **Backend → frontend (Phase 3 shipped):** `AiPersonality` (AI dossier), `AiLogicGraph` + `AiFact/AiGoal/AiOperation` + `AiColorScheme` (render the AI's decision graphs), `MatchOption` (match-setup matrix), `ScoreWeight`; functions `economyModel`, `scoreEstimate`.
 * **Backend → frontend (Phase 2 shipped):** **Maps** — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
@@ -180,6 +180,26 @@ must resolve through `dps_vs_class` against a **named** class, and the class mus
 number. Aggregates against a named class are fine; a bare scalar is not.
 
 All functions read the entities as service role; they need the data imported first (`/gamedata`).
+
+---
+
+## 3b. Behaviour changes the frontend must handle (2026-08-19, Phase 0.3)
+
+**`useGameEntity` no longer swallows errors.** It used to `catch { return [] }`, so an auth expiry, a 500,
+a dropped network and a genuinely empty table were indistinguishable — and all four rendered as
+*"No game data loaded yet — import the dataset from the Game Data page (admin)"*. Failures now propagate.
+
+* `useGameCatalog()` returns **`isError`** and **`error`** alongside `isLoading` / `isEmpty`.
+* **`isEmpty` now means genuinely zero rows** — it is false whenever a query errored.
+* Please render the two states differently: `isError` → *"couldn't load"* (with a retry), `isEmpty` →
+  the existing import hint. Sites: `Database.jsx:76-81`, `StealthAnalysis.jsx:234-235`.
+* New `useGameEntityRows(name)` returns `{ rows, isLoading, isError, error }` for any entity by name, so a
+  new Databank kind no longer needs an edit to `gameData.js`.
+
+**`gameFileImport.importEntityRows` is now a thin wrapper over `seedGameData.upsertEntityRows`** (contract
+§2's standing request, closed). Its own copy paged with `api.list("game_id", 5000)` and so re-created rows
+1..n beyond 5,000 as duplicates on every import — ScenarioEntity is 6,596 rows. No call-site change needed:
+the signature is unchanged.
 
 ---
 

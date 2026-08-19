@@ -17,20 +17,29 @@ export const countIds = (ids = []) => {
 import { listAll } from "@/lib/seedGameData";
 
 // Every game entity is keyed by game_id (synthetic for the relation tables). listAll pages if needed.
+//
+// This used to swallow every error and return [], which made an auth expiry, a 500, a dropped network
+// and a genuinely empty table indistinguishable — all four rendered as "No game data loaded yet, import
+// the dataset". Failures now propagate so callers can tell "couldn't load" from "nothing there".
+// An entity that is simply not deployed yet is still an empty result, not an error.
 export function useGameEntity(entity, enabled = true) {
   return useQuery({
     queryKey: ["game", entity],
     enabled,
     staleTime: 5 * 60 * 1000,
+    retry: 1,
     queryFn: async () => {
-      try {
-        const api = base44.entities[entity];
-        return api ? await listAll(api, "game_id") : [];
-      } catch {
-        return []; // entity not deployed yet — pages show the "import game data" hint
-      }
+      const api = base44.entities[entity];
+      if (!api) return []; // entity not deployed yet — genuinely nothing to show
+      return await listAll(api, "game_id");
     },
   });
+}
+
+/** Escape hatch: rows for any entity by name, without editing this file for every new Databank kind. */
+export function useGameEntityRows(entity, enabled = true) {
+  const q = useGameEntity(entity, enabled);
+  return { rows: q.data || [], isLoading: q.isLoading, isError: q.isError, error: q.error };
 }
 
 // Lookup maps keyed by game_id across the catalog entities used for cross-links.
@@ -65,7 +74,11 @@ export function useGameCatalog(extended = false) {
     combatTemplates: combat.data || [], formations: formations.data || [], blueprints: blueprints.data || [], statLabels,
     byId, kindOf,
     isLoading: core.some((q) => q.isLoading),
-    isEmpty: !core.some((q) => (q.data || []).length > 0),
+    // isEmpty means GENUINELY ZERO ROWS. If a query failed we do not know whether the table is empty,
+    // so isError takes precedence — render "couldn't load", never "import the dataset".
+    isError: core.some((q) => q.isError),
+    error: core.find((q) => q.isError)?.error ?? null,
+    isEmpty: !core.some((q) => q.isError) && !core.some((q) => (q.data || []).length > 0),
   };
 }
 
