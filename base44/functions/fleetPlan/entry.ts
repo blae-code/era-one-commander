@@ -5,6 +5,7 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.31';
 
 type Line = { game_id: string; count: number };
 const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
+const CLASSES = ['FighterUnit','CorvetteUnit','FrigateUnit','UtilityUnit','PlatformUnit','MineUnit','CommandModule','StructuralModule','WeaponModule','FacilityModule','UtilityModule','Station','Wreckage'];
 
 Deno.serve(async (req) => {
   const base44 = createClientFromRequest(req);
@@ -22,29 +23,44 @@ Deno.serve(async (req) => {
   ]);
   const byId = (rows: any[]) => Object.fromEntries(rows.map((r) => [r.game_id, r]));
   const M = byId(modules), U = byId(units), W = byId(weapons), R = byId(research);
-  const weaponDps = (ids: string[] = []) => ids.reduce((a, id) => a + num(W[id]?.dps), 0);
+  // Per-target-class DPS only. The old class-free `weaponDps` summed Weapon.dps, which ranks an
+  // anti-mine platform above a cruiser; class_damage_multipliers are what actually decide a matchup.
+  const dpsVsClass = (ids: string[] = []) => {
+    const out: Record<string, number> = Object.fromEntries(CLASSES.map((c) => [c, 0]));
+    for (const id of ids) {
+      const w = W[id]; if (!w) continue;
+      for (const cl of CLASSES) {
+        const mult = (w.class_damage_multipliers || []).find((m: any) => m.entity_class === cl)?.multiplier ?? 1;
+        out[cl] += num(w.dps) * mult;
+      }
+    }
+    return out;
+  };
 
   const totals: Record<string, number> = {
     cost_resources: 0, cost_population: 0, construction_time: 0, max_health: 0, mass: 0, energy_production: 0, energy_use: 0,
-    energy_net: 0, dps: 0, cargo_capacity: 0, extraction_rate: 0, resource_production: 0, part_count: 0,
+    energy_net: 0, cargo_capacity: 0, extraction_rate: 0, resource_production: 0, part_count: 0,
   };
+  const totalsVs: Record<string, number> = Object.fromEntries(CLASSES.map((c) => [c, 0]));
   const lines: any[] = [];
   const unknown: string[] = [];
   const researchNeeded = new Set<string>();
 
   const add = (kind: 'Module' | 'Unit', r: any, count: number) => {
     const c = Math.max(0, Math.floor(num(count) || 1));
-    const dps = weaponDps(r.weapons);
+    const vs = dpsVsClass(r.weapons);
     const eUse = num(r.energy_per_second), eProd = num(r.energy_production);
     const line = {
       game_id: r.game_id, name: r.name, kind, count: c, tier: r.tier,
       cost_resources: num(r.cost_resources) * c, cost_population: num(r.cost_population) * c,
       construction_time: num(r.construction_time) * c, max_health: num(r.max_health) * c, mass: num(r.mass) * c,
-      energy_production: eProd * c, energy_use: eUse * c, energy_net: (eProd - eUse) * c, dps: dps * c,
+      energy_production: eProd * c, energy_use: eUse * c, energy_net: (eProd - eUse) * c,
+      dps_vs_class: Object.fromEntries(CLASSES.map((cl) => [cl, vs[cl] * c])),
       cargo_capacity: num(r.cargo_capacity) * c, extraction_rate: num(r.extraction_rate) * c, resource_production: num(r.resource_production) * c,
     };
     lines.push(line);
     for (const k of Object.keys(totals)) if (k in line) totals[k] += (line as any)[k];
+    for (const cl of CLASSES) totalsVs[cl] += vs[cl] * c;
     totals.part_count += c;
     for (const rid of r.required_research || []) researchNeeded.add(rid);
   };
@@ -62,5 +78,9 @@ Deno.serve(async (req) => {
   for (const id of researchNeeded) visit(id);
   const required_research = ordered.map((r) => ({ game_id: r.game_id, name: r.name, tier: r.tier, cost_resources: r.cost_resources, construction_time: r.construction_time }));
 
-  return Response.json({ totals, lines, required_research, unknown });
+  return Response.json({
+    totals: { ...totals, dps_vs_class: totalsVs }, lines, required_research, unknown,
+    capabilities: { dps: 'per-target-class only; there is deliberately no class-free dps total' },
+    game_version: '0.12.2', game_build: '24615926',
+  });
 });

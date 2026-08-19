@@ -25,7 +25,10 @@ Deno.serve(async (req) => {
   else for (const p of body.parts || []) counts[p.module_id] = (counts[p.module_id] || 0) + Math.max(1, num(p.count) || 1);
   if (!Object.keys(counts).length) return Response.json({ error: 'modules{}, parts[] or blueprint_id required' }, { status: 400 });
 
-  const t: Record<string, number> = { parts: 0, cost_resources: 0, cost_population: 0, construction_time: 0, max_health: 0, mass: 0, energy_production: 0, energy_use: 0, energy_net: 0, dps: 0,
+  // NOTE: no class-free `dps` total. Summing Module.dps_total made `shipped:Anti Missile Platform`
+  // read 716.8 DPS at 6,900 RU and out-rank a Cruiser, when its real dps_vs_class is 71.7 against every
+  // class except MineUnit. Comparative DPS resolves through dps_vs_class against a NAMED class only.
+  const t: Record<string, number> = { parts: 0, cost_resources: 0, cost_population: 0, construction_time: 0, max_health: 0, mass: 0, energy_production: 0, energy_use: 0, energy_net: 0,
     cargo_capacity: 0, resource_capacity_bonus: 0, energy_capacity_bonus: 0, population_capacity_bonus: 0, research_capacity_bonus: 0, extraction_rate: 0, resource_production: 0 };
   const dpsVs: Record<string, number> = Object.fromEntries(CLASSES.map((c) => [c, 0]));
   const lines: any[] = []; const unknown: string[] = []; const byClass: Record<string, number> = {}; const byType: Record<string, number> = {}; const weapons: string[] = [];
@@ -35,7 +38,7 @@ Deno.serve(async (req) => {
     if (!m) { unknown.push(id); continue; }
     const l = { game_id: id, name: m.name, module_class: m.module_class, module_type: m.module_type, count: c, cost_resources: num(m.cost_resources) * c, cost_population: num(m.cost_population) * c,
       construction_time: num(m.construction_time) * c, max_health: num(m.max_health) * c, mass: num(m.mass) * c, energy_production: num(m.energy_production) * c, energy_use: num(m.energy_per_second) * c,
-      dps: num(m.dps_total) * c, cargo_capacity: num(m.cargo_capacity) * c, extraction_rate: num(m.extraction_rate) * c, resource_production: num(m.resource_production) * c };
+      cargo_capacity: num(m.cargo_capacity) * c, extraction_rate: num(m.extraction_rate) * c, resource_production: num(m.resource_production) * c };
     lines.push(l);
     for (const k of Object.keys(t)) if (k in l) t[k] += (l as any)[k];
     t.parts += c; t.resource_capacity_bonus += num(m.resource_capacity_bonus) * c; t.energy_capacity_bonus += num(m.energy_capacity_bonus) * c;

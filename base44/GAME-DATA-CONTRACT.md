@@ -116,7 +116,7 @@ Server-side alternative to the `/gamedata` page seeder.
 Response:
 ```json
 { "totals": { "cost_resources", "cost_population", "construction_time", "max_health", "mass",
-              "energy_production", "energy_use", "energy_net", "dps", "cargo_capacity",
+              "energy_production", "energy_use", "energy_net", "dps_vs_class", "cargo_capacity",
               "extraction_rate", "resource_production", "part_count" },
   "lines": [ { "game_id", "name", "kind": "Module|Unit", "count", "cost_resources", "dps", "energy_net", ... } ],
   "required_research": [ { "game_id", "name", "tier", "cost_resources", "construction_time" } ],  // transitive closure, ordered buildable-first
@@ -143,8 +143,23 @@ DPS per module/unit = Σ over `weapons` of `Weapon.dps` (the game's own per-weap
 
 **`engagement`** — attacker vs defender with the modifier stack. `{ attacker: {game_id, primary?, secondary?, stance?, style?, formation?, level?}, defender: {game_id, stance?, formation?, level?} }` →
 `{ attacker {…, weapons[], factors {weapon_damage, weapon_rate, attack_range}}, defender {…, max_health, armor, health_regen, factors}, per_weapon[{game_id, base_dps, class_multiplier, dps, range, armor_penetration, hp_per_hit}],
-   result {dps, alpha, net_dps, time_to_kill_s, shots_to_kill, max_range, armor_model}, modifiers_applied {attacker, defender} }`.
-Stances: `passive|reactive|defensive|aggressive|hunter`; styles: `flyby|hold|chase|orbit`; formations: `claw|delta|sphere|wall|grouped` (base `FM.FORMATION` bonus is added automatically); `level` 1–10 applies UnitLevel upgrades. Additive fractions stack per stat (`1 + Σadd`), then Multiply/Set. **Armor is reported, not applied** — the game's armor formula is not in the extracted data; present it alongside.
+   result {dps, alpha, net_dps, time_to_kill_s, shots_to_kill, max_range, armor_model, ttk_band, ranking_stable, by_armor_model[]}, capabilities, game_version, game_build, modifiers_applied {attacker, defender} }`.
+Stances: `passive|reactive|defensive|aggressive|hunter`; styles: `flyby|hold|chase|orbit`; formations: `claw|delta|sphere|wall|grouped` (base `FM.FORMATION` bonus is added automatically); `level` 1–10 applies UnitLevel upgrades. Additive fractions stack per stat (`1 + Σadd`), then Multiply; **`Set` is an absolute override, not a factor**.
+
+**Uncertainty travels in the payload (2026-08-19).** `result.time_to_kill_s` remains the point estimate under
+`armor_model: "none"` — unchanged from every number published before this date. Alongside it:
+* `ttk_band {low, high, model_spread_ratio}` — the span of TTK across four **candidate** armour shapes
+  (`none`, `subtractive`, `diminishing`, `proportional`). The game's real damage-vs-armour formula is a
+  method body that was never extracted; `ARMOR_SCALE` in those shapes is a free parameter, **not** a game
+  constant. Render the band, not a bare point estimate: CMX_FRI3 → PIR_INT is **6.44 s – 9.99 s**, spread 1.55×.
+* `ranking_stable` — true when the per-weapon ordering is identical under all four shapes. When true, a
+  *ranking* built on this response is trustworthy even though the *magnitude* is not.
+* `by_armor_model[]` — the full per-shape result, if you want to show the sensitivity directly.
+* `capabilities` — what this function does and does not model, in its own words. Worth surfacing verbatim.
+
+Veterancy is applied from a verified constant (**+0.11 per level** on MaxHealth / Armor /
+HealthRegenerationRate / WeaponDamage, identical across all 27 units) rather than by listing all 1,080
+`UnitLevel` rows on every call.
 
 **`researchImpact`** — `{ targets: ["R.U.FRS3"], have?: [...], cumulative?: true }` → `{ path[{game_id, name, depth, cost…, modifiers[], affected_units[], affected_modules[], unlocks_*}], totals, cumulative_by_entity {CMX_FRI3: {MaxSpeed: 0.33, Power: 0.21}}, unlocked {modules, units, weapons, turrets}, missing }` — class/type filters resolved to concrete ids; cumulative sums Add/Subtract fractions along the chain.
 
@@ -152,9 +167,17 @@ Stances: `passive|reactive|defensive|aggressive|hunter`; styles: `flyby|hold|cha
 
 **`scoreEstimate`** — `{ game_ids:[…] }` → per entity `{ score (game's own), components {Weight: {value, weight}}, contributions }` — weight × observable, side by side with the actual score (the combination formula is not extracted).
 
-**`blueprintStats`** — `{ modules:{id:count} | parts:[{module_id,count}] | blueprint_id }` → `{ totals {parts, cost_resources, cost_population, construction_time, max_health, mass, energy_production/use/net, dps, dps_vs_class, cargo_capacity, *_capacity_bonus, extraction_rate, resource_production}, by_class, by_type, weapons[], lines[], warnings[] (no/multiple command module, hardpoint shortfall, energy deficit), required_research[], research_totals }` — the real replacement for the grid builder's `computeStats`.
+**`blueprintStats`** — `{ modules:{id:count} | parts:[{module_id,count}] | blueprint_id }` → `{ totals {parts, cost_resources, cost_population, construction_time, max_health, mass, energy_production/use/net, dps_vs_class, cargo_capacity, *_capacity_bonus, extraction_rate, resource_production}, by_class, by_type, weapons[], lines[], warnings[] (no/multiple command module, hardpoint shortfall, energy deficit), required_research[], research_totals }` — the real replacement for the grid builder's `computeStats`.
 
 **`importStationFile`** — `{ file_base64, name?, create? }` (an ERA ONE `.station` file, e.g. from `Documents/My Games/Era One/Blueprints/`) → `{ name, era_one_version, parts[{index, guid, module_id, module_name, position, rotation, parent, connection}], modules{}, unresolved[], cost, construction_time, required_research, stats }`; `create:true` upserts it as `GameBlueprint` `player:<name>` (source `player`). Decodes the Sirenix Odin binary server-side; parts resolve via `Module.prefab_guid`.
+
+**No class-free DPS is returned for comparison (2026-08-19).** `blueprintStats.totals.dps` and
+`fleetPlan.totals.dps` have been **removed**; both now return `dps_vs_class` only. The removed figure summed
+`Module.dps_total` / `Weapon.dps` across every target class at once, which made
+`shipped:Anti Missile Platform` read **716.8 DPS at 6,900 RU** — out-ranking a Cruiser — when its real
+per-class DPS is **71.7 against everything except `MineUnit`**. Any DPS used to rank, compare or recommend
+must resolve through `dps_vs_class` against a **named** class, and the class must be printed beside the
+number. Aggregates against a named class are fine; a bare scalar is not.
 
 All functions read the entities as service role; they need the data imported first (`/gamedata`).
 
