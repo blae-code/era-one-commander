@@ -14,7 +14,40 @@ each other. Kept in `base44/` because it is the backend's statement of its own s
 | **Backend** (Blae's Claude session, from `Code/era-one-data`) | `base44/entities/*.jsonc` (except `Blueprint`, `Component`, `Hull`, `User`), `base44/functions/**`, `src/data/era-one/**`, `src/lib/seedGameData.js`, `src/lib/gameData.js`, `src/lib/gameFileImport.js`, `base44/GAME-DATA-CONTRACT.md`, README "Game data" section | The entity files are **generated** **Backend → frontend (Phase 5 shipped — workplan complete):** `LocalizedString` now carries all 9 languages (+`namespace`); `DatasetBuild` + `BuildChange` for "what changed in the patch". All 48 entities verified synced.
 * **Backend → frontend (Phase 4 shipped):** `GameBlueprint.assembly` trees (draw shipped designs), `AttachmentRule`, `Module.prefab_guid`; functions `blueprintStats` (design roll-up + warnings) and `importStationFile` (drop a `.station` file → parts + stats, optional save). This is the backend for a **module-graph Ship Builder / design viewer** replacing the Hull/Component grid.
 * **Backend → frontend (Phase 3 shipped):** `AiPersonality` (AI dossier), `AiLogicGraph` + `AiFact/AiGoal/AiOperation` + `AiColorScheme` (render the AI's decision graphs), `MatchOption` (match-setup matrix), `ScoreWeight`; functions `economyModel`, `scoreEstimate`.
-* **Backend → frontend (Phase 2 shipped):** **Maps** — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
+* **Backend → frontend (Phase 2 shipped):** **Maps*### P0-01 — error states, and quarantine the invented pages (queued, one active brief at a time)
+
+**Why:** four of the nine nav items are backed by entities that describe a different game. `Hull.jsonc`
+declares `ship_class corvette|frigate|destroyer|cruiser|battleship|carrier` and `grid_width/grid_height`;
+ERA ONE has no hulls and no grid, its real `Unit.unit_class` is `Fighter|Corvette|Frigate|Utility|
+Platform|Mine`, and ships are module graphs. The published site currently shows a player a
+"Sparrow-class Corvette 6x4 grid" and an "LN-9 Beam Lance", neither of which exists.
+
+1. **Error vs empty.** `useGameEntity` no longer swallows failures (see §3b). `useGameCatalog()` now
+   returns `isError` / `error`, and `isEmpty` means genuinely zero rows. Please render them differently:
+   `isError` -> "couldn't load" with a retry; `isEmpty` -> the existing import hint.
+   Sites: `Database.jsx:76-81`, `StealthAnalysis.jsx:234-235`.
+2. **`GameData.jsx`** — replace the 48-way `list("game_id", 5000)` loop (`:71-80`) with the exported
+   `listAll`, or drop the client count entirely and trust `gameDataStatus`. Today ScenarioEntity (6,596
+   rows) reports `partial` on the same screen whose Verify button returns `ok:true` — two authorities
+   disagreeing by construction on the page that certifies data health.
+3. **Quarantine, do not delete.** Remove `/builder`, `/blueprints`, `/compare` and `/fleet` from
+   `Layout.jsx` nav and `App.jsx` routes, and remove **Advisory** too (its seeded prompts at
+   `Advisory.jsx:222-224,236-238` resolve against the fictional `Blueprint` entity). Keep the components:
+   `/compare` and `/fleet` come back in Phase 4 re-pointed at real data.
+4. **Dashboard must stop reading the doomed entities**, not just re-point its links — it is the landing
+   page, and Phase 4 deletes those entity files. `Dashboard.jsx:14` fetches `entities.Component.list(...)`
+   as the class-chart fallback, `:15` fetches `Blueprint`, `:8` imports `BlueprintCard`, `:116` renders it,
+   and `:41` uses `blueprints.length` as the BLUEPRINTS headline (a number structurally incapable of
+   exceeding 06). Drive the class chart from `Module` alone, drop the BlueprintCard block, and re-point the
+   three quick-action cards (`:53-56`) at `/database` and `/stealth`.
+5. **`ScrollToTop.jsx:29`** calls `window.scrollTo`, but the scrolling element is
+   `<main className="flex-1 overflow-y-auto">` (`Layout.jsx:81`), so scroll position persists across every
+   route change.
+
+**Backend has already landed** for this brief: `useGameEntity` error propagation, `useGameEntityRows(name)`
+for sourcing any entity without a `gameData.js` edit, and the `importEntityRows` consolidation.
+
+* — `Scenario` + `ScenarioEntity` (world x/z per entity, kind, team, resources) = minimap + resource totals + enemy-base HP/DPS/cost per map; `EnemyWave`/`EnemyUpgrade` = wave timeline & difficulty curve; `Objective`/`GameHint`/`GameEvent`/`Remain` = codex; `ArenaTurn`; function `researchImpact`. Suggested pages: *Maps* (card grid → minimap + intel), *Waves* timeline, *Codex*.
 * **Backend → frontend (2026-08-17, Phase 0+1 shipped):** `StatDefinition` (real stat names — use in every modifier chip), `Effectiveness` + `dps_vs_class` (counters matrix / heatmap), decoded unit doctrine + flight fields, turret costs, and functions `unitLoadout` (loadout configurator with ranked fits) and `engagement` (TTK / modifier stack). Suggested wiring: Compare page → `Unit`/`Module` + `engagement`; Fleet Analysis → `fleetPlan`; a Loadout panel on Unit detail → `unitLoadout`; `gameFileImport.importEntityRows` → `upsertEntityRows`.
 * — change them upstream in era-one-data, never by hand here. |
 | **Frontend** (Base44 builder / Blae) | `src/pages/**`, `src/components/**`, `src/index.css`, `tailwind.config.js`, `src/App.jsx` routes, `src/components/Layout.jsx` nav | The backend only touched `src/pages/Database.jsx`, `src/pages/GameData.jsx`, `src/pages/Dashboard.jsx` and `src/components/database/GameEntityDetail.jsx` once to prove the data flows; from here on they are yours to restyle or replace. |
