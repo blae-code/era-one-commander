@@ -1,6 +1,6 @@
 {
  "game": {
-  "generated_utc": "2026-08-17T19:22:07Z",
+  "generated_utc": "2026-08-19T18:15:10Z",
   "buildid": "24615926",
   "LastUpdated": "1786131837",
   "SizeOnDisk": "9075402610",
@@ -25,8 +25,8 @@
    "stations": 6,
    "asteroids": 17,
    "effectiveness": 845,
-   "blueprints": 42,
-   "blueprint_parts": 2788,
+   "blueprints": 41,
+   "blueprint_parts": 2639,
    "combat_templates": 12,
    "formation_modifiers": 8,
    "factions": 2,
@@ -165,7 +165,7 @@
   {
    "entity": "GameBlueprint",
    "source_table": "blueprints",
-   "rows": 42,
+   "rows": 41,
    "columns": 35,
    "key": "game_id"
   },
@@ -242,7 +242,7 @@
   {
    "entity": "BlueprintPart",
    "source_table": "blueprint_parts",
-   "rows": 2788,
+   "rows": 2639,
    "columns": 13,
    "key": "game_id"
   },

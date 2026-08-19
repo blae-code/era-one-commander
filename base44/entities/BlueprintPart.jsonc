@@ -15,7 +15,6 @@
     "source": {
       "type": "string",
       "enum": [
-        "player",
         "shipped"
       ]
     },

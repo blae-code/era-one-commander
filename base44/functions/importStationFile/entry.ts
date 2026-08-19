@@ -120,21 +120,31 @@ Deno.serve(async (req) => {
   const cost = bp.cost && typeof bp.cost === 'object' ? { resources: bp.cost.Resources, population: bp.cost.Population, energy: bp.cost.Energy, research: bp.cost.Research } : null;
   const M: Record<string, any> = Object.fromEntries(modules.map((m: any) => [m.game_id, m]));
   const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
-  const stats = { parts: parts.length, cost_resources: 0, cost_population: 0, construction_time: 0, max_health: 0, mass: 0, energy_production: 0, energy_use: 0, dps: 0 };
+  // Per-target-class DPS only — a class-free sum ranks an anti-mine platform above a cruiser.
+  const CLASSES = ['FighterUnit','CorvetteUnit','FrigateUnit','UtilityUnit','PlatformUnit','MineUnit','CommandModule','StructuralModule','WeaponModule','FacilityModule','UtilityModule','Station','Wreckage'];
+  const stats = { parts: parts.length, cost_resources: 0, cost_population: 0, construction_time: 0, max_health: 0, mass: 0, energy_production: 0, energy_use: 0,
+    dps_vs_class: Object.fromEntries(CLASSES.map((c) => [c, 0])) as Record<string, number> };
   for (const [id, n] of Object.entries(counts)) { const m = M[id]; if (!m) continue;
     stats.cost_resources += num(m.cost_resources) * n; stats.cost_population += num(m.cost_population) * n; stats.construction_time += num(m.construction_time) * n;
-    stats.max_health += num(m.max_health) * n; stats.mass += num(m.mass) * n; stats.energy_production += num(m.energy_production) * n; stats.energy_use += num(m.energy_per_second) * n; stats.dps += num(m.dps_total) * n; }
+    stats.max_health += num(m.max_health) * n; stats.mass += num(m.mass) * n; stats.energy_production += num(m.energy_production) * n; stats.energy_use += num(m.energy_per_second) * n;
+    for (const cl of CLASSES) stats.dps_vs_class[cl] += num(m.dps_vs_class?.[cl]) * n; }
   const name = body.name || bp.name || 'Imported blueprint';
   const out: any = { name, era_one_version: bp.eraOneVersion ?? null, root_part: bp.rootPart ?? null, command_part: bp.commandPart ?? null, used_by_ai: bp.usedByAI ?? null,
     parts, modules: counts, unresolved, cost, construction_time: bp.constructionTime ?? null, required_research: Array.isArray(bp.requiredResearch) ? bp.requiredResearch : [], stats };
   if (body.create) {
-    const rec = { game_id: `player:${name}`, name, source: 'player', file: `${name}.station`, part_count: parts.length, unresolved_parts: unresolved.length,
+    // Writes to PlayerDesign, NOT GameBlueprint. GameBlueprint is in importGameData's KEYED set and its
+    // expected id list is baked into the generated gameDataStatus, so a `player:` id there is reported as
+    // `extra` and reds the health check permanently. User data never enters the generated manifest.
+    const rec = { game_id: `player:${name}`, name, source_file: body.source_file || `${name}.station`,
+      file_mtime: body.file_mtime ?? null, part_count: parts.length, unresolved_parts: unresolved.length,
       cost_resources: cost?.resources ?? null, cost_population: cost?.population ?? null, construction_time: bp.constructionTime ?? null,
       required_research: out.required_research, modules: counts, sum_module_cost_resources: stats.cost_resources, sum_module_cost_population: stats.cost_population,
-      sum_module_max_health: stats.max_health, dps_total: stats.dps, weapon_modules: Object.keys(counts).filter((id) => M[id]?.module_class === 'Weapon'),
-      root_part: bp.rootPart ?? null, command_part: bp.commandPart ?? null, era_one_version: bp.eraOneVersion ?? null, game_version: modules[0]?.game_version ?? null, game_build: modules[0]?.game_build ?? null };
-    const existing = await svc.GameBlueprint.filter({ game_id: rec.game_id }, 'game_id', 1);
-    out.record = existing[0] ? await svc.GameBlueprint.update(existing[0].id, rec) : await svc.GameBlueprint.create(rec);
+      sum_module_max_health: stats.max_health, dps_vs_class: stats.dps_vs_class,
+      weapon_modules: Object.keys(counts).filter((id) => M[id]?.module_class === 'Weapon'), parts,
+      root_part: bp.rootPart ?? null, command_part: bp.commandPart ?? null, era_one_version: bp.eraOneVersion ?? null,
+      game_version: modules[0]?.game_version ?? null, game_build: modules[0]?.game_build ?? null, imported_utc: new Date().toISOString() };
+    const existing = await svc.PlayerDesign.filter({ game_id: rec.game_id }, 'game_id', 1);
+    out.record = existing[0] ? await svc.PlayerDesign.update(existing[0].id, rec) : await svc.PlayerDesign.create(rec);
   }
   return Response.json(out);
 });

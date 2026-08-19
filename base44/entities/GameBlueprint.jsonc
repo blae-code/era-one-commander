@@ -13,7 +13,6 @@
     "source": {
       "type": "string",
       "enum": [
-        "player",
         "shipped"
       ]
     },
@@ -174,10 +173,10 @@
         "Structural": {
           "type": "number"
         },
-        "Utility": {
+        "Facility": {
           "type": "number"
         },
-        "Facility": {
+        "Utility": {
           "type": "number"
         },
         "Weapon": {
