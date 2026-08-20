@@ -35,14 +35,14 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
     return (
       <tr key={r.game_id} onClick={() => onSelect(r.game_id)}
         className={`cursor-pointer transition-colors border-b border-border ${sel ? "bg-primary/10" : cmp ? "bg-[#2f9bff]/5" : "hover:bg-secondary/50"}`}>
-        <td className={`px-2 ${pad} border-b border-border/60 align-middle`}>
+        <td className={`px-2 ${pad} border-b border-border/60 align-middle sticky left-0 z-[5] ${sel ? "bg-[#2b1512]" : cmp ? "bg-[#0f1720]" : "bg-card"}`}>
           <span className="inline-flex items-center gap-1">
             <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} title="favourite (f)" className={`p-0.5 ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><Star size={12} fill={fav ? "currentColor" : "none"} /></button>
             <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} title="compare (c)" className={`p-0.5 ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><GitCompare size={12} /></button>
           </span>
         </td>
         {columns.map((c, i) => (
-          <td key={c.key} className={`px-2 ${pad} border-b border-border/60 align-middle ${c.type === "list" ? "max-w-[260px]" : ""}`}>
+          <td key={c.key} className={`px-2 ${pad} border-b border-border/60 align-middle ${c.type === "list" ? "max-w-[260px]" : ""} ${i === 0 && c.key === "name" ? `sticky left-16 z-[5] border-r border-border ${sel ? "bg-[#2b1512]" : cmp ? "bg-[#0f1720]" : "bg-card"}` : ""}`}>
             {i === 0 && c.key === "name" ? (
               <span className="flex items-center gap-2 min-w-0">
                 <EntityIcon row={r} kindKey={kindKey} />
@@ -63,18 +63,18 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
       <table className="w-full text-sm border-separate border-spacing-0">
         <thead className="sticky top-0 z-10 bg-secondary/95 backdrop-blur">
           <tr>
-            <th className="w-16 px-2 py-2 border-b border-border" />
-            {columns.map((c) => (
+            <th className="w-16 px-2 py-2 border-b border-border sticky left-0 z-[11] bg-secondary" />
+            {columns.map((c, i) => (
               <th key={c.key} onClick={() => onSort(c.key)} style={{ minWidth: c.width }}
-                className={`tech-label px-2 py-2 font-normal whitespace-nowrap cursor-pointer select-none border-b border-border hover:text-primary ${c.type === "num" || c.type === "pct" ? "text-right" : "text-left"} ${sortKey === c.key ? "text-primary" : ""}`}>
+                className={`tech-label px-2 py-2 font-normal whitespace-nowrap cursor-pointer select-none border-b border-border hover:text-primary ${c.type === "num" || c.type === "pct" ? "text-right" : "text-left"} ${sortKey === c.key ? "text-primary" : ""} ${i === 0 && c.key === "name" ? "sticky left-16 z-[11] bg-secondary border-r border-border" : ""}`}>
                 <span className="inline-flex items-center gap-1">{c.label}{sortKey === c.key ? (sortDir === "desc" ? <ArrowDown size={10} /> : <ArrowUp size={10} />) : null}</span>
               </th>
             ))}
           </tr>
           <tr>
-            <th className="px-2 pb-1 border-b border-border" />
-            {columns.map((c) => (
-              <th key={c.key} className="px-2 pb-1 border-b border-border align-bottom">
+            <th className="px-2 pb-1 border-b border-border sticky left-0 z-[11] bg-secondary" />
+            {columns.map((c, i) => (
+              <th key={c.key} className={`px-2 pb-1 border-b border-border align-bottom ${i === 0 && c.key === "name" ? "sticky left-16 z-[11] bg-secondary border-r border-border" : ""}`}>
                 {c.type === "num" || c.type === "pct" ? <ColumnSpark rows={rows} col={c} ctx={ctx} /> : <div className="h-3.5" />}
               </th>
             ))}
@@ -85,7 +85,7 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
             ? groups.map(([g, rs]) => (
                 <React.Fragment key={g}>
                   <tr onClick={() => toggleGroup(g)} className="cursor-pointer bg-secondary/60 hover:bg-secondary">
-                    <td colSpan={columns.length + 1} className="px-2 py-1.5 border-b border-border">
+                    <td colSpan={columns.length + 1} className="px-2 py-1.5 border-b border-border sticky left-0 bg-secondary/60">
                       <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
                         {collapsed.has(g) ? <ChevronRight size={11} /> : <ChevronDown size={11} />}
                         <ClassDot value={g} />{g}
