@@ -8,6 +8,7 @@ import { CLASSES } from "./catalog";
 import { fmtNum, fmtModifier } from "@/lib/gameData";
 import { SegBar as Bar } from "./Readouts";
 import VitalsStrip from "./VitalsStrip";
+import EngagementCalc from "./EngagementCalc";
 
 const Chips = ({ ids, byId, onSelect, empty = "—" }) => (
   <div className="flex flex-wrap gap-1">
@@ -72,7 +73,7 @@ export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onCl
             </SheetHeader>
             <Tabs defaultValue="overview" className="flex-1 flex flex-col min-h-0">
               <TabsList className="mx-4 mt-2 rounded-none justify-start bg-transparent border-b border-border h-8 gap-2 p-0">
-                {["overview", "combat", "doctrine", "economy", "research", "notes", "raw"].map((t) => <TabsTrigger key={t} value={t} className="rounded-none font-mono text-[10px] uppercase tracking-wider data-[state=active]:bg-primary/10 data-[state=active]:text-primary h-8 px-2">{t}</TabsTrigger>)}
+                {["overview", "combat", ...(row.dps !== undefined && !isUnitOrModule ? ["engage"] : []), "doctrine", "economy", "research", "notes", "raw"].map((t) => <TabsTrigger key={t} value={t} className="rounded-none font-mono text-[10px] uppercase tracking-wider data-[state=active]:bg-primary/10 data-[state=active]:text-primary h-8 px-2">{t}</TabsTrigger>)}
               </TabsList>
               <div className="flex-1 overflow-y-auto p-4">
                 <TabsContent value="overview" className="m-0"><VitalsStrip row={row} peers={peers} /><GameEntityDetail kind={kindKey === "Doctrine" || kindKey === "GameBlueprint" ? "Other" : kindKey} record={row} byId={byId} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
@@ -82,6 +83,9 @@ export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onCl
                   {row.class_damage_multipliers?.length ? (<div><div className="tech-label mb-1">Class multipliers</div><KV items={row.class_damage_multipliers.map((m) => [m.entity_class, `×${m.multiplier}`])} /></div>) : null}
                   {isUnitOrModule && <KV items={[["HP", row.max_health], ["Armor", row.armor], ["HP regen", row.health_regen], ["Ablative shield", row.max_ablative_shield], ["Perimeter shield", row.max_perimeter_shield], ["Attack range", row.link_range], ["Reactivity", row.attack_reactivity], ["Attack cooldown", row.attack_cooldown], ["Aim required", row.aim_required], ["Predictive aim", row.predictive_aim], ["Structural dmg ×", row.structural_damage_multiplier]]} />}
                   {row.dps !== undefined && !isUnitOrModule && <KV items={[["DPS", row.dps], ["Range", row.range], ["Hull / hit", row.hp_change], ["Shield / hit", row.shield_change], ["Armor pen", row.armor_penetration], ["Rate of fire", row.rate_of_fire], ["Burst", row.burst_amount], ["Burst interval", row.burst_interval], ["Reload", row.requires_reload ? row.reload_time : null], ["Projectile speed", row.bullet_speed], ["Lifetime", row.bullet_lifetime], ["Tracking", row.tracking_speed], ["AoE radius", row.deal_area_damage ? row.area_radius : null], ["Status on hit", row.applied_status_on_hit], ["Type", row.weapon_type], ["Implementation", row.implementation]]} />}
+                </TabsContent>
+                <TabsContent value="engage" className="m-0">
+                  {row.dps !== undefined && !isUnitOrModule && <EngagementCalc weapon={row} ctx={ctx} />}
                 </TabsContent>
                 <TabsContent value="doctrine" className="m-0 space-y-4">
                   {isUnitOrModule ? (<>
