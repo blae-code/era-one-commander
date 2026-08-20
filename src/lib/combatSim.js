@@ -4,8 +4,11 @@
 // rate_of_fire / burst_* / reload_* fields.
 const n = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
-/** Class key a unit row counts as in the weapon damage tables. */
-export const unitClassKey = (u) => u.unit_class || "FrigateUnit";
+/** Class key a unit row counts as in the weapon damage tables (Unit.unit_class is "Frigate", tables use "FrigateUnit"). */
+export const unitClassKey = (u) => {
+  const c = u.unit_class || "Frigate";
+  return /(Unit|Module|Station|Wreckage)$/.test(c) ? c : `${c}Unit`;
+};
 
 /** Seconds to strip a target's hull with one instance of a weapon. null when it cannot damage it. */
 export function timeToKill(weapon, target) {
