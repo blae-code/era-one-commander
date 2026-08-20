@@ -9,6 +9,7 @@ import { fmtNum, fmtModifier } from "@/lib/gameData";
 import { SegBar as Bar } from "./Readouts";
 import VitalsStrip from "./VitalsStrip";
 import EngagementCalc from "./EngagementCalc";
+import DamageRadar from "./DamageRadar";
 
 const Chips = ({ ids, byId, onSelect, empty = "—" }) => (
   <div className="flex flex-wrap gap-1">
@@ -78,6 +79,7 @@ export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onCl
               <div className="flex-1 overflow-y-auto p-4">
                 <TabsContent value="overview" className="m-0"><VitalsStrip row={row} peers={peers} /><GameEntityDetail kind={kindKey === "Doctrine" || kindKey === "GameBlueprint" ? "Other" : kindKey} record={row} byId={byId} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
                 <TabsContent value="combat" className="m-0 space-y-4">
+                  {maxDps > 0 && <DamageRadar row={row} peers={peers} />}
                   {maxDps > 0 ? (<div className="space-y-1"><div className="tech-label mb-1">DPS vs target class</div>{CLASSES.map((c) => <Bar key={c} label={c} value={dpsVs[c] || 0} max={maxDps} color={CLASS_HEX[c.replace("Unit", "").replace("Module", "")] || "hsl(var(--primary))"} />)}</div>) : <div className="tech-label">No armament</div>}
                   {row.weapons?.length ? (<div><div className="tech-label mb-1">Armament</div><Chips ids={[...new Set(row.weapons)]} byId={byId} onSelect={onSelectId} /></div>) : null}
                   {row.class_damage_multipliers?.length ? (<div><div className="tech-label mb-1">Class multipliers</div><KV items={row.class_damage_multipliers.map((m) => [m.entity_class, `×${m.multiplier}`])} /></div>) : null}
