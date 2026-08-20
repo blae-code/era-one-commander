@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Wrench, Heart, Trash2 } from "lucide-react";
+import { ArrowLeft, Heart, Trash2 } from "lucide-react";
 import { CategoryIcon, HullIcon } from "@/components/icons/EraIcons";
 import StatsPanel from "@/components/builder/StatsPanel";
 import VersionHistory from "@/components/blueprints/VersionHistory";
@@ -69,11 +69,6 @@ export default function BlueprintDetail() {
           </Button>
           <Button variant="outline" className="rounded-none text-[#ff2d55] hover:text-[#ff5c7a]" onClick={del}>
             <Trash2 size={13} />
-          </Button>
-          <Button className="rounded-none font-display uppercase tracking-wider" asChild>
-            <Link to={`/builder?blueprint=${bp.id}`}>
-              <Wrench size={14} className="mr-1.5" /> Open in Builder
-            </Link>
           </Button>
         </div>
       </div>

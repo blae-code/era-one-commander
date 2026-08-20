@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
-import { Wrench, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
+import { Database, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 import { useGameCatalog } from "@/lib/gameData";
@@ -51,7 +51,7 @@ export default function Dashboard() {
       {/* Quick actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
         {[
-          { to: "/builder", icon: Wrench, title: "Ship Builder", desc: "Design a hull loadout on the construction grid" },
+          { to: "/database", icon: Database, title: "Databank", desc: "Browse every value in the installed game dataset" },
           { to: "/blueprints", icon: Layers, title: "Blueprint Database", desc: "Browse, filter and import registered designs" },
           { to: "/compare", icon: ArrowLeftRight, title: "Comparison Engine", desc: "Analyze stat deltas between components & hulls" },
         ].map(({ to, icon: Icon, title, desc }) => (
@@ -106,9 +106,6 @@ export default function Dashboard() {
           {blueprints.length === 0 ? (
             <div className="schematic-panel p-8 text-center">
               <p className="tech-label">No blueprints registered yet</p>
-              <Link to="/builder" className="inline-block mt-3 px-4 py-2 bg-primary text-primary-foreground font-display font-semibold uppercase tracking-wider text-sm hover:opacity-90">
-                Open Ship Builder
-              </Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

@@ -9,17 +9,13 @@ import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
 import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
-import ShipBuilder from '@/pages/ShipBuilder';
 import Blueprints from '@/pages/Blueprints';
 import BlueprintDetail from '@/pages/BlueprintDetail';
 import Database from '@/pages/Database';
 import Compare from '@/pages/Compare';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
-import FleetAnalysis from '@/pages/FleetAnalysis';
-import StealthAnalysis from '@/pages/StealthAnalysis';
 import DataOps from '@/pages/DataOps';
-import Advisory from '@/pages/Advisory';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -50,14 +46,10 @@ const AuthenticatedApp = () => {
       {/* Add your page Route elements here */}
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/builder" element={<ShipBuilder />} />
         <Route path="/blueprints" element={<Blueprints />} />
         <Route path="/blueprints/:id" element={<BlueprintDetail />} />
         <Route path="/database" element={<Database />} />
         <Route path="/compare" element={<Compare />} />
-        <Route path="/fleet" element={<FleetAnalysis />} />
-        <Route path="/stealth" element={<StealthAnalysis />} />
-        <Route path="/advisory" element={<Advisory />} />
         <Route path="/data" element={<DataOps />} />
         <Route path="/gamedata" element={<GameData />} />
         <Route path="/import" element={<ImportData />} />

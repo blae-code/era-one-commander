@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
-import { LayoutDashboard, Wrench, Layers, Database, ArrowLeftRight, DatabaseZap, Ship, EyeOff, BrainCircuit } from "lucide-react";
+import { LayoutDashboard, Layers, Database, ArrowLeftRight, DatabaseZap } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
 
 const NAV = [
@@ -10,28 +10,19 @@ const NAV = [
     items: [{ to: "/", label: "Command Deck", code: "01", icon: LayoutDashboard }],
   },
   {
+    group: "Game Data",
+    items: [
+      { to: "/database", label: "Databank", code: "02", icon: Database },
+      { to: "/compare", label: "Comparison", code: "03", icon: ArrowLeftRight },
+    ],
+  },
+  {
     group: "Design",
-    items: [
-      { to: "/builder", label: "Ship Builder", code: "02", icon: Wrench },
-      { to: "/blueprints", label: "Blueprints", code: "03", icon: Layers },
-    ],
-  },
-  {
-    group: "Analysis",
-    items: [
-      { to: "/database", label: "Databank", code: "04", icon: Database },
-      { to: "/compare", label: "Comparison", code: "05", icon: ArrowLeftRight },
-      { to: "/fleet", label: "Fleet", code: "06", icon: Ship },
-      { to: "/stealth", label: "Stealth", code: "07", icon: EyeOff },
-    ],
-  },
-  {
-    group: "Advisory",
-    items: [{ to: "/advisory", label: "AI Advisors", code: "08", icon: BrainCircuit }],
+    items: [{ to: "/blueprints", label: "Blueprints", code: "04", icon: Layers }],
   },
   {
     group: "System",
-    items: [{ to: "/data", label: "Data Ops", code: "09", icon: DatabaseZap }],
+    items: [{ to: "/data", label: "Data Ops", code: "05", icon: DatabaseZap }],
   },
 ];
 
