@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
 import { GripHorizontal, X, Crosshair } from "lucide-react";
 import { computeStats, fmt } from "@/lib/shipStats";
+import { MASS_TOLERANCE_FACTOR } from "@/lib/buildLimits";
+import BudgetBars from "@/components/builder/BudgetBars";
 
 // Draggable performance overlay: floats above the build grid and re-computes live as
 // modules are placed. When a component is armed in the palette it also shows the
 // projected delta of adding it to the current hull.
 const METRICS = [
   { key: "dps", label: "DPS", dec: 1 },
+  { key: "mass", label: "MASS", dec: 0, lowerBetter: true },
+  { key: "power_use", label: "DRAW", dec: 0, lowerBetter: true },
   { key: "hp", label: "HULL", dec: 0 },
   { key: "shield", label: "SHIELD", dec: 0 },
   { key: "twr", label: "TWR", dec: 2 },
@@ -21,6 +25,10 @@ export default function BuildImpactOverlay({ hull, placements, selectedComponent
     if (!selectedComponent) return null;
     return computeStats(hull, [...placements, { component: selectedComponent, x: 0, y: 0, w: 1, h: 1 }]);
   }, [hull, placements, selectedComponent]);
+
+  const massCap = (hull?.mass || 0) * MASS_TOLERANCE_FACTOR;
+  const payload = useMemo(() => placements.reduce((a, p) => a + (p.component?.mass || 0), 0), [placements]);
+  const projectedPayload = payload + (selectedComponent?.mass || 0);
 
   const weaponData = useMemo(
     () =>
@@ -53,17 +61,18 @@ export default function BuildImpactOverlay({ hull, placements, selectedComponent
         <button onClick={() => { setOpen(false); onClose?.(); }} className="ml-auto text-muted-foreground hover:text-primary"><X size={13} /></button>
       </div>
 
-      <div className="grid grid-cols-4 gap-1 px-2 py-2 border-b border-border">
+      <div className="grid grid-cols-3 gap-x-1 gap-y-2 px-2 py-2 border-b border-border">
         {METRICS.map((m) => {
           const cur = stats[m.key] || 0;
           const nxt = projected ? projected[m.key] || 0 : cur;
           const d = nxt - cur;
+          const good = m.lowerBetter ? d < 0 : d > 0;
           return (
             <div key={m.key}>
               <div className="font-mono text-[13px] text-primary ember-glow leading-none">{fmt(cur, m.dec)}</div>
               <div className="text-[8px] font-mono tracking-[0.16em] text-muted-foreground mt-1">{m.label}</div>
               {Math.abs(d) > 0.001 && (
-                <div className={`font-mono text-[9px] mt-0.5 ${d > 0 ? "text-[#38d16b]" : "text-[#ff4d4d]"}`}>
+                <div className={`font-mono text-[9px] mt-0.5 ${good ? "text-[#38d16b]" : "text-[#ff4d4d]"}`}>
                   {d > 0 ? "▲ +" : "▼ "}{fmt(d, m.dec)}
                 </div>
               )}
@@ -71,6 +80,8 @@ export default function BuildImpactOverlay({ hull, placements, selectedComponent
           );
         })}
       </div>
+
+      <BudgetBars stats={stats} projected={projected} massCap={massCap} payload={payload} projectedPayload={projectedPayload} />
 
       <div className="px-2 pt-2">
         <div className="tech-label mb-1">Armament contribution{selectedComponent?.dps > 0 ? " · projected in amber" : ""}</div>
