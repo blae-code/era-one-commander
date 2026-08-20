@@ -1,4 +1,4 @@
-import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes } from "lucide-react";
+import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes, HardDriveDownload } from "lucide-react";
 
 // Radial command ring sectors. Each sector expands to reveal its tools.
 export const SECTORS = [
@@ -26,6 +26,7 @@ export const SECTORS = [
       { to: "/blueprints", label: "Blueprint Database", code: "T-04", icon: Layers, desc: "Registered designs & revisions" },
       { to: "/blueprints", label: "Design Registry", code: "T-04b", icon: ScrollText, desc: "Browse by hull class & tags" },
       { to: "/resources", label: "Resource Planning", code: "T-04c", icon: Boxes, desc: "Aggregate materials for a build queue" },
+      { to: "/sync", label: "Blueprint Exchange", code: "T-04d", icon: HardDriveDownload, desc: "Sync designs with Google Drive" },
     ],
   },
   {

@@ -14,6 +14,7 @@ import BlueprintDetail from '@/pages/BlueprintDetail';
 import Database from '@/pages/Database';
 import ShipBuilder from '@/pages/ShipBuilder';
 import ResourcePlan from '@/pages/ResourcePlan';
+import DriveSync from '@/pages/DriveSync';
 import Compare from '@/pages/Compare';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
@@ -52,6 +53,7 @@ const AuthenticatedApp = () => {
         <Route path="/blueprints/:id" element={<BlueprintDetail />} />
         <Route path="/builder" element={<ShipBuilder />} />
         <Route path="/resources" element={<ResourcePlan />} />
+        <Route path="/sync" element={<DriveSync />} />
         <Route path="/database" element={<Database />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/data" element={<DataOps />} />
