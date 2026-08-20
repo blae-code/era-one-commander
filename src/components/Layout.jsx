@@ -29,7 +29,7 @@ const NAV = [
 export default function Layout() {
   return (
     <div className="h-screen flex bg-background overflow-hidden">
-      <aside className="w-52 shrink-0 border-r border-border bg-[hsl(30_8%_7%)] flex flex-col">
+      <aside className="w-52 shrink-0 border-r border-border bg-[hsl(12_12%_5%)] flex flex-col">
         <div className="h-14 flex items-center gap-2.5 px-4 border-b border-border">
           <LogoIcon size={26} className="text-primary" />
           <div className="leading-none">
@@ -37,6 +37,7 @@ export default function Layout() {
             <div className="tech-label mt-0.5">Tactical Companion</div>
           </div>
         </div>
+        <div className="h-[3px] hazard-stripes opacity-70" />
         <nav className="flex-1 py-2 overflow-y-auto">
           {NAV.map(({ group, items }) => (
             <div key={group} className="mb-1">
@@ -63,9 +64,9 @@ export default function Layout() {
           ))}
         </nav>
         <div className="px-4 py-3 border-t border-border">
-          <div className="tech-label">SYS // NOMINAL</div>
-          <div className="mt-1.5 h-1 bg-secondary overflow-hidden">
-            <div className="h-full w-3/4 bg-[#38bdf8]" />
+          <div className="tech-label text-primary/90">RUST // NOMINAL</div>
+          <div className="mt-1.5 h-1.5 bg-secondary overflow-hidden">
+            <div className="h-full w-3/4 hazard-stripes-ember" />
           </div>
         </div>
       </aside>
