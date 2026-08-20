@@ -7,6 +7,7 @@ import { ArrowLeft, Heart, Trash2 } from "lucide-react";
 import { CategoryIcon, HullIcon } from "@/components/icons/EraIcons";
 import StatsPanel from "@/components/builder/StatsPanel";
 import VersionHistory from "@/components/blueprints/VersionHistory";
+import MaterialCost from "@/components/blueprints/MaterialCost";
 import { toast } from "sonner";
 
 const CELL = 40;
@@ -125,6 +126,7 @@ export default function BlueprintDetail() {
               ))}
             </div>
           </div>
+          <MaterialCost placements={bp.placements || []} />
         </div>
       </div>
 
