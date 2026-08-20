@@ -13,6 +13,7 @@ import ComparePanel from "@/components/databank/ComparePanel";
 import ActiveChips from "@/components/databank/ActiveChips";
 import StatsStrip from "@/components/databank/StatsStrip";
 import ScatterView from "@/components/databank/ScatterView";
+import DamageChartView from "@/components/databank/DamageChartView";
 import DetailDrawer from "@/components/databank/DetailDrawer";
 
 // Databank v2 — the granular browser over the real ERA ONE dataset.
@@ -89,6 +90,7 @@ export default function Database() {
               {cat.isLoading ? <div className="schematic-panel p-12 tech-label text-center animate-pulse">Accessing databank…</div>
                 : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
                 : db.view === "heat" ? <HeatmapView rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
+                : db.view === "damage" ? <DamageChartView rows={sorted} ctx={ctx} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : db.view === "plot" ? <ScatterView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} db={db} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} grouped={db.grouped} groupBy={kind.groupBy} />}
             </div>
