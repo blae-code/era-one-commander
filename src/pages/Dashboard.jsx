@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
 import { LogoIcon } from "@/components/icons/EraIcons";
-import NodeCluster from "@/components/nav/NodeCluster";
+import CommandRing from "@/components/nav/CommandRing";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 import { useGameCatalog } from "@/lib/gameData";
 
@@ -48,9 +48,9 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Navigation node cluster */}
+      {/* Radial command ring navigation */}
       <div className="mb-5">
-        <NodeCluster />
+        <CommandRing />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

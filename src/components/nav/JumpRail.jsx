@@ -2,11 +2,13 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronLeft, Radio } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
-import { DESTINATIONS } from "@/components/nav/destinations";
+import { SECTORS } from "@/components/nav/sectors";
+
+const TOOLS = SECTORS.flatMap((s) => s.tools.slice(0, 1).concat(s.tools.slice(1).filter((t) => !s.tools[0] || t.to !== s.tools[0].to)));
 
 export default function JumpRail() {
   const { pathname } = useLocation();
-  const current = DESTINATIONS.find((d) => pathname.startsWith(d.to));
+  const current = TOOLS.find((t) => pathname.startsWith(t.to));
 
   return (
     <div className="sticky top-0 z-40 h-11 flex items-stretch border-b border-border bg-[hsl(12_12%_5%)]/95 backdrop-blur">
@@ -16,7 +18,7 @@ export default function JumpRail() {
       >
         <ChevronLeft size={14} />
         <LogoIcon size={18} className="text-primary" />
-        <span className="font-display font-bold text-xs tracking-[0.2em] uppercase">Deck</span>
+        <span className="font-display font-bold text-xs tracking-[0.2em] uppercase">Ring</span>
       </Link>
 
       <div className="flex items-center px-4 gap-2">
@@ -28,9 +30,9 @@ export default function JumpRail() {
       </div>
 
       <div className="ml-auto flex items-stretch">
-        {DESTINATIONS.filter((d) => d.to !== current?.to).map(({ to, label, icon: Icon }) => (
+        {TOOLS.filter((t) => t.to !== current?.to).map(({ to, label, icon: Icon }) => (
           <Link
-            key={to}
+            key={label}
             to={to}
             className="flex items-center gap-1.5 px-3.5 border-l border-border text-muted-foreground hover:text-primary hover:bg-secondary/60 transition-colors"
           >
