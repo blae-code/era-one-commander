@@ -1,75 +1,15 @@
 import React from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
-import { LayoutDashboard, Layers, Database, ArrowLeftRight, DatabaseZap } from "lucide-react";
-import { LogoIcon } from "@/components/icons/EraIcons";
-
-const NAV = [
-  {
-    group: "Overview",
-    items: [{ to: "/", label: "Command Deck", code: "01", icon: LayoutDashboard }],
-  },
-  {
-    group: "Game Data",
-    items: [
-      { to: "/database", label: "Databank", code: "02", icon: Database },
-      { to: "/compare", label: "Comparison", code: "03", icon: ArrowLeftRight },
-    ],
-  },
-  {
-    group: "Design",
-    items: [{ to: "/blueprints", label: "Blueprints", code: "04", icon: Layers }],
-  },
-  {
-    group: "System",
-    items: [{ to: "/data", label: "Data Ops", code: "05", icon: DatabaseZap }],
-  },
-];
+import JumpRail from "@/components/nav/JumpRail";
 
 export default function Layout() {
+  const { pathname } = useLocation();
+  const isDeck = pathname === "/";
+
   return (
-    <div className="h-screen flex bg-background overflow-hidden">
-      <aside className="w-52 shrink-0 border-r border-border bg-[hsl(12_12%_5%)] flex flex-col">
-        <div className="h-14 flex items-center gap-2.5 px-4 border-b border-border">
-          <LogoIcon size={26} className="text-primary" />
-          <div className="leading-none">
-            <div className="font-display font-bold text-[15px] tracking-[0.2em]">ERA ONE</div>
-            <div className="tech-label mt-0.5">Tactical Companion</div>
-          </div>
-        </div>
-        <div className="h-[3px] hazard-stripes opacity-70" />
-        <nav className="flex-1 py-2 overflow-y-auto">
-          {NAV.map(({ group, items }) => (
-            <div key={group} className="mb-1">
-              <div className="tech-label px-4 pt-2.5 pb-1 opacity-70">{group}</div>
-              {items.map(({ to, label, code, icon: Icon }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  end={to === "/"}
-                  className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-2 border-l-2 transition-colors ${
-                      isActive
-                        ? "border-primary bg-primary/15 text-primary"
-                        : "border-transparent text-muted-foreground hover:text-foreground hover:bg-secondary/70"
-                    }`
-                  }
-                >
-                  <Icon size={16} />
-                  <span className="font-display font-semibold text-sm tracking-wide uppercase flex-1">{label}</span>
-                  <span className="font-mono text-[9px] opacity-50">{code}</span>
-                </NavLink>
-              ))}
-            </div>
-          ))}
-        </nav>
-        <div className="px-4 py-3 border-t border-border">
-          <div className="tech-label text-primary/90">RUST // NOMINAL</div>
-          <div className="mt-1.5 h-1.5 bg-secondary overflow-hidden">
-            <div className="h-full w-3/4 hazard-stripes-ember" />
-          </div>
-        </div>
-      </aside>
+    <div className="h-screen flex flex-col bg-background overflow-hidden">
+      {!isDeck && <JumpRail />}
       <main className="flex-1 overflow-y-auto bp-grid">
         <Outlet />
       </main>

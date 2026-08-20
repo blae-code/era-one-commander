@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
-import { Database, Layers, ArrowLeftRight, ChevronRight } from "lucide-react";
 import { LogoIcon } from "@/components/icons/EraIcons";
+import NodeCluster from "@/components/nav/NodeCluster";
 import BlueprintCard from "@/components/blueprints/BlueprintCard";
 import { useGameCatalog } from "@/lib/gameData";
 
@@ -48,24 +48,9 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Quick actions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
-        {[
-          { to: "/database", icon: Database, title: "Databank", desc: "Browse every value in the installed game dataset" },
-          { to: "/blueprints", icon: Layers, title: "Blueprint Database", desc: "Browse, filter and import registered designs" },
-          { to: "/compare", icon: ArrowLeftRight, title: "Comparison Engine", desc: "Analyze stat deltas between components & hulls" },
-        ].map(({ to, icon: Icon, title, desc }) => (
-          <Link key={to} to={to} className="schematic-panel p-4 flex items-center gap-3.5 hover:shadow-md hover:border-primary/50 transition-all group">
-            <div className="p-2.5 border border-primary/30 bg-primary/5 text-primary">
-              <Icon size={20} />
-            </div>
-            <div className="flex-1">
-              <div className="font-display font-bold uppercase tracking-wider group-hover:text-primary transition-colors">{title}</div>
-              <div className="text-xs text-muted-foreground">{desc}</div>
-            </div>
-            <ChevronRight size={16} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-          </Link>
-        ))}
+      {/* Navigation node cluster */}
+      <div className="mb-5">
+        <NodeCluster />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
