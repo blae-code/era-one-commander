@@ -9,6 +9,7 @@ import ComponentPalette from "@/components/builder/ComponentPalette";
 import BuildGrid from "@/components/builder/BuildGrid";
 import StatsPanel from "@/components/builder/StatsPanel";
 import SaveBlueprintDialog from "@/components/builder/SaveBlueprintDialog";
+import BuildImpactOverlay from "@/components/builder/BuildImpactOverlay";
 import { computeStats } from "@/lib/shipStats";
 
 export default function ShipBuilder() {
@@ -123,8 +124,9 @@ export default function ShipBuilder() {
         </div>
 
         {/* Center: grid */}
-        <div className="schematic-panel bp-grid p-4 min-h-0 overflow-auto flex items-start justify-center">
+        <div className="schematic-panel bp-grid p-4 min-h-0 overflow-auto flex items-start justify-center relative">
           <BuildGrid hull={hull} placements={placements} selectedComponent={selectedComponent} onPlace={place} onRemove={remove} />
+          {hull && <BuildImpactOverlay hull={hull} placements={placements} selectedComponent={selectedComponent} />}
         </div>
 
         {/* Right: stats */}

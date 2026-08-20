@@ -12,6 +12,7 @@ import Dashboard from '@/pages/Dashboard';
 import Blueprints from '@/pages/Blueprints';
 import BlueprintDetail from '@/pages/BlueprintDetail';
 import Database from '@/pages/Database';
+import ShipBuilder from '@/pages/ShipBuilder';
 import Compare from '@/pages/Compare';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
@@ -48,6 +49,7 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/blueprints" element={<Blueprints />} />
         <Route path="/blueprints/:id" element={<BlueprintDetail />} />
+        <Route path="/builder" element={<ShipBuilder />} />
         <Route path="/database" element={<Database />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/data" element={<DataOps />} />
