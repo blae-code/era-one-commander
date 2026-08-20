@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowUp, ArrowDown, Star, GitCompare, ChevronDown, ChevronRight } from "lucide-react";
 import { Cell, EntityIcon, TierPips, ClassDot } from "./Cells";
+import ColumnSpark from "./ColumnSpark";
 
 // Sortable, keyboard-navigable table with heat-shaded numeric cells, mini bars and optional grouping.
 export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, sortKey, sortDir, onSort, selectedId, onSelect, favorites, onFav, compareIds, onCompare, density, notes, grouped, groupBy }) {
@@ -67,6 +68,14 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
               <th key={c.key} onClick={() => onSort(c.key)} style={{ minWidth: c.width }}
                 className={`tech-label px-2 py-2 font-normal whitespace-nowrap cursor-pointer select-none border-b border-border hover:text-primary ${c.type === "num" || c.type === "pct" ? "text-right" : "text-left"} ${sortKey === c.key ? "text-primary" : ""}`}>
                 <span className="inline-flex items-center gap-1">{c.label}{sortKey === c.key ? (sortDir === "desc" ? <ArrowDown size={10} /> : <ArrowUp size={10} />) : null}</span>
+              </th>
+            ))}
+          </tr>
+          <tr>
+            <th className="px-2 pb-1 border-b border-border" />
+            {columns.map((c) => (
+              <th key={c.key} className="px-2 pb-1 border-b border-border align-bottom">
+                {c.type === "num" || c.type === "pct" ? <ColumnSpark rows={rows} col={c} ctx={ctx} /> : <div className="h-3.5" />}
               </th>
             ))}
           </tr>

@@ -16,12 +16,17 @@ import StatsStrip from "@/components/databank/StatsStrip";
 import ScatterView from "@/components/databank/ScatterView";
 import DamageChartView from "@/components/databank/DamageChartView";
 import DetailDrawer from "@/components/databank/DetailDrawer";
+import ParallelView from "@/components/databank/ParallelView";
+import CommandPalette from "@/components/databank/CommandPalette";
+import ShortcutHelp from "@/components/databank/ShortcutHelp";
+import { useDatabankKeys } from "@/components/databank/useDatabankKeys";
 
 // Databank v2 — the granular browser over the real ERA ONE dataset.
 // State lives in the URL (shareable) + localStorage (favourites, presets, columns, notes). See components/databank/.
 export default function Database() {
   const cat = useGameCatalog(true);
   const db = useDatabank();
+  useDatabankKeys(db);
   const kind = db.kind;
   const ctx = cat;
   const allRows = useMemo(() => kind.rows(cat) || [], [kind, cat]);
@@ -42,6 +47,7 @@ export default function Database() {
     const kk = toKind(cat.kindOf(id));
     if (kk && kk !== db.kindKey && KIND_KEYS.includes(kk)) db.setKind(kk);
     db.select(id);
+    db.pushRecent(id);
   };
   const exportRows = (fmt) => {
     const blob = fmt === "csv" ? new Blob([toCSV(sorted, kind, ctx, db.visibleCols)], { type: "text/csv" }) : new Blob([JSON.stringify(sorted, null, 1)], { type: "application/json" });
@@ -59,6 +65,11 @@ export default function Database() {
           <div className="min-w-0">
             <h1 className="font-display font-bold text-xl tracking-[0.15em] leading-none">DATABANK</h1>
             <p className="tech-label mt-1 truncate">Every value from the installed game · build {cat.modules[0]?.game_build || "—"} · shareable URL state</p>
+            <div className="flex gap-1.5 mt-1.5 font-mono text-[9px] text-muted-foreground">
+              <span className="border border-border px-1.5 py-0.5">⌘K jump</span>
+              <span className="border border-border px-1.5 py-0.5">1–5 views</span>
+              <span className="border border-border px-1.5 py-0.5">? keys</span>
+            </div>
           </div>
         </div>
         <div className="hidden lg:flex gap-5 font-mono text-center">
@@ -92,6 +103,7 @@ export default function Database() {
                 : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
                 : db.view === "heat" ? <HeatmapMatrix rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
                 : db.view === "damage" ? <DamageChartView rows={sorted} ctx={ctx} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
+                : db.view === "para" ? <ParallelView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : db.view === "plot" ? <ScatterView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} db={db} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} grouped={db.grouped} groupBy={kind.groupBy} />}
             </div>
@@ -102,6 +114,9 @@ export default function Database() {
 
       <DetailDrawer row={selected} kindKey={selectedKind} ctx={ctx} peers={allRows} open={!!selected} onClose={() => db.select(null)} onSelectId={selectId}
         favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} note={db.notes[db.selectedId]} onNote={db.setNote} />
+
+      <CommandPalette cat={cat} db={db} onJump={selectId} recents={db.recents} />
+      <ShortcutHelp />
     </div>
   );
 }

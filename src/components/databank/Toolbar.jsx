@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
-import { X, Columns3, LayoutGrid, Table2, Grid3x3, Rows3, Star, Download, Bookmark, SlidersHorizontal, HelpCircle, Filter, Layers, Link2, ScatterChart, BarChart3 } from "lucide-react";
+import { X, Columns3, LayoutGrid, Table2, Grid3x3, Rows3, Star, Download, Bookmark, SlidersHorizontal, HelpCircle, Filter, Layers, Link2, ScatterChart, BarChart3, GitBranch } from "lucide-react";
 import { toast } from "sonner";
 import { ClassDot } from "./Cells";
 import SearchSuggest from "./SearchSuggest";
@@ -60,6 +60,7 @@ export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, 
         <Btn active={db.view === "heat"} onClick={() => db.setView("heat")} title="dps vs class heatmap"><Grid3x3 size={12} /></Btn>
         <Btn active={db.view === "plot"} onClick={() => db.setView("plot")} title="scatter plot — any stat vs any stat"><ScatterChart size={12} /></Btn>
         <Btn active={db.view === "damage"} onClick={() => db.setView("damage")} title="damage charts — weapons vs a specific armour class"><BarChart3 size={12} /></Btn>
+        <Btn active={db.view === "para"} onClick={() => db.setView("para")} title="parallel coordinates — every numeric column at once"><GitBranch size={12} /></Btn>
         {kind.groupBy && <Btn active={db.grouped} onClick={() => db.setGrouped(!db.grouped)} title="group rows by class"><Layers size={12} /></Btn>}
         <div className="h-5 w-px bg-border mx-1" />
         <Popover>

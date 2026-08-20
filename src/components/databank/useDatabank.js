@@ -82,6 +82,12 @@ export function useDatabank() {
   };
   const loadPreset = (p) => { setParams(new URLSearchParams(p.url), { replace: true }); if (p.cols) setColumnsByKind((prev) => { const n = { ...prev, [p.kind]: p.cols }; LS.set("columns", n); return n; }); };
   const deletePreset = (p) => setPresets((prev) => { const n = prev.filter((x) => x !== p); LS.set("presets", n); return n; });
+  const [recents, setRecents] = useState(() => LS.get("recents", []));
+  const pushRecent = useCallback((id) => setRecents((prev) => {
+    if (!id || prev[0] === id) return prev;
+    const n = [id, ...prev.filter((x) => x !== id)].slice(0, 12);
+    LS.set("recents", n); return n;
+  }), []);
   const [notes, setNotes] = useState(() => LS.get("notes", {}));
   const setNote = (id, text) => setNotes((prev) => { const n = { ...prev, [id]: text }; if (!text) delete n[id]; LS.set("notes", n); return n; });
 
@@ -90,7 +96,7 @@ export function useDatabank() {
   return {
     kindKey, kind, q, sortKey, sortDir, view, selectedId, compareIds, facetSel, ranges, favOnly, hideWip, grouped, plotX, plotY,
     setKind, setQuery, setSort, setView, select, toggleCompare, clearCompare, toggleFacet, clearFacet, setRange, setFavOnly, setHideWip, setGrouped, setPlotAxes, clearAll,
-    favorites, toggleFavorite, density, setDensity, visibleCols, setVisibleCols, resetCols, presets, savePreset, loadPreset, deletePreset, notes, setNote,
+    favorites, toggleFavorite, density, setDensity, visibleCols, setVisibleCols, resetCols, presets, savePreset, loadPreset, deletePreset, notes, setNote, recents, pushRecent,
     params,
   };
 }
