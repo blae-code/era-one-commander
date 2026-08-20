@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SECTORS } from "@/components/nav/sectors";
 import SectorTools from "@/components/nav/SectorTools";
+import { playHoverTick, playEngageClunk } from "@/lib/mechSound";
 
 const C = 200; // svg center
 const R_IN = 96;
@@ -24,7 +25,17 @@ function arcPath(start, end, rIn, rOut) {
 
 export default function CommandRing() {
   const [active, setActive] = useState(null);
+  const [hover, setHover] = useState(null);
   const sector = SECTORS.find((s) => s.id === active);
+
+  const onEnter = (id) => {
+    setHover(id);
+    playHoverTick();
+  };
+  const onEngage = (id) => {
+    playEngageClunk();
+    setActive((prev) => (prev === id ? null : id));
+  };
 
   return (
     <div className="schematic-panel rust-wash p-5 grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-6 items-center">
@@ -32,6 +43,15 @@ export default function CommandRing() {
       {/* Ring */}
       <div className="relative mx-auto">
         <svg width={400} height={400} viewBox="0 0 400 400" className="select-none">
+          <defs>
+            <filter id="ring-glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="5" result="b" />
+              <feMerge>
+                <feMergeNode in="b" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
           {/* tick ring */}
           {Array.from({ length: 72 }).map((_, i) => {
             const deg = i * 5;
@@ -57,44 +77,65 @@ export default function CommandRing() {
           {/* sectors */}
           {SECTORS.map((s) => {
             const isActive = active === s.id;
+            const isHot = hover === s.id;
+            const lit = isActive || isHot;
+            const rOut = isActive ? R_SEL : isHot ? R_OUT + 9 : R_OUT;
+            const mid = (s.start + s.end) / 2;
+            const [lx, ly] = pt((R_IN + rOut) / 2, mid);
             return (
-              <g key={s.id} onClick={() => setActive(isActive ? null : s.id)} className="cursor-pointer">
+              <g
+                key={s.id}
+                onClick={() => onEngage(s.id)}
+                onMouseEnter={() => onEnter(s.id)}
+                onMouseLeave={() => setHover(null)}
+                className="cursor-pointer"
+                filter={lit ? "url(#ring-glow)" : undefined}
+              >
                 <motion.path
-                  d={arcPath(s.start, s.end, R_IN, isActive ? R_SEL : R_OUT)}
-                  fill={isActive ? "hsl(var(--primary) / 0.28)" : "hsl(var(--card))"}
-                  stroke={isActive ? "hsl(var(--accent))" : "hsl(var(--border))"}
-                  strokeWidth={isActive ? 2 : 1}
+                  d={arcPath(s.start, s.end, R_IN, rOut)}
                   initial={false}
-                  animate={{ opacity: 1 }}
-                  className="transition-colors hover:fill-[hsl(var(--primary)/0.16)]"
+                  animate={{
+                    fill: isActive
+                      ? "hsl(var(--primary) / 0.32)"
+                      : isHot
+                        ? "hsl(var(--primary) / 0.18)"
+                        : "hsl(var(--card))",
+                    stroke: lit ? "hsl(var(--accent))" : "hsl(var(--border))",
+                    strokeWidth: isActive ? 2.2 : isHot ? 1.8 : 1,
+                  }}
+                  transition={{ type: "spring", stiffness: 210, damping: 22 }}
                 />
-                {(() => {
-                  const mid = (s.start + s.end) / 2;
-                  const [lx, ly] = pt((R_IN + (isActive ? R_SEL : R_OUT)) / 2, mid);
-                  return (
-                    <>
-                      <text
-                        x={lx}
-                        y={ly - 2}
-                        textAnchor="middle"
-                        className="font-display"
-                        style={{ fontSize: 15, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" }}
-                        fill={isActive ? "hsl(var(--accent))" : "hsl(var(--foreground))"}
-                      >
-                        {s.label.toUpperCase()}
-                      </text>
-                      <text
-                        x={lx}
-                        y={ly + 13}
-                        textAnchor="middle"
-                        style={{ fontSize: 9, fontFamily: "IBM Plex Mono", letterSpacing: "0.2em" }}
-                        fill="hsl(var(--muted-foreground))"
-                      >
-                        {s.code}
-                      </text>
-                    </>
-                  );
-                })()}
+                <motion.g
+                  initial={false}
+                  animate={{ opacity: lit ? 1 : 0.32 }}
+                  transition={{ duration: 0.22, ease: "easeOut" }}
+                >
+                  <motion.text
+                    x={lx}
+                    y={ly - 2}
+                    textAnchor="middle"
+                    className="font-display"
+                    style={{ fontSize: 15, fontWeight: 700, textTransform: "uppercase" }}
+                    fill={lit ? "hsl(var(--accent))" : "hsl(var(--muted-foreground))"}
+                    initial={false}
+                    animate={{ letterSpacing: lit ? "0.26em" : "0.1em" }}
+                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    {s.label.toUpperCase()}
+                  </motion.text>
+                  <motion.text
+                    x={lx}
+                    y={ly + 13}
+                    textAnchor="middle"
+                    style={{ fontSize: 9, fontFamily: "IBM Plex Mono", letterSpacing: "0.2em" }}
+                    fill="hsl(var(--muted-foreground))"
+                    initial={false}
+                    animate={{ opacity: lit ? 1 : 0 }}
+                    transition={{ duration: 0.2, delay: lit ? 0.08 : 0 }}
+                  >
+                    {s.code}
+                  </motion.text>
+                </motion.g>
               </g>
             );
           })}
