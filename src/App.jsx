@@ -17,6 +17,7 @@ import ResourcePlan from '@/pages/ResourcePlan';
 import DriveSync from '@/pages/DriveSync';
 import EconomyAnalysis from '@/pages/EconomyAnalysis';
 import Compare from '@/pages/Compare';
+import CombatLab from '@/pages/CombatLab';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
 import DataOps from '@/pages/DataOps';
@@ -58,6 +59,7 @@ const AuthenticatedApp = () => {
         <Route path="/database" element={<Database />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/economy" element={<EconomyAnalysis />} />
+        <Route path="/combat" element={<CombatLab />} />
         <Route path="/data" element={<DataOps />} />
         <Route path="/gamedata" element={<GameData />} />
         <Route path="/import" element={<ImportData />} />
