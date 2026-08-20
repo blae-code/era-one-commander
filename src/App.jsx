@@ -22,6 +22,7 @@ import TechTree from '@/pages/TechTree';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
 import DataOps from '@/pages/DataOps';
+import Install from '@/pages/Install';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -63,6 +64,7 @@ const AuthenticatedApp = () => {
         <Route path="/combat" element={<CombatLab />} />
         <Route path="/tech" element={<TechTree />} />
         <Route path="/data" element={<DataOps />} />
+        <Route path="/install" element={<Install />} />
         <Route path="/gamedata" element={<GameData />} />
         <Route path="/import" element={<ImportData />} />
       </Route>

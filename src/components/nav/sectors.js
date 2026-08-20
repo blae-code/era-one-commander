@@ -1,4 +1,4 @@
-import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes, HardDriveDownload, LineChart, Crosshair, GitBranch } from "lucide-react";
+import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes, HardDriveDownload, LineChart, Crosshair, GitBranch, MonitorDown } from "lucide-react";
 
 // Radial command ring sectors. Each sector expands to reveal its tools.
 export const SECTORS = [
@@ -41,6 +41,7 @@ export const SECTORS = [
     end: 230,
     tools: [
       { to: "/data", label: "Data Ops", code: "T-05", icon: DatabaseZap, desc: "Ingest, watch & sync game files" },
+      { to: "/install", label: "Desktop Install", code: "T-06", icon: MonitorDown, desc: "Pin the terminal to a second monitor" },
     ],
   },
 ];

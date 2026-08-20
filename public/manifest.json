@@ -1,0 +1,24 @@
+{
+  "name": "ERA ONE // Tactical Companion",
+  "short_name": "ERA ONE",
+  "description": "Databank, ship builder, blueprint registry and combat analytics for ERA ONE. Built to live full-screen on a second monitor.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0a0908",
+  "theme_color": "#0a0908",
+  "categories": ["games", "utilities", "productivity"],
+  "icons": [
+    { "src": "https://media.base44.com/images/public/6a832bc3569b38562160d09d/36e4d4658_generated_image.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://media.base44.com/images/public/6a832bc3569b38562160d09d/36e4d4658_generated_image.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "https://media.base44.com/images/public/6a832bc3569b38562160d09d/36e4d4658_generated_image.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Databank", "url": "/database" },
+    { "name": "Build Layout", "url": "/builder" },
+    { "name": "Combat Lab", "url": "/combat" },
+    { "name": "Tech Tree", "url": "/tech" }
+  ]
+}
