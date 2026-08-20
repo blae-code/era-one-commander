@@ -27,7 +27,8 @@ export default function CommandRing() {
   const sector = SECTORS.find((s) => s.id === active);
 
   return (
-    <div className="schematic-panel p-5 grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-6 items-center">
+    <div className="schematic-panel rust-wash p-5 grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-6 items-center">
+      <div className="absolute top-0 left-0 right-0 rivet-row opacity-50" />
       {/* Ring */}
       <div className="relative mx-auto">
         <svg width={400} height={400} viewBox="0 0 400 400" className="select-none">

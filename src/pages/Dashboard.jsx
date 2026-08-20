@@ -24,9 +24,13 @@ export default function Dashboard() {
   return (
     <div className="p-6 max-w-[1400px] mx-auto">
       {/* Header */}
-      <div className="schematic-panel p-5 mb-5 flex items-center justify-between bg-gradient-to-r from-card to-primary/5">
+      <div className="schematic-panel rust-wash p-5 mb-5 flex items-center justify-between">
+        <div className="absolute top-0 left-0 right-0 rivet-row opacity-60" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] hazard-stripes opacity-70" />
         <div className="flex items-center gap-4">
-          <LogoIcon size={44} className="text-primary" />
+          <div className="border border-primary/40 p-2 bg-black/40 welded-frame">
+            <LogoIcon size={36} className="text-primary" />
+          </div>
           <div>
             <h1 className="font-display font-bold text-2xl tracking-[0.15em] leading-none">COMMAND DECK</h1>
             <p className="tech-label mt-1.5">ERA ONE Tactical Companion // Fleet Engineering Terminal</p>
@@ -41,7 +45,7 @@ export default function Dashboard() {
             ["BLUEPRINTS", blueprints.length],
           ].map(([k, v]) => (
             <div key={k}>
-              <div className="text-2xl font-semibold text-primary">{String(v).padStart(2, "0")}</div>
+              <div className="text-2xl font-semibold text-primary ember-glow">{String(v).padStart(2, "0")}</div>
               <div className="text-[9px] tracking-[0.2em] text-muted-foreground">{k}</div>
             </div>
           ))}
