@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-const VIEWS = ["table", "cards", "heat", "plot", "damage", "para"];
+const VIEWS = ["table", "cards", "heat", "plot", "damage", "para", "tree"];
 
-// Global Databank hotkeys: 1–6 switch view, g groups rows.
+// Global Databank hotkeys: 1–7 switch view, g groups rows.
 export function useDatabankKeys(db) {
   useEffect(() => {
     const onKey = (e) => {
