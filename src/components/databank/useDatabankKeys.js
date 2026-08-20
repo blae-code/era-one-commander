@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const VIEWS = ["table", "cards", "heat", "plot", "damage", "para", "tree"];
+const VIEWS = ["table", "cards", "heat", "plot", "damage", "para", "tree", "ttk"];
 
 // Global Databank hotkeys: 1–7 switch view, g groups rows.
 export function useDatabankKeys(db) {

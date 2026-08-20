@@ -18,6 +18,7 @@ import DamageChartView from "@/components/databank/DamageChartView";
 import DetailDrawer from "@/components/databank/DetailDrawer";
 import ParallelView from "@/components/databank/ParallelView";
 import TreeView from "@/components/databank/TreeView";
+import TtkView from "@/components/databank/TtkView";
 import CommandPalette from "@/components/databank/CommandPalette";
 import ShortcutHelp from "@/components/databank/ShortcutHelp";
 import { useDatabankKeys } from "@/components/databank/useDatabankKeys";
@@ -68,7 +69,7 @@ export default function Database() {
             <p className="tech-label mt-1 truncate">Every value from the installed game · build {cat.modules[0]?.game_build || "—"} · shareable URL state</p>
             <div className="flex gap-1.5 mt-1.5 font-mono text-[9px] text-muted-foreground">
               <span className="border border-border px-1.5 py-0.5">⌘K jump</span>
-              <span className="border border-border px-1.5 py-0.5">1–7 views</span>
+              <span className="border border-border px-1.5 py-0.5">1–8 views</span>
               <span className="border border-border px-1.5 py-0.5">? keys</span>
             </div>
           </div>
@@ -104,6 +105,7 @@ export default function Database() {
                 : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
                 : db.view === "heat" ? <HeatmapMatrix rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
                 : db.view === "damage" ? <DamageChartView rows={sorted} ctx={ctx} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
+                : db.view === "ttk" ? <TtkView rows={sorted} ctx={ctx} selectedId={db.selectedId} onSelect={selectId} />
                 : db.view === "tree" ? <TreeView ctx={ctx} rows={sorted} onSelectId={selectId} />
                 : db.view === "para" ? <ParallelView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : db.view === "plot" ? <ScatterView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} db={db} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
