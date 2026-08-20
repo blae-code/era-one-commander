@@ -14,9 +14,9 @@ export default function SectorTools({ sector }) {
       {sector.tools.map(({ to, label, code, icon: Icon, desc }, i) => (
         <motion.div
           key={code}
-          initial={{ opacity: 0, x: 14 }}
+          initial={{ opacity: 0, x: 22 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.05 * i, duration: 0.25 }}
+          transition={{ delay: 0.09 * i, type: "spring", stiffness: 110, damping: 24, mass: 1.9 }}
         >
           <Link
             to={to}

@@ -71,7 +71,7 @@ export default function CommandRing() {
             strokeWidth="1.5"
             style={{ originX: "200px", originY: "200px" }}
             animate={{ rotate: 360 }}
-            transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 20, repeat: Infinity, ease: (t) => Math.floor(t * 36) / 36 }}
           />
 
           {/* sectors */}
@@ -83,13 +83,16 @@ export default function CommandRing() {
             const mid = (s.start + s.end) / 2;
             const [lx, ly] = pt((R_IN + rOut) / 2, mid);
             return (
-              <g
+              <motion.g
                 key={s.id}
                 onClick={() => onEngage(s.id)}
                 onMouseEnter={() => onEnter(s.id)}
                 onMouseLeave={() => setHover(null)}
                 className="cursor-pointer"
                 filter={lit ? "url(#ring-glow)" : undefined}
+                style={{ originX: "200px", originY: "200px" }}
+                whileTap={{ scale: 0.965 }}
+                transition={{ type: "spring", stiffness: 700, damping: 34, mass: 1.4 }}
               >
                 <motion.path
                   d={arcPath(s.start, s.end, R_IN, rOut)}
@@ -103,12 +106,12 @@ export default function CommandRing() {
                     stroke: lit ? "hsl(var(--accent))" : "hsl(var(--border))",
                     strokeWidth: isActive ? 2.2 : isHot ? 1.8 : 1,
                   }}
-                  transition={{ type: "spring", stiffness: 210, damping: 22 }}
+                  transition={{ type: "spring", stiffness: 120, damping: 30, mass: 2.2 }}
                 />
                 <motion.g
                   initial={false}
                   animate={{ opacity: lit ? 1 : 0.32 }}
-                  transition={{ duration: 0.22, ease: "easeOut" }}
+                  transition={{ duration: 0.4, ease: [0.22, 0.9, 0.16, 1] }}
                 >
                   <motion.text
                     x={lx}
@@ -119,7 +122,7 @@ export default function CommandRing() {
                     fill={lit ? "hsl(var(--accent))" : "hsl(var(--muted-foreground))"}
                     initial={false}
                     animate={{ letterSpacing: lit ? "0.26em" : "0.1em" }}
-                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ type: "spring", stiffness: 90, damping: 26, mass: 1.8 }}
                   >
                     {s.label.toUpperCase()}
                   </motion.text>
@@ -136,19 +139,27 @@ export default function CommandRing() {
                     {s.code}
                   </motion.text>
                 </motion.g>
-              </g>
+              </motion.g>
             );
           })}
 
-          {/* hub */}
-          <circle cx={C} cy={C} r={R_IN - 10} fill="hsl(12 12% 5%)" stroke="hsl(var(--primary))" strokeOpacity="0.5" />
-          <circle cx={C} cy={C} r={R_IN - 24} fill="none" stroke="hsl(var(--primary))" strokeOpacity="0.2" strokeDasharray="3 4" />
-          <text x={C} y={C - 4} textAnchor="middle" className="font-display" style={{ fontSize: 17, fontWeight: 700, letterSpacing: "0.18em" }} fill="hsl(var(--primary))">
-            ERA ONE
-          </text>
-          <text x={C} y={C + 14} textAnchor="middle" style={{ fontSize: 9, fontFamily: "IBM Plex Mono", letterSpacing: "0.22em" }} fill="hsl(var(--muted-foreground))">
-            COMMAND RING
-          </text>
+          {/* hub — jolts on each engage */}
+          <motion.g
+            key={active || "idle"}
+            style={{ originX: "200px", originY: "200px" }}
+            initial={{ scale: 1.04 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 170, damping: 12, mass: 2.4 }}
+          >
+            <circle cx={C} cy={C} r={R_IN - 10} fill="hsl(12 12% 5%)" stroke="hsl(var(--primary))" strokeOpacity="0.5" />
+            <circle cx={C} cy={C} r={R_IN - 24} fill="none" stroke="hsl(var(--primary))" strokeOpacity="0.2" strokeDasharray="3 4" />
+            <text x={C} y={C - 4} textAnchor="middle" className="font-display" style={{ fontSize: 17, fontWeight: 700, letterSpacing: "0.18em" }} fill="hsl(var(--primary))">
+              ERA ONE
+            </text>
+            <text x={C} y={C + 14} textAnchor="middle" style={{ fontSize: 9, fontFamily: "IBM Plex Mono", letterSpacing: "0.22em" }} fill="hsl(var(--muted-foreground))">
+              COMMAND RING
+            </text>
+          </motion.g>
         </svg>
       </div>
 
