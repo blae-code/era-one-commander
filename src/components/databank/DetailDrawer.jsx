@@ -6,14 +6,8 @@ import GameEntityDetail from "@/components/database/GameEntityDetail";
 import { EntityIcon, TierPips, CLASS_HEX, rowClass } from "./Cells";
 import { CLASSES } from "./catalog";
 import { fmtNum, fmtModifier } from "@/lib/gameData";
-
-const Bar = ({ label, value, max, color = "hsl(var(--primary))", dec = 1, unit = "" }) => (
-  <div className="flex items-center gap-2 text-[11px]">
-    <span className="w-28 shrink-0 text-muted-foreground truncate">{label}</span>
-    <span className="flex-1 h-2 bg-secondary overflow-hidden"><span className="block h-full" style={{ width: `${max ? Math.min(100, (value / max) * 100) : 0}%`, background: color }} /></span>
-    <span className="w-16 text-right font-mono tabular-nums">{fmtNum(value, dec)}{unit}</span>
-  </div>
-);
+import { SegBar as Bar } from "./Readouts";
+import VitalsStrip from "./VitalsStrip";
 
 const Chips = ({ ids, byId, onSelect, empty = "—" }) => (
   <div className="flex flex-wrap gap-1">
@@ -44,7 +38,7 @@ function JsonTree({ value, depth = 0 }) {
   );
 }
 
-export default function DetailDrawer({ row, kindKey, ctx, open, onClose, onSelectId, favorites, onFav, compareIds, onCompare, note, onNote }) {
+export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onClose, onSelectId, favorites, onFav, compareIds, onCompare, note, onNote }) {
   const byId = ctx.byId;
   const cls = row ? rowClass(row, kindKey) : null;
   const dpsVs = row?.dps_vs_class || {};
@@ -81,7 +75,7 @@ export default function DetailDrawer({ row, kindKey, ctx, open, onClose, onSelec
                 {["overview", "combat", "doctrine", "economy", "research", "notes", "raw"].map((t) => <TabsTrigger key={t} value={t} className="rounded-none font-mono text-[10px] uppercase tracking-wider data-[state=active]:bg-primary/10 data-[state=active]:text-primary h-8 px-2">{t}</TabsTrigger>)}
               </TabsList>
               <div className="flex-1 overflow-y-auto p-4">
-                <TabsContent value="overview" className="m-0"><GameEntityDetail kind={kindKey === "Doctrine" || kindKey === "GameBlueprint" ? "Other" : kindKey} record={row} byId={byId} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
+                <TabsContent value="overview" className="m-0"><VitalsStrip row={row} peers={peers} /><GameEntityDetail kind={kindKey === "Doctrine" || kindKey === "GameBlueprint" ? "Other" : kindKey} record={row} byId={byId} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
                 <TabsContent value="combat" className="m-0 space-y-4">
                   {maxDps > 0 ? (<div className="space-y-1"><div className="tech-label mb-1">DPS vs target class</div>{CLASSES.map((c) => <Bar key={c} label={c} value={dpsVs[c] || 0} max={maxDps} color={CLASS_HEX[c.replace("Unit", "").replace("Module", "")] || "hsl(var(--primary))"} />)}</div>) : <div className="tech-label">No armament</div>}
                   {row.weapons?.length ? (<div><div className="tech-label mb-1">Armament</div><Chips ids={[...new Set(row.weapons)]} byId={byId} onSelect={onSelectId} /></div>) : null}

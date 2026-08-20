@@ -97,7 +97,7 @@ export default function Database() {
         </>
       )}
 
-      <DetailDrawer row={selected} kindKey={selectedKind} ctx={ctx} open={!!selected} onClose={() => db.select(null)} onSelectId={selectId}
+      <DetailDrawer row={selected} kindKey={selectedKind} ctx={ctx} peers={allRows} open={!!selected} onClose={() => db.select(null)} onSelectId={selectId}
         favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} note={db.notes[db.selectedId]} onNote={db.setNote} />
     </div>
   );
