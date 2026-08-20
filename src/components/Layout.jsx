@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
 import JumpRail from "@/components/nav/JumpRail";
+import InstallSequence from "@/components/onboarding/InstallSequence";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -9,6 +10,7 @@ export default function Layout() {
 
   return (
     <div className="h-screen flex flex-col bg-background overflow-hidden">
+      <InstallSequence />
       {!isDeck && <JumpRail />}
       <main className="flex-1 overflow-y-auto bp-grid">
         <Outlet />
