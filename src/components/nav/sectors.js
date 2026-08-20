@@ -1,4 +1,4 @@
-import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes, HardDriveDownload, LineChart, Crosshair } from "lucide-react";
+import { Database, ArrowLeftRight, Layers, DatabaseZap, ScrollText, Wrench, Boxes, HardDriveDownload, LineChart, Crosshair, GitBranch } from "lucide-react";
 
 // Radial command ring sectors. Each sector expands to reveal its tools.
 export const SECTORS = [
@@ -14,6 +14,7 @@ export const SECTORS = [
       { to: "/compare", label: "Comparison Engine", code: "T-03", icon: ArrowLeftRight, desc: "Stat deltas between hulls & modules" },
       { to: "/economy", label: "Research & Economy", code: "T-03b", icon: LineChart, desc: "Tech-tree cost curves & module value plots" },
       { to: "/combat", label: "Combat Lab", code: "T-03c", icon: Crosshair, desc: "Time-to-kill, firing cycles & approach envelopes" },
+      { to: "/tech", label: "Tech Tree", code: "T-03d", icon: GitBranch, desc: "Research milestones & the modules they unlock" },
     ],
   },
   {

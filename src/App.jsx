@@ -18,6 +18,7 @@ import DriveSync from '@/pages/DriveSync';
 import EconomyAnalysis from '@/pages/EconomyAnalysis';
 import Compare from '@/pages/Compare';
 import CombatLab from '@/pages/CombatLab';
+import TechTree from '@/pages/TechTree';
 import GameData from '@/pages/GameData';
 import ImportData from '@/pages/ImportData';
 import DataOps from '@/pages/DataOps';
@@ -60,6 +61,7 @@ const AuthenticatedApp = () => {
         <Route path="/compare" element={<Compare />} />
         <Route path="/economy" element={<EconomyAnalysis />} />
         <Route path="/combat" element={<CombatLab />} />
+        <Route path="/tech" element={<TechTree />} />
         <Route path="/data" element={<DataOps />} />
         <Route path="/gamedata" element={<GameData />} />
         <Route path="/import" element={<ImportData />} />
