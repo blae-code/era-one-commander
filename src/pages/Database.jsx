@@ -8,7 +8,8 @@ import { useDatabank } from "@/components/databank/useDatabank";
 import { KIND_ICON } from "@/components/databank/Cells";
 import Toolbar from "@/components/databank/Toolbar";
 import DataTable from "@/components/databank/DataTable";
-import { CardGrid, HeatmapView } from "@/components/databank/Views";
+import { CardGrid } from "@/components/databank/Views";
+import HeatmapMatrix from "@/components/databank/HeatmapMatrix";
 import ComparePanel from "@/components/databank/ComparePanel";
 import ActiveChips from "@/components/databank/ActiveChips";
 import StatsStrip from "@/components/databank/StatsStrip";
@@ -89,7 +90,7 @@ export default function Database() {
             <div className="min-h-0">
               {cat.isLoading ? <div className="schematic-panel p-12 tech-label text-center animate-pulse">Accessing databank…</div>
                 : db.view === "cards" ? <CardGrid rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} />
-                : db.view === "heat" ? <HeatmapView rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
+                : db.view === "heat" ? <HeatmapMatrix rows={sorted} kindKey={db.kindKey} selectedId={db.selectedId} onSelect={selectId} />
                 : db.view === "damage" ? <DamageChartView rows={sorted} ctx={ctx} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : db.view === "plot" ? <ScatterView rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} db={db} selectedId={db.selectedId} onSelect={selectId} compareIds={db.compareIds} />
                 : <DataTable rows={sorted} kind={kind} kindKey={db.kindKey} ctx={ctx} columns={columns} stats={stats} sortKey={db.sortKey} sortDir={db.sortDir} onSort={db.setSort} selectedId={db.selectedId} onSelect={selectId} favorites={db.favorites} onFav={db.toggleFavorite} compareIds={db.compareIds} onCompare={db.toggleCompare} density={db.density} notes={db.notes} grouped={db.grouped} groupBy={kind.groupBy} />}

@@ -1,8 +1,6 @@
 import React from "react";
 import { Star, GitCompare } from "lucide-react";
 import { Cell, EntityIcon, TierPips, CLASS_HEX, rowClass } from "./Cells";
-import { CLASSES } from "./catalog";
-import { fmtNum } from "@/lib/gameData";
 
 // ---- Card grid --------------------------------------------------------------------------------
 export function CardGrid({ rows, kind, kindKey, ctx, columns, stats, selectedId, onSelect, favorites, onFav, compareIds, onCompare }) {
@@ -42,31 +40,4 @@ export function CardGrid({ rows, kind, kindKey, ctx, columns, stats, selectedId,
   );
 }
 
-// ---- Heatmap: dps vs target class ----------------------------------------------------------
-export function HeatmapView({ rows, kindKey, selectedId, onSelect }) {
-  const withDps = rows.filter((r) => r.dps_vs_class && Object.values(r.dps_vs_class).some((v) => v > 0));
-  if (!withDps.length) return <div className="schematic-panel p-8 tech-label text-center">Heatmap needs entries with armament — switch to Weapons, Modules, Ships or Turrets.</div>;
-  const max = Math.max(...withDps.flatMap((r) => Object.values(r.dps_vs_class)));
-  const short = (c) => c.replace("Unit", "").replace("Module", " mod").replace("Structural", "Struct.").replace("Facility", "Facil.");
-  return (
-    <div className="schematic-panel overflow-auto h-full">
-      <table className="text-xs border-separate border-spacing-0 w-full">
-        <thead className="sticky top-0 bg-secondary/95 z-10">
-          <tr><th className="tech-label px-2 py-2 text-left border-b border-border">Entry</th>
-            {CLASSES.map((c) => <th key={c} className="tech-label px-1 py-2 border-b border-border text-center whitespace-nowrap" title={c}>{short(c)}</th>)}
-            <th className="tech-label px-2 py-2 border-b border-border text-right">DPS</th></tr>
-        </thead>
-        <tbody>
-          {withDps.map((r) => (
-            <tr key={r.game_id} onClick={() => onSelect(r.game_id)} className={`cursor-pointer ${r.game_id === selectedId ? "bg-primary/10" : "hover:bg-secondary/40"}`}>
-              <td className="px-2 py-1 border-b border-border/60 whitespace-nowrap"><span className="inline-flex items-center gap-1.5"><EntityIcon row={r} kindKey={kindKey} size={13} />{r.name}</span></td>
-              {CLASSES.map((c) => { const v = r.dps_vs_class[c] || 0; const p = max ? v / max : 0;
-                return <td key={c} className="px-1 py-1 border-b border-border/60 text-center font-mono text-[10px] tabular-nums" style={{ background: `hsl(var(--primary) / ${(p * 0.75).toFixed(2)})`, color: p > 0.55 ? "hsl(var(--primary-foreground))" : undefined }} title={`${r.name} vs ${c}: ${fmtNum(v, 1)} dps`}>{v ? fmtNum(v, 0) : ""}</td>; })}
-              <td className="px-2 py-1 border-b border-border/60 text-right font-mono text-[10px]">{fmtNum(r.dps_total ?? r.dps, 1)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
+// Heatmap lives in HeatmapMatrix.jsx
