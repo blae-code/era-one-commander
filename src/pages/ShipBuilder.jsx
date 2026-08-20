@@ -11,6 +11,8 @@ import StatsPanel from "@/components/builder/StatsPanel";
 import SaveBlueprintDialog from "@/components/builder/SaveBlueprintDialog";
 import BuildImpactOverlay from "@/components/builder/BuildImpactOverlay";
 import { computeStats } from "@/lib/shipStats";
+import { checkBuild } from "@/lib/buildLimits";
+import BuildWarnings from "@/components/builder/BuildWarnings";
 
 export default function ShipBuilder() {
   const navigate = useNavigate();
@@ -44,6 +46,7 @@ export default function ShipBuilder() {
   }, [hulls, components]);
 
   const stats = useMemo(() => computeStats(hull, placements), [hull, placements]);
+  const { warnings, faultyKeys } = useMemo(() => checkBuild(hull, placements, stats), [hull, placements, stats]);
 
   const selectHull = (h) => {
     setHull(h);
@@ -125,7 +128,7 @@ export default function ShipBuilder() {
 
         {/* Center: grid */}
         <div className="schematic-panel bp-grid p-4 min-h-0 overflow-auto flex items-start justify-center relative">
-          <BuildGrid hull={hull} placements={placements} selectedComponent={selectedComponent} onPlace={place} onRemove={remove} />
+          <BuildGrid hull={hull} placements={placements} faultyKeys={faultyKeys} selectedComponent={selectedComponent} onPlace={place} onRemove={remove} />
           {hull && <BuildImpactOverlay hull={hull} placements={placements} selectedComponent={selectedComponent} />}
         </div>
 
@@ -133,6 +136,12 @@ export default function ShipBuilder() {
         <div className="schematic-panel p-3 min-h-0 overflow-y-auto">
           <div className="tech-label mb-2">Live Telemetry</div>
           <StatsPanel stats={stats} />
+          {hull && (
+            <div className="mt-3">
+              <div className="tech-label mb-2">Integrity Check</div>
+              <BuildWarnings warnings={warnings} onRemove={remove} />
+            </div>
+          )}
         </div>
       </div>
 

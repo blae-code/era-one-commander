@@ -12,7 +12,7 @@ const CAT_BG = {
   module: "bg-[#d24bff]/20 border-[#d24bff]",
 };
 
-export default function BuildGrid({ hull, placements, selectedComponent, onPlace, onRemove }) {
+export default function BuildGrid({ hull, placements, faultyKeys = [], selectedComponent, onPlace, onRemove }) {
   const [hover, setHover] = useState(null);
   if (!hull) return <div className="tech-label text-center py-16">Select a hull to begin construction</div>;
 
@@ -63,22 +63,27 @@ export default function BuildGrid({ hull, placements, selectedComponent, onPlace
           );
         })}
         {/* placed modules */}
-        {placements.map((p) => (
+        {placements.map((p) => {
+          const faulty = faultyKeys.includes(p.key);
+          return (
           <motion.button
             key={p.key}
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            animate={faulty ? { scale: 1, opacity: [1, 0.6, 1] } : { scale: 1, opacity: 1 }}
+            transition={faulty ? { opacity: { repeat: Infinity, duration: 1.4 } } : undefined}
             onClick={() => onRemove(p.key)}
-            title={`${p.component.name} — click to remove`}
-            className={`absolute flex flex-col items-center justify-center gap-0.5 border-2 ${CAT_BG[p.component.category] || "bg-secondary border-border"} hover:brightness-125`}
+            title={faulty ? `${p.component.name} — exceeds build limits, click to remove` : `${p.component.name} — click to remove`}
+            className={`absolute flex flex-col items-center justify-center gap-0.5 border-2 ${faulty ? "bg-destructive/25 border-destructive shadow-[0_0_12px_hsl(var(--destructive))]" : CAT_BG[p.component.category] || "bg-secondary border-border"} hover:brightness-125`}
             style={{ left: p.x * CELL + 2, top: p.y * CELL + 2, width: p.w * CELL - 4, height: p.h * CELL - 4 }}
           >
+            {faulty && <span className="absolute top-0.5 right-0.5 font-mono text-[9px] text-destructive leading-none">✖</span>}
             <CategoryIcon category={p.component.category} size={p.w > 1 || p.h > 1 ? 22 : 16} />
             <span className="font-mono text-[8px] leading-none text-foreground/80 px-0.5 truncate max-w-full">
               {p.component.name}
             </span>
           </motion.button>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
