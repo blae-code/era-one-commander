@@ -19,6 +19,7 @@ const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 const short = (c) => c.replace("Unit", "").replace("Module", " mod").replace("Structural", "Struct.").replace("Facility", "Facil.");
 
 // black → deep rust → ember → brass, saturated
+/** @type {[number, number[]][]} */
 const RAMP = [
   [0.0, [24, 20, 18]], [0.25, [110, 32, 18]], [0.5, [186, 58, 18]],
   [0.75, [238, 108, 20]], [1.0, [255, 196, 74]],

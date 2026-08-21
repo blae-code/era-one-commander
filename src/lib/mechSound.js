@@ -2,12 +2,12 @@
 let ctx = null;
 const getCtx = () => {
   if (typeof window === "undefined") return null;
-  if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (!ctx) ctx = new (window.AudioContext || /** @type {any} */ (window).webkitAudioContext)();
   if (ctx.state === "suspended") ctx.resume();
   return ctx;
 };
 
-function noiseBurst(ac, { duration = 0.06, gain = 0.05, freq = 1400, q = 1.4, dest }) {
+function noiseBurst(ac, { duration = 0.06, gain = 0.05, freq = 1400, q = 1.4, dest = null }) {
   const frames = Math.floor(ac.sampleRate * duration);
   const buf = ac.createBuffer(1, frames, ac.sampleRate);
   const data = buf.getChannelData(0);

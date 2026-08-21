@@ -24,8 +24,9 @@ done
 gate "Entity refs resolve (bundle or live-only)" "${missing_entities:-all}" "no dangling names" "$([ -z "$missing_entities" ] && echo 1 || echo 0)"
 
 # -- Referential: every invoked function must be deployed
+# (functions.invoke literals + the tech pages' useResearchCall("name", ...) indirection)
 missing_fns=""
-for f in $(grep -rhoE 'functions\.invoke\("[a-zA-Z]+"' src/ | grep -oE '"[a-zA-Z]+"' | tr -d '"' | sort -u); do
+for f in $(grep -rhoE '(functions\.invoke|useResearchCall)\("[a-zA-Z]+"' src/ | grep -oE '"[a-zA-Z]+"' | tr -d '"' | sort -u); do
   [ -d "base44/functions/$f" ] || missing_fns="$missing_fns $f"
 done
 gate "Function refs resolve" "${missing_fns:-all}" "no dangling names" "$([ -z "$missing_fns" ] && echo 1 || echo 0)"
@@ -36,13 +37,16 @@ fic=$(grep -rlE "$FICRE" src/ 2>/dev/null | wc -l)
 gate "Fictional-entity access files" "$fic" "0" "$([ "$fic" -eq 0 ] && echo 1 || echo 0)"
 
 # -- Functions wired
-fn=$(grep -rhoE 'functions\.invoke\("[a-zA-Z]+"' src/ | sort -u | wc -l)
+fn=$(grep -rhoE '(functions\.invoke|useResearchCall)\("[a-zA-Z]+"' src/ | grep -oE '"[a-zA-Z]+"' | sort -u | wc -l)
 gate "Functions invoked from the UI" "$fn" ">= 9" "$([ "$fn" -ge 9 ] && echo 1 || echo 0)"
 
-# -- Entities read
+# -- Entities read (direct hooks/entities.X, plus the Databank's KIND_ENTITY -> useGameEntityRows loop)
 ents=0
 for e in $(ls base44/entities/*.jsonc | xargs -n1 basename | sed 's/\.jsonc//'); do
-  grep -rqE "useGameEntity(Rows)?\(\"$e\"|entities\.$e\b" src/ --exclude=seedGameData.js 2>/dev/null && ents=$((ents+1))
+  if grep -rqE "useGameEntity(Rows)?\(\"$e\"|entities\.$e\b" src/ --exclude=seedGameData.js 2>/dev/null \
+     || grep -qE "(^|[ {])$e: \"$e\"" src/components/databank/catalog.js 2>/dev/null; then
+    ents=$((ents+1))
+  fi
 done
 gate "Entities read by any page/component" "$ents" ">= 30 of 48" "$([ "$ents" -ge 30 ] && echo 1 || echo 0)"
 

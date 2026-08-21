@@ -9,7 +9,7 @@ import SearchSuggest from "./SearchSuggest";
 import { facetGetter } from "./query";
 import { fmtNum } from "@/lib/gameData";
 
-const Btn = ({ active, children, ...p }) => (
+const Btn = ({ active = false, children, ...p }) => (
   <button {...p} className={`inline-flex items-center gap-1 px-2 h-7 border font-mono text-[10px] uppercase tracking-wider transition-colors ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"} ${p.className || ""}`}>{children}</button>
 );
 

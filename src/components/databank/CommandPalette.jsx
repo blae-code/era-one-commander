@@ -57,6 +57,7 @@ export default function CommandPalette({ cat, db, onJump, recents }) {
       return [...rec, ...commands.slice(0, 12)];
     }
     const score = (text) => { const t = text.toLowerCase(); const idx = t.indexOf(s); return idx < 0 ? -1 : idx === 0 ? 0 : 1 + idx / 100; };
+    /** @type {[number, any][]} */
     const hit = [];
     for (const e of entities) { const sc = Math.min(...[score(e.label), score(e.id)].map((x) => (x < 0 ? 999 : x))); if (sc < 999) hit.push([sc, e]); }
     for (const c of commands) { const sc = score(c.label); if (sc >= 0) hit.push([sc - 0.5, c]); }

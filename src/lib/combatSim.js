@@ -151,6 +151,7 @@ export const norm = (v, min, max) => (max > min ? (v - min) / (max - min) : 0);
 
 export const TTK_RAMP = (t01) => {
   // fast kill = ember, slow kill = cold iron
+  /** @type {[number, number[]][]} */
   const stops = [[0, [255, 214, 26]], [0.35, [255, 122, 26]], [0.7, [178, 58, 40]], [1, [58, 46, 42]]];
   let a = stops[0], b = stops[stops.length - 1];
   for (let i = 0; i < stops.length - 1; i++) if (t01 >= stops[i][0] && t01 <= stops[i + 1][0]) { a = stops[i]; b = stops[i + 1]; }

@@ -728,6 +728,7 @@ export const SYNTH_NAME = {
 };
 
 // The kind selector groups (Database.jsx renders one chip row per group).
+/** @type {[string, string[]][]} */
 export const KIND_GROUPS = [
   ["Catalog", ["Module", "Unit", "Weapon", "Turret", "Subsystem", "Ability", "GameBlueprint", "BlueprintPart"]],
   ["Maps", ["Scenario", "ScenarioEntity", "ScenarioObjective", "Objective", "Station", "Asteroid", "Resource", "Remain", "Faction"]],

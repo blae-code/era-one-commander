@@ -4,7 +4,7 @@ import WeaponTargetCharts from "@/components/database/WeaponTargetCharts";
 
 // Granular weapon analysis: per-shot damage, fire cycle, projectile flight, area effect and
 // effective damage per target class. Everything here is derived from the extracted Weapon record.
-const Section = ({ title, note, children }) => (
+const Section = ({ title, note = null, children }) => (
   <div>
     <div className="tech-label mb-1.5">{title}{note ? <span className="text-muted-foreground/60"> // {note}</span> : null}</div>
     {children}

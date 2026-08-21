@@ -52,7 +52,7 @@ export function ClassDot({ value }) {
 }
 
 // ---- cell renderer -------------------------------------------------------------------------
-export function Cell({ col, row, ctx, stats, heat = true }) {
+export function Cell({ col, row, ctx, stats = null, heat = true }) {
   const v = col.get(row, ctx);
   if (v === null || v === undefined || v === "") return <span className="text-muted-foreground/50">—</span>;
   if (col.type === "num" || col.type === "pct") {

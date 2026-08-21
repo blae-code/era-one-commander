@@ -33,7 +33,7 @@ export const loadDirHandle = () => tx("readonly", (s) => s.get(KEY));
 export const clearDirHandle = () => tx("readwrite", (s) => s.delete(KEY));
 
 export async function pickDirectory() {
-  const handle = await window.showDirectoryPicker({ mode: "read", id: "era-one-data" });
+  const handle = await /** @type {any} */ (window).showDirectoryPicker({ mode: "read", id: "era-one-data" });
   await saveDirHandle(handle);
   return handle;
 }

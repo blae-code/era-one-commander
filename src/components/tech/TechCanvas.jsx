@@ -4,7 +4,7 @@ import TechNode from "./TechNode";
 const NODE_W = 214, NODE_H = 62;
 
 // Scrollable blueprint canvas: tier columns, elbowed conduit lines, plates on top.
-export default function TechCanvas({ tree, selectedId, lineage: lin, have, onSelect, onToggleHave }) {
+export default function TechCanvas({ tree, selectedId, lineage: lin, have = null, onSelect, onToggleHave = null }) {
   const [hover, setHover] = useState(null);
   const { ancestors, descendants } = lin;
   const isolating = !!selectedId;

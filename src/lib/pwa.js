@@ -11,7 +11,7 @@ export function registerServiceWorker() {
 export const isStandalone = () =>
   window.matchMedia("(display-mode: standalone)").matches ||
   window.matchMedia("(display-mode: window-controls-overlay)").matches ||
-  window.navigator.standalone === true;
+  /** @type {any} */ (window.navigator).standalone === true;
 
 // Captures the browser install prompt so the app can offer a real install button.
 export function useInstallPrompt() {

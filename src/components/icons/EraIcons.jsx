@@ -1,5 +1,6 @@
 import React from "react";
 
+/** @returns {React.SVGProps<SVGSVGElement>} */
 const base = (props) => ({
   width: props.size || 20,
   height: props.size || 20,

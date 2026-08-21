@@ -10,7 +10,10 @@ const POLL_MS = 15000;
 
 // Watches a local folder and imports any new or modified extraction file automatically,
 // then invalidates the app's queries so every page refreshes without a reload.
-export default function useFolderWatch({ enabled = true, deleteMissing = false, onLog } = {}) {
+export default function useFolderWatch(
+  /** @type {{ enabled?: boolean, deleteMissing?: boolean, onLog?: (entry: any) => void }} */
+  { enabled = true, deleteMissing = false, onLog } = {}
+) {
   const qc = useQueryClient();
   const [handle, setHandle] = useState(null);
   const [needsPermission, setNeedsPermission] = useState(false);

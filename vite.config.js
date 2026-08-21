@@ -15,5 +15,26 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        // Split the heavy visualization/animation vendors out of the entry chunk
+        // so first paint doesn't pay for them. Function form: only modules that
+        // are actually in the graph get assigned (an object form would force-
+        // include unused packages).
+        manualChunks(id) {
+          if (id.includes('node_modules/recharts') || id.includes('node_modules/d3-')) {
+            return 'vendor-recharts';
+          }
+          if (id.includes('node_modules/framer-motion')) {
+            return 'vendor-framer-motion';
+          }
+          if (id.includes('node_modules/react-markdown') || id.includes('node_modules/micromark') || id.includes('node_modules/mdast-') || id.includes('node_modules/remark-') || id.includes('node_modules/unified')) {
+            return 'vendor-markdown';
+          }
+        }
+      }
+    }
+  }
 });

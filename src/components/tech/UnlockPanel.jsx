@@ -11,7 +11,7 @@ const Row = ({ label, value }) => (
 );
 
 // Readout for the selected milestone: prerequisite chain cost, the hardware it opens, and stat upgrades.
-export default function UnlockPanel({ tree, id, ctx, onSelect, onClear, have, onToggleHave, pinned, onPin }) {
+export default function UnlockPanel({ tree, id, ctx, onSelect, onClear, have = null, onToggleHave = null, pinned = false, onPin = null }) {
   if (!id) return (
     <div className="schematic-panel plate-texture p-4">
       <div className="tech-label">No milestone selected</div>
