@@ -1,4 +1,4 @@
-# Base44 Project
+# ERA ONE Commander
 
 Use this repository to run and edit the app locally, then publish changes back through Base44.
 
@@ -91,5 +91,6 @@ game by the sibling project `Code/era-one-data` (Unity 6 / IL2CPP / Odin reader)
   redeploy, import again.
 - Helpers: `src/lib/gameData.js` (`useGameCatalog`, `fmtModifier`), seeder `src/lib/seedGameData.js`.
 
-`Hull`/`Component` and the grid Ship Builder predate the real dataset (ERA ONE ships are module
-graphs, not hull grids) and are slated for replacement.
+The legacy `Hull`/`Component` grid builder was retired in v1.0: ships are module graphs, and the
+Drydock (`/designs`) renders the real assembly trees, imports `.station` files via
+`importStationFile`, and costs everything through `blueprintStats`.
