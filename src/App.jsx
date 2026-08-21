@@ -11,6 +11,10 @@ import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
 import Database from '@/pages/Database';
 import Designs from '@/pages/Designs';
+import Theatre from '@/pages/Theatre';
+import ThreatClock from '@/pages/ThreatClock';
+import Dossier from '@/pages/Dossier';
+import GameConstants from '@/pages/GameConstants';
 import FleetAnalysis from '@/pages/FleetAnalysis';
 import StealthAnalysis from '@/pages/StealthAnalysis';
 import ResourcePlan from '@/pages/ResourcePlan';
@@ -57,6 +61,10 @@ const AuthenticatedApp = () => {
         <Route path="/sync" element={<DriveSync />} />
         <Route path="/database" element={<Database />} />
         <Route path="/designs" element={<Designs />} />
+        <Route path="/theatre" element={<Theatre />} />
+        <Route path="/threat" element={<ThreatClock />} />
+        <Route path="/dossier" element={<Dossier />} />
+        <Route path="/constants" element={<GameConstants />} />
         <Route path="/fleet" element={<FleetAnalysis />} />
         <Route path="/stealth" element={<StealthAnalysis />} />
         <Route path="/compare" element={<Compare />} />

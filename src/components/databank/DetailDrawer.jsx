@@ -10,6 +10,12 @@ import { SegBar as Bar } from "./Readouts";
 import VitalsStrip from "./VitalsStrip";
 import EngagementCalc from "./EngagementCalc";
 import DamageRadar from "./DamageRadar";
+import LanguageStrip from "./LanguageStrip";
+import LoadoutPanel from "./LoadoutPanel";
+import EffectivenessIntent from "./EffectivenessIntent";
+
+// Kinds whose rows have '<Namespace>.<game_id>.Name' keys in LocalizedString.
+const LOC_KINDS = new Set(["Module", "Unit", "Weapon", "Turret", "ResearchNode", "Objective", "Remain", "Asteroid"]);
 
 const Chips = ({ ids, byId, onSelect, empty = "—" }) => (
   <div className="flex flex-wrap gap-1">
@@ -53,6 +59,7 @@ export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onCl
   }, [row, ctx.combatTemplates]);
   const copy = (txt) => navigator.clipboard?.writeText(txt);
   const isUnitOrModule = row && (row.unit_class || row.module_class);
+  const hasLoadout = Boolean(row?.unit_class && ((row.primary_equip_options || []).length || (row.secondary_equip_options || []).length));
   return (
     <Sheet open={open} onOpenChange={(o) => !o && onClose()}>
       <SheetContent side="right" className="w-[560px] sm:max-w-[560px] p-0 flex flex-col overflow-hidden">
@@ -66,29 +73,35 @@ export default function DetailDrawer({ row, kindKey, ctx, peers = [], open, onCl
                   <div className="font-mono text-[10px] text-muted-foreground mt-0.5">{row.game_id}{row.info ? ` · ${row.info}` : ""} · {[row.module_class, row.module_type, row.unit_class, row.unit_type, row.weapon_type, row.research_type, row.doctrine_kind].filter(Boolean).join(" · ")}</div>
                 </div>
                 <div className="flex gap-1">
-                  <button onClick={() => onFav(row.game_id)} title="favourite" className={`p-1.5 border border-border ${favorites.has(row.game_id) ? "text-[#ffd21a]" : "text-muted-foreground"}`}><Star size={13} fill={favorites.has(row.game_id) ? "currentColor" : "none"} /></button>
-                  <button onClick={() => onCompare(row.game_id)} title="add to compare" className={`p-1.5 border border-border ${compareIds.includes(row.game_id) ? "text-[#2f9bff]" : "text-muted-foreground"}`}><GitCompare size={13} /></button>
-                  <button onClick={() => copy(window.location.href)} title="copy link" className="p-1.5 border border-border text-muted-foreground hover:text-primary"><LinkIcon size={13} /></button>
+                  <button onClick={() => onFav(row.game_id)} title="favourite" aria-label="Toggle favourite" aria-pressed={favorites.has(row.game_id)} className={`p-1.5 border border-border focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${favorites.has(row.game_id) ? "text-[#ffd21a]" : "text-muted-foreground"}`}><Star size={13} fill={favorites.has(row.game_id) ? "currentColor" : "none"} aria-hidden="true" /></button>
+                  <button onClick={() => onCompare(row.game_id)} title="add to compare" aria-label="Toggle comparison" aria-pressed={compareIds.includes(row.game_id)} className={`p-1.5 border border-border focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${compareIds.includes(row.game_id) ? "text-[#2f9bff]" : "text-muted-foreground"}`}><GitCompare size={13} aria-hidden="true" /></button>
+                  <button onClick={() => copy(window.location.href)} title="copy link" aria-label="Copy share link" className="p-1.5 border border-border text-muted-foreground hover:text-primary focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary"><LinkIcon size={13} aria-hidden="true" /></button>
                 </div>
               </div>
             </SheetHeader>
             <Tabs defaultValue="overview" className="flex-1 flex flex-col min-h-0">
               <TabsList className="mx-4 mt-2 rounded-none justify-start bg-transparent border-b border-border h-8 gap-2 p-0">
-                {["overview", "combat", ...(row.dps !== undefined && !isUnitOrModule ? ["engage"] : []), "doctrine", "economy", "research", "notes", "raw"].map((t) => <TabsTrigger key={t} value={t} className="rounded-none font-mono text-[10px] uppercase tracking-wider data-[state=active]:bg-primary/10 data-[state=active]:text-primary h-8 px-2">{t}</TabsTrigger>)}
+                {["overview", "combat", ...(row.dps !== undefined && !isUnitOrModule ? ["engage"] : []), ...(hasLoadout ? ["loadout"] : []), "doctrine", "economy", "research", "notes", "raw"].map((t) => <TabsTrigger key={t} value={t} className="rounded-none font-mono text-[10px] uppercase tracking-wider data-[state=active]:bg-primary/10 data-[state=active]:text-primary h-8 px-2">{t}</TabsTrigger>)}
               </TabsList>
               <div className="flex-1 overflow-y-auto p-4">
-                <TabsContent value="overview" className="m-0"><VitalsStrip row={row} peers={peers} /><GameEntityDetail kind={kindKey === "Doctrine" || kindKey === "GameBlueprint" ? "Other" : kindKey} record={row} byId={byId} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
+                <TabsContent value="overview" className="m-0"><VitalsStrip row={row} peers={peers} /><LanguageStrip gameId={row.game_id} enabled={open && LOC_KINDS.has(kindKey)} /><GameEntityDetail kind={kindKey} record={row} byId={byId} statLabels={ctx.statLabels} onSelect={(k, id) => onSelectId(id)} /></TabsContent>
                 <TabsContent value="combat" className="m-0 space-y-4">
                   {maxDps > 0 && <DamageRadar row={row} peers={peers} />}
                   {maxDps > 0 ? (<div className="space-y-1"><div className="tech-label mb-1">DPS vs target class</div>{CLASSES.map((c) => <Bar key={c} label={c} value={dpsVs[c] || 0} max={maxDps} color={CLASS_HEX[c.replace("Unit", "").replace("Module", "")] || "hsl(var(--primary))"} />)}</div>) : <div className="tech-label">No armament</div>}
                   {row.weapons?.length ? (<div><div className="tech-label mb-1">Armament</div><Chips ids={[...new Set(row.weapons)]} byId={byId} onSelect={onSelectId} /></div>) : null}
                   {row.class_damage_multipliers?.length ? (<div><div className="tech-label mb-1">Class multipliers</div><KV items={row.class_damage_multipliers.map((m) => [m.entity_class, `×${m.multiplier}`])} /></div>) : null}
+                  {kindKey === "Weapon" && <EffectivenessIntent weaponId={row.game_id} enabled={open} />}
                   {isUnitOrModule && <KV items={[["HP", row.max_health], ["Armor", row.armor], ["HP regen", row.health_regen], ["Ablative shield", row.max_ablative_shield], ["Perimeter shield", row.max_perimeter_shield], ["Attack range", row.link_range], ["Reactivity", row.attack_reactivity], ["Attack cooldown", row.attack_cooldown], ["Aim required", row.aim_required], ["Predictive aim", row.predictive_aim], ["Structural dmg ×", row.structural_damage_multiplier]]} />}
                   {row.dps !== undefined && !isUnitOrModule && <KV items={[["DPS", row.dps], ["Range", row.range], ["Hull / hit", row.hp_change], ["Shield / hit", row.shield_change], ["Armor pen", row.armor_penetration], ["Rate of fire", row.rate_of_fire], ["Burst", row.burst_amount], ["Burst interval", row.burst_interval], ["Reload", row.requires_reload ? row.reload_time : null], ["Projectile speed", row.bullet_speed], ["Lifetime", row.bullet_lifetime], ["Tracking", row.tracking_speed], ["AoE radius", row.deal_area_damage ? row.area_radius : null], ["Status on hit", row.applied_status_on_hit], ["Type", row.weapon_type], ["Implementation", row.implementation]]} />}
                 </TabsContent>
                 <TabsContent value="engage" className="m-0">
                   {row.dps !== undefined && !isUnitOrModule && <EngagementCalc weapon={row} ctx={ctx} />}
                 </TabsContent>
+                {hasLoadout && (
+                  <TabsContent value="loadout" className="m-0">
+                    <LoadoutPanel unit={row} byId={byId} open={open} />
+                  </TabsContent>
+                )}
                 <TabsContent value="doctrine" className="m-0 space-y-4">
                   {isUnitOrModule ? (<>
                     <KV items={[["Default stance", row.default_stance], ["Stances", row.enabled_stances], ["Default style", row.default_style], ["Styles", row.enabled_styles], ["Default orientation", row.default_orientation], ["Orientations", row.enabled_orientations], ["Evade on attack", row.evade_on_attack_probability], ["Evade actions", row.evade_actions], ["Switch target every", row.switch_target_interval], ["Attack priority", row.attack_priority], ["Flyby disengage", row.flyby_disengage_distance], ["Banking", row.banking_amount], ["Backflip", row.backflip_probability], ["Oversteer", row.oversteer_enabled], ["Stay horizontal", row.stay_horizontal]]} />

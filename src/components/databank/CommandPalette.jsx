@@ -22,12 +22,20 @@ export default function CommandPalette({ cat, db, onJump, recents }) {
   }, []);
   useEffect(() => { if (open) { setQ(""); setI(0); setTimeout(() => inputRef.current?.focus(), 20); } }, [open]);
 
+  // Extra kinds worth ⌘K jumps: distinctively-named, human-scale tables. The big synthetic tables
+  // (ScenarioEntity, StatModifier, LocalizedString, Effectiveness…) would only add noise — their
+  // rows are reached through their kind's own facets. Extras index once their rows are loaded
+  // (Scenario/Objective are always on; the rest load on first visit to their kind).
+  const PALETTE_EXTRAS = ["Scenario", "Objective", "ScenarioObjective", "GameHint", "GameEvent", "Remain", "EnemyWave", "AiPersonality", "AiLogicGraph", "AiFact", "AiGoal", "AiOperation", "ScoreWeight", "Station", "Asteroid", "Resource", "Faction", "Ability", "AttachmentRule"];
   const entities = useMemo(() => {
-    const kinds = [["Module", cat.modules], ["Unit", cat.units], ["Weapon", cat.weapons], ["Turret", cat.turrets], ["Subsystem", cat.subsystems], ["ResearchNode", cat.research], ["GameBlueprint", cat.blueprints]];
+    const kinds = [
+      ["Module", cat.modules], ["Unit", cat.units], ["Weapon", cat.weapons], ["Turret", cat.turrets], ["Subsystem", cat.subsystems], ["ResearchNode", cat.research], ["GameBlueprint", cat.blueprints],
+      ...PALETTE_EXTRAS.map((k) => [k, cat.extra?.[k]]),
+    ];
     const out = [];
     for (const [k, rows] of kinds) for (const r of rows || []) out.push({ type: "entity", id: r.game_id, row: r, kindKey: k, label: r.name || r.game_id, sub: `${k} · ${r.game_id}` });
     return out;
-  }, [cat.modules, cat.units, cat.weapons, cat.turrets, cat.subsystems, cat.research, cat.blueprints]);
+  }, [cat]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const commands = useMemo(() => {
     const views = [["table", "Table view", Table2], ["cards", "Card view", LayoutGrid], ["heat", "Heatmap view", Grid3x3], ["plot", "Scatter plot view", ScatterChart], ["damage", "Damage charts view", BarChart3], ["para", "Parallel coordinates view", GitBranch]];

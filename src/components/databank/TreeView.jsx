@@ -15,7 +15,7 @@ export default function TreeView({ ctx, rows, onSelectId }) {
   if (!tree.nodes.length) return <div className="schematic-panel p-10 tech-label text-center">No research data loaded.</div>;
 
   return (
-    <div className="h-full flex flex-col min-h-0 gap-2">
+    <div className="h-full flex flex-col min-h-0 gap-2" role="region" aria-label="Research tech lattice">
       <div className="flex items-center gap-3 flex-wrap">
         <span className="tech-label inline-flex items-center gap-1"><GitFork size={11} /> Tech lattice · {tree.nodes.length} milestones · {tree.edges.length} links</span>
         <div className="flex items-center gap-3 font-mono text-[9px] text-muted-foreground">

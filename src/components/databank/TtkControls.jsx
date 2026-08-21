@@ -1,9 +1,9 @@
 import React from "react";
 import { TTK_RAMP } from "@/lib/combatSim";
 
-const Seg = ({ active, onClick, children, title }) => (
-  <button onClick={onClick} title={title}
-    className={`px-2 h-7 font-mono text-[10px] uppercase tracking-[0.12em] border transition-colors ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50"}`}>
+const Seg = ({ active = false, onClick = undefined, children, title = undefined }) => (
+  <button onClick={onClick} title={title} aria-pressed={!!active}
+    className={`px-2 h-7 font-mono text-[10px] uppercase tracking-[0.12em] border transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50"}`}>
     {children}
   </button>
 );
@@ -41,10 +41,10 @@ export default function TtkControls({ targetSet, setTargetSet, layers, setLayers
 
       <div className="flex items-center gap-2 ml-auto font-mono text-[9px] text-muted-foreground">
         <span>{metric === "dps" ? "LOW" : "FAST"}</span>
-        <div className="flex">{Array.from({ length: 16 }).map((_, i) => <span key={i} className="w-2.5 h-3" style={{ background: TTK_RAMP(i / 15) }} />)}</div>
+        <div className="flex" aria-hidden="true">{Array.from({ length: 16 }).map((_, i) => <span key={i} className="w-2.5 h-3" style={{ background: TTK_RAMP(i / 15) }} />)}</div>
         <span>{metric === "dps" ? "HIGH" : "SLOW"}</span>
       </div>
-      <div className="w-full font-mono text-[10px] text-foreground border-t border-border pt-1.5">
+      <div className="w-full font-mono text-[10px] text-foreground border-t border-border pt-1.5" aria-live="polite">
         {hover || <span className="text-muted-foreground">hover a cell for the full engagement breakdown</span>}
       </div>
     </div>

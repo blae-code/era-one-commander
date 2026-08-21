@@ -1,5 +1,9 @@
 import React from "react";
-import { Boxes, Ship, Crosshair, RadarIcon, FlaskConical, Shapes, Compass, Shield, Zap, Factory, Cog, Wrench, Radio, Package, Flame, Anchor, Move3d, Star, Sparkles, Bomb, Target } from "lucide-react";
+import {
+  Boxes, Ship, Crosshair, RadarIcon, FlaskConical, Shapes, Compass, Shield, Zap, Factory, Cog, Wrench, Radio, Package, Flame, Anchor, Move3d, Star, Sparkles, Bomb, Target,
+  Map as MapIcon, MapPin, ListChecks, Flag, Lightbulb, Bell, Recycle, Waves, TrendingUp, Swords, Brain, BookOpen, Workflow, Settings2, Scale, SlidersHorizontal, ChevronsUp,
+  Puzzle, GitBranch, Link2, Link, Magnet, Gift, Languages, Building2, Mountain, Gem, Users, Cpu,
+} from "lucide-react";
 import { fmtNum } from "@/lib/gameData";
 
 // ---- icons: kind + class/type aware -------------------------------------------------------
@@ -9,15 +13,33 @@ const CLASS_ICON = {
   Upgrade: Zap, Technology: FlaskConical, Tier: Shield, Ability: Sparkles, Stance: Target, Style: Move3d, Orientation: Compass, Formation: Shapes, Neutral: Cog,
 };
 const TYPE_ICON = { Armor: Shield, Plate: Shield, Power: Zap, Fusion: Flame, Engine: Move3d, Storage: Package, Sensor: Radio, Weapon: Crosshair, Extender: Boxes, Rotator: Cog };
-export const KIND_ICON = { Module: Boxes, Unit: Ship, Weapon: Crosshair, Turret: RadarIcon, ResearchNode: FlaskConical, Doctrine: Compass, GameBlueprint: Shapes };
+export const KIND_ICON = {
+  Module: Boxes, Unit: Ship, Weapon: Crosshair, Turret: RadarIcon, ResearchNode: FlaskConical, Doctrine: Compass, GameBlueprint: Shapes,
+  Subsystem: Cpu, Ability: Sparkles, BlueprintPart: Puzzle, AttachmentRule: Magnet, ModuleWeapon: Link2, UnitWeapon: Link,
+  Scenario: MapIcon, ScenarioEntity: MapPin, ScenarioObjective: ListChecks, Objective: Flag, Station: Building2, Asteroid: Mountain, Resource: Gem, Remain: Recycle, Faction: Users,
+  EnemyWave: Waves, EnemyUpgrade: TrendingUp, EnemySpawner: Factory, ArenaTurn: Swords,
+  AiPersonality: Brain, AiLogicGraph: Workflow, AiFact: BookOpen, AiGoal: Target, AiOperation: Cog,
+  Effectiveness: Zap, StatModifier: SlidersHorizontal, UnitLevel: ChevronsUp, ResearchEdge: GitBranch, LootEntry: Gift, MatchOption: Settings2, ScoreWeight: Scale,
+  GameHint: Lightbulb, GameEvent: Bell, LocalizedString: Languages,
+};
 export const CLASS_HEX = {
   Weapon: "#ff7a1a", Structural: "#c9d6e3", Utility: "#00d1c1", Facility: "#2f9bff", Command: "#ffd21a",
   Fighter: "#00d1c1", Corvette: "#2f9bff", Frigate: "#ff7a1a", Platform: "#c9d6e3", Mine: "#ff4d4d",
   Upgrade: "#00d1c1", Technology: "#2f9bff", Tier: "#ffd21a", Ability: "#c98aff", Stance: "#ff7a1a", Style: "#2f9bff", Orientation: "#c9d6e3", Formation: "#00d1c1", Neutral: "#8c9aa3",
   Standard: "#c9d6e3", Missile: "#ff7a1a", EMP: "#2f9bff", SelfDestruct: "#ff4d4d", LongRangeTorpedo: "#ffd21a", NuclearBomb: "#ff4d4d", SubWeapon: "#8c9aa3", Radiation: "#8cff5a",
   shipped: "#c9d6e3", player: "#00d1c1", CMX: "#2f9bff", PIR: "#ff4d4d",
+  // ScenarioEntity kinds + teams
+  asteroid: "#8c9aa3", wreck: "#c9d6e3", module: "#2f9bff", unit: "#00d1c1", station: "#ffd21a", hazard: "#ff4d4d", objective: "#c98aff", other: "#8c9aa3",
+  Team1: "#2f9bff", Team2: "#ff4d4d", Rogue: "#ff7a1a", None: "#8c9aa3",
+  // Objective categories · research-edge kinds · event categories/priorities
+  Primary: "#ff7a1a", Secondary: "#2f9bff", Challenge: "#ffd21a",
+  requires: "#ff7a1a", child: "#2f9bff",
+  Combat: "#ff4d4d", Research: "#2f9bff", Building: "#c9d6e3", Detection: "#00d1c1", Resource: "#ffd21a", Energy: "#8cff5a",
+  Low: "#8c9aa3", Medium: "#2f9bff", High: "#ff7a1a", Alert: "#ff4d4d",
 };
-export const rowClass = (r, kindKey) => r.module_class || r.unit_class || r.weapon_type?.split("|")[0] || r.research_type || r.doctrine_kind || r.source || kindKey;
+export const rowClass = (r, kindKey) =>
+  r.module_class || r.unit_class || r.weapon_type?.split("|")[0] || r.research_type || r.doctrine_kind ||
+  r.kind || r.target_class || r.event_category || r.faction || r.team || r.source || kindKey;
 
 export function EntityIcon({ row, kindKey, size = 16 }) {
   const cls = rowClass(row, kindKey);

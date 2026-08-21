@@ -23,8 +23,8 @@ export default function StatsStrip({ rows, kind, ctx, db }) {
   const f = (v) => fmtNum(v, col.dec ?? 1);
 
   return (
-    <div className="schematic-panel px-3 py-2 mb-3 flex items-center gap-4 flex-wrap">
-      <select value={col.key} onChange={(e) => setManual(e.target.value)}
+    <div className="schematic-panel px-3 py-2 mb-3 flex items-center gap-4 flex-wrap" role="group" aria-label={`${col.label} distribution, ${d.n} values`}>
+      <select value={col.key} onChange={(e) => setManual(e.target.value)} aria-label="Distribution column"
         className="h-6 bg-background/60 border border-border px-1 font-mono text-[10px] uppercase tracking-wider outline-none focus:border-primary text-foreground">
         {numCols.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
       </select>
@@ -37,10 +37,15 @@ export default function StatsStrip({ rows, kind, ctx, db }) {
       <div className="flex items-end gap-px h-7 flex-1 min-w-[160px]">
         {d.hist.map((n, i) => {
           const lo = d.min + (d.span * i) / d.hist.length, hi = d.min + (d.span * (i + 1)) / d.hist.length;
+          const apply = canFilter ? () => db.setRange(col.key, Math.floor(lo), Math.ceil(hi)) : undefined;
           return (
             <div key={i}
-              onClick={canFilter ? () => db.setRange(col.key, Math.floor(lo), Math.ceil(hi)) : undefined}
-              className={`flex-1 bg-primary/60 hover:bg-primary transition-colors ${canFilter ? "cursor-pointer" : ""}`}
+              onClick={apply}
+              role={canFilter ? "button" : undefined}
+              tabIndex={canFilter ? 0 : undefined}
+              aria-label={canFilter ? `Filter ${col.label} to ${f(lo)} – ${f(hi)} (${n} entries)` : undefined}
+              onKeyDown={canFilter ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); apply(); } } : undefined}
+              className={`flex-1 bg-primary/60 hover:bg-primary transition-colors ${canFilter ? "cursor-pointer focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary" : ""}`}
               style={{ height: `${n ? Math.max(8, (n / d.hmax) * 100) : 2}%`, opacity: n ? 1 : 0.25 }}
               title={`${f(lo)} – ${f(hi)}: ${n} entries${canFilter ? " · click to filter" : ""}`} />
           );

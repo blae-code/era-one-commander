@@ -10,7 +10,8 @@ const Chip = ({ children, onRemove, color = "border-primary/50 text-primary" }) 
 );
 
 // Row of removable chips for every active query token, facet, range and toggle.
-export default function ActiveChips({ db, kind, parsed }) {
+// wipCount = rows in the current kind the game flags work_in_progress (hidden by default).
+export default function ActiveChips({ db, kind, parsed, wipCount = 0 }) {
   const chips = [];
   const rebuild = (words, clauses) =>
     [...words, ...clauses.map(({ field, op, val }) => `${field}${op}${/\s/.test(val) ? `"${val}"` : val}`)].join(" ");
@@ -26,6 +27,11 @@ export default function ActiveChips({ db, kind, parsed }) {
     chips.push({ label: `${col?.label || key}: ${lo != null ? fmtNum(lo, 0) : "…"} – ${hi != null ? fmtNum(hi, 0) : "…"}`, on: () => db.setRange(key, null, null), color: "border-[#ffd21a]/50 text-[#ffd21a]" });
   }
   if (db.favOnly) chips.push({ label: "★ favourites", on: () => db.setFavOnly(false), color: "border-[#ffd21a]/50 text-[#ffd21a]" });
+  // WIP rows are filtered out by default — surface that hidden state and make it dismissable.
+  if (db.hideWip && wipCount > 0)
+    chips.push({ label: `${wipCount} WIP hidden`, on: () => db.setHideWip(false), color: "border-muted-foreground/40 text-muted-foreground" });
+  if (!db.hideWip)
+    chips.push({ label: "showing WIP", on: () => db.setHideWip(true), color: "border-[#ffd21a]/50 text-[#ffd21a]" });
   if (!chips.length) return null;
 
   return (

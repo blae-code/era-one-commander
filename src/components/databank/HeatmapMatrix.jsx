@@ -62,19 +62,19 @@ export default function HeatmapMatrix({ rows, kindKey, selectedId, onSelect }) {
   };
 
   return (
-    <div className="schematic-panel plate-texture h-full flex flex-col overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60 z-20" />
+    <div className="schematic-panel plate-texture h-full flex flex-col overflow-hidden" role="region" aria-label="Damage heatmap matrix by target class">
+      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60 z-20" aria-hidden="true" />
       {/* controls */}
       <div className="flex items-center justify-between gap-3 flex-wrap px-3 py-2 border-b border-border">
         <div className="flex items-center gap-1">
           {METRICS.map((x) => (
-            <button key={x.key} onClick={() => setMetric(x.key)}
-              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider ${metric === x.key ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground hover:border-primary/40"}`}>{x.label}</button>
+            <button key={x.key} onClick={() => setMetric(x.key)} aria-pressed={metric === x.key}
+              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${metric === x.key ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground hover:border-primary/40"}`}>{x.label}</button>
           ))}
-          <div className="h-5 w-px bg-border mx-1" />
+          <div className="h-5 w-px bg-border mx-1" aria-hidden="true" />
           {SCALES.map((s) => (
-            <button key={s.key} onClick={() => setScale(s.key)}
-              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider ${scale === s.key ? "border-accent text-accent" : "border-border text-muted-foreground hover:border-primary/40"}`}>{s.label}</button>
+            <button key={s.key} onClick={() => setScale(s.key)} aria-pressed={scale === s.key}
+              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${scale === s.key ? "border-accent text-accent" : "border-border text-muted-foreground hover:border-primary/40"}`}>{s.label}</button>
           ))}
           {sortCls && (
             <button onClick={() => setSortCls(null)} className="px-2 h-7 border border-border font-mono text-[10px] uppercase text-muted-foreground hover:text-primary">clear sort</button>
@@ -82,7 +82,7 @@ export default function HeatmapMatrix({ rows, kindKey, selectedId, onSelect }) {
         </div>
         <div className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
           <span>cold</span>
-          <span className="h-3 w-40 border border-border" style={{ background: `linear-gradient(90deg, ${RAMP.map(([p, c]) => `rgb(${c.join(",")}) ${p * 100}%`).join(",")})` }} />
+          <span className="h-3 w-40 border border-border" aria-hidden="true" style={{ background: `linear-gradient(90deg, ${RAMP.map(([p, c]) => `rgb(${c.join(",")}) ${p * 100}%`).join(",")})` }} />
           <span>hot</span>
           <span className="ml-1">{scale === "global" ? `max ${fmtNum(globalMax, 0)}` : scale === "row" ? "row-relative" : "column-relative"}</span>
         </div>
@@ -95,16 +95,19 @@ export default function HeatmapMatrix({ rows, kindKey, selectedId, onSelect }) {
               <th className="tech-label px-2 py-2 text-left border-b border-border sticky left-0 bg-[hsl(12_12%_6%)]">Armament</th>
               {cols.map((c) => (
                 <th key={c} onClick={() => setSortCls(c === sortCls ? null : c)}
-                  className={`tech-label px-1 py-2 border-b border-border text-center whitespace-nowrap cursor-pointer select-none ${sortCls === c ? "text-primary" : "hover:text-foreground"} ${hover?.c === c ? "bg-primary/10" : ""}`}
+                  role="button" tabIndex={0} aria-sort={sortCls === c ? "descending" : "none"} aria-label={`Rank armaments by ${m.label} versus ${c}`}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setSortCls(c === sortCls ? null : c); } }}
+                  className={`tech-label px-1 py-2 border-b border-border text-center whitespace-nowrap cursor-pointer select-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1 ${sortCls === c ? "text-primary" : "hover:text-foreground"} ${hover?.c === c ? "bg-primary/10" : ""}`}
                   title={`${c} — click to rank`}>{short(c)}</th>
               ))}
-              <th className="tech-label px-2 py-2 border-b border-border text-right">Total</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map((r) => (
-              <tr key={r.game_id} onClick={() => onSelect(r.game_id)}
-                className={`cursor-pointer ${r.game_id === selectedId ? "outline outline-1 outline-accent" : ""} ${hover?.id === r.game_id ? "bg-primary/5" : ""}`}>
+              <tr key={r.game_id} onClick={() => onSelect(r.game_id)} tabIndex={0} aria-selected={r.game_id === selectedId}
+                aria-label={`Inspect ${r.name}`}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(r.game_id); } }}
+                className={`cursor-pointer focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1 ${r.game_id === selectedId ? "outline outline-1 outline-accent" : ""} ${hover?.id === r.game_id ? "bg-primary/5" : ""}`}>
                 <td className="px-2 py-1 border-b border-border/50 whitespace-nowrap sticky left-0 bg-[hsl(14_11%_7%)]">
                   <span className="inline-flex items-center gap-1.5"><EntityIcon row={r} kindKey={kindKey} size={13} />{r.name}</span>
                 </td>
@@ -120,7 +123,6 @@ export default function HeatmapMatrix({ rows, kindKey, selectedId, onSelect }) {
                     </td>
                   );
                 })}
-                <td className="px-2 py-1 border-b border-border/50 text-right font-mono text-[10px] text-muted-foreground">{fmtNum(r.dps_total ?? r.dps, 1)}</td>
               </tr>
             ))}
           </tbody>

@@ -1,3 +1,4 @@
+import { useSearchParams } from "react-router-dom";
 import React, { useMemo, useState } from "react";
 import { Anchor } from "lucide-react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -22,7 +23,9 @@ export default function Designs() {
   const player = useGameEntityRows("PlayerDesign");
   const qc = useQueryClient();
 
-  const [selectedId, setSelectedId] = useState(null);
+  const [searchParams] = useSearchParams();
+  // Deep link: /designs?id=<game_id> (Databank drawer "Open in Drydock")
+  const [selectedId, setSelectedId] = useState(() => searchParams.get("id") || null);
   const [query, setQuery] = useState("");
   const [view, setView] = useState("top");
   const [partSel, setPartSel] = useState(null);

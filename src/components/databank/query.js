@@ -27,6 +27,15 @@ function resolveKeys(field, columns) {
   return [...keys];
 }
 
+// The one way to read a facet value: through the column getter when the facet key has a column
+// (computed facets — unit faction fallback, scenario names, mount kind), else the raw field.
+// Toolbar counts, applyQuery filtering and the primary-facet picker must all use this, or a
+// getter-backed facet mismatches its own filter.
+export function facetGetter(kind, key) {
+  const col = kind.columns.find((c) => c.key === key);
+  return col ? (r, ctx) => String(col.get(r, ctx) ?? "—") : (r) => String(r[key] ?? "—");
+}
+
 export function applyQuery(rows, kind, ctx, parsed, opts = {}) {
   const { favorites = new Set(), facetSel = {}, ranges = {}, favOnly = false, hideWip = false } = opts;
   const cols = kind.columns;
@@ -54,10 +63,13 @@ export function applyQuery(rows, kind, ctx, parsed, opts = {}) {
     });
   });
 
+  const facetGet = {};
+  for (const fk of Object.keys(facetSel)) facetGet[fk] = facetGetter(kind, fk);
+
   const out = rows.filter((r) => {
     if (favOnly && !favorites.has(r.game_id)) return false;
     if (hideWip && r.work_in_progress) return false;
-    for (const [fk, sel] of Object.entries(facetSel)) if (sel && sel.size && !sel.has(String(r[fk] ?? "—"))) return false;
+    for (const [fk, sel] of Object.entries(facetSel)) if (sel && sel.size && !sel.has(facetGet[fk](r, ctx))) return false;
     for (const [rk, [lo, hi]] of Object.entries(ranges)) {
       const v = rowValue(r, rk);
       if (typeof v !== "number") { if (lo != null || hi != null) return false; continue; }

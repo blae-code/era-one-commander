@@ -5,11 +5,11 @@ const KEYS = [
   ["⌘K / Ctrl K", "Jump to any entity or run a command"],
   ["/", "Focus the query bar"],
   ["↑ ↓", "Move through rows"],
-  ["⏎", "Open the selected entity"],
+  ["⏎ / Space", "Open the focused / selected entity"],
   ["c", "Add / remove from comparison"],
   ["f", "Toggle favourite"],
   ["g", "Group rows by class"],
-  ["1 – 6", "Table · cards · heatmap · plot · damage · parallel"],
+  ["1 – 8", "Table · cards · heatmap · plot · damage · parallel · tree · TTK"],
   ["?", "This panel"],
   ["Esc", "Close panel / drawer"],
 ];
@@ -29,8 +29,8 @@ export default function ShortcutHelp() {
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={() => setOpen(false)}>
-      <div className="schematic-panel plate-texture w-[min(460px,92vw)] p-4" onClick={(e) => e.stopPropagation()}>
-        <div className="flex items-center gap-2 mb-3"><Keyboard size={16} className="text-primary" /><div className="font-display font-bold tracking-[0.15em] text-sm">KEY MAP</div></div>
+      <div className="schematic-panel plate-texture w-[min(460px,92vw)] p-4" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center gap-2 mb-3"><Keyboard size={16} className="text-primary" aria-hidden="true" /><div className="font-display font-bold tracking-[0.15em] text-sm">KEY MAP</div></div>
         {KEYS.map(([k, d]) => (
           <div key={k} className="flex items-center gap-3 py-1 border-b border-border/50 last:border-0">
             <span className="font-mono text-[10px] border border-border px-1.5 py-0.5 min-w-[92px] text-center">{k}</span>

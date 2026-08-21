@@ -30,17 +30,21 @@ export default function ParallelView({ rows, kind, kindKey, ctx, columns, select
 
   const path = (pts) => pts.filter(Boolean).map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
 
+  const hasNominalDps = axes.some((a) => a.col.key === "dps_total" || a.col.key === "dps");
+
   return (
-    <div className="schematic-panel plate-texture h-full overflow-auto p-2">
+    <div className="schematic-panel plate-texture h-full overflow-auto p-2" role="region"
+      aria-label={`Parallel coordinates across ${axes.length} numeric columns, ${Math.min(rows.length, 400)} rows`}>
       <div className="flex items-center justify-between mb-1 px-1">
-        <div className="tech-label">Parallel coordinates // {axes.length} axes · {Math.min(rows.length, 400)} of {rows.length} rows</div>
-        <div className="font-mono text-[9px] text-muted-foreground">{hover ? `${hover.name} · ${hover.game_id}` : "hover a line to read it · click to open"}</div>
+        <div className="tech-label">Parallel coordinates // {axes.length} axes · {Math.min(rows.length, 400)} of {rows.length} rows{hasNominalDps ? " · * = all-class nominal DPS" : ""}</div>
+        <div className="font-mono text-[9px] text-muted-foreground" aria-live="polite">{hover ? `${hover.name} · ${hover.game_id}` : "hover a line to read it · click to open"}</div>
       </div>
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-[calc(100%-24px)] min-h-[380px]">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-[calc(100%-24px)] min-h-[380px]" role="img"
+        aria-label={`Each of the ${Math.min(rows.length, 400)} rows drawn as a line across ${axes.length} normalised axes`}>
         {axes.map((a, i) => (
           <g key={a.col.key}>
             <line x1={padX + i * step} y1={padY} x2={padX + i * step} y2={H - padY} stroke="hsl(14 11% 24%)" />
-            <text x={padX + i * step} y={padY - 12} textAnchor="middle" fill="hsl(18 8% 60%)" style={{ fontFamily: "IBM Plex Mono", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.1em" }}>{a.col.label}</text>
+            <text x={padX + i * step} y={padY - 12} textAnchor="middle" fill="hsl(18 8% 60%)" style={{ fontFamily: "IBM Plex Mono", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.1em" }}>{a.col.key === "dps_total" || a.col.key === "dps" ? `${a.col.label}*` : a.col.label}</text>
             <text x={padX + i * step} y={padY - 2} textAnchor="middle" fill="hsl(9 64% 55%)" style={{ fontFamily: "IBM Plex Mono", fontSize: 8 }}>{fmtNum(a.max, a.col.dec ?? 0)}</text>
             <text x={padX + i * step} y={H - padY + 12} textAnchor="middle" fill="hsl(18 8% 45%)" style={{ fontFamily: "IBM Plex Mono", fontSize: 8 }}>{fmtNum(a.min, a.col.dec ?? 0)}</text>
           </g>

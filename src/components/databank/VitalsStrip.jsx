@@ -7,7 +7,7 @@ const peak = (rows, key) => rows.reduce((m, r) => Math.max(m, Number(r?.[key]) |
 
 export default function VitalsStrip({ row, peers = [] }) {
   const max = useMemo(() => {
-    const keys = ["max_health", "armor", "max_ablative_shield", "max_perimeter_shield", "energy_production", "energy_per_second", "energy_use", "mass", "mass_total", "cost_resources", "dps", "range", "rate_of_fire"];
+    const keys = ["max_health", "armor", "max_ablative_shield", "max_perimeter_shield", "energy_production", "energy_per_second", "energy_use", "mass", "mass_total", "cost_resources", "range", "rate_of_fire"];
     const out = {};
     for (const k of keys) out[k] = peak(peers.length ? peers : [row], k);
     return out;
@@ -17,9 +17,21 @@ export default function VitalsStrip({ row, peers = [] }) {
   const mass = Number(row.mass ?? row.mass_total ?? 0);
   const isCombat = row.dps !== undefined && !row.module_class && !row.unit_class;
 
+  // RULE-3: comparative damage is resolved through the game's per-class table with the class NAMED,
+  // never as the class-free scalar `dps` scaled against the peer peak.
+  const bestCls = useMemo(() => {
+    let best = null;
+    for (const [c, v] of Object.entries(row.dps_vs_class || {})) if (Number(v) > (best ? Number(row.dps_vs_class[best]) : 0)) best = c;
+    return best;
+  }, [row]);
+  const clsPeerMax = useMemo(
+    () => (bestCls ? (peers.length ? peers : [row]).reduce((m, r) => Math.max(m, Number(r?.dps_vs_class?.[bestCls]) || 0), 0) : 0),
+    [bestCls, peers, row],
+  );
+
   const bars = isCombat
     ? [
-        { label: "Damage /s", value: Number(row.dps) || 0, max: max.dps, color: "#ff7a1a", dec: 1 },
+        ...(bestCls ? [{ label: `DPS vs ${bestCls.replace("Unit", "").replace("Module", " mod")}`, value: Number(row.dps_vs_class?.[bestCls]) || 0, max: clsPeerMax, color: "#ff7a1a", dec: 1 }] : []),
         { label: "Range", value: Number(row.range) || 0, max: max.range, color: "#2f9bff" },
         { label: "Cycle rate", value: Number(row.rate_of_fire) || 0, max: max.rate_of_fire, color: "#ffd21a", dec: 2, unit: "/s" },
       ]
@@ -36,9 +48,9 @@ export default function VitalsStrip({ row, peers = [] }) {
   if (!anyValue) return null;
 
   return (
-    <div className="schematic-panel plate-texture p-3 mb-4">
-      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" />
-      <div className="tech-label mb-2">Tactical readout // scaled to dataset peak</div>
+    <div className="schematic-panel plate-texture p-3 mb-4" role="group" aria-label="Tactical vitals readout">
+      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" aria-hidden="true" />
+      <div className="tech-label mb-2">Tactical readout // scaled to dataset peak{isCombat && bestCls ? ` · damage vs ${bestCls} (strongest class)` : ""}</div>
       <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center">
         <div className="space-y-1.5">
           {bars.filter((b) => b.max > 0).map((b) => <SegBar key={b.label} {...b} />)}

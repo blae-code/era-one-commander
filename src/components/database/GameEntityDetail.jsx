@@ -3,6 +3,8 @@ import TierBadge from "@/components/shared/TierBadge";
 import StatBar from "@/components/shared/StatBar";
 import { fmtNum, countIds, fmtModifier } from "@/lib/gameData";
 import WeaponBreakdown from "@/components/database/WeaponBreakdown";
+import BlueprintDetail from "@/components/database/BlueprintDetail";
+import DoctrineDetail from "@/components/database/DoctrineDetail";
 
 // Detail panel for the real game entities. `onSelect(kind, game_id)` lets ids cross-link
 // (module → its weapons, unit → its equipment options, research → children).
@@ -62,8 +64,11 @@ const Header = ({ r, sub }) => (
   </div>
 );
 
-export default function GameEntityDetail({ kind, record: r, byId, onSelect }) {
+export default function GameEntityDetail({ kind, record: r, byId, onSelect, statLabels }) {
   if (!r) return <div className="tech-label text-center py-16">Select an entry to inspect</div>;
+
+  if (kind === "GameBlueprint") return <BlueprintDetail r={r} byId={byId} onSelect={onSelect} />;
+  if (kind === "Doctrine") return <DoctrineDetail r={r} statLabels={statLabels} />;
 
   if (kind === "Module") {
     return (

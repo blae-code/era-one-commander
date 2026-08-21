@@ -1,17 +1,28 @@
 // Databank v2 — per-kind configuration: columns, facets, numeric ranges, search fields, radar axes.
 // Every column: { key, label, get(row, ctx), type: 'num'|'text'|'enum'|'list'|'pct'|'bool', unit, dec, heat (shade by max), width, on (default visible) }
+// Facet keys resolve through the column getter when a column with that key exists (see query.facetGetter),
+// so computed facets (unit faction, scenario name, mount kind…) count and filter identically.
 import { Crosshair, Ship, RadarIcon, FlaskConical, Boxes, Shapes, Compass } from "lucide-react";
-import { countIds } from "@/lib/gameData";
+import { countIds, fmtModifier } from "@/lib/gameData";
 
 const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : null);
 const listNames = (ids, ctx) => countIds(ids || []).map(([id, n]) => `${n > 1 ? n + "× " : ""}${ctx.byId[id]?.name || id}`).join(", ");
 const energy = (r) => (num(r.energy_production) ? num(r.energy_production) : -(num(r.energy_per_second) || 0)) || 0;
+const idName = (id, ctx) => (id == null || id === "" ? null : ctx.byId?.[id]?.name || id);
+const fmtMods = (r, ctx) => (r.modifiers || []).map((m) => fmtModifier(m, ctx.statLabels)).join(", ");
+// Unity rich-text markup + |-n-| keybind placeholders in GameHint/LocalizedString text
+const stripRich = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\|-\d+-\|/g, "[key]").trim();
+const sumVals = (o) => { let t = 0; let any = false; for (const v of Object.values(o || {})) { t += Number(v) || 0; any = true; } return any ? t : null; };
 
 const common = [
   { key: "name", label: "Name", get: (r) => r.name, type: "text", width: 240, on: true, sticky: true },
   { key: "game_id", label: "ID", get: (r) => r.game_id, type: "text", width: 90, on: false },
   { key: "tier", label: "Tier", get: (r) => num(r.tier), type: "num", dec: 0, width: 60, on: true },
 ];
+const nameCol = { ...common[0] };
+const idCol = { ...common[1] };
+// rows binding for entities the catalog does not load — Database.jsx fills cat.extra via useGameEntityRows
+const ext = (name) => (cat) => (cat.extra && cat.extra[name]) || [];
 
 export const KINDS = {
   Module: {
@@ -31,7 +42,7 @@ export const KINDS = {
       { key: "max_health", label: "HP", get: (r) => num(r.max_health), type: "num", dec: 0, heat: true, width: 80, on: true },
       { key: "armor", label: "Armor", get: (r) => num(r.armor), type: "num", dec: 0, heat: true, width: 70, on: true },
       { key: "energy", label: "Energy/s", get: energy, type: "num", dec: 1, signed: true, width: 80, on: true },
-      { key: "dps_total", label: "DPS", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 80, on: true },
+      { key: "dps_total", label: "DPS · all-class nominal", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 110, on: true },
       { key: "mass", label: "Mass", get: (r) => num(r.mass), type: "num", dec: 0, width: 70, on: false },
       { key: "cargo_capacity", label: "Cargo", get: (r) => num(r.cargo_capacity), type: "num", dec: 0, width: 80, on: false },
       { key: "extraction_rate", label: "Extract", get: (r) => num(r.extraction_rate), type: "num", dec: 1, width: 80, on: false },
@@ -63,7 +74,7 @@ export const KINDS = {
       { key: "armor", label: "Armor", get: (r) => num(r.armor), type: "num", dec: 0, heat: true, width: 70, on: true },
       { key: "max_speed", label: "Speed", get: (r) => num(r.max_speed), type: "num", dec: 2, heat: true, width: 70, on: true },
       { key: "turning_power", label: "Turn", get: (r) => num(r.turning_power), type: "num", dec: 2, width: 60, on: false },
-      { key: "dps_total", label: "DPS", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 80, on: true },
+      { key: "dps_total", label: "DPS · all-class nominal", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 110, on: true },
       { key: "weapons", label: "Fixed armament", get: (r, ctx) => listNames(r.weapons, ctx), type: "list", width: 200, on: true },
       { key: "hardpoints", label: "Hardpoints", get: (r) => Object.entries(r.hardpoints || {}).map(([k, v]) => `${v} ${k}`).join(", "), type: "text", width: 130, on: true },
       { key: "secondary_equip", label: "Default fit", get: (r, ctx) => [r.primary_equip, r.secondary_equip].filter(Boolean).map((id) => ctx.byId[id]?.name || id).join(" · "), type: "text", width: 200, on: false },
@@ -89,7 +100,7 @@ export const KINDS = {
       ...common.filter((c) => c.key !== "tier"),
       { key: "weapon_type", label: "Type", get: (r) => r.weapon_type, type: "enum", width: 110, on: true },
       { key: "implementation", label: "Impl.", get: (r) => r.implementation, type: "enum", width: 100, on: false },
-      { key: "dps", label: "DPS", get: (r) => num(r.dps), type: "num", dec: 1, heat: true, width: 80, on: true },
+      { key: "dps", label: "DPS · all-class nominal", get: (r) => num(r.dps), type: "num", dec: 1, heat: true, width: 110, on: true },
       { key: "range", label: "Range", get: (r) => num(r.range), type: "num", dec: 1, heat: true, width: 80, on: true },
       { key: "hp_change", label: "Hull/hit", get: (r) => num(r.hp_change), type: "num", dec: 2, heat: true, width: 80, on: true },
       { key: "shield_change", label: "Shield/hit", get: (r) => num(r.shield_change), type: "num", dec: 2, width: 80, on: false },
@@ -117,7 +128,7 @@ export const KINDS = {
       ...common.filter((c) => c.key !== "tier"),
       { key: "weapons", label: "Weapons", get: (r, ctx) => listNames(r.weapons, ctx), type: "list", width: 220, on: true },
       { key: "weapons_count", label: "Guns", get: (r) => num(r.weapons_count), type: "num", dec: 0, width: 60, on: true },
-      { key: "dps_total", label: "DPS", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 80, on: true },
+      { key: "dps_total", label: "DPS · all-class nominal", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 110, on: true },
       { key: "cost_resources", label: "Cost", get: (r) => num(r.cost_resources), type: "num", dec: 0, heat: true, width: 80, on: true },
       { key: "construction_time", label: "Build", get: (r) => num(r.construction_time), type: "num", dec: 0, unit: "s", width: 70, on: false },
       { key: "horizontal_rotation_speed", label: "Rotation", get: (r) => num(r.horizontal_rotation_speed), type: "num", dec: 0, unit: "°/s", width: 90, on: true },
@@ -128,6 +139,15 @@ export const KINDS = {
       { key: "predictive_aim", label: "Pred. aim", get: (r) => !!r.predictive_aim, type: "bool", width: 80, on: false },
       { key: "attack_priority", label: "Targets", get: (r) => (r.attack_priority || []).join(" › "), type: "list", width: 240, on: false },
       { key: "required_research", label: "Research", get: (r, ctx) => listNames(r.required_research, ctx), type: "list", width: 200, on: false },
+    ],
+  },
+  Subsystem: {
+    label: "Subsystems", rows: (cat) => cat.subsystems, groupBy: null,
+    desc: "Fighter equipment stub table — the game files leave weapons, dps and info empty on all 4 rows.",
+    facets: [], ranges: [], search: ["name", "game_id", "asset_name"], radar: [],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "asset_name", label: "Asset", get: (r) => r.asset_name, type: "text", width: 220, on: true },
     ],
   },
   ResearchNode: {
@@ -143,7 +163,7 @@ export const KINDS = {
       { key: "cost_energy", label: "Energy", get: (r) => num(r.cost_energy), type: "num", dec: 0, width: 70, on: false },
       { key: "construction_time", label: "Time", get: (r) => num(r.construction_time), type: "num", dec: 0, unit: "s", heat: true, width: 70, on: true },
       { key: "tree_depth", label: "Depth", get: (r) => num(r.tree_depth), type: "num", dec: 0, width: 60, on: true },
-      { key: "modifiers", label: "Grants", get: (r) => (r.modifiers || []).map((m) => `${m.stat} ${m.operation === "Subtract" ? "−" : "+"}${Math.round((m.value || 0) * (m.abs ? 1 : 100))}${m.abs ? "" : "%"}`).join(", "), type: "list", width: 240, on: true },
+      { key: "modifiers", label: "Grants", get: fmtMods, type: "list", width: 240, on: true },
       { key: "unlocks", label: "Unlocks", get: (r, ctx) => listNames([...(r.unlocks_modules || []), ...(r.unlocks_units || []), ...(r.unlocks_weapons || []), ...(r.unlocks || [])], ctx), type: "list", width: 220, on: true },
       { key: "required_nodes", label: "Requires", get: (r, ctx) => listNames(r.required_nodes, ctx), type: "list", width: 200, on: false },
       { key: "child_nodes", label: "Leads to", get: (r, ctx) => listNames(r.child_nodes, ctx), type: "list", width: 200, on: false },
@@ -154,12 +174,13 @@ export const KINDS = {
   },
   Doctrine: {
     label: "Doctrine", icon: Compass, rows: (cat) => [...(cat.combatTemplates || []).map((c) => ({ ...c, doctrine_kind: c.kind })), ...(cat.formations || []).map((f) => ({ ...f, doctrine_kind: "Formation" }))],
+    desc: "Stances, styles and orientations (CombatTemplate) merged with formation effects — 6 of the 12 templates carry no modifiers at all.",
     groupBy: "doctrine_kind", facets: [["doctrine_kind", "Kind"]], ranges: [], search: ["name", "game_id", "doctrine_kind"], radar: [],
     columns: [
-      { key: "name", label: "Name", get: (r) => r.name, type: "text", width: 220, on: true, sticky: true },
+      { ...nameCol, width: 220 },
       { key: "game_id", label: "ID", get: (r) => r.game_id, type: "text", width: 160, on: false },
       { key: "doctrine_kind", label: "Kind", get: (r) => r.doctrine_kind, type: "enum", width: 100, on: true },
-      { key: "modifiers", label: "Effects", get: (r) => (r.modifiers || []).map((m) => `${m.stat} ${m.operation === "Subtract" ? "−" : m.operation === "Set" ? "= " : "+"}${m.operation === "Set" || m.abs ? m.value : Math.round((m.value || 0) * 100) + "%"}`).join(", "), type: "list", width: 520, on: true },
+      { key: "modifiers", label: "Effects", get: fmtMods, type: "list", width: 520, on: true },
       { key: "n", label: "#", get: (r) => (r.modifiers || []).length, type: "num", dec: 0, width: 50, on: true },
     ],
   },
@@ -170,14 +191,14 @@ export const KINDS = {
     search: ["name", "game_id", "folder"],
     radar: [["dps_total", "DPS"], ["sum_module_max_health", "HP"], ["sum_module_cost_resources", "Cost", true], ["part_count", "Parts"], ["crew_total", "Crew", true]],
     columns: [
-      { key: "name", label: "Name", get: (r) => r.name, type: "text", width: 220, on: true, sticky: true },
+      { ...nameCol, width: 220 },
       { key: "source", label: "Source", get: (r) => r.source, type: "enum", width: 80, on: true },
       { key: "folder", label: "Folder", get: (r) => r.folder || "—", type: "enum", width: 150, on: false },
       { key: "part_count", label: "Parts", get: (r) => num(r.part_count), type: "num", dec: 0, heat: true, width: 70, on: true },
       { key: "sum_module_cost_resources", label: "Cost", get: (r) => num(r.sum_module_cost_resources), type: "num", dec: 0, unit: "RU", heat: true, width: 100, on: true },
       { key: "crew_total", label: "Crew", get: (r) => num(r.crew_total), type: "num", dec: 0, width: 70, on: true },
       { key: "sum_module_max_health", label: "HP", get: (r) => num(r.sum_module_max_health), type: "num", dec: 0, heat: true, width: 90, on: true },
-      { key: "dps_total", label: "DPS", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 80, on: true },
+      { key: "dps_total", label: "DPS · all-class nominal", get: (r) => num(r.dps_total), type: "num", dec: 1, heat: true, width: 110, on: true },
       { key: "energy", label: "Energy/s", get: (r) => (num(r.energy_production) || 0) - (num(r.energy_use) || 0), type: "num", dec: 1, signed: true, width: 80, on: true },
       { key: "construction_time", label: "Build", get: (r) => num(r.construction_time), type: "num", dec: 0, unit: "s", width: 70, on: false },
       { key: "weapon_modules", label: "Weapon modules", get: (r, ctx) => listNames(r.weapon_modules, ctx), type: "list", width: 240, on: true },
@@ -185,15 +206,542 @@ export const KINDS = {
       { key: "assembly_depth", label: "Depth", get: (r) => num(r.assembly_depth), type: "num", dec: 0, width: 60, on: false },
     ],
   },
+  BlueprintPart: {
+    label: "Blueprint parts", rows: ext("BlueprintPart"), groupBy: null, primaryFacet: "blueprint_id",
+    desc: "Every part placement in every shipped design — pick a blueprint first.",
+    facets: [["blueprint_id", "Blueprint"], ["source", "Source"]],
+    ranges: ["index", "parent_connection"],
+    search: ["name", "module_id", "blueprint_id"],
+    columns: [
+      { ...nameCol, label: "Module" },
+      { ...idCol, width: 160 },
+      { key: "blueprint_id", label: "Blueprint", get: (r) => r.blueprint || r.blueprint_id, type: "enum", width: 160, on: true },
+      { key: "source", label: "Source", get: (r) => r.source, type: "enum", width: 80, on: false },
+      { key: "index", label: "Part #", get: (r) => num(r.index), type: "num", dec: 0, width: 60, on: true },
+      { key: "module_id", label: "Module ID", get: (r) => r.module_id, type: "text", width: 90, on: false },
+      { key: "pos_x", label: "X", get: (r) => num(r.position?.[0]), type: "num", dec: 1, width: 60, on: true },
+      { key: "pos_y", label: "Y", get: (r) => num(r.position?.[1]), type: "num", dec: 1, width: 60, on: true },
+      { key: "pos_z", label: "Z", get: (r) => num(r.position?.[2]), type: "num", dec: 1, width: 60, on: true },
+      { key: "parent_part", label: "Parent", get: (r) => num(r.parent_part), type: "num", dec: 0, width: 70, on: true },
+      { key: "parent_connection", label: "Socket", get: (r) => num(r.parent_connection), type: "num", dec: 0, width: 70, on: false },
+    ],
+  },
+  AttachmentRule: {
+    label: "Attachment rules", rows: ext("AttachmentRule"), groupBy: "module_class",
+    desc: "Per-module attachment constraints — what each part needs, provides and forbids when mounted.",
+    facets: [["module_class", "Class"], ["mount_size", "Mount"], ["is_command", "Command"], ["requires_hardpoint", "Needs hardpoint"], ["provides_hardpoint", "Gives hardpoint"]],
+    ranges: ["mount_size", "link_range"],
+    search: ["name", "game_id", "module_type"],
+    columns: [
+      nameCol, idCol,
+      { key: "module_class", label: "Class", get: (r) => r.module_class, type: "enum", width: 100, on: true },
+      { key: "module_type", label: "Type", get: (r) => r.module_type, type: "enum", width: 130, on: true },
+      { key: "mount_size", label: "Mount", get: (r) => num(r.mount_size), type: "num", dec: 0, width: 60, on: true },
+      { key: "link_range", label: "Link range", get: (r) => num(r.link_range), type: "num", dec: 1, width: 90, on: true },
+      { key: "is_command", label: "Command", get: (r) => !!r.is_command, type: "bool", width: 80, on: true },
+      { key: "provides_hardpoint", label: "Gives hardpt", get: (r) => !!r.provides_hardpoint, type: "bool", width: 70, on: true },
+      { key: "requires_hardpoint", label: "Needs hardpt", get: (r) => !!r.requires_hardpoint, type: "bool", width: 70, on: true },
+      { key: "can_be_upgraded", label: "Upgradable", get: (r) => !!r.can_be_upgraded, type: "bool", width: 80, on: false },
+      { key: "perfect_attachment_requires", label: "Perfect req.", get: (r) => r.perfect_attachment_requires, type: "text", width: 130, on: false },
+    ],
+  },
+  ModuleWeapon: {
+    label: "Module armament", rows: ext("ModuleWeapon"), groupBy: null,
+    desc: "Junction table: which turret or weapon each module mounts, and how many.",
+    facets: [["mount_kind", "Via"]], ranges: ["count"], search: ["name", "armament"],
+    columns: [
+      { ...nameCol, label: "Module" },
+      { key: "mount_kind", label: "Via", get: (r) => (r.turret_id ? "Turret" : "Weapon"), type: "enum", width: 80, on: true },
+      { key: "armament", label: "Armament", get: (r, ctx) => idName(r.turret_id || r.weapon_id, ctx), type: "text", width: 220, on: true },
+      { key: "count", label: "Count", get: (r) => num(r.count), type: "num", dec: 0, width: 60, on: true },
+    ],
+  },
+  UnitWeapon: {
+    label: "Ship armament", rows: ext("UnitWeapon"), groupBy: null,
+    desc: "Junction table: which turret or weapon each ship mounts, and how many.",
+    facets: [["mount_kind", "Via"]], ranges: ["count"], search: ["name", "armament"],
+    columns: [
+      { ...nameCol, label: "Ship" },
+      { key: "mount_kind", label: "Via", get: (r) => (r.turret_id ? "Turret" : "Weapon"), type: "enum", width: 80, on: true },
+      { key: "armament", label: "Armament", get: (r, ctx) => idName(r.turret_id || r.weapon_id, ctx), type: "text", width: 220, on: true },
+      { key: "count", label: "Count", get: (r) => num(r.count), type: "num", dec: 0, width: 60, on: true },
+    ],
+  },
+  Ability: {
+    label: "Abilities", rows: ext("Ability"), groupBy: null,
+    facets: [], ranges: ["duration", "cooldown"], search: ["name", "game_id", "info", "description"],
+    columns: [
+      nameCol, idCol,
+      { key: "info", label: "Role", get: (r) => r.info, type: "enum", width: 100, on: true },
+      { key: "agent_category", label: "AI role", get: (r) => r.agent_category, type: "enum", width: 110, on: true },
+      { key: "duration", label: "Duration", get: (r) => num(r.duration), type: "num", dec: 1, unit: "s", width: 80, on: true },
+      { key: "cooldown", label: "Cooldown", get: (r) => num(r.cooldown), type: "num", dec: 1, unit: "s", width: 80, on: true },
+      { key: "has_secondary", label: "Secondary", get: (r) => !!r.has_secondary, type: "bool", width: 80, on: false },
+      { key: "can_be_interrupted", label: "Interruptible", get: (r) => !!r.can_be_interrupted, type: "bool", width: 90, on: false },
+      { key: "description", label: "Description", get: (r) => r.description, type: "list", width: 380, on: true },
+    ],
+  },
+
+  // ---- Maps -----------------------------------------------------------------------------------
+  Scenario: {
+    label: "Maps", rows: ext("Scenario"), groupBy: null,
+    desc: "19 of the 24 maps are playable — the other 5 are the game's own test scenarios.",
+    facets: [["playable", "Playable"], ["has_spawner", "Spawner"]],
+    ranges: ["size_x", "size_z", "resources_sum", "asteroid_count", "enemy_hp_total", "objective_count"],
+    search: ["name", "game_id", "description", "description_statistics"],
+    radar: [["size_x", "Width"], ["resources_sum", "Resources"], ["asteroid_count", "Asteroids"], ["enemy_hp_total", "Enemy HP"]],
+    columns: [
+      nameCol, idCol,
+      { key: "playable", label: "Playable", get: (r) => !!r.playable, type: "bool", width: 70, on: true },
+      { key: "size_x", label: "Width", get: (r) => num(r.size_x), type: "num", dec: 0, width: 70, on: true },
+      { key: "size_z", label: "Depth", get: (r) => num(r.size_z), type: "num", dec: 0, width: 70, on: true },
+      { key: "resources_sum", label: "Resources", get: (r) => num(r.resources_sum), type: "num", dec: 0, unit: "RU", heat: true, width: 110, on: true },
+      { key: "asteroid_count", label: "Asteroids", get: (r) => num(r.asteroid_count), type: "num", dec: 0, width: 80, on: true },
+      { key: "enemy_module_count", label: "Enemy modules", get: (r) => num(r.enemy_module_count), type: "num", dec: 0, width: 100, on: true },
+      { key: "enemy_hp_total", label: "Enemy HP", get: (r) => num(r.enemy_hp_total), type: "num", dec: 0, heat: true, width: 100, on: true },
+      { key: "enemy_dps_total", label: "Enemy DPS · all-class nominal", get: (r) => num(r.enemy_dps_total), type: "num", dec: 0, width: 130, on: true },
+      { key: "objective_count", label: "Objectives", get: (r) => num(r.objective_count), type: "num", dec: 0, width: 80, on: true },
+      { key: "unit_count", label: "Units", get: (r) => num(r.unit_count), type: "num", dec: 0, width: 60, on: false },
+      { key: "wreck_count", label: "Wrecks", get: (r) => num(r.wreck_count), type: "num", dec: 0, width: 70, on: false },
+      { key: "station_count", label: "Stations", get: (r) => num(r.station_count), type: "num", dec: 0, width: 70, on: false },
+      { key: "hazard_count", label: "Hazards", get: (r) => num(r.hazard_count), type: "num", dec: 0, width: 70, on: false },
+      { key: "has_spawner", label: "Spawner", get: (r) => !!r.has_spawner, type: "bool", width: 70, on: false },
+      { key: "enemy_cost_total", label: "Enemy cost", get: (r) => num(r.enemy_cost_total), type: "num", dec: 0, unit: "RU", width: 100, on: false },
+      { key: "description_statistics", label: "Stat block", get: (r) => r.description_statistics, type: "list", width: 340, on: false },
+    ],
+  },
+  ScenarioEntity: {
+    label: "Map entities", rows: ext("ScenarioEntity"), groupBy: "kind", primaryFacet: "scenario_id",
+    desc: "Every placed object on every map — pick a map first. Wreck and hazard rows carry no resolvable identifier (the game writes the literal 'Remain').",
+    facets: [["scenario_id", "Map"], ["kind", "Kind"], ["team", "Team"], ["entity_class", "Class"]],
+    ranges: ["x", "y", "z", "resources"],
+    search: ["name", "identifier", "kind", "scenario_id"],
+    columns: [
+      nameCol, idCol,
+      { key: "scenario_id", label: "Map", get: (r, ctx) => idName(r.scenario_id, ctx), type: "enum", width: 110, on: true },
+      { key: "kind", label: "Kind", get: (r) => r.kind, type: "enum", width: 90, on: true },
+      { key: "team", label: "Team", get: (r) => r.team, type: "enum", width: 80, on: true },
+      { key: "entity_class", label: "Class", get: (r) => r.entity_class, type: "enum", width: 120, on: false },
+      { key: "identifier", label: "Identifier", get: (r, ctx) => idName(r.identifier, ctx), type: "text", width: 180, on: true },
+      { key: "x", label: "X", get: (r) => num(r.x), type: "num", dec: 1, width: 70, on: true },
+      { key: "y", label: "Y", get: (r) => num(r.y), type: "num", dec: 1, width: 70, on: true },
+      { key: "z", label: "Z", get: (r) => num(r.z), type: "num", dec: 1, width: 70, on: true },
+      { key: "resources", label: "Resources", get: (r) => sumVals(r.resources), type: "num", dec: 0, unit: "RU", heat: true, width: 100, on: true },
+      { key: "parent_index", label: "Parent", get: (r) => num(r.parent_index), type: "num", dec: 0, width: 60, on: false },
+      { key: "spawner", label: "Spawner", get: (r) => !!r.spawner, type: "bool", width: 70, on: false },
+    ],
+  },
+  ScenarioObjective: {
+    label: "Map objectives", rows: ext("ScenarioObjective"), groupBy: "category",
+    desc: "Objectives as placed per map (18 of 24 maps carry any).",
+    facets: [["scenario_id", "Map"], ["category", "Category"]],
+    ranges: [], search: ["name", "description", "scenario_id"],
+    columns: [
+      nameCol, idCol,
+      { key: "scenario_id", label: "Map", get: (r, ctx) => idName(r.scenario_id, ctx), type: "enum", width: 120, on: true },
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 100, on: true },
+      { key: "objective_id", label: "Objective", get: (r, ctx) => idName(r.objective_id, ctx), type: "text", width: 180, on: false },
+      { key: "description", label: "Description", get: (r) => r.description, type: "list", width: 420, on: true },
+    ],
+  },
+  Objective: {
+    label: "Objectives", rows: ext("Objective"), groupBy: "category",
+    facets: [["category", "Category"], ["is_challenge", "Challenge"], ["can_fail", "Can fail"]],
+    ranges: ["time_to_complete_before_fail", "resources_target", "resource_reward", "enemies_to_kill"],
+    search: ["name", "description", "assigned_message", "completed_message", "category"],
+    columns: [
+      nameCol, idCol,
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 100, on: true },
+      { key: "is_challenge", label: "Challenge", get: (r) => !!r.is_challenge, type: "bool", width: 80, on: true },
+      { key: "can_fail", label: "Can fail", get: (r) => !!r.can_fail, type: "bool", width: 70, on: true },
+      { key: "lose_on_fail", label: "Lose on fail", get: (r) => !!r.lose_on_fail, type: "bool", width: 90, on: false },
+      { key: "time_to_complete_before_fail", label: "Time limit", get: (r) => num(r.time_to_complete_before_fail) || null, type: "num", dec: 0, unit: "s", width: 90, on: true },
+      { key: "resources_target", label: "RU target", get: (r) => num(r.resources_target) || null, type: "num", dec: 0, width: 90, on: true },
+      { key: "resource_reward", label: "Reward", get: (r) => num(r.resource_reward) || null, type: "num", dec: 0, unit: "RU", width: 90, on: true },
+      { key: "enemies_to_kill", label: "Kills", get: (r) => num(r.enemies_to_kill) || null, type: "num", dec: 0, width: 60, on: false },
+      { key: "description", label: "Description", get: (r) => r.description, type: "list", width: 320, on: true },
+      { key: "assigned_message", label: "Briefing", get: (r) => r.assigned_message, type: "list", width: 380, on: false },
+      { key: "completed_message", label: "On complete", get: (r) => r.completed_message, type: "list", width: 320, on: false },
+      { key: "failed_message", label: "On fail", get: (r) => r.failed_message, type: "list", width: 320, on: false },
+      { key: "game_hint", label: "Hint", get: (r, ctx) => idName(r.game_hint, ctx), type: "text", width: 150, on: false },
+    ],
+  },
+  Station: {
+    label: "Stations", rows: ext("Station"), groupBy: null,
+    facets: [], ranges: [], search: ["name", "game_id", "info"],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "info", label: "Info", get: (r) => r.info, type: "text", width: 240, on: true },
+      { key: "asset_name", label: "Asset", get: (r) => r.asset_name, type: "text", width: 220, on: false },
+    ],
+  },
+  Asteroid: {
+    label: "Asteroids", rows: ext("Asteroid"), groupBy: null,
+    desc: "Asteroid archetypes — per-map yields live on their Map entities placements (1,371 of 1,582 carry a resource load).",
+    facets: [["info", "Note"]], ranges: [], search: ["name", "game_id", "info"],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "info", label: "Note", get: (r) => r.info, type: "text", width: 240, on: true },
+      { key: "asset_name", label: "Asset", get: (r) => r.asset_name, type: "text", width: 220, on: false },
+    ],
+  },
+  Resource: {
+    label: "Resources", rows: ext("Resource"), groupBy: null,
+    facets: [], ranges: [], search: ["name", "game_id", "info"],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "info", label: "Info", get: (r) => r.info, type: "text", width: 180, on: true },
+      { key: "extraction_rate", label: "Extract/s", get: (r) => num(r.extraction_rate), type: "num", dec: 2, width: 90, on: true },
+      { key: "refining_rate", label: "Refine/s", get: (r) => num(r.refining_rate), type: "num", dec: 2, width: 90, on: true },
+    ],
+  },
+  Remain: {
+    label: "Wreck types", rows: ext("Remain"), groupBy: null,
+    desc: "Reference table only — 22 of 27 share the name 'Wreck', and map placements never join here (they all say 'Remain').",
+    facets: [["max_health", "HP class"]],
+    ranges: ["max_health", "life_span"],
+    search: ["name", "game_id", "info"],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "info", label: "Info", get: (r) => r.info, type: "text", width: 200, on: true },
+      { key: "max_health", label: "HP", get: (r) => num(r.max_health), type: "num", dec: 0, heat: true, width: 80, on: true },
+      { key: "life_span", label: "Lifespan", get: (r) => num(r.life_span), type: "num", dec: 0, unit: "s", width: 90, on: true },
+    ],
+  },
+  Faction: {
+    label: "Factions", rows: ext("Faction"), groupBy: null,
+    facets: [], ranges: [], search: ["name", "short_name", "description"],
+    columns: [
+      nameCol, { ...idCol, on: true },
+      { key: "short_name", label: "Tag", get: (r) => r.short_name, type: "enum", width: 70, on: true },
+      { key: "description", label: "Description", get: (r) => r.description, type: "list", width: 520, on: true },
+    ],
+  },
+
+  // ---- Waves & AI ------------------------------------------------------------------------------
+  EnemyWave: {
+    label: "Enemy waves", rows: ext("EnemyWave"), groupBy: "faction",
+    desc: "The two enemy HQs' spawn tables — what ships arrive, when, and in which formation.",
+    facets: [["faction", "Faction"], ["formation_stance", "Stance"]],
+    ranges: ["time_to_spawn", "unit_total", "probability"],
+    search: ["name", "game_id", "faction", "formation_stance"],
+    columns: [
+      { ...nameCol, width: 120 }, idCol,
+      { key: "faction", label: "Faction", get: (r) => r.faction, type: "enum", width: 70, on: true },
+      { key: "index", label: "Wave #", get: (r) => num(r.index), type: "num", dec: 0, width: 60, on: true },
+      { key: "time_to_spawn", label: "Spawns at", get: (r) => num(r.time_to_spawn), type: "num", dec: 0, unit: "s", heat: true, width: 90, on: true },
+      { key: "random_time_to_spawn", label: "± random", get: (r) => num(r.random_time_to_spawn) || null, type: "num", dec: 0, unit: "s", width: 80, on: false },
+      { key: "probability", label: "Chance", get: (r) => num(r.probability), type: "num", dec: 0, unit: "%", width: 70, on: true },
+      { key: "unit_total", label: "Units", get: (r) => num(r.unit_total), type: "num", dec: 0, heat: true, width: 60, on: true },
+      { key: "unit_total_max", label: "Max units", get: (r) => num(r.unit_total_max), type: "num", dec: 0, width: 80, on: false },
+      { key: "units", label: "Composition", get: (r, ctx) => Object.values(r.units || {}).map((u) => `${u.count}× ${idName(u.unit_id, ctx)}`).join(", "), type: "list", width: 320, on: true },
+      { key: "formation_stance", label: "Stance", get: (r) => r.formation_stance, type: "enum", width: 90, on: true },
+      { key: "possible_formations", label: "Formations", get: (r) => (r.possible_formations || []).join(", "), type: "list", width: 160, on: false },
+      { key: "trade_chance", label: "Trade %", get: (r) => num(r.trade_chance) || null, type: "num", dec: 0, width: 70, on: false },
+      { key: "trade_resources", label: "Trade RU", get: (r) => num(r.trade_resources) || null, type: "num", dec: 0, width: 80, on: false },
+    ],
+  },
+  EnemyUpgrade: {
+    label: "Enemy upgrades", rows: ext("EnemyUpgrade"), groupBy: "faction",
+    desc: "The AI tech curve — research batches each enemy HQ receives over time.",
+    facets: [["faction", "Faction"]], ranges: ["time_to_upgrade"], search: ["name", "game_id", "faction"],
+    columns: [
+      { ...nameCol, width: 160 }, idCol,
+      { key: "faction", label: "Faction", get: (r) => r.faction, type: "enum", width: 70, on: true },
+      { key: "time_to_upgrade", label: "At", get: (r) => num(r.time_to_upgrade), type: "num", dec: 0, unit: "s", heat: true, width: 80, on: true },
+      { key: "research_ids", label: "Research granted", get: (r, ctx) => listNames(r.research_ids, ctx), type: "list", width: 480, on: true },
+    ],
+  },
+  EnemySpawner: {
+    label: "Enemy spawners", rows: ext("EnemySpawner"), groupBy: null,
+    desc: "The two enemy HQ headers — their waves and upgrades live in Enemy waves / Enemy upgrades.",
+    facets: [], ranges: [], search: ["name", "game_id", "faction"],
+    columns: [
+      { ...nameCol, width: 140 }, { ...idCol, on: true },
+      { key: "faction", label: "Faction", get: (r) => r.faction, type: "enum", width: 70, on: true },
+      { key: "initial_delay", label: "First delay", get: (r) => num(r.initial_delay), type: "num", dec: 0, unit: "s", width: 90, on: true },
+      { key: "wave_count", label: "Waves", get: (r) => num(r.wave_count), type: "num", dec: 0, width: 60, on: true },
+      { key: "upgrade_steps", label: "Upgrades", get: (r) => num(r.upgrade_steps), type: "num", dec: 0, width: 80, on: true },
+      { key: "only_spawn_when_enemy_detected", label: "Waits for detection", get: (r) => !!r.only_spawn_when_enemy_detected, type: "bool", width: 120, on: true },
+    ],
+  },
+  ArenaTurn: {
+    label: "Arena turns", rows: ext("ArenaTurn"), groupBy: null,
+    desc: "Battle-arena progression — opponents and rewards per turn.",
+    facets: [], ranges: ["reward_for_victory"], search: ["name", "game_id"],
+    columns: [
+      { ...nameCol, width: 100 }, idCol,
+      { key: "turn", label: "Turn", get: (r) => num(r.turn), type: "num", dec: 0, width: 50, on: true },
+      { key: "reward_for_victory", label: "Reward", get: (r) => num(r.reward_for_victory), type: "num", dec: 0, unit: "RU", heat: true, width: 90, on: true },
+      { key: "opponent_blueprints", label: "Opponents", get: (r) => (r.opponent_blueprints || []).map((s) => String(s).split("/").pop()).join(", "), type: "list", width: 340, on: true },
+      { key: "support_wave_units", label: "Support wave", get: (r, ctx) => Object.entries(r.support_wave_units || {}).map(([id, n]) => `${n}× ${idName(id, ctx)}`).join(", "), type: "list", width: 240, on: true },
+    ],
+  },
+  AiPersonality: {
+    label: "AI personalities", rows: ext("AiPersonality"), groupBy: null,
+    desc: "5 personalities × ~90 knobs — the key attack-behaviour columns are shown; open a row for the full dossier.",
+    facets: [["default_attack_stance", "Stance"]], ranges: [],
+    search: ["name", "game_id", "default_attack_stance"],
+    columns: [
+      { ...nameCol, width: 140 }, idCol,
+      { key: "default_attack_stance", label: "Stance", get: (r) => r.default_attack_stance, type: "enum", width: 100, on: true },
+      { key: "min_max_units_for_attack", label: "Attack fleet", get: (r) => (r.min_max_units_for_attack ? `${r.min_max_units_for_attack[0]}–${r.min_max_units_for_attack[1]}` : null), type: "text", width: 90, on: true },
+      { key: "stations_percent_before_attack", label: "Base % first", get: (r) => num(r.stations_percent_before_attack), type: "pct", dec: 0, width: 90, on: true },
+      { key: "aggressive_probability", label: "Aggressive", get: (r) => num(r.aggressive_probability), type: "pct", dec: 1, width: 90, on: true },
+      { key: "defensive_probability", label: "Defensive", get: (r) => num(r.defensive_probability), type: "pct", dec: 1, width: 90, on: true },
+      { key: "hunter_probability", label: "Hunter", get: (r) => num(r.hunter_probability), type: "pct", dec: 1, width: 80, on: true },
+      { key: "flyby_probability", label: "Flyby", get: (r) => num(r.flyby_probability), type: "pct", dec: 1, width: 70, on: false },
+      { key: "orbit_probability", label: "Orbit", get: (r) => num(r.orbit_probability), type: "pct", dec: 1, width: 70, on: false },
+      { key: "chase_probability", label: "Chase", get: (r) => num(r.chase_probability), type: "pct", dec: 1, width: 70, on: false },
+      { key: "frigate_warp_attack_chance", label: "Frigate warp", get: (r) => num(r.frigate_warp_attack_chance), type: "pct", dec: 1, width: 90, on: false },
+      { key: "priority_module_identifiers", label: "Priority modules", get: (r, ctx) => listNames(r.priority_module_identifiers, ctx), type: "list", width: 280, on: false },
+      { key: "priority_research_identifiers", label: "Priority research", get: (r, ctx) => listNames(r.priority_research_identifiers, ctx), type: "list", width: 280, on: false },
+    ],
+  },
+  AiLogicGraph: {
+    label: "AI graphs", rows: ext("AiLogicGraph"), groupBy: "category",
+    desc: "The AI's decision graphs — 8 real (PLAYER_AGENT_* / ROGUE_AGENT_*) plus 5 LOGIC.TEST_* test graphs.",
+    facets: [["faction", "Faction"], ["category", "Category"]],
+    ranges: ["node_count", "edge_count"],
+    search: ["name", "game_id", "faction", "category"],
+    columns: [
+      { ...nameCol, width: 220 }, idCol,
+      { key: "faction", label: "Faction", get: (r) => r.faction, type: "enum", width: 80, on: true },
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 110, on: true },
+      { key: "node_count", label: "Nodes", get: (r) => num(r.node_count), type: "num", dec: 0, heat: true, width: 60, on: true },
+      { key: "edge_count", label: "Edges", get: (r) => num(r.edge_count), type: "num", dec: 0, width: 60, on: true },
+      { key: "facts", label: "Facts", get: (r) => num(r.facts), type: "num", dec: 0, width: 60, on: false },
+      { key: "operations", label: "Operations", get: (r) => num(r.operations), type: "num", dec: 0, width: 80, on: false },
+      { key: "goals", label: "Goals", get: (r) => num(r.goals), type: "num", dec: 0, width: 60, on: false },
+      { key: "comments", label: "Designer notes", get: (r) => (r.comments || []).length || null, type: "num", dec: 0, width: 100, on: false },
+    ],
+  },
+  AiFact: {
+    label: "AI facts", rows: ext("AiFact"), groupBy: null,
+    desc: "GOAP vocabulary — the world-state facts the AI graphs test.",
+    facets: [["category", "Category"]], ranges: [], search: ["name", "game_id", "category"],
+    columns: [
+      { ...nameCol, width: 260 }, idCol,
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 200, on: true },
+      { key: "non_blocking", label: "Non-blocking", get: (r) => !!r.non_blocking, type: "bool", width: 90, on: true },
+    ],
+  },
+  AiGoal: {
+    label: "AI goals", rows: ext("AiGoal"), groupBy: null,
+    desc: "GOAP vocabulary — the goals the AI plans toward.",
+    facets: [["category", "Category"]], ranges: [], search: ["name", "game_id", "category"],
+    columns: [
+      { ...nameCol, width: 260 }, idCol,
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 200, on: true },
+    ],
+  },
+  AiOperation: {
+    label: "AI operations", rows: ext("AiOperation"), groupBy: null,
+    desc: "GOAP vocabulary — the actions the AI can take, with planner utility and cost.",
+    facets: [["category", "Category"], ["construction_channel", "Channel"]],
+    ranges: ["value", "cost"],
+    search: ["name", "game_id", "category"],
+    columns: [
+      { ...nameCol, width: 240 }, idCol,
+      { key: "category", label: "Category", get: (r) => r.category, type: "enum", width: 180, on: true },
+      { key: "value", label: "Utility", get: (r) => num(r.value), type: "num", dec: 0, heat: true, width: 70, on: true },
+      { key: "cost", label: "Cost", get: (r) => num(r.cost), type: "num", dec: 0, width: 60, on: true },
+      { key: "construction_channel", label: "Channel", get: (r) => r.construction_channel, type: "enum", width: 110, on: false },
+    ],
+  },
+
+  // ---- Systems ---------------------------------------------------------------------------------
+  Effectiveness: {
+    label: "Effectiveness", rows: ext("Effectiveness"), groupBy: "target_class",
+    desc: "Weapon × target-class table (65 × 13). Only 84 of 845 rows are explicit rules — the rest carry the default ×1.0.",
+    facets: [["explicit", "Explicit rule"], ["target_class", "Target class"]],
+    ranges: ["multiplier", "dps", "armor_penetration", "range"],
+    search: ["name", "weapon_id", "target_class"],
+    columns: [
+      { ...nameCol, width: 260 },
+      { key: "weapon_id", label: "Weapon ID", get: (r) => r.weapon_id, type: "text", width: 90, on: false },
+      { key: "target_class", label: "Target class", get: (r) => r.target_class, type: "enum", width: 130, on: true },
+      { key: "multiplier", label: "Multiplier", get: (r) => num(r.multiplier), type: "num", dec: 2, heat: true, width: 80, on: true },
+      { key: "explicit", label: "Explicit", get: (r) => !!r.explicit, type: "bool", width: 70, on: true },
+      { key: "dps", label: "DPS vs class", get: (r) => num(r.dps), type: "num", dec: 1, heat: true, width: 90, on: true },
+      { key: "hp_per_hit", label: "Hull/hit", get: (r) => num(r.hp_per_hit), type: "num", dec: 2, width: 80, on: false },
+      { key: "armor_penetration", label: "Armor pen", get: (r) => num(r.armor_penetration), type: "pct", dec: 0, width: 90, on: true },
+      { key: "range", label: "Range", get: (r) => num(r.range), type: "num", dec: 0, width: 70, on: true },
+    ],
+  },
+  StatModifier: {
+    label: "Stat modifiers", rows: ext("StatModifier"), groupBy: "source_type",
+    desc: "Every stat modifier in the game — research, veterancy, modules, stances and formations.",
+    facets: [["source_type", "Source"], ["context", "Context"], ["stat", "Stat"], ["operation", "Operation"]],
+    ranges: ["value"],
+    search: ["name", "stat", "context", "source_id"],
+    columns: [
+      { ...nameCol, label: "Source", width: 220 },
+      { key: "source_type", label: "Source type", get: (r) => r.source_type, type: "enum", width: 110, on: true },
+      { key: "context", label: "Context", get: (r) => r.context, type: "enum", width: 110, on: true },
+      { key: "stat", label: "Stat", get: (r, ctx) => (ctx.statLabels && ctx.statLabels[r.stat]) || r.stat, type: "enum", width: 130, on: true },
+      { key: "effect", label: "Effect", get: (r, ctx) => fmtModifier(r, ctx.statLabels), type: "text", width: 180, on: true },
+      { key: "value", label: "Value", get: (r) => num(r.value), type: "num", dec: 2, width: 70, on: false },
+      { key: "operation", label: "Op", get: (r) => r.operation, type: "enum", width: 80, on: false },
+      { key: "source_id", label: "Source ID", get: (r) => r.source_id, type: "text", width: 130, on: false },
+    ],
+  },
+  UnitLevel: {
+    label: "Veterancy", rows: ext("UnitLevel"), groupBy: null,
+    desc: "27 ships × 10 levels × 4 stats — the bonus is a uniform +11%/level on every row; only the XP curve varies.",
+    facets: [["unit_id", "Ship"], ["stat", "Stat"], ["level", "Level"]],
+    ranges: ["level", "experience_required"],
+    search: ["name", "unit_id", "stat"],
+    columns: [
+      { ...nameCol, label: "Ship · level", width: 200 },
+      { key: "unit_id", label: "Ship", get: (r, ctx) => idName(r.unit_id, ctx), type: "enum", width: 140, on: false },
+      { key: "level", label: "Level", get: (r) => num(r.level), type: "num", dec: 0, width: 60, on: true },
+      { key: "experience_required", label: "XP required", get: (r) => num(r.experience_required), type: "num", dec: 0, heat: true, width: 100, on: true },
+      { key: "stat", label: "Stat", get: (r, ctx) => (ctx.statLabels && ctx.statLabels[r.stat]) || r.stat, type: "enum", width: 120, on: true },
+      { key: "effect", label: "Effect", get: (r, ctx) => fmtModifier(r, ctx.statLabels), type: "text", width: 140, on: true },
+    ],
+  },
+  ResearchEdge: {
+    label: "Tech edges", rows: ext("ResearchEdge"), groupBy: "kind",
+    desc: "The tech tree as edges — two overlaid graphs: hard prerequisites ('requires') and layout children ('child').",
+    facets: [["kind", "Kind"]], ranges: [], search: ["name", "from_id", "to_id"],
+    columns: [
+      { ...nameCol, label: "Edge", width: 320 },
+      { key: "from_id", label: "From", get: (r, ctx) => idName(r.from_id, ctx), type: "text", width: 180, on: true },
+      { key: "to_id", label: "To", get: (r, ctx) => idName(r.to_id, ctx), type: "text", width: 180, on: true },
+      { key: "kind", label: "Kind", get: (r) => r.kind, type: "enum", width: 90, on: true },
+    ],
+  },
+  LootEntry: {
+    label: "Loot tables", rows: ext("LootEntry"), groupBy: "table",
+    desc: "Wreck research-drop tables — a blank item is the game's own '(nothing)' outcome, shown as 'no drop'.",
+    facets: [["table", "Table"]],
+    ranges: ["weight", "probability"],
+    search: ["name", "table"],
+    columns: [
+      { ...nameCol, label: "Drop", width: 220 },
+      { key: "table", label: "Table", get: (r) => r.table, type: "enum", width: 200, on: true },
+      { key: "weight", label: "Weight", get: (r) => num(r.weight), type: "num", dec: 0, heat: true, width: 90, on: true },
+      { key: "probability", label: "Probability", get: (r) => num(r.probability), type: "pct", dec: 2, heat: true, width: 90, on: true },
+      { key: "item_id", label: "Item ID", get: (r) => r.item_id || "(nothing)", type: "text", width: 100, on: false },
+    ],
+  },
+  MatchOption: {
+    label: "Match options", rows: ext("MatchOption"), groupBy: "setting",
+    desc: "Every match-setup setting and its selectable options, in the game's own order.",
+    facets: [["setting", "Setting"]], ranges: [], search: ["name", "setting", "option"],
+    columns: [
+      { ...nameCol, label: "Option", width: 180 },
+      { key: "setting", label: "Setting", get: (r) => r.setting, type: "enum", width: 170, on: true },
+      { key: "value", label: "Order", get: (r) => num(r.value), type: "num", dec: 0, width: 60, on: true },
+      { key: "enum", label: "C# enum", get: (r) => r.enum, type: "text", width: 380, on: false },
+    ],
+  },
+  ScoreWeight: {
+    label: "Score weights", rows: ext("ScoreWeight"), groupBy: null,
+    desc: "The score formula's per-component weights.",
+    facets: [], ranges: ["weight"], search: ["name", "game_id"],
+    columns: [
+      { ...nameCol, width: 220 }, idCol,
+      { key: "weight", label: "Weight", get: (r) => num(r.weight), type: "num", dec: 3, heat: true, width: 100, on: true },
+    ],
+  },
+
+  // ---- Reference -------------------------------------------------------------------------------
+  GameHint: {
+    label: "Hints", rows: ext("GameHint"), groupBy: null,
+    desc: "The game's tutorial hints (engine markup stripped; [key] marks a keybind placeholder).",
+    facets: [["hint_type", "Type"]], ranges: [], search: ["name", "text"],
+    columns: [
+      { ...nameCol, width: 180 }, idCol,
+      { key: "hint_type", label: "Type", get: (r) => num(r.hint_type), type: "num", dec: 0, width: 50, on: true },
+      { key: "text", label: "Text", get: (r) => stripRich(r.text), type: "list", width: 560, on: true },
+    ],
+  },
+  GameEvent: {
+    label: "Events", rows: ext("GameEvent"), groupBy: "event_category",
+    desc: "Every in-game notification/event and how the engine surfaces it.",
+    facets: [["event_category", "Category"], ["priority", "Priority"], ["event_type", "Type"]],
+    ranges: ["expire_time", "cooldown"],
+    search: ["name", "event_type", "event_category"],
+    columns: [
+      { ...nameCol, label: "Message", width: 280 }, idCol,
+      { key: "event_type", label: "Type", get: (r) => r.event_type, type: "text", width: 180, on: false },
+      { key: "event_category", label: "Category", get: (r) => r.event_category, type: "enum", width: 100, on: true },
+      { key: "priority", label: "Priority", get: (r) => r.priority, type: "enum", width: 80, on: true },
+      { key: "expire_time", label: "Expires", get: (r) => num(r.expire_time), type: "num", dec: 0, unit: "s", width: 70, on: true },
+      { key: "cooldown", label: "Cooldown", get: (r) => num(r.cooldown), type: "num", dec: 0, unit: "s", width: 80, on: true },
+      { key: "audio_only", label: "Audio only", get: (r) => !!r.audio_only, type: "bool", width: 80, on: false },
+      { key: "show_notification", label: "Notifies", get: (r) => !!r.show_notification, type: "bool", width: 70, on: false },
+    ],
+  },
+  LocalizedString: {
+    label: "Strings", rows: ext("LocalizedString"), groupBy: "namespace", primaryFacet: "namespace",
+    desc: "Every game string in 9 languages (English shown) — pick a namespace first. Keys are dotted paths, not entity ids.",
+    facets: [["namespace", "Namespace"]], ranges: [],
+    search: ["name", "text_en"],
+    columns: [
+      { ...nameCol, label: "Key", width: 300 },
+      { key: "namespace", label: "Namespace", get: (r) => r.namespace, type: "enum", width: 150, on: true },
+      { key: "text_en", label: "English text", get: (r) => stripRich(r.text_en), type: "list", width: 520, on: true },
+    ],
+  },
 };
 
 export const KIND_KEYS = Object.keys(KINDS);
 export const CLASSES = ["FighterUnit", "CorvetteUnit", "FrigateUnit", "UtilityUnit", "PlatformUnit", "MineUnit", "CommandModule", "StructuralModule", "WeaponModule", "FacilityModule", "UtilityModule", "Station", "Wreckage"];
 
+// ---- data sourcing for kinds the catalog does not load ------------------------------------------
+// Database.jsx calls useGameEntityRows(name) for each of these (a static list, so hook order is
+// stable), gated on the active kind so 30+ entities are not fetched eagerly, and passes the rows in
+// as cat.extra[name]. ALWAYS_ON entities are tiny cross-link tables (map + objective names).
+export const KIND_ENTITY = {
+  Scenario: "Scenario", ScenarioEntity: "ScenarioEntity", ScenarioObjective: "ScenarioObjective", Objective: "Objective",
+  GameHint: "GameHint", GameEvent: "GameEvent", Remain: "Remain",
+  EnemyWave: "EnemyWave", EnemyUpgrade: "EnemyUpgrade", EnemySpawner: "EnemySpawner", ArenaTurn: "ArenaTurn",
+  AiPersonality: "AiPersonality", AiFact: "AiFact", AiGoal: "AiGoal", AiOperation: "AiOperation", AiLogicGraph: "AiLogicGraph",
+  MatchOption: "MatchOption", ScoreWeight: "ScoreWeight",
+  Effectiveness: "Effectiveness", StatModifier: "StatModifier", UnitLevel: "UnitLevel",
+  BlueprintPart: "BlueprintPart", ResearchEdge: "ResearchEdge", ModuleWeapon: "ModuleWeapon", UnitWeapon: "UnitWeapon",
+  AttachmentRule: "AttachmentRule", LootEntry: "LootEntry", LocalizedString: "LocalizedString",
+  Station: "Station", Asteroid: "Asteroid", Resource: "Resource", Faction: "Faction", Ability: "Ability",
+};
+export const EXTRA_ENTITIES = [...new Set(Object.values(KIND_ENTITY))];
+export const ALWAYS_ON_ENTITIES = ["Scenario", "Objective"];
+
+// Rows for these entities lack a `name` field, which every view treats as identity — synthesize one
+// (done once per fetch in Database.jsx, with the catalog byId available for cross-links).
+export const SYNTH_NAME = {
+  Effectiveness: (r) => `${r.weapon_name || r.weapon_id} vs ${r.target_class}`,
+  StatModifier: (r, byId) => byId[r.source_id]?.name || r.source_id || r.game_id,
+  UnitLevel: (r, byId) => `${byId[r.unit_id]?.name || r.unit_id} · L${r.level}`,
+  BlueprintPart: (r) => r.module_name || r.module_id,
+  ResearchEdge: (r, byId) => `${byId[r.from_id]?.name || r.from_id} → ${byId[r.to_id]?.name || r.to_id}`,
+  ModuleWeapon: (r, byId) => byId[r.module_id]?.name || r.module_id,
+  UnitWeapon: (r, byId) => byId[r.unit_id]?.name || r.unit_id,
+  EnemyUpgrade: (r) => `${r.faction} upgrade ${String(r.game_id).split(".").pop()}`,
+  EnemySpawner: (r) => `${r.faction} spawner`,
+  ArenaTurn: (r) => `Turn ${r.turn}`,
+  MatchOption: (r) => r.option,
+  LocalizedString: (r) => r.key,
+  LootEntry: (r) => r.item_name || "(no drop)",
+};
+
+// The kind selector groups (Database.jsx renders one chip row per group).
+export const KIND_GROUPS = [
+  ["Catalog", ["Module", "Unit", "Weapon", "Turret", "Subsystem", "Ability", "GameBlueprint", "BlueprintPart"]],
+  ["Maps", ["Scenario", "ScenarioEntity", "ScenarioObjective", "Objective", "Station", "Asteroid", "Resource", "Remain", "Faction"]],
+  ["Waves & AI", ["EnemyWave", "EnemyUpgrade", "EnemySpawner", "ArenaTurn", "AiPersonality", "AiLogicGraph", "AiFact", "AiGoal", "AiOperation"]],
+  ["Systems", ["ResearchNode", "ResearchEdge", "Doctrine", "Effectiveness", "StatModifier", "UnitLevel", "AttachmentRule", "ModuleWeapon", "UnitWeapon", "LootEntry", "MatchOption", "ScoreWeight"]],
+  ["Reference", ["GameHint", "GameEvent", "LocalizedString"]],
+];
+
 // Field aliases for the query language: alias -> column key
 export const ALIASES = {
-  class: ["module_class", "unit_class", "doctrine_kind"], type: ["module_type", "unit_type", "weapon_type", "research_type"], sub: ["module_sub_type"],
-  cost: ["cost_resources", "sum_module_cost_resources"], hp: ["max_health", "sum_module_max_health"], health: ["max_health"], dps: ["dps_total", "dps"], range: ["range", "visual_range"],
+  class: ["module_class", "unit_class", "doctrine_kind", "target_class", "entity_class"], type: ["module_type", "unit_type", "weapon_type", "research_type", "event_type"], sub: ["module_sub_type"],
+  cost: ["cost_resources", "sum_module_cost_resources", "cost"], hp: ["max_health", "sum_module_max_health"], health: ["max_health"], dps: ["dps_total", "dps"], range: ["range", "visual_range"],
   speed: ["max_speed", "bullet_speed"], crew: ["cost_population", "crew_total"], energy: ["energy"], armor: ["armor"], pen: ["armor_penetration"], rof: ["rate_of_fire"],
   tier: ["tier"], id: ["game_id"], faction: ["faction"], time: ["construction_time"], depth: ["tree_depth", "assembly_depth"], parts: ["part_count"], mass: ["mass"], cargo: ["cargo_capacity"],
+  map: ["scenario_id"], team: ["team"], kind: ["kind", "doctrine_kind"], ns: ["namespace"], stat: ["stat"], mult: ["multiplier"], weight: ["weight"], prob: ["probability"],
+  level: ["level"], xp: ["experience_required"], category: ["category", "event_category"],
 };

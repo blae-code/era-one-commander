@@ -17,19 +17,23 @@ export default function ScatterView({ rows, kind, kindKey, ctx, db, selectedId, 
 
   if (!xCol || !yCol) return <div className="schematic-panel p-8 tech-label text-center">No numeric columns to plot for this kind.</div>;
 
+  // RULE-3: the game's own class-free DPS aggregates may only appear with the "all-class nominal" label.
+  const axisLabel = (c) => (c && (c.key === "dps_total" || c.key === "dps") ? `${c.label} (all-class nominal)` : c?.label);
+
   const AxisSel = ({ label, val, onChange }) => (
     <label className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
       {label}
-      <select value={val} onChange={(e) => onChange(e.target.value)}
+      <select value={val} onChange={(e) => onChange(e.target.value)} aria-label={`${label} axis column`}
         className="h-7 bg-background/60 border border-border px-1.5 text-[10px] font-mono outline-none focus:border-primary text-foreground">
-        {numCols.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
+        {numCols.map((c) => <option key={c.key} value={c.key}>{axisLabel(c)}</option>)}
       </select>
     </label>
   );
   const tick = { fill: "hsl(36 10% 70%)", fontSize: 10, fontFamily: "monospace" };
 
   return (
-    <div className="schematic-panel h-full flex flex-col p-3 min-h-[420px]">
+    <div className="schematic-panel h-full flex flex-col p-3 min-h-[420px]" role="region"
+      aria-label={`Scatter plot of ${axisLabel(yCol)} against ${axisLabel(xCol)}, ${data.length} points`}>
       <div className="flex items-center gap-4 mb-1 flex-wrap">
         <span className="tech-label">Scatter analysis // {data.length} plotted</span>
         <AxisSel label="X" val={xCol.key} onChange={(k) => db.setPlotAxes(k, yCol.key)} />
@@ -47,15 +51,15 @@ export default function ScatterView({ rows, kind, kindKey, ctx, db, selectedId, 
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 10, right: 20, bottom: 14, left: 6 }}>
             <CartesianGrid stroke="hsl(30 7% 19%)" strokeDasharray="3 3" />
-            <XAxis dataKey="x" type="number" name={xCol.label} tick={tick} stroke="hsl(30 7% 19%)"
-              label={{ value: xCol.label, position: "insideBottomRight", fill: "hsl(36 10% 70%)", fontSize: 10, dy: 12 }} />
-            <YAxis dataKey="y" type="number" name={yCol.label} tick={tick} stroke="hsl(30 7% 19%)"
-              label={{ value: yCol.label, angle: -90, position: "insideLeft", fill: "hsl(36 10% 70%)", fontSize: 10 }} />
+            <XAxis dataKey="x" type="number" name={axisLabel(xCol)} tick={tick} stroke="hsl(30 7% 19%)"
+              label={{ value: axisLabel(xCol), position: "insideBottomRight", fill: "hsl(36 10% 70%)", fontSize: 10, dy: 12 }} />
+            <YAxis dataKey="y" type="number" name={axisLabel(yCol)} tick={tick} stroke="hsl(30 7% 19%)"
+              label={{ value: axisLabel(yCol), angle: -90, position: "insideLeft", fill: "hsl(36 10% 70%)", fontSize: 10 }} />
             <ZAxis range={[46, 47]} />
             <Tooltip cursor={{ strokeDasharray: "3 3" }} content={({ payload }) => payload?.length ? (
               <div className="bg-popover border border-border px-2 py-1.5 font-mono text-[10px]">
                 <div className="text-foreground font-bold">{payload[0].payload.name}</div>
-                <div className="text-muted-foreground">{xCol.label}: {fmtNum(payload[0].payload.x, xCol.dec ?? 1)} · {yCol.label}: {fmtNum(payload[0].payload.y, yCol.dec ?? 1)}</div>
+                <div className="text-muted-foreground">{axisLabel(xCol)}: {fmtNum(payload[0].payload.x, xCol.dec ?? 1)} · {axisLabel(yCol)}: {fmtNum(payload[0].payload.y, yCol.dec ?? 1)}</div>
               </div>) : null} />
             <Scatter data={data} onClick={(p) => p?.id && onSelect(p.id)}>
               {data.map((p) => (

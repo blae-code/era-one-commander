@@ -44,8 +44,8 @@ export default function DamageChartView({ rows, ctx, selectedId, onSelect, compa
     return <div className="schematic-panel p-10 text-center tech-label">No per-class damage tables on these records — switch to Weapons or Turrets.</div>;
 
   return (
-    <div className="schematic-panel plate-texture p-4 h-full overflow-auto">
-      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" />
+    <div className="schematic-panel plate-texture p-4 h-full overflow-auto" role="region" aria-label={`Damage profile chart versus ${activeCls}`}>
+      <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" aria-hidden="true" />
       <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
         <div>
           <div className="font-display font-bold text-sm tracking-[0.18em] uppercase">Damage profile // {activeCls}</div>
@@ -53,13 +53,13 @@ export default function DamageChartView({ rows, ctx, selectedId, onSelect, compa
         </div>
         <div className="flex items-center gap-1">
           {METRICS.map((x) => (
-            <button key={x.key} onClick={() => setMetric(x.key)}
-              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider transition-colors ${metric === x.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>{x.label}</button>
+            <button key={x.key} onClick={() => setMetric(x.key)} aria-pressed={metric === x.key}
+              className={`px-2 h-7 border font-mono text-[10px] uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${metric === x.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/40"}`}>{x.label}</button>
           ))}
-          <div className="h-5 w-px bg-border mx-1" />
+          <div className="h-5 w-px bg-border mx-1" aria-hidden="true" />
           {[12, 18, 30, 60].map((n) => (
-            <button key={n} onClick={() => setLimit(n)}
-              className={`px-2 h-7 border font-mono text-[10px] transition-colors ${limit === n ? "border-accent text-accent" : "border-border text-muted-foreground hover:border-primary/40"}`}>{n}</button>
+            <button key={n} onClick={() => setLimit(n)} aria-pressed={limit === n} aria-label={`Show top ${n}`}
+              className={`px-2 h-7 border font-mono text-[10px] transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${limit === n ? "border-accent text-accent" : "border-border text-muted-foreground hover:border-primary/40"}`}>{n}</button>
           ))}
         </div>
       </div>
@@ -67,9 +67,9 @@ export default function DamageChartView({ rows, ctx, selectedId, onSelect, compa
       {/* armour class selector */}
       <div className="flex flex-wrap gap-1 mb-4">
         {classes.map((c) => (
-          <button key={c} onClick={() => setCls(c)}
-            className={`inline-flex items-center gap-1.5 px-2 h-7 border clip-plate font-mono text-[10px] uppercase tracking-[0.12em] transition-colors ${activeCls === c ? "border-primary bg-primary/20 text-foreground" : "border-border text-muted-foreground hover:border-primary/40"}`}>
-            <span className="w-2 h-2" style={{ background: CLASS_HEX[c] }} />{c.replace(/(Unit|Module)$/, "")}
+          <button key={c} onClick={() => setCls(c)} aria-pressed={activeCls === c} aria-label={`Target class ${c}`}
+            className={`inline-flex items-center gap-1.5 px-2 h-7 border clip-plate font-mono text-[10px] uppercase tracking-[0.12em] transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${activeCls === c ? "border-primary bg-primary/20 text-foreground" : "border-border text-muted-foreground hover:border-primary/40"}`}>
+            <span className="w-2 h-2" aria-hidden="true" style={{ background: CLASS_HEX[c] }} />{c.replace(/(Unit|Module)$/, "")}
           </button>
         ))}
       </div>
@@ -77,7 +77,8 @@ export default function DamageChartView({ rows, ctx, selectedId, onSelect, compa
       <ResponsiveContainer width="100%" height={Math.max(240, data.length * 26)}>
         <BarChart data={data} layout="vertical" margin={{ left: 8, right: 40, top: 4, bottom: 4 }} barSize={14}>
           <CartesianGrid horizontal={false} stroke="hsl(var(--border))" strokeOpacity={0.5} />
-          <XAxis type="number" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} />
+          <XAxis type="number" tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false}
+            label={{ value: `${m.label} vs ${activeCls}`, position: "insideBottomRight", fill: "hsl(var(--muted-foreground))", fontSize: 10, fontFamily: "IBM Plex Mono", dy: 8 }} />
           <YAxis type="category" dataKey="name" width={190} tick={{ fontSize: 10, fontFamily: "IBM Plex Mono", fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} />
           <Tooltip
             cursor={{ fill: "hsl(var(--primary) / 0.08)" }}

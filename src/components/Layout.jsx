@@ -1,4 +1,5 @@
 import React from "react";
+import BuildStamp from "@/components/BuildStamp";
 import { Outlet, useLocation } from "react-router-dom";
 import { Toaster as SonnerToaster } from "sonner";
 import JumpRail from "@/components/nav/JumpRail";
@@ -15,6 +16,7 @@ export default function Layout() {
       <main id="app-main" className="flex-1 overflow-y-auto bp-grid">
         <Outlet />
       </main>
+      <BuildStamp />
       <SonnerToaster position="bottom-right" toastOptions={{ style: { borderRadius: 0, fontFamily: "IBM Plex Mono", fontSize: 12 } }} />
     </div>
   );

@@ -11,8 +11,8 @@ export function SegBar({ label, value = 0, max = 0, unit = "", dec = 0, color = 
   const lit = Math.round(pct * SEGMENTS);
   return (
     <div className="flex items-center gap-2">
-      <span className="w-24 shrink-0 font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground truncate">{label}</span>
-      <span className="flex-1 flex gap-[2px] h-3.5 border border-border/70 bg-black/50 p-[2px]">
+      <span className="w-24 shrink-0 font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground truncate" title={label}>{label}</span>
+      <span className="flex-1 flex gap-[2px] h-3.5 border border-border/70 bg-black/50 p-[2px]" role="meter" aria-label={label} aria-valuenow={value} aria-valuemin={0} aria-valuemax={max}>
         {Array.from({ length: SEGMENTS }).map((_, i) => {
           const on = i < lit;
           const hot = danger && i > SEGMENTS * 0.75;
@@ -54,8 +54,8 @@ export function ArcGauge({ label, value = 0, max = 0, unit = "", dec = 0, color 
   const needleDeg = A0 + pct * (A1 - A0);
   const [nx, ny] = polar(r - 4, needleDeg);
   return (
-    <div className="flex flex-col items-center">
-      <svg width={size} height={size * 0.82} viewBox={`0 0 ${size} ${size * 0.82}`}>
+    <div className="flex flex-col items-center" role="meter" aria-label={label} aria-valuenow={value} aria-valuemin={0} aria-valuemax={max}>
+      <svg width={size} height={size * 0.82} viewBox={`0 0 ${size} ${size * 0.82}`} aria-hidden="true">
         <path d={arc(A0, A1, r)} fill="none" stroke="hsl(var(--secondary))" strokeWidth="7" />
         <path d={arc(A0, needleDeg, r)} fill="none" stroke={color} strokeWidth="7" />
         {Array.from({ length: 10 }).map((_, i) => {

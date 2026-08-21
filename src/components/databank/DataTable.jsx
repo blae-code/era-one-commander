@@ -33,12 +33,13 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
   const renderRow = (r) => {
     const sel = r.game_id === selectedId, fav = favorites.has(r.game_id), cmp = compareIds.includes(r.game_id);
     return (
-      <tr key={r.game_id} onClick={() => onSelect(r.game_id)}
-        className={`cursor-pointer transition-colors border-b border-border ${sel ? "bg-primary/10" : cmp ? "bg-[#2f9bff]/5" : "hover:bg-secondary/50"}`}>
+      <tr key={r.game_id} onClick={() => onSelect(r.game_id)} tabIndex={0} aria-selected={sel}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(r.game_id); } }}
+        className={`cursor-pointer transition-colors border-b border-border focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1 ${sel ? "bg-primary/10" : cmp ? "bg-[#2f9bff]/5" : "hover:bg-secondary/50"}`}>
         <td className={`px-2 ${pad} border-b border-border/60 align-middle sticky left-0 z-[5] ${sel ? "bg-[#2b1512]" : cmp ? "bg-[#0f1720]" : "bg-card"}`}>
           <span className="inline-flex items-center gap-1">
-            <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} title="favourite (f)" className={`p-0.5 ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><Star size={12} fill={fav ? "currentColor" : "none"} /></button>
-            <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} title="compare (c)" className={`p-0.5 ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><GitCompare size={12} /></button>
+            <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} title="favourite (f)" aria-label={`${fav ? "Remove" : "Add"} favourite: ${r.name}`} aria-pressed={fav} className={`p-0.5 focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><Star size={12} fill={fav ? "currentColor" : "none"} aria-hidden="true" /></button>
+            <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} title="compare (c)" aria-label={`${cmp ? "Remove from" : "Add to"} comparison: ${r.name}`} aria-pressed={cmp} className={`p-0.5 focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40 hover:text-muted-foreground"}`}><GitCompare size={12} aria-hidden="true" /></button>
           </span>
         </td>
         {columns.map((c, i) => (
@@ -60,14 +61,17 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
 
   return (
     <div ref={ref} className="schematic-panel overflow-auto h-full">
-      <table className="w-full text-sm border-separate border-spacing-0">
+      <table className="w-full text-sm border-separate border-spacing-0" aria-label={`${kind?.label || kindKey} data table, ${rows.length} rows`}>
         <thead className="sticky top-0 z-10 bg-secondary/95 backdrop-blur">
           <tr>
             <th className="w-16 px-2 py-2 border-b border-border sticky left-0 z-[11] bg-secondary" />
             {columns.map((c, i) => (
               <th key={c.key} onClick={() => onSort(c.key)} style={{ minWidth: c.width }}
-                className={`tech-label px-2 py-2 font-normal whitespace-nowrap cursor-pointer select-none border-b border-border hover:text-primary ${c.type === "num" || c.type === "pct" ? "text-right" : "text-left"} ${sortKey === c.key ? "text-primary" : ""} ${i === 0 && c.key === "name" ? "sticky left-16 z-[11] bg-secondary border-r border-border" : ""}`}>
-                <span className="inline-flex items-center gap-1">{c.label}{sortKey === c.key ? (sortDir === "desc" ? <ArrowDown size={10} /> : <ArrowUp size={10} />) : null}</span>
+                role="button" tabIndex={0} aria-sort={sortKey === c.key ? (sortDir === "desc" ? "descending" : "ascending") : "none"}
+                aria-label={`Sort by ${c.label}`}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSort(c.key); } }}
+                className={`tech-label px-2 py-2 font-normal whitespace-nowrap cursor-pointer select-none border-b border-border hover:text-primary focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1 ${c.type === "num" || c.type === "pct" ? "text-right" : "text-left"} ${sortKey === c.key ? "text-primary" : ""} ${i === 0 && c.key === "name" ? "sticky left-16 z-[11] bg-secondary border-r border-border" : ""}`}>
+                <span className="inline-flex items-center gap-1">{c.label}{sortKey === c.key ? (sortDir === "desc" ? <ArrowDown size={10} aria-hidden="true" /> : <ArrowUp size={10} aria-hidden="true" />) : null}</span>
               </th>
             ))}
           </tr>
@@ -84,7 +88,9 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
           {groups
             ? groups.map(([g, rs]) => (
                 <React.Fragment key={g}>
-                  <tr onClick={() => toggleGroup(g)} className="cursor-pointer bg-secondary/60 hover:bg-secondary">
+                  <tr onClick={() => toggleGroup(g)} tabIndex={0} aria-expanded={!collapsed.has(g)} aria-label={`Group ${g}, ${rs.length} rows`}
+                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleGroup(g); } }}
+                    className="cursor-pointer bg-secondary/60 hover:bg-secondary focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1">
                     <td colSpan={columns.length + 1} className="px-2 py-1.5 border-b border-border sticky left-0 bg-secondary/60">
                       <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
                         {collapsed.has(g) ? <ChevronRight size={11} /> : <ChevronDown size={11} />}
@@ -97,7 +103,7 @@ export default function DataTable({ rows, kind, kindKey, ctx, columns, stats, so
                 </React.Fragment>
               ))
             : rows.map(renderRow)}
-          {rows.length === 0 && <tr><td colSpan={columns.length + 1} className="tech-label text-center py-12">No entries match — clear a filter or loosen the query</td></tr>}
+          {rows.length === 0 && <tr><td colSpan={columns.length + 1} role="status" aria-live="polite" className="tech-label text-center py-12">No entries match — clear a filter or loosen the query</td></tr>}
         </tbody>
       </table>
     </div>

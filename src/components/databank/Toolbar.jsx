@@ -6,6 +6,7 @@ import { X, Columns3, LayoutGrid, Table2, Grid3x3, Rows3, Star, Download, Bookma
 import { toast } from "sonner";
 import { ClassDot } from "./Cells";
 import SearchSuggest from "./SearchSuggest";
+import { facetGetter } from "./query";
 import { fmtNum } from "@/lib/gameData";
 
 const Btn = ({ active, children, ...p }) => (
@@ -18,12 +19,13 @@ export default function Toolbar({ db, kind, allRows, filteredRows, ctx, errors, 
   const facetValues = useMemo(() => {
     const out = {};
     for (const [key] of kind.facets) {
+      const get = facetGetter(kind, key); // same value source as applyQuery's facet filter
       const c = new Map();
-      for (const r of allRows) { const v = String(r[key] ?? "—"); c.set(v, (c.get(v) || 0) + 1); }
+      for (const r of allRows) { const v = get(r, ctx); c.set(v, (c.get(v) || 0) + 1); }
       out[key] = [...c.entries()].sort((a, b) => b[1] - a[1]);
     }
     return out;
-  }, [allRows, kind]);
+  }, [allRows, kind, ctx]);
   const rangeBounds = useMemo(() => {
     const out = {};
     for (const key of kind.ranges) {

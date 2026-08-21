@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { fmtNum } from "@/lib/gameData";
 import { TTK_RAMP, unitClassKey } from "@/lib/combatSim";
-import { buildMatrix, heat, effectiveHp, defenceProfile, dpsAgainst, perHitAgainst } from "@/lib/ttkMatrix";
+import { buildMatrix, heat, effectiveHp, defenceProfile, dpsAgainst, perHitAgainst, ttkBandCell } from "@/lib/ttkMatrix";
 import TtkControls from "./TtkControls";
 
 // Databank view: interactive time-to-kill matrix. Rows are the armaments currently filtered in the
@@ -36,21 +36,28 @@ export default function TtkView({ rows, ctx, onSelect, selectedId }) {
   const describe = (a, t) => {
     const p = defenceProfile(t);
     const dps = dpsAgainst(a, t), per = perHitAgainst(a, t), hp = effectiveHp(t, layers);
-    return `${a.name} → ${t.name} · pool ${fmtNum(hp)} (hull ${fmtNum(p.hull)}${layers.ablative ? ` + abl ${fmtNum(p.ablative)}` : ""}${layers.perimeter ? ` + per ${fmtNum(p.perimeter)}` : ""}) · armor ${fmtNum(p.armor)} · ${fmtNum(dps, 1)} dps${per > 0 ? ` · ${fmtNum(per, 1)}/hit` : ""} · ttk ${fmtNum(dps > 0 ? hp / dps : 0, 1)}s`;
+    const band = ttkBandCell(a, t, layers);
+    const bandTxt = band && Number.isFinite(band.low) && Number.isFinite(band.high) && band.high > band.low
+      ? ` · armour band ${fmtNum(band.low, 1)}–${fmtNum(band.high, 1)}s (4 shapes)` : "";
+    return `${a.name} → ${t.name} · pool ${fmtNum(hp)} (hull ${fmtNum(p.hull)}${layers.ablative ? ` + abl ${fmtNum(p.ablative)}` : ""}${layers.perimeter ? ` + per ${fmtNum(p.perimeter)}` : ""}) · armor ${fmtNum(p.armor)} · ${fmtNum(dps, 1)} dps vs ${unitClassKey(t)}${per > 0 ? ` · ${fmtNum(per, 1)}/hit` : ""} · ttk ${fmtNum(dps > 0 ? hp / dps : 0, 1)}s${bandTxt}`;
   };
 
   if (!attackers.length || !targets.length)
     return <div className="schematic-panel p-10 tech-label text-center">No armament or target data in the current filter.</div>;
 
   return (
-    <div className="h-full flex flex-col min-h-0 gap-2">
+    <div className="h-full flex flex-col min-h-0 gap-2" role="region" aria-label="Time-to-kill matrix">
       <TtkControls targetSet={targetSet} setTargetSet={setTargetSet} layers={layers} setLayers={setLayers}
         metric={metric} setMetric={setMetric} sortBy={sortBy} setSortBy={setSortBy}
         counts={{ units: ctx.units.length, modules: ctx.modules.length }} hover={hover} />
 
+      <div className="tech-label" role="note">
+        Armour model unextracted — cells show the armour-model-"none" point value; hover a cell for the band (low–high across 4 candidate armour shapes).
+      </div>
+
       <div className="schematic-panel plate-texture relative flex-1 min-h-0 overflow-auto">
-        <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60 z-30" />
-        <table className="border-separate border-spacing-0 text-xs">
+        <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60 z-30" aria-hidden="true" />
+        <table className="border-separate border-spacing-0 text-xs" aria-label={`${attackers.length} armaments against ${targets.length} target profiles`}>
           <thead>
             <tr>
               <th className="sticky left-0 top-0 z-20 bg-secondary tech-label text-left px-2 py-2 border-b border-r border-border min-w-[200px]">
@@ -60,7 +67,9 @@ export default function TtkView({ rows, ctx, onSelect, selectedId }) {
                 const p = defenceProfile(t);
                 return (
                   <th key={t.game_id} onClick={() => onSelect?.(t.game_id)} title={`${t.name} · ${fmtNum(effectiveHp(t, layers))} pool · armor ${fmtNum(p.armor)}`}
-                    className="sticky top-0 z-10 bg-secondary border-b border-r border-border/40 px-1 py-2 cursor-pointer hover:text-primary align-bottom">
+                    role="button" tabIndex={0} aria-label={`Inspect target ${t.name}`}
+                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect?.(t.game_id); } }}
+                    className="sticky top-0 z-10 bg-secondary border-b border-r border-border/40 px-1 py-2 cursor-pointer hover:text-primary align-bottom focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1">
                     <div className="font-mono text-[9px] uppercase tracking-[0.1em] whitespace-nowrap" style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", maxHeight: 130 }}>
                       {t.name}
                     </div>
@@ -78,7 +87,9 @@ export default function TtkView({ rows, ctx, onSelect, selectedId }) {
               return (
                 <tr key={a.game_id} className={active ? "bg-primary/10" : ""}>
                   <td onClick={() => onSelect?.(a.game_id)}
-                    className={`sticky left-0 z-10 px-2 py-1 border-b border-r border-border cursor-pointer whitespace-nowrap ${active ? "bg-[#2b1512]" : "bg-card hover:text-primary"}`}>
+                    role="button" tabIndex={0} aria-label={`Inspect armament ${a.name}`}
+                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect?.(a.game_id); } }}
+                    className={`sticky left-0 z-10 px-2 py-1 border-b border-r border-border cursor-pointer whitespace-nowrap focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary focus-visible:-outline-offset-1 ${active ? "bg-[#2b1512]" : "bg-card hover:text-primary"}`}>
                     <span className="text-[11px] font-medium">{a.name}</span>
                     <span className="ml-1.5 font-mono text-[9px] text-muted-foreground">{a.weapon_type || a.module_sub_type || a.weapon_category}</span>
                   </td>

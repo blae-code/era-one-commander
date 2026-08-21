@@ -6,13 +6,16 @@ import { Cell, EntityIcon, TierPips, CLASS_HEX, rowClass } from "./Cells";
 export function CardGrid({ rows, kind, kindKey, ctx, columns, stats, selectedId, onSelect, favorites, onFav, compareIds, onCompare }) {
   const numCols = columns.filter((c) => (c.type === "num" || c.type === "pct") && c.key !== "tier").slice(0, 6);
   return (
-    <div className="grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 overflow-auto h-full pr-1">
+    <div className="grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 overflow-auto h-full pr-1"
+      role="region" aria-label={`${kind?.label || kindKey} card grid, ${rows.length} entries`}>
       {rows.map((r) => {
         const sel = r.game_id === selectedId, fav = favorites.has(r.game_id), cmp = compareIds.includes(r.game_id);
         const cls = rowClass(r, kindKey);
         return (
           <div key={r.game_id} onClick={() => onSelect(r.game_id)}
-            className={`schematic-panel p-3 cursor-pointer transition-colors ${sel ? "border-primary/70 bg-primary/5" : "hover:border-primary/40"}`}
+            role="button" tabIndex={0} aria-pressed={sel} aria-label={`Inspect ${r.name}`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(r.game_id); } }}
+            className={`schematic-panel p-3 cursor-pointer transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${sel ? "border-primary/70 bg-primary/5" : "hover:border-primary/40"}`}
             style={{ borderLeft: `3px solid ${CLASS_HEX[cls] || "hsl(var(--primary))"}` }}>
             <div className="flex items-start gap-2">
               <EntityIcon row={r} kindKey={kindKey} size={20} />
@@ -20,8 +23,8 @@ export function CardGrid({ rows, kind, kindKey, ctx, columns, stats, selectedId,
                 <div className="font-display font-bold text-sm leading-tight truncate">{r.name}</div>
                 <div className="font-mono text-[9px] text-muted-foreground truncate">{r.game_id}{r.info ? ` · ${r.info}` : ""} <TierPips tier={r.tier} /></div>
               </div>
-              <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} className={fav ? "text-[#ffd21a]" : "text-muted-foreground/40"}><Star size={13} fill={fav ? "currentColor" : "none"} /></button>
-              <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} className={cmp ? "text-[#2f9bff]" : "text-muted-foreground/40"}><GitCompare size={13} /></button>
+              <button onClick={(e) => { e.stopPropagation(); onFav(r.game_id); }} aria-label={`${fav ? "Remove" : "Add"} favourite: ${r.name}`} aria-pressed={fav} className={`focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${fav ? "text-[#ffd21a]" : "text-muted-foreground/40"}`}><Star size={13} fill={fav ? "currentColor" : "none"} aria-hidden="true" /></button>
+              <button onClick={(e) => { e.stopPropagation(); onCompare(r.game_id); }} aria-label={`${cmp ? "Remove from" : "Add to"} comparison: ${r.name}`} aria-pressed={cmp} className={`focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary ${cmp ? "text-[#2f9bff]" : "text-muted-foreground/40"}`}><GitCompare size={13} aria-hidden="true" /></button>
             </div>
             <div className="grid grid-cols-3 gap-x-3 gap-y-1.5 mt-2.5">
               {numCols.map((c) => (
@@ -35,7 +38,7 @@ export function CardGrid({ rows, kind, kindKey, ctx, columns, stats, selectedId,
           </div>
         );
       })}
-      {rows.length === 0 && <div className="tech-label text-center py-12 col-span-full">No entries match</div>}
+      {rows.length === 0 && <div role="status" aria-live="polite" className="tech-label text-center py-12 col-span-full">No entries match</div>}
     </div>
   );
 }
