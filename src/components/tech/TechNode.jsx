@@ -1,9 +1,9 @@
 import React from "react";
-import { Cpu, Rocket } from "lucide-react";
+import { Check, Cpu, Rocket } from "lucide-react";
 import { TYPE_COLOR } from "@/lib/techTree";
 
 // One riveted plate on the tech canvas. Dimmed when a lineage is isolated and it sits outside it.
-export default function TechNode({ node, x, y, state, mods, units, onSelect, onHover }) {
+export default function TechNode({ node, x, y, state, mods, units, owned, onSelect, onHover, onToggleHave }) {
   const color = TYPE_COLOR[node.research_type] || "#b0a49b";
   const style = {
     selected: "border-accent bg-[#2b1512]",
@@ -15,14 +15,15 @@ export default function TechNode({ node, x, y, state, mods, units, onSelect, onH
 
   return (
     <button
-      onClick={() => onSelect(node.game_id)}
+      onClick={(e) => (e.altKey && onToggleHave ? onToggleHave(node.game_id) : onSelect(node.game_id))}
       onMouseEnter={() => onHover?.(node.game_id)}
       onMouseLeave={() => onHover?.(null)}
-      title={node.description || node.info || node.name}
+      title={`${node.description || node.info || node.name} — alt-click to toggle researched`}
       className={`absolute w-[214px] h-[62px] text-left px-2 py-1.5 border clip-plate plate-texture welded-frame transition-colors hover:border-accent ${style}`}
       style={{ left: x, top: y }}
     >
       <span className="absolute left-0 top-0 bottom-0 w-[3px]" style={{ background: color }} />
+      {owned && <span className="absolute bottom-0.5 right-1 text-[#22c55e]" title="researched (in your HAVE set)"><Check size={10} /></span>}
       <div className="pl-1.5">
         <div className="flex items-center justify-between gap-1">
           <span className="text-[11px] font-medium leading-tight truncate">{node.name}</span>

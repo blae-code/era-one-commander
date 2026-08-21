@@ -27,20 +27,28 @@ export function buildTechTree(research, modules, units) {
     }
   }
 
-  // layout: column per tier, rows ordered by parent position then name for short edges
-  const tiers = [...new Set(nodes.map((r) => Number(r.tier) || 0))].sort((a, b) => a - b);
+  // layout: column per tree_depth (longest prerequisite chain — the dataset's own layout
+  // hint), rows ordered by tree_order (stable topological index) for short edges.
+  // Falls back to tier / parent-position ordering when the fields are absent.
+  const depthOf = (r) => (Number.isFinite(Number(r.tree_depth)) && r.tree_depth !== null ? Number(r.tree_depth) : Number(r.tier) || 0);
+  const orderOf = (r) => (Number.isFinite(Number(r.tree_order)) && r.tree_order !== null ? Number(r.tree_order) : null);
+  const tiers = [...new Set(nodes.map(depthOf))].sort((a, b) => a - b);
   const pos = new Map();
+  const colCount = new Map();
   for (const t of tiers) {
-    const col = nodes.filter((r) => (Number(r.tier) || 0) === t)
+    const col = nodes.filter((r) => depthOf(r) === t)
       .sort((a, b) => {
+        const oa = orderOf(a), ob = orderOf(b);
+        if (oa !== null && ob !== null && oa !== ob) return oa - ob;
         const pa = (parents.get(a.game_id) || [])[0], pb = (parents.get(b.game_id) || [])[0];
         return (pos.get(pa)?.y ?? 0) - (pos.get(pb)?.y ?? 0) || a.name.localeCompare(b.name);
       });
+    colCount.set(t, col.length);
     col.forEach((r, i) => pos.set(r.game_id, { x: PAD + tiers.indexOf(t) * COL_W, y: PAD + i * ROW_H }));
   }
-  const height = PAD * 2 + Math.max(...tiers.map((t) => nodes.filter((r) => (Number(r.tier) || 0) === t).length)) * ROW_H;
+  const height = PAD * 2 + Math.max(...tiers.map((t) => colCount.get(t) || 0)) * ROW_H;
 
-  return { nodes, byId, parents, children, edges, pos, tiers, unlocksModules, unlocksUnits,
+  return { nodes, byId, parents, children, edges, pos, tiers, colCount, unlocksModules, unlocksUnits,
     width: PAD * 2 + tiers.length * COL_W, height, COL_W, ROW_H };
 }
 

@@ -4,7 +4,7 @@ import TechNode from "./TechNode";
 const NODE_W = 214, NODE_H = 62;
 
 // Scrollable blueprint canvas: tier columns, elbowed conduit lines, plates on top.
-export default function TechCanvas({ tree, selectedId, lineage: lin, onSelect }) {
+export default function TechCanvas({ tree, selectedId, lineage: lin, have, onSelect, onToggleHave }) {
   const [hover, setHover] = useState(null);
   const { ancestors, descendants } = lin;
   const isolating = !!selectedId;
@@ -32,7 +32,7 @@ export default function TechCanvas({ tree, selectedId, lineage: lin, onSelect })
         {/* tier column headers */}
         {tree.tiers.map((t, i) => (
           <div key={t} className="absolute top-0 tech-label" style={{ left: 28 + i * tree.COL_W, top: 6 }}>
-            ERA {t} <span className="text-muted-foreground/60">· {tree.nodes.filter((r) => (Number(r.tier) || 0) === t).length}</span>
+            LAYER {t} <span className="text-muted-foreground/60">· {tree.colCount?.get(t) ?? 0}</span>
           </div>
         ))}
 
@@ -51,7 +51,7 @@ export default function TechCanvas({ tree, selectedId, lineage: lin, onSelect })
           const p = tree.pos.get(n.game_id);
           return <TechNode key={n.game_id} node={n} x={p.x} y={p.y + 18} state={stateOf(n.game_id)}
             mods={(tree.unlocksModules.get(n.game_id) || []).length} units={(tree.unlocksUnits.get(n.game_id) || []).length}
-            onSelect={onSelect} onHover={setHover} />;
+            owned={have?.has(n.game_id)} onSelect={onSelect} onHover={setHover} onToggleHave={onToggleHave} />;
         })}
       </div>
     </div>

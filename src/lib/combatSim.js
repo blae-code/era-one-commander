@@ -4,11 +4,75 @@
 // rate_of_fire / burst_* / reload_* fields.
 const n = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
-/** Class key a unit row counts as in the weapon damage tables (Unit.unit_class is "Frigate", tables use "FrigateUnit"). */
-export const unitClassKey = (u) => {
-  const c = u.unit_class || "Frigate";
-  return /(Unit|Module|Station|Wreckage)$/.test(c) ? c : `${c}Unit`;
+/** Class key an entity counts as in the weapon damage tables. Units map their unit_class
+ * ("Frigate" -> "FrigateUnit"); modules map their module_class ("Command" -> "CommandModule") —
+ * a module target must NEVER fall back to FrigateUnit, or the matrix prices it with the wrong
+ * multipliers. Already-suffixed class keys pass through unchanged. */
+const UNIT_CLASS_KEY = { Fighter: "FighterUnit", Corvette: "CorvetteUnit", Frigate: "FrigateUnit", Utility: "UtilityUnit", Platform: "PlatformUnit", Mine: "MineUnit" };
+const MODULE_CLASS_KEY = { Command: "CommandModule", Structural: "StructuralModule", Weapon: "WeaponModule", Facility: "FacilityModule", Utility: "UtilityModule" };
+export const unitClassKey = (e) => {
+  if (!e) return "FrigateUnit";
+  if (e.unit_class) {
+    const c = e.unit_class;
+    if (/(Unit|Module|Station|Wreckage)$/.test(c)) return c;
+    return UNIT_CLASS_KEY[c] || `${c}Unit`;
+  }
+  if (e.module_class) {
+    const c = e.module_class;
+    if (/(Unit|Module|Station|Wreckage)$/.test(c)) return c;
+    return MODULE_CLASS_KEY[c] || `${c}Module`;
+  }
+  return "FrigateUnit";
 };
+
+/** Candidate armour shapes, replicated VERBATIM from the deployed engagement function
+ * (base44/functions/engagement/entry.ts) so the two surfaces agree. The game's real
+ * damage-vs-armour formula was never extracted: the point estimate everywhere stays
+ * armor_model "none" (identical to shipped behaviour) and the band across these four
+ * shapes shows how much the answer depends on the unknown. ARMOR_SCALE is a free
+ * parameter, not an extracted game constant. */
+export const ARMOR_SCALE = 100;
+export const ARMOR_MODELS = {
+  none: (d) => d,
+  subtractive: (d, a) => Math.max(d - a, d * 0.1),
+  diminishing: (d, a) => d * (ARMOR_SCALE / (ARMOR_SCALE + Math.max(0, a))),
+  proportional: (d, a) => d * (1 - Math.min(Math.max(0, a) / ARMOR_SCALE, 0.9)),
+};
+
+/** Mirrors the engagement function's capabilities.unmodelled list. */
+export const UNMODELLED = [
+  "projectile travel time",
+  "attack_priority / switch_target_interval",
+  "evade and disengage behaviour",
+  "accuracy and leading",
+];
+
+/**
+ * TTK band for one weapon vs one target: the armor_model "none" point value plus the
+ * low-high across the four candidate armour shapes (effective armour = target armor
+ * reduced by the weapon's armor_penetration, as in the engagement function).
+ * hpOverride lets callers substitute a layered defence pool. null = cannot damage it.
+ */
+export function ttkBand(weapon, target, hpOverride) {
+  const base = n(weapon.dps_vs_class?.[unitClassKey(target)]);
+  const hp = hpOverride ?? n(target.max_health);
+  if (base <= 0 || hp <= 0) return null;
+  const armorEff = n(target.armor) * (1 - n(weapon.armor_penetration));
+  const by_model = Object.entries(ARMOR_MODELS).map(([model, f]) => {
+    const dps = f(base, armorEff);
+    return { model, dps, time_to_kill_s: dps > 0 ? hp / dps : null };
+  });
+  const ttks = by_model.map((r) => r.time_to_kill_s).filter((v) => typeof v === "number");
+  const low = Math.min(...ttks), high = Math.max(...ttks);
+  return {
+    point: hp / base,
+    low, high,
+    spread: low > 0 ? high / low : null,
+    by_model,
+    armor: n(target.armor),
+    armor_penetration: n(weapon.armor_penetration),
+  };
+}
 
 /** Seconds to strip a target's hull with one instance of a weapon. null when it cannot damage it. */
 export function timeToKill(weapon, target) {

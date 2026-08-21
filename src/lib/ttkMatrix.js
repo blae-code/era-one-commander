@@ -1,7 +1,7 @@
 // TTK matrix maths. Every input is a shipped game value — no invented mitigation formulas.
 // Defence pools: hull (max_health), ablative shield (max_ablative_shield), perimeter shield
 // (max_perimeter_shield). Armor is reported alongside, never used as a made-up multiplier.
-import { unitClassKey } from "@/lib/combatSim";
+import { unitClassKey, ttkBand } from "@/lib/combatSim";
 
 const n = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
@@ -34,6 +34,12 @@ export function ttkCell(attacker, target, layers, metric) {
   }
   return hp / dps;
 }
+
+/** RULE-2 band for a cell: armor_model "none" point + low-high across the four candidate
+ * armour shapes (see combatSim.ARMOR_MODELS, replicated from the deployed engagement
+ * function), computed against the layered defence pool. null = cannot engage. */
+export const ttkBandCell = (attacker, target, layers) =>
+  ttkBand(attacker, target, effectiveHp(target, layers));
 
 /** Grid of values + extents for shading. */
 export function buildMatrix(attackers, targets, layers, metric) {

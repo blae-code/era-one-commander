@@ -1,62 +1,48 @@
 import React from "react";
-import { fmt } from "@/lib/shipStats";
-import PowerGauge from "@/components/shared/PowerGauge";
+import StatBar from "@/components/shared/StatBar";
+import { fmtNum } from "@/lib/gameData";
 
-// Aggregate readout for the whole fleet: headline combat totals plus derived fleet averages.
-const CARDS = [
-  { key: "dps", label: "Total DPS", accent: "text-[#ff7a1a]" },
-  { key: "shield", label: "Combined Shields", accent: "text-[#eef4fa]" },
-  { key: "hp", label: "Total Hull HP", accent: "text-[#38bdf8]" },
-  { key: "thrust", label: "Total Thrust", unit: "kN", accent: "text-[#2f9bff]" },
-  { key: "mass", label: "Fleet Mass", unit: "t", accent: "text-muted-foreground" },
-  { key: "cargo", label: "Cargo Capacity", unit: "m³", accent: "text-[#ffd21a]" },
-];
-
-export default function FleetSummary({ totals, hulls, designs }) {
-  const effectiveHp = (totals.hp || 0) + (totals.shield || 0);
-  const twr = totals.mass > 0 ? totals.thrust / totals.mass : 0;
-
+// TOTALS band from fleetPlan.totals — headline mono readouts + StatBars.
+// Deliberately NO class-free DPS figure here: comparative DPS lives in FleetContribution,
+// always against a named target class.
+export default function FleetSummary({ totals, stamp = "" }) {
+  const t = /** @type {any} */ (totals) || {};
+  const net = t.energy_net || 0;
+  const eMax = Math.max(t.energy_production || 0, t.energy_use || 0, 1);
+  const headline = [
+    ["COST RU", fmtNum(t.cost_resources || 0)],
+    ["CREW", fmtNum(t.cost_population || 0)],
+    ["BUILD S", fmtNum(t.construction_time || 0)],
+    ["PARTS", fmtNum(t.part_count || 0)],
+    ["ENERGY NET /S", `${net >= 0 ? "+" : ""}${fmtNum(net, 1)}`, net < 0],
+  ].map(([label, value, danger = false]) => [String(label), value, danger]);
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-3 gap-px bg-border border border-border">
-        {CARDS.map(({ key, label, unit, accent }) => (
-          <div key={key} className="bg-card p-3">
-            <div className="tech-label">{label}</div>
-            <div className={`font-display font-bold text-2xl leading-tight mt-0.5 ${accent}`}>
-              {fmt(totals[key])}
-              {unit && <span className="font-mono text-[10px] text-muted-foreground ml-1">{unit}</span>}
-            </div>
+    <div className="schematic-panel p-4">
+      <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
+        <div className="tech-label">Force totals</div>
+        {stamp && <div className="tech-label">{stamp}</div>}
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-center mb-5">
+        {headline.map(([label, value, danger]) => (
+          <div key={String(label)} className={`border py-2.5 px-1 ${danger ? "border-[#ff2d55] bg-[#ff2d55]/10" : "border-border bg-black/30"}`}>
+            <div className={`text-xl font-semibold leading-none ${danger ? "text-[#ff2d55]" : "text-primary ember-glow"}`}>{value}</div>
+            <div className="text-[9px] tracking-[0.2em] text-muted-foreground mt-1.5">{label}</div>
           </div>
         ))}
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="schematic-panel p-3">
-          <div className="tech-label mb-2">Fleet power grid</div>
-          <PowerGauge gen={totals.power_gen || 0} use={totals.power_use || 0} />
-        </div>
-        <div className="schematic-panel p-3">
-          <div className="tech-label mb-2">Derived fleet metrics</div>
-          <div className="border border-border divide-y divide-border">
-            {[
-              ["Designs fielded", `${designs}`],
-              ["Hulls fielded", `${hulls}`],
-              ["Effective HP", `${fmt(effectiveHp)}`, "hull + shields"],
-              ["Fleet TWR", fmt(twr, 2), twr >= 1 ? "✔ agile" : "▲ sluggish"],
-              ["DPS per hull", hulls ? fmt((totals.dps || 0) / hulls, 1) : "—"],
-              ["DPS per 1k mass", totals.mass ? fmt(((totals.dps || 0) / totals.mass) * 1000, 1) : "—"],
-            ].map(([k, v, hint]) => (
-              <div key={k} className="flex items-baseline justify-between gap-3 px-2.5 py-1.5 bg-card">
-                <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">{k}</span>
-                <span className="font-mono text-xs font-semibold">
-                  {v}
-                  {hint ? <span className="ml-1.5 font-normal text-[10px] text-muted-foreground">{hint}</span> : null}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+        <StatBar label="Max health" value={t.max_health || 0} max={t.max_health || 0} unit="hp" />
+        <StatBar label="Mass" value={t.mass || 0} max={t.mass || 0} />
+        <StatBar label="Energy production" value={t.energy_production || 0} max={eMax} unit="/s" color="bg-[#38bdf8]" />
+        <StatBar label="Energy use" value={t.energy_use || 0} max={eMax} unit="/s" color={net < 0 ? "bg-[#ff2d55]" : "bg-[#ffb020]"} />
+        <StatBar label="Cargo capacity" value={t.cargo_capacity || 0} max={t.cargo_capacity || 0} />
+        <StatBar label="Extraction rate" value={t.extraction_rate || 0} max={t.extraction_rate || 0} unit="/s" color="bg-[#22c55e]" />
       </div>
+      {net < 0 && (
+        <div className="mt-3 font-mono text-[10px] text-[#ff2d55] uppercase tracking-wider">
+          ⚠ Energy deficit {fmtNum(net, 1)}/s — add reactor capacity
+        </div>
+      )}
     </div>
   );
 }

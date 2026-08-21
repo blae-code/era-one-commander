@@ -8,7 +8,7 @@ export default function CostLineList({ lines, maxHeight = "none" }) {
   return (
     <div className="overflow-y-auto" style={{ maxHeight }}>
       <div className="grid grid-cols-[1fr_44px_72px_60px_72px] gap-2 px-1 pb-1 border-b border-border font-mono text-[8px] uppercase tracking-[0.16em] text-muted-foreground sticky top-0 bg-card z-10">
-        <span>Component</span><span className="text-right">Qty</span><span className="text-right">RU</span><span className="text-right">Crew</span><span className="text-right">Build s</span>
+        <span>Item</span><span className="text-right">Qty</span><span className="text-right">RU</span><span className="text-right">Crew</span><span className="text-right">Build s</span>
       </div>
       {lines.map((l) => (
         <div key={l.key} className="relative grid grid-cols-[1fr_44px_72px_60px_72px] gap-2 items-center px-1 py-1 border-b border-border/40 font-mono text-[11px]">
@@ -16,6 +16,7 @@ export default function CostLineList({ lines, maxHeight = "none" }) {
           <span className="relative flex items-center gap-1.5 min-w-0">
             <CategoryIcon category={l.category} size={12} />
             <span className="truncate">{l.name}</span>
+            {l.tier > 0 && <span className="shrink-0 border border-border px-1 text-[8px] text-muted-foreground">T{l.tier}</span>}
             {!l.rec && <span className="text-[#ffd21a] text-[9px] shrink-0">▲</span>}
           </span>
           <span className="relative text-right text-muted-foreground">×{l.qty}</span>

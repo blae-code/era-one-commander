@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Cpu, Rocket, ArrowUpRight, X } from "lucide-react";
+import { Cpu, Rocket, ArrowUpRight, X, Check, Crosshair } from "lucide-react";
 import { fmtNum, fmtModifier } from "@/lib/gameData";
 import { pathCost, lineage, TYPE_COLOR } from "@/lib/techTree";
 
@@ -11,7 +11,7 @@ const Row = ({ label, value }) => (
 );
 
 // Readout for the selected milestone: prerequisite chain cost, the hardware it opens, and stat upgrades.
-export default function UnlockPanel({ tree, id, ctx, onSelect, onClear }) {
+export default function UnlockPanel({ tree, id, ctx, onSelect, onClear, have, onToggleHave, pinned, onPin }) {
   if (!id) return (
     <div className="schematic-panel plate-texture p-4">
       <div className="tech-label">No milestone selected</div>
@@ -37,6 +37,23 @@ export default function UnlockPanel({ tree, id, ctx, onSelect, onClear }) {
         <button onClick={onClear} className="text-muted-foreground hover:text-primary shrink-0"><X size={14} /></button>
       </div>
       {(node.description || node.info) && <p className="text-[11px] text-muted-foreground leading-snug">{node.description || node.info}</p>}
+
+      {(onToggleHave || onPin) && (
+        <div className="flex flex-wrap gap-1">
+          {onToggleHave && (
+            <button onClick={() => onToggleHave(id)}
+              className={`px-2 py-1 border font-mono text-[9px] uppercase tracking-[0.12em] inline-flex items-center gap-1 ${have?.has(id) ? "border-[#22c55e] text-[#22c55e] bg-[#22c55e]/10" : "border-border text-muted-foreground hover:border-[#22c55e] hover:text-[#22c55e]"}`}>
+              <Check size={10} /> {have?.has(id) ? "Researched" : "Mark researched"}
+            </button>
+          )}
+          {onPin && (
+            <button onClick={() => onPin(id)}
+              className={`px-2 py-1 border font-mono text-[9px] uppercase tracking-[0.12em] inline-flex items-center gap-1 ${pinned ? "border-accent text-accent bg-accent/10" : "border-border text-muted-foreground hover:border-accent hover:text-accent"}`}>
+              <Crosshair size={10} /> {pinned ? "Pinned to path" : "Pin to path"}
+            </button>
+          )}
+        </div>
+      )}
 
       <div>
         <div className="tech-label mb-1">Full path cost (with prerequisites)</div>

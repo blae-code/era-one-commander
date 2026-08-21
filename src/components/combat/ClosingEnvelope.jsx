@@ -42,7 +42,7 @@ export default function ClosingEnvelope({ weapon, units, onSelectUnit }) {
           ))}
         </div>
       )}
-      <p className="text-[10px] text-muted-foreground mt-2">Bar = time to cross the weapon's reach at the hull's top speed; striped head = projectile travel time; readout = share of hull HP lost before contact.</p>
+      <p className="text-[10px] text-muted-foreground mt-2">Bar = time to cross the weapon's reach at the hull's top speed; striped head = projectile travel time; readout = share of hull HP lost before contact. Damage resolves through the weapon's DPS vs each hull's own class (armor_model: none).</p>
     </div>
   );
 }

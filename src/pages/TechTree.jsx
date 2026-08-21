@@ -4,12 +4,31 @@ import { useGameCatalog, fmtNum } from "@/lib/gameData";
 import { buildTechTree, lineage, TYPE_COLOR } from "@/lib/techTree";
 import TechCanvas from "@/components/tech/TechCanvas";
 import UnlockPanel from "@/components/tech/UnlockPanel";
+import ResearchPlanner from "@/components/tech/ResearchPlanner";
+import ImpactPanel from "@/components/tech/ImpactPanel";
 
-// Tech-tree explorer: research milestones as tier columns, wired to the hardware they unlock.
+const HAVE_KEY = "tech:have";
+const loadHave = () => {
+  try { return new Set(JSON.parse(localStorage.getItem(HAVE_KEY) || "[]")); } catch { return new Set(); }
+};
+
+// Tech-tree explorer: research milestones laid out by the dataset's own tree_depth/tree_order,
+// wired to the hardware they unlock. Server-side researchPath/researchImpact drive the
+// planner (PATH MODE) and impact panels for the selected/pinned milestones.
 export default function TechTree() {
   const cat = useGameCatalog(true);
   const [sel, setSel] = useState(null);
   const [q, setQ] = useState("");
+  const [have, setHave] = useState(loadHave);
+  const [pins, setPins] = useState([]);
+
+  const toggleHave = (id) => setHave((prev) => {
+    const next = new Set(prev);
+    if (next.has(id)) next.delete(id); else next.add(id);
+    try { localStorage.setItem(HAVE_KEY, JSON.stringify([...next])); } catch { /* private mode */ }
+    return next;
+  });
+  const togglePin = (id) => setPins((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
 
   const tree = useMemo(() => buildTechTree(cat.research, cat.modules, cat.units), [cat.research, cat.modules, cat.units]);
   const lin = useMemo(() => lineage(tree, sel), [tree, sel]);
@@ -19,8 +38,22 @@ export default function TechTree() {
     return tree.nodes.filter((n) => `${n.name} ${n.game_id}`.toLowerCase().includes(s)).slice(0, 7);
   }, [q, tree]);
 
+  // PATH MODE targets: every pinned milestone plus the current selection.
+  const targets = useMemo(() => {
+    const t = [...pins];
+    if (sel && !t.includes(sel)) t.push(sel);
+    return t;
+  }, [pins, sel]);
+  const haveArr = useMemo(() => [...have].sort(), [have]);
+
+  // Dataset stamp, read from the rows themselves — never hardcoded.
+  const stamp = useMemo(() => {
+    const r = cat.research[0] || cat.modules[0];
+    return r?.game_version ? `game ${r.game_version} · build ${r.game_build}` : null;
+  }, [cat.research, cat.modules]);
+
   const totalUnlocks = useMemo(() => [...tree.unlocksModules.values()].reduce((a, v) => a + v.length, 0), [tree]);
-  const readout = [["MILESTONES", tree.nodes.length], ["LINKS", tree.edges.length], ["MODULE UNLOCKS", totalUnlocks], ["ERAS", tree.tiers.length]];
+  const readout = [["MILESTONES", tree.nodes.length], ["LINKS", tree.edges.length], ["MODULE UNLOCKS", totalUnlocks], ["RESEARCHED", have.size]];
 
   return (
     <div className="p-4 md:p-6 max-w-[1800px] mx-auto w-full h-full flex flex-col min-h-0">
@@ -29,7 +62,7 @@ export default function TechTree() {
           <GitBranch size={30} className="text-primary shrink-0" />
           <div className="min-w-0">
             <h1 className="font-display font-bold text-xl tracking-[0.15em] leading-none">TECH TREE</h1>
-            <p className="tech-label mt-1 truncate">Research milestones → module & hull unlocks · click a plate to isolate its prerequisite chain</p>
+            <p className="tech-label mt-1 truncate">Research milestones → module & hull unlocks · click a plate to isolate its chain · alt-click = mark researched</p>
           </div>
         </div>
         <div className="hidden lg:flex gap-5 font-mono text-center">
@@ -56,15 +89,34 @@ export default function TechTree() {
           {Object.entries(TYPE_COLOR).map(([t, c]) => <span key={t} className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5" style={{ background: c }} />{t}</span>)}
         </div>
         {sel && <button onClick={() => setSel(null)} className="px-2 h-7 border border-primary bg-primary/20 font-mono text-[10px] uppercase tracking-[0.12em] hover:bg-primary/30">show full tree</button>}
+        {have.size > 0 && (
+          <button onClick={() => { setHave(new Set()); try { localStorage.setItem(HAVE_KEY, "[]"); } catch { /* private mode */ } }}
+            className="px-2 h-7 border border-border font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground hover:border-[#22c55e] hover:text-[#22c55e]">
+            clear researched ({have.size})
+          </button>
+        )}
         <span className="tech-label ml-auto">{sel ? `${lin.ancestors.size} prerequisites · ${lin.descendants.size} downstream` : "full tree"}</span>
       </div>
 
       {cat.isLoading ? <div className="schematic-panel p-12 tech-label text-center animate-pulse">Mapping research lattice…</div>
+      : cat.isError ? (
+        <div className="schematic-panel p-10 text-center">
+          <div className="tech-label text-destructive">Couldn&apos;t load the research catalog</div>
+          <div className="font-mono text-[10px] text-muted-foreground mt-2 break-all">{String(cat.error?.message || cat.error || "")}</div>
+          <button onClick={() => window.location.reload()} className="mt-3 px-3 py-1.5 border border-primary font-mono text-[10px] uppercase tracking-[0.12em] hover:bg-primary/20">Retry</button>
+        </div>
+      )
       : tree.nodes.length === 0 ? <div className="schematic-panel p-10 tech-label text-center">No research data loaded — import the dataset from Data Ops.</div>
       : (
-        <div className="flex-1 min-h-0 grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-3">
-          <div className="min-h-0 min-w-0"><TechCanvas tree={tree} selectedId={sel} lineage={lin} onSelect={setSel} /></div>
-          <div className="overflow-y-auto min-h-0"><UnlockPanel tree={tree} id={sel} ctx={cat} onSelect={setSel} onClear={() => setSel(null)} /></div>
+        <div className="flex-1 min-h-0 grid grid-cols-1 xl:grid-cols-[1fr_400px] gap-3">
+          <div className="min-h-0 min-w-0"><TechCanvas tree={tree} selectedId={sel} lineage={lin} have={have} onSelect={setSel} onToggleHave={toggleHave} /></div>
+          <div className="overflow-y-auto min-h-0 space-y-3">
+            <UnlockPanel tree={tree} id={sel} ctx={cat} onSelect={setSel} onClear={() => setSel(null)}
+              have={have} onToggleHave={toggleHave} pinned={sel ? pins.includes(sel) : false} onPin={togglePin} />
+            <ResearchPlanner tree={tree} targets={targets} have={haveArr} onToggleHave={toggleHave}
+              pins={pins} onUnpin={togglePin} onSelect={setSel} stamp={stamp} />
+            {sel && <ImpactPanel id={sel} have={haveArr} ctx={cat} onSelect={setSel} stamp={stamp} />}
+          </div>
         </div>
       )}
     </div>

@@ -1,65 +1,54 @@
-import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import { fmt } from "@/lib/shipStats";
+import React, { useMemo } from "react";
+import TierBadge from "@/components/shared/TierBadge";
+import { fmtNum } from "@/lib/gameData";
 
-// Fleet composition: how the hulls (and their firepower) split across classes and roles.
-const HEX = ["#ff7a1a", "#2f9bff", "#ffd21a", "#d24bff", "#38bdf8", "#ff2d55", "#eef4fa"];
-
-function group(roster, key) {
-  const map = new Map();
-  for (const r of roster) {
-    const label = r[key] || "Unclassified";
-    const cur = map.get(label) || { label, hulls: 0, dps: 0, shield: 0 };
-    cur.hulls += r.qty;
-    cur.dps += (r.stats?.dps || 0) * r.qty;
-    cur.shield += (r.stats?.shield || 0) * r.qty;
-    map.set(label, cur);
-  }
-  return [...map.values()].sort((a, b) => b.hulls - a.hulls);
-}
-
-function Breakdown({ title, rows, hulls }) {
-  return (
-    <div className="schematic-panel p-3">
-      <div className="tech-label mb-2">{title}</div>
-      <div className="flex items-center gap-3">
-        <ResponsiveContainer width={130} height={130}>
-          <PieChart>
-            <Pie data={rows} dataKey="hulls" nameKey="label" innerRadius={34} outerRadius={60} stroke="hsl(30 7% 9%)" strokeWidth={2} isAnimationActive={false}>
-              {rows.map((r, i) => <Cell key={r.label} fill={HEX[i % HEX.length]} />)}
-            </Pie>
-            <Tooltip
-              contentStyle={{ background: "hsl(30 7% 9%)", border: "1px solid hsl(30 7% 24%)", borderRadius: 0, fontFamily: "IBM Plex Mono", fontSize: 11 }}
-              formatter={(v, n) => [`${v} hulls`, n]}
-            />
-          </PieChart>
-        </ResponsiveContainer>
-        <div className="flex-1 border border-border divide-y divide-border min-w-0">
-          {rows.map((r, i) => (
-            <div key={r.label} className="bg-card px-2.5 py-1.5 flex items-baseline justify-between gap-3">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground truncate">
-                <span className="inline-block w-2 h-2 mr-2 align-middle" style={{ background: HEX[i % HEX.length] }} />
-                {r.label}
-              </span>
-              <span className="font-mono text-xs font-semibold whitespace-nowrap">
-                {r.hulls}
-                <span className="font-normal text-[10px] text-muted-foreground ml-1">
-                  {hulls ? `${Math.round((r.hulls / hulls) * 100)}%` : ""} · {fmt(r.dps)} dps · {fmt(r.shield)} shd
-                </span>
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+// Per-line breakdown from fleetPlan.lines[]. Ranking is re-derived CLIENT-SIDE on
+// dps_vs_class[selectedClass] — never on any class-free scalar — and the class the
+// ranking targets is named in the column header (RULE-3).
+export default function FleetComposition({ lines = [], selectedClass }) {
+  const sorted = useMemo(
+    () => [...lines].sort((a, b) => (b.dps_vs_class?.[selectedClass] || 0) - (a.dps_vs_class?.[selectedClass] || 0)),
+    [lines, selectedClass]
   );
-}
 
-export default function FleetComposition({ roster, hulls }) {
+  const headers = ["UNIT / MODULE", "KIND", "TIER", "COUNT", "COST RU", "CREW", "BUILD S", "HP", "MASS", "E-NET /S", `DPS VS ${String(selectedClass || "").toUpperCase()}`];
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <Breakdown title="Composition by class" rows={group(roster, "ship_class")} hulls={hulls} />
-      <Breakdown title="Composition by role" rows={group(roster, "role")} hulls={hulls} />
+    <div className="schematic-panel p-4">
+      <div className="tech-label mb-3">Fleet lines · ranked by dps vs {selectedClass}</div>
+      <div className="overflow-x-auto">
+        <table className="w-full font-mono text-[11px]">
+          <thead>
+            <tr className="text-left">
+              {headers.map((h) => (
+                <th key={h} className="tech-label font-normal pb-2 pr-3 whitespace-nowrap">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-border">
+            {sorted.map((l) => (
+              <tr key={`${l.kind}:${l.game_id}`} className="hover:bg-secondary/40">
+                <td className="py-1.5 pr-3">
+                  <div className="font-display text-xs">{l.name || l.game_id}</div>
+                  <div className="text-[9px] text-muted-foreground">{l.game_id}</div>
+                </td>
+                <td className="pr-3 uppercase text-[9px] text-muted-foreground">{l.kind}</td>
+                <td className="pr-3"><TierBadge tier={l.tier || 1} /></td>
+                <td className="pr-3 text-primary ember-glow">×{fmtNum(l.count)}</td>
+                <td className="pr-3">{fmtNum(l.cost_resources)}</td>
+                <td className="pr-3">{fmtNum(l.cost_population)}</td>
+                <td className="pr-3">{fmtNum(l.construction_time)}</td>
+                <td className="pr-3">{fmtNum(l.max_health)}</td>
+                <td className="pr-3">{fmtNum(l.mass)}</td>
+                <td className={`pr-3 ${(l.energy_net || 0) < 0 ? "text-[#ff2d55]" : "text-[#38bdf8]"}`}>
+                  {(l.energy_net || 0) >= 0 ? "+" : ""}{fmtNum(l.energy_net, 1)}
+                </td>
+                <td className="pr-3 text-accent">{fmtNum(l.dps_vs_class?.[selectedClass] || 0, 1)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

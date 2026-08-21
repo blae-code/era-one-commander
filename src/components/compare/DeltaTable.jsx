@@ -1,39 +1,65 @@
 import React from "react";
-import { fmt } from "@/lib/shipStats";
+import { fmtNum } from "@/lib/gameData";
 
-export default function DeltaTable({ a, b, rows }) {
+// N-way (2-4) side-by-side stat table with best-value highlighting.
+// rows: [{ key, label, unit?, dec?, lowerBetter?, neutral?, get? }] — get(row) overrides row[key].
+// lowerBetter flips the highlight for cost/mass/energy-draw style metrics; neutral skips it.
+export default function DeltaTable({ items, colors, rows }) {
+  const val = (r, def) => {
+    const v = def.get ? def.get(r) : r?.[def.key];
+    const n = Number(v);
+    return Number.isFinite(n) ? n : 0;
+  };
+
   return (
-    <div className="schematic-panel divide-y divide-border">
-      <div className="grid grid-cols-[1fr_auto_1fr] gap-2 px-3 py-2 bg-secondary/50">
-        <div className="font-display font-semibold text-sm text-[#ff7a1a] truncate">{a?.name || "—"}</div>
-        <div className="tech-label self-center">VS</div>
-        <div className="font-display font-semibold text-sm text-[#2f9bff] text-right truncate">{b?.name || "—"}</div>
-      </div>
-      {rows.map(({ key, label, unit, decimals = 0, lowerBetter }) => {
-        const va = a?.[key] ?? 0;
-        const vb = b?.[key] ?? 0;
-        const diff = va - vb;
-        const aWins = lowerBetter ? va < vb : va > vb;
-        const tie = va === vb;
-        return (
-          <div key={key} className="grid grid-cols-[1fr_auto_1fr] gap-2 px-3 py-2 items-center">
-            <div className={`font-mono text-sm ${!tie && aWins ? "font-semibold text-[#ff7a1a]" : "text-foreground/70"}`}>
-              {fmt(va, decimals)}{unit}
-            </div>
-            <div className="text-center min-w-[110px]">
-              <div className="tech-label">{label}</div>
-              {!tie && (
-                <div className={`font-mono text-[10px] ${diff > 0 ? "text-[#ff7a1a]" : "text-[#2f9bff]"}`}>
-                  {diff > 0 ? "▲" : "▼"} {fmt(Math.abs(diff), decimals)}
-                </div>
-              )}
-            </div>
-            <div className={`font-mono text-sm text-right ${!tie && !aWins ? "font-semibold text-[#2f9bff]" : "text-foreground/70"}`}>
-              {fmt(vb, decimals)}{unit}
-            </div>
-          </div>
-        );
-      })}
+    <div className="schematic-panel overflow-x-auto">
+      <table className="w-full">
+        <thead>
+          <tr className="bg-secondary/50">
+            <th className="tech-label text-left px-3 py-2 font-normal">METRIC</th>
+            {items.map((it, i) => (
+              <th
+                key={it.game_id}
+                className="px-3 py-2 text-right font-display font-semibold text-sm max-w-[170px] truncate"
+                style={{ color: colors[i] }}
+                title={it.game_id}
+              >
+                {it.name}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-border">
+          {rows.map((def) => {
+            const vals = items.map((it) => val(it, def));
+            const best = def.lowerBetter ? Math.min(...vals) : Math.max(...vals);
+            const allEqual = vals.every((v) => v === vals[0]);
+            return (
+              <tr key={def.key}>
+                <td className="px-3 py-1.5 whitespace-nowrap">
+                  <span className="tech-label">{def.label}</span>
+                  {def.lowerBetter && (
+                    <span className="font-mono text-[9px] text-muted-foreground ml-1.5">▼ lower better</span>
+                  )}
+                </td>
+                {vals.map((v, i) => {
+                  const isBest = !def.neutral && !allEqual && v === best;
+                  return (
+                    <td
+                      key={items[i].game_id}
+                      className={`px-3 py-1.5 text-right font-mono text-sm ${isBest ? "font-semibold" : "text-foreground/60"}`}
+                      style={isBest ? { color: colors[i] } : undefined}
+                    >
+                      {isBest && <span className="mr-1">▲</span>}
+                      {fmtNum(v, def.dec || 0)}{def.unit || ""}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -1,41 +1,67 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, Legend, Tooltip, ResponsiveContainer } from "recharts";
-import { fmt } from "@/lib/shipStats";
+import { ENTITY_CLASSES, CLASS_LABEL, DEFAULT_CLASS } from "./classes";
+import { fmtNum } from "@/lib/gameData";
 
-// Per-design contribution to the fleet's firepower and survivability (quantity included).
-const METRICS = [
-  { key: "dps", label: "DPS", fill: "#ff7a1a" },
-  { key: "shield", label: "SHIELD", fill: "#eef4fa" },
-  { key: "hp", label: "HULL HP", fill: "#38bdf8" },
-];
-
-const axis = { fontSize: 9, fontFamily: "IBM Plex Mono", fill: "hsl(36 10% 65%)" };
-
-export default function FleetContribution({ roster }) {
-  const data = roster.map((r) => ({
-    name: r.name.length > 14 ? `${r.name.slice(0, 13)}…` : r.name,
-    dps: (r.stats?.dps || 0) * r.qty,
-    shield: (r.stats?.shield || 0) * r.qty,
-    hp: (r.stats?.hp || 0) * r.qty,
-  }));
-
+// DPS-vs-class strip: fleetPlan.totals.dps_vs_class across the 13 EntityClasses.
+// The selected target class is ALWAYS named beside the headline number (RULE-3);
+// there is deliberately no class-free total anywhere on this panel.
+export default function FleetContribution({ dpsVsClass = {}, selected = DEFAULT_CLASS, onSelect, capability = "" }) {
+  const max = Math.max(1, ...ENTITY_CLASSES.map((c) => dpsVsClass?.[c] || 0));
+  const value = dpsVsClass?.[selected] || 0;
   return (
-    <div className="schematic-panel p-3">
-      <div className="tech-label mb-2">Contribution by design</div>
-      <ResponsiveContainer width="100%" height={260}>
-        <BarChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: -8 }}>
-          <XAxis dataKey="name" tick={axis} axisLine={{ stroke: "hsl(30 7% 24%)" }} tickLine={false} interval={0} />
-          <YAxis tick={axis} axisLine={false} tickLine={false} width={48} />
-          <Tooltip
-            contentStyle={{ background: "hsl(30 7% 9%)", border: "1px solid hsl(30 7% 24%)", borderRadius: 0, fontFamily: "IBM Plex Mono", fontSize: 11 }}
-            formatter={(v, n) => [fmt(v), n]}
-          />
-          <Legend wrapperStyle={{ fontFamily: "IBM Plex Mono", fontSize: 9, letterSpacing: "0.12em" }} />
-          {METRICS.map((m) => (
-            <Bar key={m.key} dataKey={m.key} name={m.label} fill={m.fill} fillOpacity={0.85} isAnimationActive={false} />
+    <div className="schematic-panel p-4">
+      <div className="flex items-end justify-between flex-wrap gap-3 mb-4">
+        <div>
+          <div className="tech-label mb-1">Fleet DPS · by target class</div>
+          <div className="font-mono">
+            <span className="text-2xl font-semibold text-primary ember-glow">{fmtNum(value, 1)}</span>
+            <span className="text-xs text-muted-foreground ml-2 uppercase tracking-wider">
+              dps vs <span className="text-foreground">{selected}</span>
+              {selected === DEFAULT_CLASS ? " (default)" : ""}
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-1 max-w-[560px] justify-end">
+          {ENTITY_CLASSES.map((c) => (
+            <button
+              key={c}
+              onClick={() => onSelect?.(c)}
+              title={c}
+              className={`px-2 py-1 font-mono text-[9px] uppercase tracking-wider border transition-colors ${
+                selected === c
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border text-muted-foreground hover:border-primary/60 hover:text-foreground"
+              }`}
+            >
+              {CLASS_LABEL[c] || c}
+              {c === DEFAULT_CLASS ? " *" : ""}
+            </button>
           ))}
-        </BarChart>
-      </ResponsiveContainer>
+        </div>
+      </div>
+      <div className="space-y-1.5">
+        {ENTITY_CLASSES.map((c) => {
+          const v = dpsVsClass?.[c] || 0;
+          const active = c === selected;
+          return (
+            <button key={c} onClick={() => onSelect?.(c)} title={c} className="w-full flex items-center gap-2 group text-left">
+              <span className={`w-28 shrink-0 font-mono text-[9px] uppercase tracking-wider ${active ? "text-primary" : "text-muted-foreground group-hover:text-foreground"}`}>
+                {CLASS_LABEL[c] || c}
+              </span>
+              <span className="flex-1 h-2 bg-secondary overflow-hidden">
+                <span
+                  className={`block h-full transition-all duration-300 ${active ? "bg-primary" : "bg-primary/40 group-hover:bg-primary/60"}`}
+                  style={{ width: `${(v / max) * 100}%` }}
+                />
+              </span>
+              <span className={`w-16 shrink-0 text-right font-mono text-[10px] ${active ? "text-primary ember-glow" : "text-muted-foreground"}`}>
+                {fmtNum(v, 1)}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <p className="tech-label mt-3">* default target class{capability ? ` · backend: ${capability}` : ""}</p>
     </div>
   );
 }

@@ -11,9 +11,11 @@ const KIND_STYLE = {
 
 // Firing-cycle strip: shots, burst gaps, precharge and reload laid on a real time axis,
 // with the sustained-vs-peak DPS gap that raw DPS columns hide.
-export default function FiringCycle({ weapon, perShot }) {
+export default function FiringCycle({ weapon, perShot, targetClass }) {
   if (!weapon) return <div className="schematic-panel p-6 tech-label text-center">Select an armament to see its firing cycle.</div>;
   const c = firingCycle(weapon, perShot || 0);
+  // RULE-3: per-shot damage (and therefore peak/sustained DPS) is per-class — name the class.
+  const vs = targetClass ? ` · dmg vs ${targetClass}` : "";
   const pct = (v) => `${(v / c.cycle) * 100}%`;
   const ticks = Array.from({ length: 5 }, (_, i) => (c.cycle * i) / 4);
 
@@ -23,12 +25,12 @@ export default function FiringCycle({ weapon, perShot }) {
         <div>
           <div className="tech-label">Firing cycle // {weapon.name}</div>
           <div className="font-mono text-[10px] text-muted-foreground mt-0.5">
-            {c.shots} shot{c.shots > 1 ? "s" : ""} per cycle · {fmtNum(c.cycle, 2)}s cycle · {fmtNum(c.downtime * 100, 0)}% downtime
+            {c.shots} shot{c.shots > 1 ? "s" : ""} per cycle · {fmtNum(c.cycle, 2)}s cycle · {fmtNum(c.downtime * 100, 0)}% downtime{vs}
           </div>
         </div>
         <div className="flex gap-4 font-mono text-center">
-          <div><div className="text-base text-accent leading-none ember-glow">{fmtNum(c.peak, 1)}</div><div className="text-[9px] tracking-[0.18em] text-muted-foreground mt-1">PEAK DPS</div></div>
-          <div><div className="text-base text-primary leading-none">{fmtNum(c.sustained, 1)}</div><div className="text-[9px] tracking-[0.18em] text-muted-foreground mt-1">SUSTAINED</div></div>
+          <div><div className="text-base text-accent leading-none ember-glow">{fmtNum(c.peak, 1)}</div><div className="text-[9px] tracking-[0.18em] text-muted-foreground mt-1">PEAK DPS{targetClass ? ` VS ${targetClass.replace(/Unit$/, "").toUpperCase()}` : ""}</div></div>
+          <div><div className="text-base text-primary leading-none">{fmtNum(c.sustained, 1)}</div><div className="text-[9px] tracking-[0.18em] text-muted-foreground mt-1">SUSTAINED{targetClass ? ` VS ${targetClass.replace(/Unit$/, "").toUpperCase()}` : ""}</div></div>
         </div>
       </div>
 

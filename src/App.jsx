@@ -10,6 +10,8 @@ import ScrollToTop from './components/ScrollToTop';
 import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
 import Database from '@/pages/Database';
+import Designs from '@/pages/Designs';
+import FleetAnalysis from '@/pages/FleetAnalysis';
 import StealthAnalysis from '@/pages/StealthAnalysis';
 import ResourcePlan from '@/pages/ResourcePlan';
 import DriveSync from '@/pages/DriveSync';
@@ -54,6 +56,8 @@ const AuthenticatedApp = () => {
         <Route path="/resources" element={<ResourcePlan />} />
         <Route path="/sync" element={<DriveSync />} />
         <Route path="/database" element={<Database />} />
+        <Route path="/designs" element={<Designs />} />
+        <Route path="/fleet" element={<FleetAnalysis />} />
         <Route path="/stealth" element={<StealthAnalysis />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/economy" element={<EconomyAnalysis />} />

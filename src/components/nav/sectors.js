@@ -1,4 +1,4 @@
-import { Database, ArrowLeftRight, Layers, DatabaseZap, Boxes, HardDriveDownload, LineChart, Crosshair, GitBranch, MonitorDown, EyeOff } from "lucide-react";
+import { Database, ArrowLeftRight, Layers, DatabaseZap, Boxes, HardDriveDownload, LineChart, Crosshair, GitBranch, MonitorDown, EyeOff, Anchor, Ship } from "lucide-react";
 
 // Radial command ring sectors. Each sector expands to reveal its tools.
 export const SECTORS = [
@@ -16,6 +16,7 @@ export const SECTORS = [
       { to: "/combat", label: "Combat Lab", code: "T-03c", icon: Crosshair, desc: "Time-to-kill, firing cycles & approach envelopes" },
       { to: "/tech", label: "Tech Tree", code: "T-03d", icon: GitBranch, desc: "Research milestones & the modules they unlock" },
       { to: "/stealth", label: "Stealth Analysis", code: "T-03e", icon: EyeOff, desc: "Signatures, detection ranges & first-sight" },
+      { to: "/fleet", label: "Fleet Analysis", code: "T-03f", icon: Ship, desc: "Compose a force \u00b7 fleetPlan roll-up" },
     ],
   },
   {
@@ -26,8 +27,9 @@ export const SECTORS = [
     start: -5,
     end: 115,
     tools: [
+      { to: "/designs", label: "The Drydock", code: "T-04a", icon: Anchor, desc: "Ship & station designs \u2014 assembly graphs & .station import" },
       { to: "/resources", label: "Resource Planning", code: "T-04c", icon: Boxes, desc: "Aggregate materials for a build queue" },
-      { to: "/sync", label: "Blueprint Exchange", code: "T-04d", icon: HardDriveDownload, desc: "Sync designs with Google Drive" },
+      { to: "/sync", label: "Design Exchange", code: "T-04d", icon: HardDriveDownload, desc: "Sync imported designs with Google Drive" },
     ],
   },
   {
