@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { SECTORS } from "@/components/nav/sectors";
 import SectorTools from "@/components/nav/SectorTools";
 import { playHoverTick, playEngageClunk } from "@/lib/mechSound";
@@ -26,23 +26,33 @@ function arcPath(start, end, rIn, rOut) {
 export default function CommandRing() {
   const [active, setActive] = useState(null);
   const [hover, setHover] = useState(null);
+  const reduceMotion = useReducedMotion();
+  // Autoplay policy: WebAudio stays silent until the user has clicked/keyed at least once.
+  const gestureRef = useRef(false);
   const sector = SECTORS.find((s) => s.id === active);
 
   const onEnter = (id) => {
     setHover(id);
-    playHoverTick();
+    if (gestureRef.current && !reduceMotion) playHoverTick();
   };
   const onEngage = (id) => {
-    playEngageClunk();
+    gestureRef.current = true; // click / Enter / Space — a real user gesture
+    if (!reduceMotion) playEngageClunk();
     setActive((prev) => (prev === id ? null : id));
+  };
+  const onSectorKey = (e, id) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onEngage(id);
+    }
   };
 
   return (
     <div className="schematic-panel rust-wash p-5 grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-6 items-center">
       <div className="absolute top-0 left-0 right-0 rivet-row opacity-50" />
       {/* Ring */}
-      <div className="relative mx-auto">
-        <svg width={400} height={400} viewBox="0 0 400 400" className="select-none">
+      <div className="relative mx-auto w-full max-w-[400px]">
+        <svg viewBox="0 0 400 400" className="w-full h-auto select-none" role="group" aria-label="Command ring sector selector">
           <defs>
             <filter id="ring-glow" x="-30%" y="-30%" width="160%" height="160%">
               <feGaussianBlur stdDeviation="5" result="b" />
@@ -60,19 +70,23 @@ export default function CommandRing() {
             return <line key={i} x1={ax} y1={ay} x2={bx} y2={by} stroke="hsl(var(--primary))" strokeOpacity={i % 6 === 0 ? 0.5 : 0.18} strokeWidth="1" />;
           })}
 
-          {/* sweep */}
-          <motion.line
-            x1={C}
-            y1={C}
-            x2={C + R_OUT}
-            y2={C}
-            stroke="hsl(var(--accent))"
-            strokeOpacity="0.35"
-            strokeWidth="1.5"
-            style={{ originX: "200px", originY: "200px" }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: (t) => Math.floor(t * 36) / 36 }}
-          />
+          {/* sweep — frozen under prefers-reduced-motion */}
+          {reduceMotion ? (
+            <line x1={C} y1={C} x2={C + R_OUT} y2={C} stroke="hsl(var(--accent))" strokeOpacity="0.35" strokeWidth="1.5" />
+          ) : (
+            <motion.line
+              x1={C}
+              y1={C}
+              x2={C + R_OUT}
+              y2={C}
+              stroke="hsl(var(--accent))"
+              strokeOpacity="0.35"
+              strokeWidth="1.5"
+              style={{ originX: "200px", originY: "200px" }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: (t) => Math.floor(t * 36) / 36 }}
+            />
+          )}
 
           {/* sectors */}
           {SECTORS.map((s) => {
@@ -85,13 +99,20 @@ export default function CommandRing() {
             return (
               <motion.g
                 key={s.id}
+                role="button"
+                tabIndex={0}
+                aria-label={`${s.label} sector, ${s.code}`}
+                aria-pressed={isActive}
                 onClick={() => onEngage(s.id)}
+                onKeyDown={(e) => onSectorKey(e, s.id)}
+                onFocus={() => onEnter(s.id)}
+                onBlur={() => setHover((h) => (h === s.id ? null : h))}
                 onMouseEnter={() => onEnter(s.id)}
                 onMouseLeave={() => setHover(null)}
-                className="cursor-pointer"
+                className="cursor-pointer outline-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary"
                 filter={lit ? "url(#ring-glow)" : undefined}
                 style={{ originX: "200px", originY: "200px" }}
-                whileTap={{ scale: 0.965 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.965 }}
                 transition={{ type: "spring", stiffness: 700, damping: 34, mass: 1.4 }}
               >
                 <motion.path
@@ -147,7 +168,7 @@ export default function CommandRing() {
           <motion.g
             key={active || "idle"}
             style={{ originX: "200px", originY: "200px" }}
-            initial={{ scale: 1.04 }}
+            initial={reduceMotion ? false : { scale: 1.04 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 170, damping: 12, mass: 2.4 }}
           >
@@ -175,14 +196,15 @@ export default function CommandRing() {
             </div>
             <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
               Engage a ring sector to deploy its tools. Archives holds the dataset and comparison engine,
-              Foundry holds registered blueprints, Ops handles ingestion and sync.
+              Foundry plans resources and exchanges designs, Ops handles ingestion and sync.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
               {SECTORS.map((s) => (
                 <button
                   key={s.id}
-                  onClick={() => setActive(s.id)}
-                  className="border border-border px-3 py-1.5 clip-plate font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                  onClick={() => onEngage(s.id)}
+                  aria-label={`Engage ${s.label} sector`}
+                  className="border border-border px-3 py-1.5 clip-plate font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground hover:text-primary hover:border-primary transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary"
                 >
                   {s.label}
                 </button>

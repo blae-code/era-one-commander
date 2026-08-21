@@ -17,7 +17,6 @@
   ],
   "shortcuts": [
     { "name": "Databank", "url": "/database" },
-    { "name": "Build Layout", "url": "/builder" },
     { "name": "Combat Lab", "url": "/combat" },
     { "name": "Tech Tree", "url": "/tech" }
   ]

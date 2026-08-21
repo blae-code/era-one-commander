@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { AlertTriangle } from "lucide-react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { useGameCatalog } from "@/lib/gameData";
 import { STATES, signatureFor, detectorsFrom } from "@/lib/stealth";
@@ -8,6 +10,7 @@ import EngagementRings from "@/components/stealth/EngagementRings";
 import StealthHeader from "@/components/stealth/StealthHeader";
 
 export default function StealthAnalysis() {
+  const qc = useQueryClient();
   const game = useGameCatalog();
   const [contactId, setContactId] = useState(null);
   const [threatId, setThreatId] = useState(null);
@@ -33,7 +36,18 @@ export default function StealthAnalysis() {
         stateLabel={STATES.find((s) => s.key === state)?.label || ""}
       />
 
-      {game.isEmpty ? (
+      {game.isError ? (
+        <div className="schematic-panel p-16 text-center relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" />
+          <AlertTriangle size={28} className="mx-auto text-primary mb-3" />
+          <div className="font-display font-bold uppercase tracking-[0.15em]">DATALINK FAILURE</div>
+          <p className="tech-label mt-1">Couldn't load game data: {String(game.error?.message || game.error)}</p>
+          <button onClick={() => qc.invalidateQueries({ queryKey: ["game"] })}
+            className="mt-4 px-4 h-8 font-mono text-[10px] uppercase tracking-wider border border-primary bg-primary text-primary-foreground hover:bg-primary/80 transition-colors">
+            Retry
+          </button>
+        </div>
+      ) : game.isEmpty ? (
         <div className="schematic-panel p-16 text-center tech-label">Import game data first to run stealth analysis</div>
       ) : (
         <>

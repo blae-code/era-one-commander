@@ -26,7 +26,9 @@ export default function ScrollToTop() {
       return () => window.clearTimeout(timer);
     }
 
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    // The app shell is h-screen overflow-hidden; the real scroller is Layout's <main id="app-main">.
+    const el = document.getElementById("app-main") ?? window;
+    el.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname, hash, navigationType]);
 
   return null;

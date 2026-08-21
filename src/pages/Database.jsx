@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { DatabaseZap, Database as DatabaseIcon } from "lucide-react";
+import { useQueryClient } from "@tanstack/react-query";
+import { AlertTriangle, DatabaseZap, Database as DatabaseIcon } from "lucide-react";
 import { useGameCatalog, fmtNum } from "@/lib/gameData";
 import { KINDS, KIND_KEYS } from "@/components/databank/catalog";
 import { parseQuery, applyQuery, sortRows, columnStats, toCSV } from "@/components/databank/query";
@@ -26,6 +27,7 @@ import { useDatabankKeys } from "@/components/databank/useDatabankKeys";
 // Databank v2 — the granular browser over the real ERA ONE dataset.
 // State lives in the URL (shareable) + localStorage (favourites, presets, columns, notes). See components/databank/.
 export default function Database() {
+  const qc = useQueryClient();
   const cat = useGameCatalog(true);
   const db = useDatabank();
   useDatabankKeys(db);
@@ -88,7 +90,18 @@ export default function Database() {
           </button>); })}
       </div>
 
-      {cat.isEmpty && !cat.isLoading ? (
+      {cat.isError ? (
+        <div className="schematic-panel p-8 text-center relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-[2px] hazard-stripes opacity-60" />
+          <AlertTriangle size={28} className="mx-auto text-primary mb-3" />
+          <div className="font-display font-bold uppercase tracking-[0.15em]">DATALINK FAILURE</div>
+          <p className="tech-label mt-1">Couldn't load the databank: {String(cat.error?.message || cat.error)}</p>
+          <button onClick={() => qc.invalidateQueries({ queryKey: ["game"] })}
+            className="mt-4 px-4 h-8 font-mono text-[10px] uppercase tracking-wider border border-primary bg-primary text-primary-foreground hover:bg-primary/80 transition-colors">
+            Retry
+          </button>
+        </div>
+      ) : cat.isEmpty && !cat.isLoading ? (
         <div className="schematic-panel p-8 text-center">
           <DatabaseZap size={28} className="mx-auto text-primary mb-3" />
           <div className="font-display font-bold uppercase tracking-wider">No game data loaded yet</div>

@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, ShieldCheck, CheckCircle2 } from "lucide-react";
-import { useCallsign, sanitizeCallsign } from "@/lib/callsign";
+import { Terminal, ShieldCheck, CheckCircle2, SkipForward } from "lucide-react";
+import { useCallsign, readCallsign, sanitizeCallsign } from "@/lib/callsign";
 import BootLog from "./BootLog";
 import CallsignField, { pickSuggestion } from "./CallsignField";
 
@@ -16,6 +16,10 @@ const LINES = [
 
 const STEPS = [["boot", "Diagnostics"], ["callsign", "Identity"], ["sealed", "Seal"]];
 
+// In-memory fallback: if localStorage is blocked the key never persists, so without this
+// the overlay would return on every load. Module-scoped so it survives remounts this session.
+let sessionDismissed = false;
+
 // First-run rig installation. Collects a self-chosen callsign held in this browser only —
 // no account, no name, no email. Rendered once, then never again on this machine.
 export default function InstallSequence() {
@@ -24,13 +28,30 @@ export default function InstallSequence() {
   const [value, setValue] = useState("");
   const [gone, setGone] = useState(false);
   const hint = useMemo(pickSuggestion, []);
-  if (installed || gone) return null;
+
+  // Skip / guest mode: seal as OPERATOR. setCallsign persists via try/catch; the module
+  // flag guarantees the overlay stays gone this session even if localStorage throws.
+  const skip = () => {
+    if (sessionDismissed || readCallsign()) return; // already sealed — never clobber a chosen callsign
+    sessionDismissed = true;
+    try { setCallsign("OPERATOR"); } catch { /* in-memory flag already set */ }
+    setGone(true);
+  };
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") skip(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (installed || gone || sessionDismissed) return null;
 
   const commit = () => {
     const cs = sanitizeCallsign(value).trim();
     if (cs.length < 2) return;
     setStage("sealed");
-    setTimeout(() => { setCallsign(cs); setGone(true); }, 1400);
+    setTimeout(() => { sessionDismissed = true; setCallsign(cs); setGone(true); }, 1400);
   };
 
   const stageIdx = STEPS.findIndex(([s]) => s === stage);
@@ -91,6 +112,19 @@ export default function InstallSequence() {
                 </motion.div>
                 <div className="text-[hsl(var(--chart-3))] mt-3 flex items-center gap-1.5"><CheckCircle2 size={12} /> install complete — terminal online</div>
               </motion.div>
+            )}
+
+            {stage !== "sealed" && (
+              <>
+                <div className="rivet-row opacity-40" />
+                <div className="flex items-center justify-between">
+                  <button onClick={skip}
+                    className="inline-flex items-center gap-1.5 px-2.5 h-7 border border-border font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground hover:border-primary hover:text-primary transition-colors">
+                    <SkipForward size={11} /> Skip / Guest Mode
+                  </button>
+                  <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground/50">esc to skip · signs you in as OPERATOR</span>
+                </div>
+              </>
             )}
           </div>
         </motion.div>

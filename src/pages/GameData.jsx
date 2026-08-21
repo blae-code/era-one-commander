@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
-import { seedGameData, loadIndex, ERA_ONE_ENTITIES } from "@/lib/seedGameData";
+import { seedGameData, loadIndex } from "@/lib/seedGameData";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
 import GameDataHeader from "@/components/gamedata/GameDataHeader";
 
@@ -32,31 +32,17 @@ export default function GameData() {
 
   useEffect(() => { loadIndex().then(setIndex); }, []);
 
-  const { data: live = {}, refetch, isFetching } = useQuery({
-    queryKey: ["gamedata-live-counts"],
-    queryFn: async () => {
-      const out = {};
-      for (const { entity } of ERA_ONE_ENTITIES) {
-        try {
-          const rows = await base44.entities[entity].list("game_id", 5000);
-          out[entity] = { count: rows.length, build: rows[0]?.game_build ?? null, defined: true };
-        } catch {
-          out[entity] = { count: 0, build: null, defined: false };
-        }
-      }
-      return out;
-    },
-  });
-
+  // Live counts + per-entity state come ONLY from the server verify (gameDataStatus pages past 5000
+  // rows and knows the expected ids) — a client-side list() count would cap and contradict it.
   const bundledBuild = index?.game?.buildid;
+  const verified = verify && !verify.error ? verify.entities || null : null;
   const status = useMemo(() => {
     if (!index) return null;
     return index.entities.map((e) => {
-      const l = live[e.entity] || {};
-      const state = !l.defined ? "missing" : l.count === 0 ? "empty" : l.build !== bundledBuild ? "stale" : l.count === e.rows ? "synced" : "partial";
-      return { ...e, live: l, state };
+      const v = verified?.[e.entity];
+      return { ...e, v, state: v ? v.state : "unknown" };
     });
-  }, [index, live, bundledBuild]);
+  }, [index, verified]);
 
   const run = async () => {
     setRunning(true); setLog([]);
@@ -64,14 +50,14 @@ export default function GameData() {
       const summary = await seedGameData(base44, { onProgress: (m) => setLog((l) => [...l, m]), deleteMissing });
       setLog((l) => [...l, `complete: ${JSON.stringify(summary)}`]);
       qc.invalidateQueries();
-      refetch();
+      runVerify();
     } catch (e) {
       setLog((l) => [...l, `ERROR: ${e?.message || e}`]);
     } finally { setRunning(false); }
   };
 
   const STATE_STYLE = {
-    synced: "text-emerald-400", partial: "text-amber-400", stale: "text-amber-400", empty: "text-muted-foreground", missing: "text-red-400",
+    synced: "text-emerald-400", partial: "text-amber-400", stale: "text-amber-400", empty: "text-muted-foreground", missing_entity: "text-red-400", unknown: "text-muted-foreground",
   };
 
   return (
@@ -80,12 +66,12 @@ export default function GameData() {
         subtitle={`Bundled dataset // ERA ONE ${index?.game?.game_version || "—"} · build ${bundledBuild || "—"} · extracted ${index?.game?.generated_utc || "—"}`}
         readout={[
           ["TABLES", (status || []).length],
-          ["SYNCED", (status || []).filter((e) => e.state === "synced").length, "#22c55e"],
-          ["PENDING", (status || []).filter((e) => e.state !== "synced").length, "#ffb020"],
+          ["SYNCED", verified ? (status || []).filter((e) => e.state === "synced").length : "—", "#22c55e"],
+          ["PENDING", verified ? (status || []).filter((e) => e.state !== "synced").length : "—", "#ffb020"],
           ["BUNDLED ROWS", (status || []).reduce((s, e) => s + (e.rows || 0), 0)],
         ]}
-        onRefetch={() => refetch()}
-        isFetching={isFetching}
+        onRefetch={runVerify}
+        isFetching={verifying}
         onVerify={runVerify}
         verifying={verifying}
         onRun={run}
@@ -113,17 +99,22 @@ export default function GameData() {
               <tr key={e.entity}>
                 <td className="px-3 py-2 font-mono text-xs">{e.entity}<span className="text-muted-foreground"> · {e.source_table}</span></td>
                 <td className="px-3 py-2 font-mono text-xs">{e.rows}</td>
-                <td className="px-3 py-2 font-mono text-xs">{e.live.defined ? e.live.count : "—"}</td>
-                <td className="px-3 py-2 font-mono text-xs">{e.live.build || "—"}</td>
+                <td className="px-3 py-2 font-mono text-xs">{e.v ? (e.state === "missing_entity" ? "—" : e.v.live) : "—"}</td>
+                <td className="px-3 py-2 font-mono text-xs">{e.v?.live_build || "—"}</td>
                 <td className={`px-3 py-2 font-mono text-xs uppercase ${STATE_STYLE[e.state]}`}>
                   {e.state === "synced" && <CheckCircle2 size={12} className="inline mr-1 -mt-0.5" />}
-                  {e.state === "missing" ? "entity not deployed" : e.state}
+                  {e.state === "missing_entity" ? "entity not deployed" : e.state === "unknown" ? "—" : e.state}
                 </td>
               </tr>
             ))}
             {!status && <tr><td colSpan={5} className="tech-label text-center py-8 animate-pulse">Reading bundled index…</td></tr>}
           </tbody>
         </table>
+        {status && !verified && (
+          <div className="tech-label px-3 py-2 border-t border-border text-muted-foreground">
+            Live counts unknown — run Verify for server-side live counts (pages past the 5000-row client cap).
+          </div>
+        )}
       </div>
 
       {verify && (

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 export default function SectorTools({ sector }) {
+  const reduceMotion = useReducedMotion();
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-2">
@@ -14,13 +15,14 @@ export default function SectorTools({ sector }) {
       {sector.tools.map(({ to, label, code, icon: Icon, desc }, i) => (
         <motion.div
           key={code}
-          initial={{ opacity: 0, x: 22 }}
+          initial={reduceMotion ? false : { opacity: 0, x: 22 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.09 * i, type: "spring", stiffness: 110, damping: 24, mass: 1.9 }}
         >
           <Link
             to={to}
-            className="group flex items-center gap-3 border border-border bg-card/95 clip-plate p-3 hover:border-primary transition-colors"
+            aria-label={`${label} — ${desc}`}
+            className="group flex items-center gap-3 border border-border bg-card/95 clip-plate p-3 hover:border-primary transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary"
           >
             <Icon size={17} className="text-primary shrink-0" />
             <div className="flex-1 min-w-0">

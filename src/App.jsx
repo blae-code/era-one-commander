@@ -9,10 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
 import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
-import Blueprints from '@/pages/Blueprints';
-import BlueprintDetail from '@/pages/BlueprintDetail';
 import Database from '@/pages/Database';
-import ShipBuilder from '@/pages/ShipBuilder';
+import StealthAnalysis from '@/pages/StealthAnalysis';
 import ResourcePlan from '@/pages/ResourcePlan';
 import DriveSync from '@/pages/DriveSync';
 import EconomyAnalysis from '@/pages/EconomyAnalysis';
@@ -53,12 +51,10 @@ const AuthenticatedApp = () => {
       {/* Add your page Route elements here */}
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/blueprints" element={<Blueprints />} />
-        <Route path="/blueprints/:id" element={<BlueprintDetail />} />
-        <Route path="/builder" element={<ShipBuilder />} />
         <Route path="/resources" element={<ResourcePlan />} />
         <Route path="/sync" element={<DriveSync />} />
         <Route path="/database" element={<Database />} />
+        <Route path="/stealth" element={<StealthAnalysis />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/economy" element={<EconomyAnalysis />} />
         <Route path="/combat" element={<CombatLab />} />

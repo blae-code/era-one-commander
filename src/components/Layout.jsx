@@ -12,7 +12,7 @@ export default function Layout() {
     <div className="h-screen flex flex-col bg-background overflow-hidden">
       <InstallSequence />
       {!isDeck && <JumpRail />}
-      <main className="flex-1 overflow-y-auto bp-grid">
+      <main id="app-main" className="flex-1 overflow-y-auto bp-grid">
         <Outlet />
       </main>
       <SonnerToaster position="bottom-right" toastOptions={{ style: { borderRadius: 0, fontFamily: "IBM Plex Mono", fontSize: 12 } }} />
